@@ -3,7 +3,6 @@ import MigrantCore
 import Observation
 
 /// Партия на экране: движок, текущая фаза и сохранение на диск.
-@MainActor
 @Observable
 final class GameSession {
     enum Phase: Equatable {

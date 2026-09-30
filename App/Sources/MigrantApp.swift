@@ -1,3 +1,4 @@
+import MigrantCore
 import SwiftUI
 
 @main
