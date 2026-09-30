@@ -1,0 +1,3 @@
+// Подпись. Впиши свой Team ID: Xcode → Settings → Accounts → твой Apple ID → Team ID.
+// Файл живёт отдельно от project.yml, чтобы перегенерация проекта его не стирала.
+DEVELOPMENT_TEAM =
