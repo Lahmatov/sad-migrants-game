@@ -1,0 +1,256 @@
+{
+  "act": "packing",
+  "cards": [
+    {
+      "id": "intro",
+      "image": "late february night in a small saint petersburg rental flat, a man and a woman sit at a kitchen table lit only by two laptop screens, phones face down, snow falling past the dark window",
+      "anim": "snow",
+      "choices": [
+        {
+          "label": "Позвонить папе",
+          "image": "the man standing at the dark window holding a phone to his ear, waiting for an answer, city lights below in the snow",
+          "anim": "snow"
+        }
+      ]
+    },
+    {
+      "id": "call_dad",
+      "image": "close view of a smartphone on a kitchen table showing an outgoing call to 'dad', a cold cup of tea beside it, blue winter dusk through the window",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Хорошо, подумаем»",
+          "image": "the man sitting hunched on a stool with the phone pressed to his ear, looking at the floor, two plane tickets printed on the table",
+          "anim": "none"
+        },
+        {
+          "label": "«Пап, мы уже решили»",
+          "image": "the man in the hallway with the phone, his free hand pressed to his forehead, a quiet flat behind him",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать его с собой",
+          "image": "the man smiling sadly into the phone, through the window a row of old soviet garages under snow",
+          "anim": "snow"
+        }
+      ]
+    },
+    {
+      "id": "call_inlaws",
+      "image": "a warm old kitchen, an older couple at the table on a video call on a tablet, the father-in-law already holding car keys",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Обнять его",
+          "image": "two men in a narrow hallway in an awkward hug, the older one patting the younger on the back",
+          "anim": "none"
+        },
+        {
+          "label": "«Спасибо»",
+          "image": "the older man walking out to a snowy yard toward an old car with a flashlight, checking the fuel",
+          "anim": "snow"
+        },
+        {
+          "label": "«Мы сами, на такси»",
+          "image": "the older man waving his hand dismissively in a kitchen, car keys swinging from his finger, the younger man laughing",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "pack_clothes",
+      "image": "two big open suitcases on the floor of a small room, piles of folded clothes for summer and winter, a bathroom scale nearby",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "both suitcases half full, a winter jacket squeezed in on top, the scale showing a big number in illegible pixels",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
+      "id": "pack_toys",
+      "image": "a floor covered with toy cars, lego bricks, picture books and a grey plush cat, an open suitcase waiting",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Взять всё",
+          "image": "a suitcase packed full of toy cars and lego, the grey plush cat sitting on top like a guard",
+          "anim": "dust"
+        },
+        {
+          "label": "Кота и пять машинок",
+          "image": "a hand holding five small toy cars over the suitcase, the grey plush cat already inside",
+          "anim": "none"
+        },
+        {
+          "label": "Кота, машинки и Лего",
+          "image": "a stack of children's books left on an empty shelf while the suitcase is zipped with toys inside",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
+      "id": "pack_kitchen",
+      "image": "a small white ikea toy kitchen in the corner of a child's room, toy cars inside a toy pot, a suitcase beside it clearly too small",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Попробовать разобрать",
+          "image": "the man sitting on the floor with an allen key surrounded by toy kitchen parts, a single screw in his hand",
+          "anim": "none"
+        },
+        {
+          "label": "Оставить",
+          "image": "the toy kitchen standing alone in a half-empty room, a phone in the man's hand taking its photo",
+          "anim": "dust"
+        },
+        {
+          "label": "Пообещать новую — там",
+          "image": "the man crouching and promising something to an empty toy kitchen, a child's drawing on the wall",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "pack_buckwheat",
+      "image": "a kitchen counter with paper packs of buckwheat, curd snack bars in a fridge door, an open suitcase on a chair",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять гречку",
+          "image": "three kilos of buckwheat packs wedged between sweaters in the suitcase, a family eating curd snacks at the table behind",
+          "anim": "none"
+        },
+        {
+          "label": "Купим там",
+          "image": "empty suitcase corner where buckwheat could be, the family eating curd snacks at a late kitchen table",
+          "anim": "steam"
+        },
+        {
+          "label": "Один килограмм — для души",
+          "image": "one small pack of buckwheat and a box of tea placed neatly in the suitcase like a treasure",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "pack_laptops",
+      "image": "two work laptops in backpacks on a sofa and a third old laptop with stickers lying alone",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять и старый",
+          "image": "the old laptop squeezed into a backpack already full of cables",
+          "anim": "none"
+        },
+        {
+          "label": "Оставить бабушке",
+          "image": "an elderly woman holding the old laptop at her kitchen table, a landline phone beside her",
+          "anim": "steam"
+        },
+        {
+          "label": "Продать за вечер",
+          "image": "a buyer with a supermarket plastic bag taking the old laptop at a doorway at night",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "pack_kid_meds",
+      "image": "a kitchen table covered with medicine boxes, thermometers and syrups, a woman sorting them into a big pouch",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять всю",
+          "image": "a fat first aid pouch zipped shut on top of the suitcase, the woman relieved",
+          "anim": "none"
+        },
+        {
+          "label": "«Может, поменьше?»",
+          "image": "the woman giving a long look while the man silently adds another box to the pile",
+          "anim": "none"
+        },
+        {
+          "label": "Добавить свои таблетки",
+          "image": "two first aid pouches side by side in the suitcase, one small, one huge",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "pack_album",
+      "image": "an old paper photo album open on a bed: a small boy on a beach, a young father, faded colors",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Взять альбом",
+          "image": "the photo album wrapped in a sweater and placed in the suitcase",
+          "anim": "dust"
+        },
+        {
+          "label": "Сфотографировать страницы",
+          "image": "a phone held over the album photographing a page, the screen glowing",
+          "anim": "none"
+        },
+        {
+          "label": "Взять три фотографии",
+          "image": "three old photos slipped into a passport cover on a table",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "scales_over",
+      "image": "a suitcase on bathroom scales, the man and woman staring at it, things spread around on the floor",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Выложить гречку",
+          "image": "packs of buckwheat taken out and stacked on the floor next to the scales",
+          "anim": "none"
+        },
+        {
+          "label": "Выложить Лего",
+          "image": "a lego box set aside on a shelf labelled with a sticky note, the suitcase lighter",
+          "anim": "none"
+        },
+        {
+          "label": "Распихать по рюкзакам",
+          "image": "three backpacks bulging enormously, the man testing the weight of one with a grimace",
+          "anim": "none"
+        },
+        {
+          "label": "Доплатить за перевес",
+          "image": "an airline check-in desk, the man paying by card for excess baggage",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "scales_ok",
+      "image": "the man sitting on a suitcase to close it, the woman pulling the zipper, both laughing tiredly",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Ехать в Старую Руссу",
+          "image": "two closed suitcases and three backpacks standing in a row by the front door at night",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "pack_fallback",
+      "image": "things moved from a suitcase to a backpack and back, the room a mess of half-packed bags",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Хватит",
+          "image": "the man giving up and sitting on the floor among the bags",
+          "anim": "dust"
+        }
+      ]
+    }
+  ]
+}

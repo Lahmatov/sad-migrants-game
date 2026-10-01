@@ -1,0 +1,334 @@
+{
+  "act": "figueira2",
+  "cards": [
+    {
+      "id": "f2_card",
+      "image": "a ctt envelope opened on the kitchen table, the man's residence card from porto inside",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сфотографировать все три",
+          "image": "three residence cards lined up on the table, a phone taking a photo",
+          "anim": "none"
+        },
+        {
+          "label": "Проверить фамилию",
+          "image": "the man holding the card close to his eyes, checking the surname",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить маме",
+          "image": "the man on the phone with his mother, waving the card",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_citizen_count",
+      "image": "a phone calculator and a calendar reminder set three and a half years ahead",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Начать учить к экзамену A2",
+          "image": "a portuguese exam textbook open at 'my family', a mold spot drawn in the margin",
+          "anim": "none"
+        },
+        {
+          "label": "Просто считать",
+          "image": "the man counting on his fingers by the window, the ocean outside",
+          "anim": "sea"
+        },
+        {
+          "label": "Записаться на курсы A2",
+          "image": "an evening language class, the same faces as before, a bit more confident",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_new_year",
+      "image": "new year's eve in the figueira flat: a laptop showing the family in saint petersburg with the kremlin chimes, glasses raised at 9 pm",
+      "anim": "confetti",
+      "choices": [
+        {
+          "label": "Встретить оба",
+          "image": "midnight, the family eating twelve grapes as fireworks burst over the ocean",
+          "anim": "confetti"
+        },
+        {
+          "label": "Только петербургский",
+          "image": "the family asleep at midnight, the boy waking up to fireworks at the window",
+          "anim": "stars"
+        },
+        {
+          "label": "Только португальский",
+          "image": "the couple walking the promenade at night, fireworks over the sea",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "f2_padel",
+      "image": "a padel court with glass walls, the woman swinging a racket and hitting her own nose",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "В urgência",
+          "image": "a long hospital corridor, the woman holding ice to her nose, a phone at 10 percent",
+          "anim": "none"
+        },
+        {
+          "label": "Приложить лёд и доиграть",
+          "image": "the woman finishing the set with a bruised nose, raising her racket",
+          "anim": "none"
+        },
+        {
+          "label": "В частную клинику",
+          "image": "a private clinic x-ray screen showing a nose",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_grandma",
+      "image": "a short message on the man's phone, the man sitting very still by the window",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Достать её купюру",
+          "image": "an old banknote from the grandmother's envelope held in the man's hands over the photo album",
+          "anim": "none"
+        },
+        {
+          "label": "Звонить маме каждый день",
+          "image": "the man on the phone with his mother at the same time every evening",
+          "anim": "none"
+        },
+        {
+          "label": "Пересмотреть её танец",
+          "image": "a wedding video on the phone: the tiny grandmother dancing, holding onto the man",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "f2_niece",
+      "image": "a phone video of a baby girl taking first steps holding a flat pebble",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Позвонить брату",
+          "image": "the brothers on a long video call, both smiling",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_irs",
+      "image": "the portuguese tax portal on a laptop, a hundred fields, the man frowning",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Заполнить самому",
+          "image": "six evenings of youtube tutorials and forms, coffee cups piling up",
+          "anim": "none"
+        },
+        {
+          "label": "Бразильский бухгалтер",
+          "image": "a brazilian accountant at his desk explaining with big gestures",
+          "anim": "none"
+        },
+        {
+          "label": "Подать вместе с женой",
+          "image": "the couple filling the return together at two laptops",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_kid_corrects",
+      "image": "a parents' meeting at the kindergarten, the boy correcting his father's portuguese without looking up from a tablet",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сказать «obrigado» сыну",
+          "image": "the boy saying 'de nada' with a serious face, the teacher nodding at him",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_storm",
+      "image": "a winter storm: waves crashing over the figueira promenade, the family watching from the window",
+      "anim": "rain",
+      "choices": [
+        {
+          "label": "Смотреть вместе",
+          "image": "three silhouettes at the window, the boy pointing at the angry atlantic",
+          "anim": "rain"
+        }
+      ]
+    },
+    {
+      "id": "f2_mom_call",
+      "image": "an evening video call, the boy showing drawings, the woman showing her healed nose, the ocean in the window",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«До завтра, мам»",
+          "image": "the call ending with everyone waving goodbye",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_mom_visit",
+      "image": "the arrivals hall at lisbon airport, the grandmother with a suitcase full of gifts, the boy hesitating",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Показать всё за неделю",
+          "image": "the grandmother tired but proud on a bench in coimbra",
+          "anim": "none"
+        },
+        {
+          "label": "Просто быть дома",
+          "image": "the grandmother cooking soup in the old flat, the boy hugging her leg",
+          "anim": "steam"
+        },
+        {
+          "label": "Оставить ей внука на вечер",
+          "image": "the couple at a restaurant table alone, candles",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "f2_inlaws_visit",
+      "image": "the father-in-law walking around the battered peugeot, kicking a tyre",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Дать тестю порулить",
+          "image": "the father-in-law driving the peugeot along the ocean road, nodding at the glass roof",
+          "anim": "gulls"
+        },
+        {
+          "label": "Выспаться наконец",
+          "image": "the grandparents walking the boy on the promenade, pockets full of shells",
+          "anim": "gulls"
+        },
+        {
+          "label": "Устроить ужин для всех",
+          "image": "a crowded dinner in the old flat with colleagues, friends and grandparents",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "f2_inlaws_malaga",
+      "image": "a warm mediterranean beach in malaga with the grandparents under an umbrella",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Купаться до заката",
+          "image": "the father-in-law swimming to a buoy, the boy in armbands following",
+          "anim": "sea"
+        },
+        {
+          "label": "Оставить сына с ними",
+          "image": "the couple alone in malaga old town eating tapas",
+          "anim": "lights"
+        },
+        {
+          "label": "Лететь лоукостером",
+          "image": "the grandmother squeezing a week of things into a tiny cabin bag at the airport",
+          "anim": "none"
+        },
+        {
+          "label": "Ехать на Пежо",
+          "image": "five people in the battered peugeot on a spanish highway, the sky through the glass roof",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_low_nerves",
+      "image": "3 am in the kitchen, the man alone with tea, everything done but heavy",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Записаться к психологу",
+          "image": "a psychologist on a video call explaining with calm hands",
+          "anim": "none"
+        },
+        {
+          "label": "Разбудить жену",
+          "image": "the couple with tea at dawn",
+          "anim": "steam"
+        },
+        {
+          "label": "Сходить на падел",
+          "image": "the couple playing padel laughing, the woman in safety goggles",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_low_money",
+      "image": "a phone with a low balance on the kitchen table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять фриланс",
+          "image": "the man building a surf school website, the boy with a bodyboard",
+          "anim": "none"
+        },
+        {
+          "label": "Продать что-нибудь",
+          "image": "a bicycle and headphones sold to a stranger",
+          "anim": "none"
+        },
+        {
+          "label": "Сдать гараж",
+          "image": "a neighbour's small boat parked in the family's garage",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_move_decision",
+      "image": "the woman opening the long-open school tab, the couple at the table at night",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Переезжаем в Оэйраш",
+          "image": "suitcases taken down from the top of a wardrobe",
+          "anim": "dust"
+        },
+        {
+          "label": "Ещё год здесь",
+          "image": "the boy asking a question at dinner, the couple looking at each other",
+          "anim": "none"
+        },
+        {
+          "label": "Сначала съездить посмотреть",
+          "image": "the family on a weekend visit to a school yard in oeiras, the boy running",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "f2_day",
+      "image": "an ordinary figueira week: padel, kindergarten, 'bom dia' to neighbours",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "a price tag in euros, no longer converted",
+          "anim": "none"
+        }
+      ]
+    }
+  ]
+}

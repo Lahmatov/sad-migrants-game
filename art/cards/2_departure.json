@@ -1,0 +1,295 @@
+{
+  "act": "departure",
+  "cards": [
+    {
+      "id": "dep_russa",
+      "image": "a small wooden house kitchen in an old russian town, a tiny grandmother pushing an envelope into the man's coat pocket, a toddler in her arms",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Взять конверт",
+          "image": "the man's hand holding a white envelope, grandmother nodding firmly",
+          "anim": "none"
+        },
+        {
+          "label": "«Ба, не надо»",
+          "image": "a toddler's jacket on a hotel bed, an envelope sticking out of its pocket",
+          "anim": "none"
+        },
+        {
+          "label": "Отдать конверт маме тайком",
+          "image": "the man quietly handing the envelope to his mother in a dim hallway",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_mom_dinner",
+      "image": "a crowded family table with olivier salad, herring under a fur coat, pies and a pizza for the toddler who eats only bread",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Сказать главное",
+          "image": "mother and son across the table, she laughing with wet eyes",
+          "anim": "steam"
+        },
+        {
+          "label": "Есть ещё пирожок",
+          "image": "the man's plate piled high with pies, a grandmother adding more",
+          "anim": "steam"
+        },
+        {
+          "label": "Помочь мыть посуду",
+          "image": "mother and son washing dishes shoulder to shoulder at a small sink, steam rising",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "dep_money",
+      "image": "a dark winter street at night with a row of atms, one screen glowing, the man with a phone checking a broker app",
+      "anim": "snow",
+      "choices": [
+        {
+          "label": "Объехать банкоматы",
+          "image": "the man at the fifth atm finally pulling out euro banknotes, snow on his shoulders",
+          "anim": "snow"
+        },
+        {
+          "label": "Поменять в обменнике",
+          "image": "a small currency exchange booth with a long queue and a tired cashier behind glass",
+          "anim": "lights"
+        },
+        {
+          "label": "Крипта через P2P",
+          "image": "a phone screen with a chat and a cat avatar, the man in a dark room lit by it",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_rate",
+      "image": "a currency exchange with a big rate board, numbers changing, a queue of people in winter coats",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Поменять ещё немного",
+          "image": "the man pushing more banknotes under the cashier window",
+          "anim": "lights"
+        },
+        {
+          "label": "Не менять",
+          "image": "the man walking away from the queue, the rate board behind him going up",
+          "anim": "lights"
+        },
+        {
+          "label": "Спросить мужчину впереди",
+          "image": "the man talking to a stranger in a grey coat in the queue, the stranger not turning around",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "dep_farewell",
+      "image": "a phone with a long list of contacts, the man's thumb hovering, packed bags in the background",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Написать им из Тбилиси",
+          "image": "a short message typed on the phone in a tbilisi hotel room",
+          "anim": "none"
+        },
+        {
+          "label": "Не объяснять никому",
+          "image": "the phone face down on a suitcase, the room silent",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить одному другу",
+          "image": "the man on a balcony at night calling one friend, breath visible in the cold",
+          "anim": "snow"
+        }
+      ]
+    },
+    {
+      "id": "dep_apartment",
+      "image": "a rented flat left as if for a holiday: dishes in the cupboard, books on the shelf, the toy kitchen in the corner",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Закрыть дверь",
+          "image": "a hand turning a key twice in an old apartment door",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_kid_question",
+      "image": "a toddler walking alone between bags and boxes in a half-empty flat, holding the grey plush cat",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Взять на руки",
+          "image": "the man holding the toddler who buries his face in his neck",
+          "anim": "none"
+        },
+        {
+          "label": "Включить мультики",
+          "image": "a toddler watching cartoons on a tablet among boxes, the man looking away",
+          "anim": "none"
+        },
+        {
+          "label": "Строить крепость из коробок",
+          "image": "a fort built from cardboard boxes with a window, a toddler peeking out",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
+      "id": "dep_walk",
+      "image": "a couple sitting on the floor among packed bags in a dark flat, not talking",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сидеть рядом с женой",
+          "image": "the man and the woman shoulder to shoulder on the floor, a neighbour's tv glow through the wall",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_messages",
+      "image": "a phone screen with three messages: a thumbs up, an angry line, a heart, the man reading in the dark",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ответить всем",
+          "image": "the man typing replies on the phone on a sofa",
+          "anim": "none"
+        },
+        {
+          "label": "Никому",
+          "image": "the phone switched off on a table, then the man reaching for it again",
+          "anim": "none"
+        },
+        {
+          "label": "Ответить только третьему",
+          "image": "a single heart sent back on the phone screen",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_work",
+      "image": "a video call on a laptop with a grid of colleagues, a contract document open next to it",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Согласиться на ГПХ",
+          "image": "the man signing a document on a laptop with a tired face",
+          "anim": "none"
+        },
+        {
+          "label": "Подписать петицию",
+          "image": "a petition page with a few signatures on the laptop screen",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить юриста",
+          "image": "the man on a video call with a lawyer, a notepad full of scribbles",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_airport",
+      "image": "a car driving through empty night streets of saint petersburg to the airport, the father-in-law at the wheel",
+      "anim": "snow",
+      "choices": [
+        {
+          "label": "Встать в очередь",
+          "image": "a crowded airport hall at night, families with suitcases standing in a long quiet queue",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "dep_border",
+      "image": "passport control booth at night, an officer behind glass, the man with a sleeping toddler on his shoulder and many bags",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Туризм»",
+          "image": "the officer looking at the luggage for a long time, a stamp raised in the air",
+          "anim": "none"
+        },
+        {
+          "label": "Улыбнуться и молчать",
+          "image": "the man smiling nervously at the booth, passports being flipped",
+          "anim": "none"
+        },
+        {
+          "label": "«В гости к друзьям»",
+          "image": "the officer glancing at the sleeping toddler and stamping the passport",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_plane",
+      "image": "inside a charter plane at night, a toddler asleep on the man's chest, the woman looking out of the window",
+      "anim": "stars",
+      "choices": [
+        {
+          "label": "Смотреть в окно",
+          "image": "view through the plane window: clouds, nothing but clouds, no border to be seen",
+          "anim": "stars"
+        },
+        {
+          "label": "Взять жену за руку",
+          "image": "two hands holding each other on the armrest",
+          "anim": "none"
+        },
+        {
+          "label": "Смотреть на сына",
+          "image": "a sleeping toddler holding the man's finger",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_yerevan",
+      "image": "a plane parked on the tarmac in yerevan, mountains through the window, a toddler pressing his palm to the glass",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Помахать горам",
+          "image": "the toddler waving at the snowy mountains outside the window",
+          "anim": "none"
+        },
+        {
+          "label": "Проверить, где деньги",
+          "image": "the man patting his sock and jacket lining to check the money",
+          "anim": "none"
+        },
+        {
+          "label": "Закрыть глаза",
+          "image": "the man asleep in the plane seat, the woman reading",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "dep_wait",
+      "image": "bags packed, unpacked and packed again in a small room",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "the man staring at a clock above the packed bags",
+          "anim": "dust"
+        }
+      ]
+    }
+  ]
+}

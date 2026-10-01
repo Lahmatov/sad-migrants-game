@@ -1,0 +1,1050 @@
+{
+  "act": "figueira",
+  "cards": [
+    {
+      "id": "fig_istanbul",
+      "image": "a small istanbul transit hotel room at night, the family eating room-service food on the bed, a minaret outside the window",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Спать до будильника",
+          "image": "dawn, the toddler sitting up in bed listening to the call to prayer from a minaret across the street",
+          "anim": "stars"
+        },
+        {
+          "label": "Выйти на балкон",
+          "image": "the man on a hotel balcony before dawn in his jacket, city lights and a minaret",
+          "anim": "lights"
+        },
+        {
+          "label": "Пройтись по ночной улице",
+          "image": "the family walking a night street, a cat asleep on a car bonnet, a simit seller waving",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "fig_lisbon",
+      "image": "lisbon on a december day: steep streets, a yellow tram, the family with two suitcases and three backpacks on a hill",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Погулять ещё день",
+          "image": "the family riding a yellow tram, the boy asleep against the window",
+          "anim": "none"
+        },
+        {
+          "label": "Сразу в Фигейру",
+          "image": "a train along fields and pine trees toward figueira, the boy pressing his face to the glass",
+          "anim": "none"
+        },
+        {
+          "label": "Доехать до океана",
+          "image": "the boy running toward atlantic waves on a lisbon beach and away again",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "fig_arrive",
+      "image": "figueira da foz off-season: an extremely wide empty beach, wind, seagulls, a lone fisherman",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Подойти к воде вместе",
+          "image": "the family walking hand in hand toward the huge cold atlantic",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
+      "id": "fig_month_both",
+      "image": "a phone banking app on a portuguese windowsill, salaries in, rent out, the ocean far away",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Отложить",
+          "image": "a jar of saved coins next to a box of pastéis de nata",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_month_me",
+      "image": "the man avoiding a banking app, phone face down on the table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Затянуть пояса",
+          "image": "a modest shopping basket on the kitchen table",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_month_wife",
+      "image": "the man cooking soup with a cover letter in portuguese open on the laptop",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Держаться",
+          "image": "the man typing at night, soup cooling on the stove",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_month_none",
+      "image": "an empty wallet beside a rent bill in an old portuguese flat",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Платить из накоплений",
+          "image": "savings dropping on a phone screen, the man staring at it",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_nif",
+      "image": "a finanças tax office hall in portugal, ticket machine, green fluorescent light, the family waiting",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Через помогаторов",
+          "image": "a helper in a blazer handing three tax number papers to the couple",
+          "anim": "none"
+        },
+        {
+          "label": "Самому в Finanças",
+          "image": "the man at a counter being refused, gesturing in broken portuguese",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить в чате",
+          "image": "the man reading a long chat thread of recommendations on his phone",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_bank",
+      "image": "a portuguese bank office, a manager looking at russian passports and standing up to leave",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Через помогаторов",
+          "image": "a helper speaking portuguese for the family at the bank desk",
+          "anim": "none"
+        },
+        {
+          "label": "Ждать и улыбаться",
+          "image": "a pile of forms and the couple smiling tiredly",
+          "anim": "none"
+        },
+        {
+          "label": "Показать грузинский счёт",
+          "image": "the man handing over a translated georgian bank statement",
+          "anim": "none"
+        },
+        {
+          "label": "Пойти в другой банк",
+          "image": "a second bank, the couple walking out with cards in an hour",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_flat",
+      "image": "an old portuguese flat with two bedrooms, a living room and a garage, old windows, dated furniture",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Заплатить за полгода",
+          "image": "the man staring at a huge bank transfer on his phone, keys in his other hand",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить помесячно",
+          "image": "the landlord shaking his head, pointing at a contract",
+          "anim": "none"
+        },
+        {
+          "label": "Поторговаться",
+          "image": "the landlord and the man shaking hands, the old windows behind them",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_car",
+      "image": "a roadside car lot in figueira, a battered peugeot with a panoramic glass roof",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить",
+          "image": "the boy lying on the back seat looking up through the panoramic roof at clouds, the ocean road outside",
+          "anim": "none"
+        },
+        {
+          "label": "Пока на автобусе",
+          "image": "father and son waiting at a lonely bus stop, a bus driver waving",
+          "anim": "none"
+        },
+        {
+          "label": "Велосипед с креслом",
+          "image": "the man cycling with the boy in a child seat behind him along the promenade",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
+      "id": "fig_car_later",
+      "image": "rain at a bus stop, the boy soaked, the peugeot still for sale across the road",
+      "anim": "rain",
+      "choices": [
+        {
+          "label": "Купить",
+          "image": "the seller grinning and handing over the peugeot keys",
+          "anim": "rain"
+        },
+        {
+          "label": "Ещё подождать",
+          "image": "father and son under a tiny umbrella still waiting for the bus",
+          "anim": "rain"
+        },
+        {
+          "label": "Взять машину в аренду",
+          "image": "a rental car parked outside the old flat",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_layoff_me",
+      "image": "a laptop showing a company-wide layoff email, the man sitting very still",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сразу искать",
+          "image": "the man updating his cv at night, typing 'portugal' as location",
+          "anim": "none"
+        },
+        {
+          "label": "Сначала к океану",
+          "image": "the man on the wide sand beach throwing a shell into the ocean",
+          "anim": "sea"
+        },
+        {
+          "label": "Созвониться с командой",
+          "image": "a video call grid of laid-off colleagues laughing and sharing links",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_job_found_me",
+      "image": "an offer email on the laptop, the evening sky outside",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Принять",
+          "image": "the man dancing in the kitchen, the boy joining in",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "fig_laptop_sell",
+      "image": "the old laptop with stickers lying on the table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Продать",
+          "image": "a buyer counting euro bills for the laptop at the door",
+          "anim": "none"
+        },
+        {
+          "label": "Оставить",
+          "image": "the old laptop put back on a shelf",
+          "anim": "dust"
+        },
+        {
+          "label": "Отдать сыну",
+          "image": "the boy drumming on the old laptop's spacebar, a cartoon on screen",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_school",
+      "image": "a small portuguese kindergarten with azulejo tiles, the boy holding his father's hand at the gate",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Показать налоги и платить",
+          "image": "the boy quiet at a tiny table among portuguese children, then whispering",
+          "anim": "none"
+        },
+        {
+          "label": "Искать бесплатный",
+          "image": "the man on the phone calling kindergartens, a list crossed out",
+          "anim": "none"
+        },
+        {
+          "label": "Подождать до сентября",
+          "image": "the boy on the man's lap during a video call at home",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_school_tv",
+      "image": "a kindergarten room with an abacus lesson, and a tv on in the corner",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Забирать пораньше",
+          "image": "the man arriving at four, the boy running out",
+          "anim": "none"
+        },
+        {
+          "label": "Пусть смотрит",
+          "image": "children watching a tv in a row, the boy among them",
+          "anim": "none"
+        },
+        {
+          "label": "Поговорить с воспитательницей",
+          "image": "the man talking to a teacher at the kindergarten door with gestures",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_alopecia",
+      "image": "the man looking at a small bald patch on the boy's head in the morning light",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "По страховке за неделю",
+          "image": "a doctor's office, a calm doctor reassuring the parents",
+          "anim": "none"
+        },
+        {
+          "label": "Ждать три месяца",
+          "image": "a calendar with three months crossed off, the man checking the boy's head",
+          "anim": "none"
+        },
+        {
+          "label": "Врач из чата по видео",
+          "image": "a video call with a doctor, the man holding a phone near the boy's head",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_kid_languages",
+      "image": "the boy in pajamas in bed asking for his hat, the man sitting on the edge",
+      "anim": "stars",
+      "choices": [
+        {
+          "label": "Гордиться",
+          "image": "the man telling friends on the phone with a proud face",
+          "anim": "none"
+        },
+        {
+          "label": "Читать ему по-русски",
+          "image": "the man reading a russian fairy tale book at bedtime",
+          "anim": "none"
+        },
+        {
+          "label": "Записать в заметки",
+          "image": "a phone note with a growing list of the boy's funny phrases",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_school_bilingual",
+      "image": "the woman at night looking at a bilingual school website, the man beside her",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Когда-нибудь»",
+          "image": "the school website tab still open months later",
+          "anim": "none"
+        },
+        {
+          "label": "Посчитать, сколько нужно",
+          "image": "a spreadsheet titled with question marks on the laptop",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить про скидки",
+          "image": "an email reply from the school on the screen, the couple laughing",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_legal",
+      "image": "a portuguese law office with folders, a lawyer explaining residence permit articles to the couple",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Довериться юристам",
+          "image": "the man reading a long list of requirements",
+          "anim": "none"
+        },
+        {
+          "label": "Податься самому, как жена",
+          "image": "the man alone at home with a mountain of forms, then calling the lawyers",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить в чате, кто как",
+          "image": "a phone chat with many recommendations",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_sef_slots",
+      "image": "the couple at two laptops refreshing an appointment page, a clock showing the minute slots appear",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ловить до победы",
+          "image": "the couple exhausted at dawn, still refreshing",
+          "anim": "none"
+        },
+        {
+          "label": "Сдаться и платить",
+          "image": "the man paying online for an appointment",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить друзей ловить",
+          "image": "friends' messages popping up on the phone trying to help",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_sef_paid",
+      "image": "a map of portugal with three pins: santarém, porto, viseu",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ехать по всей стране",
+          "image": "three government office windows, three sets of fingerprints, the boy serious at the camera",
+          "anim": "none"
+        },
+        {
+          "label": "Составить маршрут",
+          "image": "a neat travel spreadsheet of dates and trains",
+          "anim": "none"
+        },
+        {
+          "label": "Взять сына в Порту",
+          "image": "father and son on a train and then on the iron bridge in porto",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_card_son",
+      "image": "a small residence card with the boy's serious face lying on a ctt envelope",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сфотографировать",
+          "image": "a phone photo of the card being sent to grandmother",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_card_wife",
+      "image": "the woman holding her residence card with two fingers like a long-awaited ticket",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«А моя?»",
+          "image": "the woman patting the man on the shoulder, laughing",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_sef_renamed",
+      "image": "an old sef sign being replaced by a new aima sign over the same long queue",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ждать",
+          "image": "the man waiting, scrolling chat messages about the queue",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить узнать",
+          "image": "the man listening to hold music on the phone",
+          "anim": "none"
+        },
+        {
+          "label": "Книга жалоб",
+          "image": "the man writing in a complaint book at a counter",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_parcel_offer",
+      "image": "a video call with the mother showing a parcel she just sent",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Спасибо, мам!»",
+          "image": "the mother smiling on screen, the man smiling with a hint of worry",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "ctt_notice",
+      "image": "a ctt post office letter about a parcel held at customs",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Задекларировать сейчас",
+          "image": "a customs form on a laptop with every value set to zero",
+          "anim": "none"
+        },
+        {
+          "label": "Потом разберусь",
+          "image": "the letter put aside under a pile of papers",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "ctt_reminder",
+      "image": "the man counting days on a calendar, a slow ctt website loading",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Задекларировать",
+          "image": "the man submitting the declaration at the last moment",
+          "anim": "none"
+        },
+        {
+          "label": "Amanhã",
+          "image": "the man closing the laptop and saying 'tomorrow'",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "parcel_returned",
+      "image": "a video call: the mother holding a returned parcel covered in stickers",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Мам, в следующий раз разберусь»",
+          "image": "the man promising on the call, the mother waving it off",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "parcel_arrives",
+      "image": "an opened parcel on the table: wool socks, a chocolate bar, picture books, a handwritten note",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Съесть дольку «Алёнки»",
+          "image": "the man breaking off a piece of the chocolate, the family around",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_mold",
+      "image": "a black mold spot in the corner of an old portuguese flat, the landlord shrugging",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить средство",
+          "image": "the man spraying the corner with a cleaner",
+          "anim": "none"
+        },
+        {
+          "label": "Назвать её Жозе",
+          "image": "the boy waving good morning to the mold in the corner",
+          "anim": "none"
+        },
+        {
+          "label": "Открыть окна настежь",
+          "image": "all the windows wide open, curtains blowing in the cold wind",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_cold",
+      "image": "the coldest flat: the family in jackets indoors, breath visible, old leaky windows",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить обогреватель",
+          "image": "the family huddled around a tiny heater",
+          "anim": "none"
+        },
+        {
+          "label": "Терпеть",
+          "image": "the man in three pairs of socks texting his mother 'all good'",
+          "anim": "none"
+        },
+        {
+          "label": "Спать втроём",
+          "image": "three people and a plush cat under two blankets on one bed",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_electricity",
+      "image": "an electricity bill on the table, the man staring at it",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Оплатить",
+          "image": "the man paying the bill on his phone with a sigh",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_stone",
+      "image": "on the wide sand beach the boy holding the batumi stone up to the ocean",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "«Бросай»",
+          "image": "the stone flying over the atlantic waves, the boy waving after it",
+          "anim": "sea"
+        },
+        {
+          "label": "«Давай оставим»",
+          "image": "the stone placed on a shelf next to the grey plush cat",
+          "anim": "none"
+        },
+        {
+          "label": "«Брось ракушку вместо»",
+          "image": "the boy throwing a shell into the ocean, the stone still in his pocket",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "fig_stones",
+      "image": "the boy searching the sand for stones, finding shells and a cork",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Искать вместе",
+          "image": "father and son crouching on the sand together searching",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
+      "id": "fig_pastel",
+      "image": "a portuguese pastelaria counter with warm pastéis de nata and cinnamon, the man eating one standing",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Ещё по одному",
+          "image": "two more pastries on the counter, the man and boy grinning",
+          "anim": "steam"
+        },
+        {
+          "label": "Хватит",
+          "image": "the man and boy walking away from the pastelaria, glancing back",
+          "anim": "none"
+        },
+        {
+          "label": "Коробку домой",
+          "image": "a box of six pastries in the car, two already gone",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_obrigado",
+      "image": "a supermarket checkout, the cashier asking something, the man and boy smiling the same confused smile",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Записаться на курсы",
+          "image": "a portuguese class in the evening, the man at a desk among other immigrants",
+          "anim": "none"
+        },
+        {
+          "label": "Учить по приложению",
+          "image": "a language app owl on the phone screen looking disappointed",
+          "anim": "none"
+        },
+        {
+          "label": "Улыбнуться и кивнуть",
+          "image": "the cashier packing a bag herself, the man nodding",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_chat",
+      "image": "a phone chat 'russians in figueira' with eighty members, the man scrolling",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Читать всё",
+          "image": "the man reading endless messages late at night",
+          "anim": "none"
+        },
+        {
+          "label": "Пойти на площадку",
+          "image": "a sunny playground, parents chatting, the boy making a friend on the slide",
+          "anim": "none"
+        },
+        {
+          "label": "Выйти из чата",
+          "image": "the phone with the chat muted on the table",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_utente",
+      "image": "a portuguese parish office, the man getting a residence certificate stamped",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Получить utente",
+          "image": "a health centre card being handed over",
+          "anim": "none"
+        },
+        {
+          "label": "Аптечка из Петербурга",
+          "image": "the woman finding ear drops in the old first aid pouch",
+          "anim": "none"
+        },
+        {
+          "label": "Частная клиника",
+          "image": "a private clinic doctor examining the boy's ear",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_colleagues",
+      "image": "a warm portuguese living room, two families of the wife's colleagues, children disappearing into another room",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Пойти с тортом",
+          "image": "adults laughing at a table with a cake, children building a pillow fort",
+          "anim": "lights"
+        },
+        {
+          "label": "Сослаться на усталость",
+          "image": "the man alone in a silent flat in the evening",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать их к себе",
+          "image": "the two families in sweaters squeezed into the old cold flat, laughing",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_amanha",
+      "image": "the flat suddenly dark in the middle of a video call, the man frozen at the laptop",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ждать",
+          "image": "the man working in a cafe at the only socket",
+          "anim": "none"
+        },
+        {
+          "label": "Ехать к ним в офис",
+          "image": "a utility office clerk sympathetically saying 'amanhã'",
+          "anim": "none"
+        },
+        {
+          "label": "Зажечь свечи",
+          "image": "the family at a candlelit table, the boy delighted",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "fig_mom_birthday",
+      "image": "a finanças queue, the man holding ticket a148, the board showing a62",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Позвонить из очереди",
+          "image": "the man laughing into his phone in the queue",
+          "anim": "none"
+        },
+        {
+          "label": "Пусть внук поздравит вечером",
+          "image": "the boy singing happy birthday into a phone in the evening",
+          "anim": "none"
+        },
+        {
+          "label": "Записать видео от всех",
+          "image": "the family recording a video with a cake and a drawing",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "fig_sardines",
+      "image": "são joão festival in figueira: sardines grilling, music, strings of lights, people bopping each other with plastic hammers",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Влиться",
+          "image": "the family in the crowd with plastic hammers, laughing strangers",
+          "anim": "confetti"
+        },
+        {
+          "label": "Посмотреть с балкона",
+          "image": "the couple watching the festival from a balcony, smoke and lights below",
+          "anim": "lights"
+        },
+        {
+          "label": "Пожарить сардины дома",
+          "image": "the man grilling sardines on the balcony, neighbours waving",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "fig_ocean",
+      "image": "the man sitting alone on wet sand facing the huge atlantic",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Посидеть ещё",
+          "image": "the man still sitting as the sun sets over the ocean",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "fig_syrok",
+      "image": "a 'world foods' supermarket shelf with a russian curd snack priced 4.99",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить два",
+          "image": "the boy tasting the snack with a 'meh' face, the man finishing both",
+          "anim": "none"
+        },
+        {
+          "label": "Не покупать",
+          "image": "the man walking away from the shelf and coming back",
+          "anim": "none"
+        },
+        {
+          "label": "Сфотографировать маме",
+          "image": "a phone photo of the price tag sent to grandmother",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_surf",
+      "image": "a surf school on figueira beach, wetsuits and boards in the sand, big waves",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Записаться",
+          "image": "the man standing on a surfboard for two seconds before falling",
+          "anim": "sea"
+        },
+        {
+          "label": "Смотреть с берега",
+          "image": "father and son watching surfers from the sand",
+          "anim": "sea"
+        },
+        {
+          "label": "Купить доску с рук",
+          "image": "the man carrying a dented second-hand surfboard home",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
+      "id": "fig_mom_call",
+      "image": "a video call: the boy showing grandmother the ocean, the kindergarten and the mold in the corner",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Тепло, мам»",
+          "image": "the man angling the phone camera away from the moldy corner",
+          "anim": "none"
+        },
+        {
+          "label": "Показать океан",
+          "image": "the man on the promenade showing the atlantic on the phone",
+          "anim": "sea"
+        },
+        {
+          "label": "Позвать маму в гости",
+          "image": "the grandmother on screen nodding 'in summer'",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_low_nerves",
+      "image": "3 am, the man awake staring at the ceiling, document icons floating instead of sheep",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Записаться к психологу",
+          "image": "a video session with a psychologist",
+          "anim": "none"
+        },
+        {
+          "label": "Разбудить жену",
+          "image": "the couple with tea at the kitchen table at dawn",
+          "anim": "steam"
+        },
+        {
+          "label": "Пойти к океану ночью",
+          "image": "the man alone by the night ocean",
+          "anim": "stars"
+        }
+      ]
+    },
+    {
+      "id": "fig_low_money",
+      "image": "a low balance on the phone, the man checking again",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять фриланс",
+          "image": "the man building a website for a surf school, a surfboard leaning on the wall",
+          "anim": "none"
+        },
+        {
+          "label": "Продать что-нибудь",
+          "image": "headphones and a bicycle being sold to a stranger",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить у мамы",
+          "image": "money transfer notifications from mother",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_urgencia",
+      "image": "a portuguese hospital emergency room at night, the boy feverish in his mother's arms",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Жена — первой ночью",
+          "image": "the woman on a narrow folding bed by the boy's hospital bed, a monitor blinking",
+          "anim": "lights"
+        },
+        {
+          "label": "Остаться самому",
+          "image": "the man awake by the hospital bed counting drops in the drip",
+          "anim": "lights"
+        },
+        {
+          "label": "Меняться днём",
+          "image": "the couple handing over at the hospital door with a taxi waiting",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_friends",
+      "image": "a lakeside picnic area among pine trees, barbecue grills smoking, families from the playground, kids in a pack",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Остаться до темноты",
+          "image": "the group by the lake after dark, embers glowing",
+          "anim": "stars"
+        },
+        {
+          "label": "Уйти пораньше",
+          "image": "the family leaving the picnic early, the boy looking back",
+          "anim": "none"
+        },
+        {
+          "label": "Привезти пельмени",
+          "image": "the man opening a thermos of pelmeni, everyone crowding around",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "fig_niece_born",
+      "image": "a phone photo of a newborn baby girl, the man looking at it",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Позвонить по видео",
+          "image": "a video call: the brother holding up the baby, the boy waving",
+          "anim": "none"
+        },
+        {
+          "label": "Отправить фото сына",
+          "image": "the boy holding up a drawing of a sun for his cousin",
+          "anim": "none"
+        },
+        {
+          "label": "Пообещать приехать",
+          "image": "the man typing 'we will come' on his phone",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "fig_year_one",
+      "image": "a golden sunset over figueira beach, the family sitting on the sand",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Второй год",
+          "image": "the family walking home along the promenade at dusk",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
+      "id": "fig_day",
+      "image": "an ordinary figueira week: laptop, kindergarten, ocean wind, neighbours saying bom dia",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "the promenade with the ocean and seagulls",
+          "anim": "gulls"
+        }
+      ]
+    }
+  ]
+}

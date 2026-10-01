@@ -10,11 +10,14 @@
 import copy
 import os
 import random
+import re
 import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import content  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 GAME, CARDS = content.load()
 
@@ -232,6 +235,37 @@ class ChoiceShapeTests(unittest.TestCase):
         g = at_card('bat_wedding', 'batumi', ['new_offer'])
         tap(g, 'Позвать её танцевать')
         self.assertIn('grandma_dance', g.flags)
+
+
+class CardArtTests(unittest.TestCase):
+    """У каждой карточки и каждого выбора есть промпт на картинку."""
+
+    def setUp(self):
+        import make_card_art
+        self.art = make_card_art
+
+    def test_every_card_and_choice_has_prompt(self):
+        self.assertEqual(self.art.problems(CARDS, self.art.load_art()), [])
+
+    def test_renamed_button_is_reported(self):
+        card = {'id': 'x', 'choices': [{'label': 'новая'}]}
+        acts = [('t.json', {'cards': [{'id': 'x', 'image': 'a', 'anim': 'none',
+                                       'choices': [{'label': 'старая', 'image': 'b', 'anim': 'none'}]}]})]
+        self.assertEqual(len(self.art.problems([card], acts)), 1)
+
+    def test_missing_card_and_unknown_animation_are_reported(self):
+        cards = [{'id': 'x', 'choices': []}, {'id': 'y', 'choices': []}]
+        acts = [('t.json', {'cards': [{'id': 'x', 'image': 'a', 'anim': 'fireworks', 'choices': []}]})]
+        found = self.art.problems(cards, acts)
+        self.assertTrue(any('y' in f for f in found))
+        self.assertTrue(any('fireworks' in f for f in found))
+
+    def test_animation_names_match_the_app(self):
+        path = os.path.join(ROOT, 'Core', 'Sources', 'MigrantCore', 'ArtMotion.swift')
+        with open(path, encoding='utf-8') as handle:
+            swift = handle.read()
+        cases = re.search(r'case (none, [a-z, ]+)\n', swift).group(1).split(', ')
+        self.assertEqual(cases, self.art.ANIMATIONS)
 
 
 class StoryTests(unittest.TestCase):

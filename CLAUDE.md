@@ -34,12 +34,14 @@
 - Игра автобиографична: никаких настоящих имён, работодателей и деталей, по которым можно узнать родственников.
 - `tools/content.py` повторяет правила `GameEngine.swift`. Меняешь движок — меняй и его.
 - Новая сцена в карточке — добавь её с промптом в `docs/art.md` и пересобери бриф: `python3 tools/make_art_brief.py`.
+- Новая карточка или выбор — промпт на картинку в `art/cards/<акт>.json` (поля `image` и `anim`), затем `python3 tools/make_card_art.py`. Тест падает, если у карточки или выбора нет промпта или текст кнопки поменялся.
+- Картинки карточек — `App/Resources/Art/<карточка>.png` и `<карточка>__<номер выбора>.png`; анимацию поверх рисует код (`ArtMotion.swift`).
 - Новая реальная история — в `docs/stories.md`.
 
 ## Перед коммитом
 
 ```sh
-python3 tools/content.py --quiet && python3 tools/test_content.py && python3 tools/lint.py
+python3 tools/content.py --quiet && python3 tools/make_card_art.py --check && python3 tools/test_content.py && python3 tools/lint.py
 ```
 
 ## Прочее

@@ -1,0 +1,803 @@
+{
+  "act": "oeiras",
+  "cards": [
+    {
+      "id": "oei_renewal",
+      "image": "an aima website showing no appointments, the man on hold on the phone",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Звонить на горячую линию",
+          "image": "the man with a phone on speaker playing hold music, the boy humming along",
+          "anim": "none"
+        },
+        {
+          "label": "Нанять юриста",
+          "image": "a lawyer saying 'we'll do it', a new car keychain on his desk",
+          "anim": "none"
+        },
+        {
+          "label": "Написать в книгу жалоб",
+          "image": "the man writing in a complaint book at a counter",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_arrive",
+      "image": "oeiras: palm trees, white houses, the ocean, the family arriving with suitcases in summer",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Распаковать чемоданы",
+          "image": "everything unpacked: the batumi stone and the grey plush cat on a shelf",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_school_fee",
+      "image": "a school invoice email on the phone, the boy chatting in english in the background",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Оплатить",
+          "image": "the man paying on his phone with a sigh",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_school",
+      "image": "a september traffic jam on the road to lisbon, then a bilingual school yard with kids from many countries",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Обнять",
+          "image": "the man hugging the boy after his first school day",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_sporting",
+      "image": "school kids split into red benfica and green-white sporting, the boy in a sporting football kit",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Карточки болельщиков",
+          "image": "father and son with green-white scarves in the roaring alvalade stadium",
+          "anim": "confetti"
+        },
+        {
+          "label": "Сначала на его игру",
+          "image": "a saturday morning youth football match, the boy running the wrong way",
+          "anim": "none"
+        },
+        {
+          "label": "«Мы за Фигейру»",
+          "image": "the boy looking at his father like a traitor, a sporting shirt on the chair",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_sporting_match",
+      "image": "a sporting match at night, father and son singing, the stadium lights",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "«В следующий раз!»",
+          "image": "forty thousand people sighing after a last-minute goal against",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "oei_accident",
+      "image": "the old peugeot with a crumpled bonnet on a wet road in oeiras, the man alone beside it",
+      "anim": "rain",
+      "choices": [
+        {
+          "label": "Продать как есть",
+          "image": "the man touching the steering wheel of the peugeot for the last time, a buyer counting euros",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_bmw",
+      "image": "a car dealership, a white bmw 320d touring under spotlights, a salesman smiling",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Взять BMW в кредит",
+          "image": "the man signing a loan contract, the boy hugging the car",
+          "anim": "lights"
+        },
+        {
+          "label": "Взять что-то попроще",
+          "image": "the man walking out of the showroom with bmw keys after ten minutes",
+          "anim": "lights"
+        },
+        {
+          "label": "Подержанный универсал",
+          "image": "a plain used estate car parked in the street, the boy disappointed",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_pregnancy",
+      "image": "the woman coming out of the bathroom with a pregnancy test, her face both happy and scared",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Обрадоваться",
+          "image": "the man laughing and then counting money on his fingers, the boy demanding a brother",
+          "anim": "none"
+        },
+        {
+          "label": "Сесть на пол",
+          "image": "the couple sitting on the floor together laughing and crying",
+          "anim": "none"
+        },
+        {
+          "label": "Сразу позвонить маме",
+          "image": "the man on the phone, the woman making a horrified face",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_law_change",
+      "image": "a phone chat with news about a citizenship law change, the man reading in the dark",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Перечитать закон",
+          "image": "the man reading a law on the laptop three times",
+          "anim": "none"
+        },
+        {
+          "label": "Не говорить жене",
+          "image": "the woman asking 'did you know?', both silent at the table",
+          "anim": "none"
+        },
+        {
+          "label": "Подписать петицию",
+          "image": "an online petition with many signatures",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_daughter_born",
+      "image": "a maternity ward in july, a newborn girl asleep, the boy holding her carefully",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сфотографировать их вдвоём",
+          "image": "a photo of brother and sister on a shelf next to the batumi stone and the grey cat",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить маме",
+          "image": "a video call with the grandmother crying, the screen freezing",
+          "anim": "none"
+        },
+        {
+          "label": "Подержать её первым",
+          "image": "a midwife placing the baby in the man's arms, the baby looking at him",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_daughter_docs",
+      "image": "the man on hold with aima, holding the baby, hold music",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Звонить каждый день",
+          "image": "the baby asleep on the man's chest to the hold music",
+          "anim": "none"
+        },
+        {
+          "label": "Юрист",
+          "image": "the same lawyer from figueira welcoming them warmly",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить в чате",
+          "image": "a chat message with a list of documents",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_daughter_aima",
+      "image": "an aima office, a clerk trying to photograph a nine-month-old baby looking at keys",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Потрясти ключами",
+          "image": "keys jingling above the camera, the baby staring seriously into the lens",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_legoland",
+      "image": "copenhagen harbour with colourful houses, father and son with backpacks",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Лететь",
+          "image": "father and son on a roller coaster at legoland, hands up",
+          "anim": "confetti"
+        },
+        {
+          "label": "Отложить до лета",
+          "image": "the boy crossing days off a calendar",
+          "anim": "none"
+        },
+        {
+          "label": "Взять и жену",
+          "image": "the whole family in a rented citroën on a danish road",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_father",
+      "image": "8 am, the man in the kitchen with the phone, his mother's name on the screen",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Лететь",
+          "image": "the woman looking for tickets while the man sits at the kitchen table, the boy bringing him the grey plush cat",
+          "anim": "none"
+        },
+        {
+          "label": "Вспомнить тот звонок",
+          "image": "the man remembering: a row of old garages under snow",
+          "anim": "snow"
+        }
+      ]
+    },
+    {
+      "id": "oei_father_trip",
+      "image": "the brothers driving north from saint petersburg to karelia, snow at the end of may along the road",
+      "anim": "snow",
+      "choices": [
+        {
+          "label": "Разобрать его квартиру",
+          "image": "an old flat in monchegorsk, the brothers sorting things in silence, a nike sweatshirt and a stopped wristwatch on the table",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
+      "id": "oei_father_back",
+      "image": "a plane window over clouds, the man wearing his father's sweatshirt",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Смотреть в окно",
+          "image": "the arrivals hall, the woman and the boy holding a handmade sign 'papa' with a backwards letter",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_ten_years",
+      "image": "a chat message: citizenship now ten years instead of five, a calendar reminder on the phone",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Передвинуть напоминание",
+          "image": "the man dragging a calendar reminder five years ahead",
+          "anim": "none"
+        },
+        {
+          "label": "Учить A2 дальше",
+          "image": "the man studying portuguese verbs at night",
+          "anim": "none"
+        },
+        {
+          "label": "Посчитать для дочки",
+          "image": "the man calculating on paper, a baby asleep beside him",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_witnesses",
+      "image": "an oeiras apartment stairwell, the man looking at neighbours' doors he doesn't know",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Постучать к соседке снизу",
+          "image": "an elderly neighbour opening her door and handing the boy a cookie",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать друзей",
+          "image": "friends from lisbon signing a paper at a parish office counter",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить консьержа",
+          "image": "the man talking to a concierge, a box of pastries on the counter",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_prices",
+      "image": "a coffee cup and a price tag in an oeiras café",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Заказать кофе",
+          "image": "the man drinking espresso at the counter",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "oei_old_friends",
+      "image": "friends from figueira visiting the oeiras beach, kids playing an old game",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Сидеть до ночи",
+          "image": "the group on the beach at night, still talking",
+          "anim": "stars"
+        }
+      ]
+    },
+    {
+      "id": "oei_mom_granddaughter",
+      "image": "a video call: the grandmother on screen, the baby trying to eat the phone",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить маме билеты",
+          "image": "the man buying plane tickets on his laptop during the call",
+          "anim": "none"
+        },
+        {
+          "label": "Поднести дочку ближе",
+          "image": "the baby pressing her cheek to the phone screen, the grandmother leaning in",
+          "anim": "none"
+        },
+        {
+          "label": "Обещать: скоро",
+          "image": "the man saying 'soon' into the phone",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_mortgage_bank",
+      "image": "a bank manager asking for documents, the man with a folder of contracts",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Подать заявку",
+          "image": "an email of pre-approval on the phone, the man rereading it",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_viewings",
+      "image": "lisbon apartment viewings: a flat with no kitchen, a flat with a view of a wall, a flat above a bar",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Смотреть дальше",
+          "image": "the boy asking the estate agent about deposits",
+          "anim": "none"
+        },
+        {
+          "label": "Взять с потенциалом",
+          "image": "the couple staring at the empty space where a kitchen should be",
+          "anim": "none"
+        },
+        {
+          "label": "Смотреть в Оэйраше",
+          "image": "the family viewing a flat near the school in oeiras",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_apart",
+      "image": "the woman sitting on the edge of the sofa at night talking quietly, children asleep",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Поговорить по-настоящему",
+          "image": "the couple talking at the kitchen table until 3 am",
+          "anim": "none"
+        },
+        {
+          "label": "Разъехаться",
+          "image": "two sets of keys on the table",
+          "anim": "none"
+        },
+        {
+          "label": "Найти психолога для двоих",
+          "image": "the couple on a video session with a therapist",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_business",
+      "image": "a playground, another dad pitching an idea to the man while the kids climb a slide",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Рискнуть",
+          "image": "the man working on a laptop on a playground bench in the evening",
+          "anim": "none"
+        },
+        {
+          "label": "Не сейчас",
+          "image": "the two dads shaking hands, nothing decided",
+          "anim": "none"
+        },
+        {
+          "label": "Помочь советом",
+          "image": "a weekly video call, the man criticising an app interface",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_business_grows",
+      "image": "a phone showing payment notifications, the man staring in disbelief",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Не верить",
+          "image": "the man checking the bank app three times, smiling",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "oei_mom_again",
+      "image": "lisbon arrivals hall, the grandmother with a suitcase, the boy running toward her",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Встретить всей семьёй",
+          "image": "the boy hugging his grandmother, the suitcase nearly falling",
+          "anim": "none"
+        },
+        {
+          "label": "Отпроситься с работы на неделю",
+          "image": "the man driving his mother along the oeiras coast",
+          "anim": "gulls"
+        },
+        {
+          "label": "Пусть отдохнёт от нас",
+          "image": "the grandmother alone with a coffee at a pastelaria counter",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "oei_inlaws_again",
+      "image": "the father-in-law asking for car keys at the door, the grandmother taking the children",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Отдать тестю ключи",
+          "image": "the father-in-law driving through sintra hills",
+          "anim": "none"
+        },
+        {
+          "label": "Сходить вдвоём в кино",
+          "image": "the couple in a cinema holding hands",
+          "anim": "none"
+        },
+        {
+          "label": "Готовить всем вместе",
+          "image": "everyone making pelmeni together, flour everywhere",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_inlaws_granddaughter",
+      "image": "a week before the birth, the wife's parents unpacking in the oeiras flat, the father-in-law studying the coffee machine",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Показать, где что лежит",
+          "image": "a list on the fridge, the grandmother waving it away",
+          "anim": "none"
+        },
+        {
+          "label": "Собрать сумку в роддом",
+          "image": "four people packing a hospital bag, a chocolate bar going in and out",
+          "anim": "none"
+        },
+        {
+          "label": "Отправить фото твоей маме",
+          "image": "a photo of the grandparents with the boy on the sofa, waiting",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_mom_paris",
+      "image": "paris on a bridge over the seine, the man and his mother arm in arm, the eiffel tower in the distance",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "К Эйфелевой башне",
+          "image": "the mother looking up at the eiffel tower",
+          "anim": "none"
+        },
+        {
+          "label": "Просто гулять",
+          "image": "the two walking along the seine past bookstalls",
+          "anim": "none"
+        },
+        {
+          "label": "Сидеть в кафе на углу",
+          "image": "mother and son at a small paris café corner table",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "oei_mom_spain",
+      "image": "a car on a coastal road in southern spain, white hill towns, the grandmother in a sun hat in the back seat",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Ехать медленно",
+          "image": "a white andalusian village street, the grandmother photographing everything",
+          "anim": "none"
+        },
+        {
+          "label": "Сразу к морю",
+          "image": "the grandmother standing knee-deep in the mediterranean",
+          "anim": "sea"
+        },
+        {
+          "label": "Научить её паэлье",
+          "image": "a big paella pan on a terrace table",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "oei_low_nerves",
+      "image": "the man falling asleep standing in a pharmacy queue",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Поменяться ночами с женой",
+          "image": "the man sleeping peacefully in daylight",
+          "anim": "none"
+        },
+        {
+          "label": "Психолог",
+          "image": "a video session with the same psychologist",
+          "anim": "none"
+        },
+        {
+          "label": "Бегать у океана",
+          "image": "the man running along the oeiras promenade at 6 am",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "oei_low_money",
+      "image": "school, rent, car loan and nappies bills spread on a table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять подработку",
+          "image": "the man working at night with a baby monitor beside the laptop",
+          "anim": "none"
+        },
+        {
+          "label": "Продать BMW",
+          "image": "the bmw being driven away by a buyer",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить отсрочку в школе",
+          "image": "a school office, the man signing a payment plan",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_final",
+      "image": "a lisbon flat with keys on the floor: third floor, small kitchen, a slice of the river tagus in the window",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Подписать",
+          "image": "a pen over a mortgage contract",
+          "anim": "none"
+        },
+        {
+          "label": "Купить без ипотеки",
+          "image": "the man on the phone saying no loan needed",
+          "anim": "none"
+        },
+        {
+          "label": "Вернуться в Петербург",
+          "image": "the man looking at the contract, then calling his mother",
+          "anim": "none"
+        },
+        {
+          "label": "Принять оффер в Амстердаме",
+          "image": "an offer letter from amsterdam open on the laptop",
+          "anim": "none"
+        },
+        {
+          "label": "Принять оффер из Штатов",
+          "image": "an offer letter from a us startup, the ocean in the window",
+          "anim": "sea"
+        },
+        {
+          "label": "Не подписывать. Пока",
+          "image": "the man on the phone saying 'não', the wife nodding",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "final_museum",
+      "image": "an empty new flat in the evening: the grandmother's banknote, the batumi stone, the photo album and the grey plush cat laid out in a row on the floor",
+      "anim": "dust",
+      "choices": [
+        {
+          "label": "Поставить коробку на полку",
+          "image": "a box placed first on an empty shelf",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
+      "id": "final_two_homes",
+      "image": "an empty flat, the batumi stone and the grey cat on the floor, the grandmother on a video call looking at every corner",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Включить свет",
+          "image": "the light switched on in the empty flat, warm glow",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "final_ours",
+      "image": "a neighbour bringing a pie to the empty flat, the baby asleep on a sporting scarf",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Включить свет",
+          "image": "the light switched on, the family and the neighbour laughing",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "final_thirty",
+      "image": "the family of four sitting on the floor of an empty flat eating pizza from a box",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Включить свет",
+          "image": "the light switched on over the pizza box",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "aima_call_again",
+      "image": "the man on hold with aima, counting attempts on a sticky note",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ждать до конца",
+          "image": "a real voice finally answering at minute 43",
+          "anim": "none"
+        },
+        {
+          "label": "Сдаться и нанять юриста",
+          "image": "the man paying a lawyer",
+          "anim": "none"
+        },
+        {
+          "label": "Поехать без записи",
+          "image": "a guard at the aima door handing the man a phone number",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "aima_slot",
+      "image": "an aima appointment confirmation: three people, 8:40 am, far from oeiras",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Ехать на BMW",
+          "image": "the white bmw on a night highway, the boy asleep in the back",
+          "anim": "stars"
+        },
+        {
+          "label": "Ехать автобусом",
+          "image": "the family on a night bus with coffee from a gas station",
+          "anim": "stars"
+        },
+        {
+          "label": "Попросить поближе",
+          "image": "the man on the phone asking for a closer office",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "biometrics_lost",
+      "image": "an aima screen: biometric data not found",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Записаться повторно",
+          "image": "the man starting over with the hold music",
+          "anim": "none"
+        },
+        {
+          "label": "Жалоба капслоком",
+          "image": "an angry email being typed in three languages",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить юристу",
+          "image": "the man calling the lawyer who sighs",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "biometrics_found",
+      "image": "an email: your data has been found, we apologise",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сфотографировать",
+          "image": "the man taking a screenshot of the apology",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "oei_day",
+      "image": "an ordinary oeiras week: school, work, the highway to lisbon along the ocean",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "the man stuck in traffic grumbling like a local",
+          "anim": "none"
+        }
+      ]
+    }
+  ]
+}

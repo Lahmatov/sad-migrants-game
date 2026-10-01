@@ -1,0 +1,979 @@
+{
+  "act": "batumi",
+  "cards": [
+    {
+      "id": "bat_flat",
+      "image": "a batumi flat with armenian-style renovation: gilded moulding, a huge chandelier, the black sea through the balcony door, a toddler waving at the sea from the balcony",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Распаковать всё",
+          "image": "toy cars lined up on the windowsill, the grey plush cat on the bed, laptops on a gold-legged table",
+          "anim": "sea"
+        },
+        {
+          "label": "Сначала к морю",
+          "image": "the family walking onto a pebble beach still carrying a backpack, the toddler throwing his first stone into the sea",
+          "anim": "sea"
+        },
+        {
+          "label": "Сначала поспать",
+          "image": "the family asleep in their clothes on a big bed with golden legs, sea light on the ceiling",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_lift",
+      "image": "a georgian apartment block lobby with a coin-operated elevator, the man holding a toddler and shopping bags",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Искать монетку",
+          "image": "the man turning out his pockets: coins, a receipt, a toy car; a neighbour tapping her elevator card",
+          "anim": "none"
+        },
+        {
+          "label": "Пешком",
+          "image": "the man climbing an endless staircase with a toddler on one arm and bags in the other",
+          "anim": "none"
+        },
+        {
+          "label": "Сесть на ступеньку и ждать",
+          "image": "the man and toddler sitting on a step, a smiling neighbour coming down the stairs",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_neighbor_price",
+      "image": "inside an old slow elevator, a chatty neighbour in a housecoat talking to the man",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Зато у нас море»",
+          "image": "the man on his balcony at sunset looking at the sea, a rent invoice in his hand",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_month_both",
+      "image": "a phone banking app on a balcony railing, two salaries in, rent out, the sea behind",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Отложить",
+          "image": "a small jar of saved coins on the gold-legged table, sea in the window",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_month_me",
+      "image": "the woman at night scrolling job listings on a laptop with a serious face, the man cooking soup",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Затянуть пояса",
+          "image": "a belt being tightened symbolically, a small grocery bag on the kitchen table",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_month_wife",
+      "image": "the man cooking soup with a toddler on his hip, cover letters open on a laptop",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Держаться",
+          "image": "the man typing a cover letter late at night, a pot cooling on the stove",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_month_none",
+      "image": "an empty wallet next to a rent invoice on a gilded table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Платить из накоплений",
+          "image": "a savings account balance dropping on a phone screen, the man rubbing his eyes",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_my_bank",
+      "image": "a small bank office in batumi, a smiling clerk handing a bank card across the counter",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Надолго»",
+          "image": "the man holding his new georgian bank card like a small anchor",
+          "anim": "none"
+        },
+        {
+          "label": "«Пока не знаем»",
+          "image": "the clerk shrugging with a knowing smile, a queue of people like him behind",
+          "anim": "none"
+        },
+        {
+          "label": "Открыть счёт и жене",
+          "image": "two bank cards on the counter side by side, the woman taking hers",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_car_trip",
+      "image": "the man searching the flat for his bank card, drawers open, a toddler watching very innocently",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Перерыть коробки на выброс",
+          "image": "the man digging through cardboard boxes by the door, finding the card in the third one",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить сына",
+          "image": "the toddler silently leading the man by the hand to a pile of boxes",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить жене",
+          "image": "the woman on a video call pointing calmly toward the boxes without looking up",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_car",
+      "image": "a georgian used car market under the sun, rows of cars, a red volkswagen jetta gli shining among dusty suvs",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять то, что хочется",
+          "image": "the man proudly standing by a red jetta gli, his friend shaking his head, the woman looking at the low clearance",
+          "anim": "none"
+        },
+        {
+          "label": "Взять подешевле",
+          "image": "an old tall suv that does not start on the first try, the friend nodding approval",
+          "anim": "none"
+        },
+        {
+          "label": "Обойдёмся такси",
+          "image": "the man leaving the car market on foot with cash in his pocket, waving down a taxi",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_car_police",
+      "image": "a georgian police office, a laptop on the desk with a skype call to another police station where the seller waves",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Помахать продавцу",
+          "image": "the man waving at the seller on the laptop screen, a policeman stamping a paper",
+          "anim": "none"
+        },
+        {
+          "label": "Держать документы наготове",
+          "image": "the man clutching a thick folder of documents that nobody asks for",
+          "anim": "none"
+        },
+        {
+          "label": "Пошутить в камеру",
+          "image": "two policemen laughing at the skype call, the stamp coming down",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_car_repair",
+      "image": "a small garage in batumi, an old mechanic listening to an engine like a doctor",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Чинить",
+          "image": "the car driving out of the garage, a crate of mandarins on the back seat",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_stones",
+      "image": "a pebble beach in batumi, the toddler throwing stones into the black sea, the man with a phone",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Кидать вместе",
+          "image": "father and son throwing stones together, splashes on the grey-green sea",
+          "anim": "sea"
+        },
+        {
+          "label": "Научить «блинчики»",
+          "image": "the man skipping a flat stone across the water, the toddler clapping",
+          "anim": "sea"
+        },
+        {
+          "label": "Собрать самые красивые",
+          "image": "small hands holding a pile of white striped pebbles",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_stones_again",
+      "image": "evening pebble beach, the boy searching for the perfect flat stone, the sea calm",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Ещё один камень",
+          "image": "a stone in mid-air over the sunset sea",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_bar",
+      "image": "sami ludi bar at night in batumi, a table of friends with beer, warm lights",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Пойти",
+          "image": "the man walking home at 1 am along the neon boulevard, happy and a bit sad",
+          "anim": "lights"
+        },
+        {
+          "label": "Остаться дома",
+          "image": "the couple on the sofa watching a series, the man's phone with an unread invitation",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать всех к себе",
+          "image": "friends with beer in the gilded living room, the toddler asleep in the next room",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "bat_rain",
+      "image": "batumi in heavy rain, the boulevard empty, the toddler at home drawing blue scribbles by the window",
+      "anim": "rain",
+      "choices": [
+        {
+          "label": "Гулять под дождём",
+          "image": "father and son in rubber boots jumping in puddles on the empty boulevard",
+          "anim": "rain"
+        },
+        {
+          "label": "Сидеть дома",
+          "image": "a messy living room with puzzles and cartoons, rain streaming down the balcony door",
+          "anim": "rain"
+        },
+        {
+          "label": "Уехать в Тбилиси",
+          "image": "a sunny tbilisi courtyard, the toddler running around a friend's flat",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_snow",
+      "image": "april snow on palm trees and mandarin trees in batumi, cars by the sea covered in white",
+      "anim": "snow",
+      "choices": [
+        {
+          "label": "Показать сыну снег",
+          "image": "the toddler touching snow on the balcony railing, looking up puzzled",
+          "anim": "snow"
+        },
+        {
+          "label": "Написать маме",
+          "image": "a phone chat: 'we have snow' answered with 'us too', snowy palms in the window",
+          "anim": "snow"
+        },
+        {
+          "label": "Лепить снеговика",
+          "image": "a tiny wet snowman with a mandarin nose on the beach",
+          "anim": "snow"
+        }
+      ]
+    },
+    {
+      "id": "bat_adjaruli",
+      "image": "an adjarian khachapuri boat with cheese, butter and egg on a cafe table, a local stirring it to show how",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Доесть за сыном",
+          "image": "the man finishing the khachapuri while the toddler holds only the crust",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_khinkali",
+      "image": "a georgian restaurant table with a plate of big khinkali and a plate of tiny khinkali",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Заказать по правилу",
+          "image": "the waiter bringing two plates, big and small, without asking",
+          "anim": "steam"
+        },
+        {
+          "label": "Украсть маленький",
+          "image": "the toddler staring silently at the man who holds a stolen tiny khinkali",
+          "anim": "none"
+        },
+        {
+          "label": "Научить есть руками",
+          "image": "the toddler covered in broth holding a khinkali by its tail, the waiter applauding",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_kindergarten",
+      "image": "the gate of a georgian kindergarten, strict teachers in the yard, the toddler holding the man's leg",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Оставить его",
+          "image": "the man walking away and looking back from around the corner",
+          "anim": "none"
+        },
+        {
+          "label": "Посидеть с ним первый час",
+          "image": "the man sitting on a tiny chair in the classroom, a teacher giving him a look",
+          "anim": "none"
+        },
+        {
+          "label": "Сразу искать няню",
+          "image": "the man walking home with the toddler on his shoulders, a phone with nanny ads",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_kindergarten_fear",
+      "image": "the toddler holding onto the apartment door in the morning, refusing to put on his shoes",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Забрать из садика",
+          "image": "the boy laughing in the evening at home, the kindergarten bag left in the corner",
+          "anim": "none"
+        },
+        {
+          "label": "Дать ещё неделю",
+          "image": "a long week shown as a calendar, the boy quiet at the window",
+          "anim": "none"
+        },
+        {
+          "label": "Поговорить с воспитателем",
+          "image": "the man talking to a stern teacher at the kindergarten gate",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_nanny",
+      "image": "a kind nanny playing with the toddler in sand and blocks, an art class with paints",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Выдохнуть",
+          "image": "the man working calmly at the laptop, a quiet flat, sea in the window",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_ali_nino",
+      "image": "the moving metal statues of ali and nino on batumi boulevard at dusk, the toddler watching with his mouth open",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Ждать следующей встречи",
+          "image": "the statues meeting and merging, the toddler clapping",
+          "anim": "sea"
+        },
+        {
+          "label": "Увести на мороженое",
+          "image": "the man and toddler eating ice cream on a bench, the statues behind them",
+          "anim": "sea"
+        },
+        {
+          "label": "Рассказать их историю",
+          "image": "the man crouching beside the toddler, telling the story, pointing at the statues",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_persimmon",
+      "image": "two plastic bags of orange persimmons on the doorstep, smiling elderly landlords",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Есть, пока не кончится",
+          "image": "the family eating persimmons with puckered faces",
+          "anim": "none"
+        },
+        {
+          "label": "Подождать, пока дозреет",
+          "image": "persimmons ripening in a row on the balcony railing",
+          "anim": "sea"
+        },
+        {
+          "label": "Угостить соседей",
+          "image": "the man handing persimmons to neighbours on the landing",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_buckwheat",
+      "image": "a batumi supermarket shelf full of buckwheat, the man staring at it",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Сварить петербургскую",
+          "image": "a pot of buckwheat from saint petersburg steaming on the stove",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_toys",
+      "image": "a long traffic jam of forty toy cars across the gilded living room from sofa to balcony",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Достроить пробку вместе",
+          "image": "father and son on the floor adding the last toy cars to the jam",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_cold_flat",
+      "image": "a cold flat in winter, wind through the balcony door, a single air conditioner, mold in a corner",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Купить обогреватель",
+          "image": "the family huddled around a small heater",
+          "anim": "none"
+        },
+        {
+          "label": "Спать в свитерах",
+          "image": "three people asleep in sweaters on one bed under blankets",
+          "anim": "none"
+        },
+        {
+          "label": "Греться в кафе днём",
+          "image": "the man and woman working with laptops in a warm cafe, steam from cups",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_kid_sick",
+      "image": "night, a feverish toddler in bed, the man with a phone searching in a panic",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Достать аптечку жены",
+          "image": "the woman finding medicine in the big first aid pouch in the dark",
+          "anim": "none"
+        },
+        {
+          "label": "Частная клиника",
+          "image": "a private clinic at night, a kind doctor writing a prescription",
+          "anim": "none"
+        },
+        {
+          "label": "Написать в чат",
+          "image": "a phone chat at 1 am filling with replies, the man reading",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_layoff_wife",
+      "image": "the woman closing her laptop and sitting silently at the gilded table",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Мы справимся»",
+          "image": "the family walking along the boulevard at night, nobody talking",
+          "anim": "sea"
+        },
+        {
+          "label": "Сесть за её резюме",
+          "image": "the couple rewriting a cv at 2 am, two laptops and cold tea",
+          "anim": "none"
+        },
+        {
+          "label": "«Отдохни месяц»",
+          "image": "the woman reading a book on the beach while the toddler plays with stones",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_job_found_wife",
+      "image": "the woman on a video interview in german, the man and toddler hiding behind the door",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Отметить",
+          "image": "the family celebrating with adjarian khachapuri and ice cream",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "bat_vnzh_apply",
+      "image": "batumi public service hall: glass, coffee machine, electronic queue screens",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Подать самим",
+          "image": "the man at the counter with a stack of translated papers",
+          "anim": "none"
+        },
+        {
+          "label": "Через посредника",
+          "image": "a smooth fixer in sunglasses taking money and documents",
+          "anim": "none"
+        },
+        {
+          "label": "Не подавать",
+          "image": "the man walking out of the glass hall, deciding not to apply",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_vnzh_refused",
+      "image": "a phone sms on the gilded table: application refused, no reason given",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Подать снова",
+          "image": "the same clerk recognising the man at the counter and smiling sadly",
+          "anim": "none"
+        },
+        {
+          "label": "Принять",
+          "image": "the man opening a map of europe on his laptop for the first time not as a tourist",
+          "anim": "none"
+        },
+        {
+          "label": "Пойти к юристу",
+          "image": "a lawyer spreading his hands at his desk",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_portugal_idea",
+      "image": "a video call with colleagues sitting on a portuguese balcony with the atlantic ocean behind them",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Записать в заметки",
+          "image": "a phone note titled 'portugal???'",
+          "anim": "none"
+        },
+        {
+          "label": "«Хватит переездов»",
+          "image": "the couple in bed, both googling figueira da foz on two phones",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить про школы",
+          "image": "the woman taking notes during the call about schools and taxes",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_first_word",
+      "image": "the toddler looking up at his mother and saying his first word, the woman crying, the man filming with shaking hands",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Отправить видео бабушкам",
+          "image": "a video message flying to two grandmothers on their phones",
+          "anim": "none"
+        },
+        {
+          "label": "Учить «папа» быстрее",
+          "image": "the man repeating 'pa-pa' to the toddler who looks at him with pity",
+          "anim": "none"
+        },
+        {
+          "label": "Купить торт",
+          "image": "a cake with an illegible word on it, the toddler eating the first letter",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
+      "id": "bat_offer",
+      "image": "a phone with a recruiter's message on the balcony table, sea behind",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Согласиться",
+          "image": "the man typing 'yes' on the phone, smiling",
+          "anim": "none"
+        },
+        {
+          "label": "Поторговаться",
+          "image": "the man negotiating on a call, pacing on the balcony",
+          "anim": "sea"
+        },
+        {
+          "label": "Взять неделю подумать",
+          "image": "the phone face down on the table for a week, the recruiter's messages piling up",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_wedding",
+      "image": "a russian wedding hall, the brother and bride, a tiny grandmother pressing money into the man's hand",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Взять деньги, не споря",
+          "image": "the grandmother holding the man's hand all evening at the table",
+          "anim": "lights"
+        },
+        {
+          "label": "Обнять её подольше",
+          "image": "a long goodbye hug with the grandmother at the door",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать её танцевать",
+          "image": "the man slowly dancing with his tiny grandmother, everyone filming",
+          "anim": "lights"
+        }
+      ]
+    },
+    {
+      "id": "bat_moscow_office",
+      "image": "a moscow office reception, the man handing over a work laptop",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Обнять бывших коллег",
+          "image": "two colleagues walking the man to the elevator",
+          "anim": "none"
+        },
+        {
+          "label": "Отдать ноутбук и уйти",
+          "image": "a door closing behind the man, a signature on a form",
+          "anim": "none"
+        },
+        {
+          "label": "Зайти в столовую",
+          "image": "the man alone in an office canteen with a cutlet, mashed potatoes and kompot",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_brother_call",
+      "image": "a phone ringing on the balcony at night, the brother's name on the screen",
+      "anim": "stars",
+      "choices": [
+        {
+          "label": "«Конечно. Приезжай»",
+          "image": "the man saying yes into the phone, the sea dark behind him",
+          "anim": "stars"
+        }
+      ]
+    },
+    {
+      "id": "bat_brother_border",
+      "image": "a long queue of cars at a mountain border at night, people cold by the roadside, the man waiting in his car",
+      "anim": "stars",
+      "choices": [
+        {
+          "label": "Возить, пока есть место",
+          "image": "strangers asleep in the back seat of the man's car, heater on, night road",
+          "anim": "stars"
+        },
+        {
+          "label": "Ждать только брата",
+          "image": "the man in his car watching the queue, then opening the door to two cold strangers",
+          "anim": "stars"
+        },
+        {
+          "label": "Носить брату термос",
+          "image": "the man walking along the queue with a thermos and sandwiches",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "bat_brother_here",
+      "image": "the brothers and the toddler in the gilded living room in the evening, the sea dark in the window",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Говорить о детстве",
+          "image": "the brothers on the balcony talking about childhood, smiling",
+          "anim": "stars"
+        },
+        {
+          "label": "Спросить, что дальше",
+          "image": "the brother looking at the sea in silence",
+          "anim": "sea"
+        },
+        {
+          "label": "Позвать кидать камни",
+          "image": "the brother, the man and the toddler skipping stones on the beach",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_brother_leaves",
+      "image": "december on batumi boulevard, the toddler giving his uncle his best stone",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Обнять",
+          "image": "two brothers in a long hug, then walking in opposite directions",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_tourists",
+      "image": "a crowded summer beach in batumi full of loud tourists",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Заказать на грузинском",
+          "image": "the man ordering in georgian at a beach cafe, the waiter smiling",
+          "anim": "none"
+        },
+        {
+          "label": "Уйти на дальний пляж",
+          "image": "a quiet distant beach with only locals, father and son with stones",
+          "anim": "sea"
+        },
+        {
+          "label": "Подсказать им хинкальную",
+          "image": "the man pointing tourists toward a khinkali place",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_mom_call",
+      "image": "a video call: the grandmother on screen, the toddler showing her the sea from the balcony",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Позвать маму в гости",
+          "image": "the grandmother on screen saying 'where would I go', then checking the weather",
+          "anim": "none"
+        },
+        {
+          "label": "Рассказать про работу",
+          "image": "the man talking on the call, grandmother squinting 'you lost weight'",
+          "anim": "none"
+        },
+        {
+          "label": "Показать сына с камнями",
+          "image": "the toddler carrying the phone to the beach to show grandmother the pebbles",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_mom_visit",
+      "image": "the man's mother stepping onto the gilded balcony, looking at the sea in silence, a suitcase of gifts behind her",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Повести на пляж",
+          "image": "the grandmother sitting on pebbles, the grandson bringing her stones one by one",
+          "anim": "sea"
+        },
+        {
+          "label": "Накормить хачапури",
+          "image": "the grandmother tasting adjarian khachapuri with suspicion",
+          "anim": "steam"
+        },
+        {
+          "label": "Просто сидеть на балконе",
+          "image": "mother and son drinking tea on the balcony looking at the sea",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_low_nerves",
+      "image": "4 am, the man alone on the balcony staring at the dark sea",
+      "anim": "stars",
+      "choices": [
+        {
+          "label": "Разбудить жену",
+          "image": "the couple drinking tea in the kitchen at dawn",
+          "anim": "steam"
+        },
+        {
+          "label": "Записаться к психологу",
+          "image": "a video session with a psychologist, both quiet",
+          "anim": "none"
+        },
+        {
+          "label": "Пойти к морю",
+          "image": "the man throwing stones alone into the dark sea",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_low_money",
+      "image": "a phone banking app showing a low balance, the man checking it again",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять фриланс",
+          "image": "the man building a website for a georgian restaurant, a plate of food beside the laptop",
+          "anim": "none"
+        },
+        {
+          "label": "Переехать в квартиру попроще",
+          "image": "a smaller flat with a window onto a wall, the toddler searching for the sea",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить у мамы",
+          "image": "money transfer notifications on the phone, the man ashamed",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_schengen",
+      "image": "the woman holding the toddler's passport open at a visa page, turning pale",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "В Португалию",
+          "image": "plane tickets via istanbul on a laptop screen",
+          "anim": "none"
+        },
+        {
+          "label": "Открыть карту Европы",
+          "image": "a map of europe on the table, the toddler pointing at the far west edge by the ocean",
+          "anim": "none"
+        },
+        {
+          "label": "Спросить брата",
+          "image": "the brothers talking on the balcony, the brother nodding 'go'",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "bat_sell_car",
+      "image": "the red car parked by the sea with a for sale sign, buyers circling",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Продать как есть",
+          "image": "the man handing over the keys and taking cash",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_last_stones",
+      "image": "the last evening on the pebble beach, the boy pressing a stone to his chest",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Взять камень",
+          "image": "a flat batumi stone placed into the suitcase on top of clothes",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_spb_flat",
+      "image": "a family chat on the phone with photos of an emptying saint petersburg flat",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Пусть берут",
+          "image": "someone else's kitchen with the man's old mug on the shelf",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить сохранить главное",
+          "image": "the toy kitchen photographed for an online listing",
+          "anim": "none"
+        },
+        {
+          "label": "Не думать об этом",
+          "image": "the phone with notifications muted lying on the balcony table",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "crypto_frozen",
+      "image": "a phone screen showing a frozen crypto account warning, a cat avatar offline",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Пройти верификацию",
+          "image": "the man taking a selfie with his passport and a handwritten date",
+          "anim": "none"
+        },
+        {
+          "label": "Продать по плохому курсу",
+          "image": "a bad exchange rate on screen, the man pressing sell",
+          "anim": "none"
+        },
+        {
+          "label": "Писать в поддержку",
+          "image": "a mailbox full of identical support replies",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "bat_day",
+      "image": "an ordinary batumi week: laptop, nanny, sea, rain, khachapuri",
+      "anim": "sea",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "the boulevard in the evening, the family walking",
+          "anim": "sea"
+        }
+      ]
+    }
+  ]
+}

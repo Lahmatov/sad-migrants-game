@@ -24,7 +24,7 @@ struct GameView: View {
                 .font(Theme.caption)
                 .foregroundStyle(Theme.dim)
 
-                SceneImage(name: card.scene, act: engine.state.act)
+                SceneImage(name: card.scene, act: engine.state.act, art: artName(card))
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 8) {
@@ -40,7 +40,7 @@ struct GameView: View {
                     }
                 }
 
-                if case .outcome(_, let outcome) = session.phase {
+                if case .outcome(_, let outcome, _) = session.phase {
                     OutcomePanel(outcome: outcome) {
                         tapCount += 1
                         session.dismissOutcome()
@@ -60,8 +60,17 @@ struct GameView: View {
 
     /// Пока показан итог — остаётся карточка, на которой сделан выбор.
     private func shownCard(_ engine: GameEngine) -> Card? {
-        if case .outcome(let card, _) = session.phase { return card }
+        if case .outcome(let card, _, _) = session.phase { return card }
         return engine.currentCard
+    }
+
+    /// Картинка выбора, пока виден его итог; иначе — картинка карточки.
+    private func artName(_ card: Card) -> String {
+        if case .outcome(_, _, let choice) = session.phase {
+            let name = ArtLibrary.choiceName(card: card.id, choice: choice)
+            if ArtLibrary.has(name) { return name }
+        }
+        return card.id
     }
 }
 
@@ -125,10 +134,18 @@ struct PixelMeter: View {
 struct SceneImage: View {
     let name: String?
     let act: String
+    /// Картинка карточки или выбора из папки Art — главнее фона сцены.
+    var art: String? = nil
 
     var body: some View {
         ZStack {
-            if let name, UIImage(named: name) != nil {
+            if let art, let image = ArtLibrary.image(art) {
+                Image(uiImage: image)
+                    .resizable()
+                    .interpolation(.none)
+                    .scaledToFill()
+                ArtOverlay(kind: ArtLibrary.animation(for: art))
+            } else if let name, UIImage(named: name) != nil {
                 Image(name)
                     .resizable()
                     .interpolation(.none)
@@ -142,7 +159,7 @@ struct SceneImage: View {
         .clipped()
         .pixelFrame()
         // Новая сцена проявляется, а не выскакивает.
-        .id(name)
+        .id(ArtLibrary.has(art ?? "") ? art : name)
         .transition(.opacity)
     }
 }

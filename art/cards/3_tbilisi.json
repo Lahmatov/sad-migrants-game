@@ -1,0 +1,297 @@
+{
+  "act": "tbilisi",
+  "cards": [
+    {
+      "id": "tb_border",
+      "image": "tbilisi airport passport control at dawn, a kind georgian officer leaning out of his booth smiling at a sleepy toddler",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Спасибо»",
+          "image": "the officer laughing and stamping the passport, the man with a hand on his heart",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_arrival",
+      "image": "a small tbilisi hotel room for three: one bed, one desk, a window onto a courtyard where a man is fixing an old car",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Распаковать чемоданы",
+          "image": "the same room ten minutes later, cozy and lived-in, a toddler building a garage of toy cars under the bed",
+          "anim": "none"
+        },
+        {
+          "label": "Не распаковывать",
+          "image": "closed suitcases stacked by the wall, the man digging through one for socks",
+          "anim": "none"
+        },
+        {
+          "label": "Сразу открыть ноутбук",
+          "image": "the man on a video call on the bed among unopened suitcases while the toddler jumps on the mattress",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "crypto_check",
+      "image": "a phone screen showing a crypto wallet balance and a sticker of a cat saying good luck, hotel bed sheets around",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Выдохнуть",
+          "image": "the man lying on the hotel bed exhaling, phone on his chest",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_work_bed",
+      "image": "a hotel room as an office: the man on the bed with a laptop, the woman at the desk with a laptop, the toddler between them watching cartoons",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Созвон из ванной",
+          "image": "the man sitting on the edge of a bathtub presenting on a laptop, tiles behind him",
+          "anim": "none"
+        },
+        {
+          "label": "Работать ночью",
+          "image": "the man working at night by laptop light, the family asleep, city lights in the window",
+          "anim": "lights"
+        },
+        {
+          "label": "Созвон с сыном на коленях",
+          "image": "a toddler on the man's lap waving into a laptop camera, a smiling boss on screen",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_breakfast",
+      "image": "a hotel breakfast buffet with khachapuri, cheese and fat tomatoes, a toddler with a plate of french fries",
+      "anim": "steam",
+      "choices": [
+        {
+          "label": "Ещё хачапури",
+          "image": "the man with a plate stacked with khachapuri",
+          "anim": "steam"
+        },
+        {
+          "label": "Взять с собой на обед",
+          "image": "the man wrapping a khachapuri in a napkin and hiding it in his bag",
+          "anim": "none"
+        },
+        {
+          "label": "Уговорить сына на хачапури",
+          "image": "the toddler biting the cheesy edge of a khachapuri with a suspicious face",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "tb_old_town",
+      "image": "old tbilisi in the evening: carved wooden balconies, steep streets, the man carrying the toddler on his shoulders",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Подняться к крепости",
+          "image": "view from narikala fortress over the lights of tbilisi, the toddler pointing at the city",
+          "anim": "lights"
+        },
+        {
+          "label": "Сесть в кафе",
+          "image": "a tiny cafe table on a steep street, the owner handing a mandarin to the toddler",
+          "anim": "lights"
+        },
+        {
+          "label": "Серные бани",
+          "image": "domes of the sulfur baths with steam rising, the family coming out red-cheeked",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "tb_atm",
+      "image": "a georgian atm on an old street, a small queue of russian-speaking people, a phone with a chat listing working atms",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Снять, сколько дают",
+          "image": "the atm slowly pushing out dollar bills, the man covering his eyes",
+          "anim": "none"
+        },
+        {
+          "label": "Ждать грузинский счёт",
+          "image": "the woman silently showing the man a map pin on her phone",
+          "anim": "none"
+        },
+        {
+          "label": "Попросить друга перевести",
+          "image": "the man on the phone to a friend while looking at three banking apps",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_bank",
+      "image": "a georgian bank hall with a long queue of tired people with passports and children, a form on the counter",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Не подписывать",
+          "image": "a pen laid down next to an unsigned form on the counter",
+          "anim": "none"
+        },
+        {
+          "label": "Уйти в другой банк",
+          "image": "the man standing alone outside a bank entrance on a sunny street",
+          "anim": "none"
+        },
+        {
+          "label": "Подождать, пока откроют жене",
+          "image": "the woman's new bank card on a cafe table between two coffees",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_wife_bank",
+      "image": "the woman holding up a new georgian bank card like a trophy outside a bank",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Оплатить ею кофе",
+          "image": "the card tapped on a cafe terminal, two coffees on the counter",
+          "anim": "steam"
+        }
+      ]
+    },
+    {
+      "id": "tb_gamarjoba",
+      "image": "a hotel corridor, an elderly georgian neighbour waving at the toddler who waves back, pigeons on the windowsill",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Мадлоба!»",
+          "image": "the toddler waving at pigeons in a courtyard, the man saying thank you to the neighbour",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_mom_call",
+      "image": "a phone video call: a grandmother's face on screen, behind the camera a hotel room with two laptops and a toddler sitting inside a wardrobe",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "«Это временно, мам»",
+          "image": "the man holding the phone, the grandmother on screen nodding wisely",
+          "anim": "none"
+        },
+        {
+          "label": "Дать трубку сыну",
+          "image": "the toddler holding the phone up to show grandmother the grey plush cat",
+          "anim": "none"
+        },
+        {
+          "label": "Показать вид из окна",
+          "image": "the phone pointed at the courtyard, a man under a car bonnet waving at the camera",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_signagi",
+      "image": "a wedding photo on a phone: a young couple on the old city wall of sighnaghi with the alazani valley behind them",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Найти свадебные фото",
+          "image": "the couple lying on a hotel bed scrolling wedding photos, the toddler pointing at the screen",
+          "anim": "none"
+        },
+        {
+          "label": "Обещать съездить в Сигнахи",
+          "image": "the couple shaking little fingers in a promise at a window",
+          "anim": "none"
+        },
+        {
+          "label": "Съездить прямо сейчас",
+          "image": "the family on the city wall of sighnaghi, the toddler running where the couple once stood",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_one_room",
+      "image": "a georgian restaurant at night, plates of khinkali, a toddler asleep at the table",
+      "anim": "lights",
+      "choices": [
+        {
+          "label": "Заказать ещё хинкали",
+          "image": "a toddler asleep on two chairs under the man's jacket, the couple talking over khinkali",
+          "anim": "lights"
+        },
+        {
+          "label": "Нести сына в отель",
+          "image": "the man carrying the sleeping toddler through night tbilisi, the woman holding his elbow",
+          "anim": "lights"
+        },
+        {
+          "label": "Сидеть на балконе",
+          "image": "the couple on a narrow hotel balcony with tea, looking down at the courtyard",
+          "anim": "stars"
+        }
+      ]
+    },
+    {
+      "id": "tb_trip",
+      "image": "a rental car on a mountain pass road between tbilisi and batumi, green hills, a toddler asleep in the back seat",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Взять ту, что у моря",
+          "image": "an over-decorated batumi flat: gilded moulding, an opera-style chandelier, the black sea in the window",
+          "anim": "sea"
+        },
+        {
+          "label": "Посмотреть все пять",
+          "image": "five apartment doors in a row, one with no windows, one with a fat cat sitting in it",
+          "anim": "none"
+        },
+        {
+          "label": "Поторговаться",
+          "image": "the man shaking hands with a smiling landlord under a golden chandelier",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_where_next",
+      "image": "the toddler standing at the hotel window looking out, two suitcases and three backpacks packed by the door",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "В Батуми, к морю",
+          "image": "the family loading bags into a car, the toddler squealing with joy",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "tb_day",
+      "image": "another day in the hotel room: laptops, khachapuri, cartoons, the man in the courtyard still fixing his car",
+      "anim": "none",
+      "choices": [
+        {
+          "label": "Дальше",
+          "image": "the courtyard seen from the window, the car bonnet still open",
+          "anim": "none"
+        }
+      ]
+    }
+  ]
+}

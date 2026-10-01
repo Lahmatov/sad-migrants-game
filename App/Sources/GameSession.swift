@@ -11,7 +11,8 @@ final class GameSession {
         case intro
         case card
         /// Итог выбора показывается поверх карточки, на которой он сделан.
-        case outcome(Card, Outcome)
+        /// `choice` — номер нажатой кнопки: у каждого выбора своя картинка.
+        case outcome(Card, Outcome, choice: Int)
         /// `isNew` — концовка открыта впервые.
         case ending(Ending, isNew: Bool)
     }
@@ -91,7 +92,7 @@ final class GameSession {
         if outcome.result == nil, outcome.applied.isEmpty, outcome.ending == nil {
             phase = .card
         } else {
-            phase = .outcome(card, outcome)
+            phase = .outcome(card, outcome, choice: index)
         }
     }
 

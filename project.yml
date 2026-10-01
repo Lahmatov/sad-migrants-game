@@ -27,6 +27,12 @@ targets:
       - path: App/Sources
       - path: App/Resources
         buildPhase: resources
+        excludes:
+          - "Art/**"
+      # Картинки карточек — папкой-ссылкой: новый PNG попадает в сборку без xcodegen.
+      - path: App/Resources/Art
+        type: folder
+        buildPhase: resources
     dependencies:
       - package: MigrantCore
         product: MigrantCore
