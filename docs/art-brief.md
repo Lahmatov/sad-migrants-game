@@ -82,7 +82,7 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 58.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 61.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -132,6 +132,24 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, currency exchange booth near a metro entrance, glowing rate board with unreadable digits, queue of people in dark coats, one person in a hoodie seen from behind, cold evening, neon green digits
+```
+
+**`airport_arrivals.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, airport arrivals hall in lisbon, glass doors opening, a grandmother with a big suitcase and a small boy running toward her with arms open, warm afternoon light, welcome signs, joyful and slightly teary
+```
+
+**`paris.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, paris seine embankment at golden hour, eiffel tower in the distance, a man in his 30s walking arm in arm with his elderly mother seen from behind, bookstalls along the river, soft warm light, tender and quiet
+```
+
+**`malaga_beach.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, warm mediterranean beach in malaga, white hillside town behind, turquoise calm sea, a family with grandparents under a striped umbrella, a boy in armbands running into the water, bright midday sun
 ```
 
 **`airport_home.png`**

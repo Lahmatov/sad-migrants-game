@@ -107,6 +107,24 @@ currency exchange booth near a metro entrance, glowing rate board with unreadabl
 in dark coats, one person in a hoodie seen from behind, cold evening, neon green digits
 ```
 
+### `airport_arrivals` · 4
+```
+airport arrivals hall in lisbon, glass doors opening, a grandmother with a big suitcase and a small boy running toward her
+with arms open, warm afternoon light, welcome signs, joyful and slightly teary
+```
+
+### `paris` · 1
+```
+paris seine embankment at golden hour, eiffel tower in the distance, a man in his 30s walking arm in arm with his elderly
+mother seen from behind, bookstalls along the river, soft warm light, tender and quiet
+```
+
+### `malaga_beach` · 2
+```
+warm mediterranean beach in malaga, white hillside town behind, turquoise calm sea, a family with grandparents under a
+striped umbrella, a boy in armbands running into the water, bright midday sun
+```
+
 ### `airport_home` · 2
 ```
 airport departure hall at night, long quiet queue to passport control, people with big suitcases,

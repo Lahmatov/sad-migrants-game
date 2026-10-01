@@ -272,6 +272,19 @@ final class StoryTests: XCTestCase {
         XCTAssertTrue(labels(try self.engine(at: "oei_father", act: "oeiras", flags: ["asked_dad"])).contains("Вспомнить тот звонок"))
     }
 
+    func testMomsFirstVisitOpensTrips() throws {
+        var engine = try self.engine(at: "f2_mom_visit", act: "figueira2")
+        try tap(&engine, "Просто быть дома")
+        XCTAssertTrue(engine.state.flags.contains("mom_visited"))
+        let paris = try XCTUnwrap(try Self.content.get().card("oei_mom_paris"))
+        XCTAssertEqual(paris.requires?.flags, ["mom_visited", "residence_card"])
+    }
+
+    func testFatherInLawDrivesBmwOnlyIfYouHaveOne() throws {
+        XCTAssertFalse(labels(try engine(at: "oei_inlaws_malaga", act: "oeiras")).contains("Тестю — за руль BMW"))
+        XCTAssertTrue(labels(try engine(at: "oei_inlaws_malaga", act: "oeiras", flags: ["bmw"])).contains("Тестю — за руль BMW"))
+    }
+
     func testGrandmaDanceVideoOnlyIfYouDanced() throws {
         XCTAssertFalse(labels(try engine(at: "f2_grandma", act: "figueira2")).contains("Пересмотреть её танец"))
         XCTAssertTrue(labels(try engine(at: "f2_grandma", act: "figueira2", flags: ["grandma_dance"])).contains("Пересмотреть её танец"))

@@ -102,11 +102,14 @@ struct SceneRecipe {
             r.place = .sea(.sand); r.sea = [E32.pine, E32.ocean]
         case "ocean":
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
+        case "malaga_beach":
+            // Средиземное море: тёплое и спокойное, без португальских чаек.
+            r = mood(act: "oeiras"); r.place = .sea(.sand); r.palms = true
         case "ocean_sunset", "oeiras_beach":
             r = mood(act: "oeiras"); r.place = .sea(.sand); r.seagulls = true
         case "yard_home", "exchange", "tbilisi_old_town", "batumi_street", "lisbon_street",
              "figueira_street", "oeiras_street", "batumi_kindergarten", "figueira_school",
-             "oeiras_school", "playground":
+             "oeiras_school", "playground", "paris":
             r.place = .city
             if name == "exchange" { r.neon = true; r.stars = true }
             if name == "batumi_street" { r.neon = true; r.rain = true }
@@ -131,7 +134,7 @@ struct SceneRecipe {
             r.place = .phone(.video)
         case "financas", "bank", "aima", "ctt_post", "clinic", "hospital", "lawyer",
              "public_service_hall", "border", "supermarket", "batumi_supermarket",
-             "car_dealer", "airport_home", "transit", "university", "office":
+             "car_dealer", "airport_home", "airport_arrivals", "transit", "university", "office":
             r.place = .office
         default:
             r.place = .interior

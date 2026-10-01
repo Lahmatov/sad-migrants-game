@@ -194,6 +194,19 @@ class ChoiceShapeTests(unittest.TestCase):
         self.assertIn('asked_dad', g.flags)
         self.assertIn('Вспомнить тот звонок', labels(at_card('oei_father', 'oeiras', ['asked_dad'])))
 
+    def test_paris_and_spain_follow_moms_first_visit(self):
+        paris = next(c for c in CARDS if c['id'] == 'oei_mom_paris')
+        spain = next(c for c in CARDS if c['id'] == 'oei_mom_spain')
+        self.assertIn('mom_visited', paris['requires']['flags'])
+        self.assertIn('mom_paris', spain['requires']['flags'])
+        g = at_card('f2_mom_visit', 'figueira2')
+        tap(g, 'Просто быть дома')
+        self.assertIn('mom_visited', g.flags)
+
+    def test_father_in_law_drives_bmw_only_if_you_have_one(self):
+        self.assertNotIn('Тестю — за руль BMW', labels(at_card('oei_inlaws_malaga', 'oeiras')))
+        self.assertIn('Тестю — за руль BMW', labels(at_card('oei_inlaws_malaga', 'oeiras', ['bmw'])))
+
     def test_grandma_dance_video_only_if_you_danced(self):
         self.assertNotIn('Пересмотреть её танец', labels(at_card('f2_grandma', 'figueira2')))
         g = at_card('bat_wedding', 'batumi', ['new_offer'])
