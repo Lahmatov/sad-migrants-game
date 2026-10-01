@@ -30,9 +30,6 @@ targets:
     dependencies:
       - package: MigrantCore
         product: MigrantCore
-    scheme:
-      testTargets:
-        - package: MigrantCore/MigrantCoreTests
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.lahmatov.migrantsad
