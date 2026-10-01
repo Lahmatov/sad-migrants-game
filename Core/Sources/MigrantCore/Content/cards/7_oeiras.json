@@ -2,6 +2,71 @@
   "act": "oeiras",
   "cards": [
     {
+      "id": "oei_renewal",
+      "scene": "aima",
+      "weight": 10,
+      "requires": {
+        "flags": [
+          "residence_card"
+        ],
+        "fromActDay": 90
+      },
+      "text": "Пора продлевать вид на жительство. Теперь — в AIMA. Нужна запись: сдать биометрию заново. Слотов нет. На сайте нет, по телефону нет. В чатах есть, но за деньги.",
+      "choices": [
+        {
+          "label": "Звонить на горячую линию",
+          "result": "Музыка ожидания. Сорок минут. Потом гудки. Сын выучил эту мелодию и напевает её в садике.",
+          "effects": {
+            "stats": {
+              "nerves": -10
+            },
+            "add": {
+              "aima_calls": 1
+            },
+            "schedule": [
+              {
+                "card": "aima_call_again",
+                "inDays": 15
+              }
+            ]
+          }
+        },
+        {
+          "label": "Нанять юриста",
+          "result": "Юрист говорит: «Сделаем». Юрист покупает новую машину.",
+          "effects": {
+            "stats": {
+              "money": -400
+            },
+            "set": [
+              "aima_lawyer"
+            ],
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 30
+              }
+            ]
+          }
+        },
+        {
+          "label": "Написать в книгу жалоб",
+          "result": "Livro de Reclamações — самое мощное оружие Португалии. Говорят, помогает. Говорят, через месяц.",
+          "effects": {
+            "stats": {
+              "documents": 5
+            },
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 45
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "oei_arrive",
       "kind": "event",
       "scene": "oeiras_street",
@@ -442,6 +507,39 @@
       ]
     },
     {
+      "id": "oei_witnesses",
+      "scene": "stairs",
+      "weight": 4,
+      "requires": {
+        "fromActDay": 20
+      },
+      "text": "В Оэйраше для справки о проживании нужны два свидетеля-соседа. В Фигейре было проще. Ты не знаешь соседей даже по именам.",
+      "choices": [
+        {
+          "label": "Постучать к соседке снизу",
+          "result": "Сеньора с первого этажа соглашается сразу и приносит сыну печенье. Она будет свидетелем, что вы существуете. Это больше, чем может AIMA.",
+          "effects": {
+            "stats": {
+              "belonging": 10,
+              "nerves": -5,
+              "documents": 5
+            }
+          }
+        },
+        {
+          "label": "Позвать друзей",
+          "result": "Друзья приезжают из Лиссабона подписать бумагу «мы его соседи». Чиновница смотрит на них долго. Подписывает.",
+          "effects": {
+            "stats": {
+              "belonging": 6,
+              "nerves": -8,
+              "documents": 5
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "oei_prices",
       "scene": "supermarket",
       "requires": {
@@ -771,6 +869,194 @@
           "label": "Включить свет",
           "effects": {
             "ending": "thirty_years"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aima_call_again",
+      "kind": "event",
+      "scene": "aima",
+      "requires": {
+        "notFlags": [
+          "aima_slot_got"
+        ]
+      },
+      "text": "Горячая линия AIMA, попытка номер… ты сбиваешься со счёта. Музыка та же.",
+      "choices": [
+        {
+          "label": "Ждать до конца",
+          "result": "На сорок третьей минуте отвечает живой человек. Обещает записать. Произносит твою фамилию так, что ты её не узнаёшь.",
+          "effects": {
+            "stats": {
+              "nerves": -10
+            },
+            "add": {
+              "aima_calls": 1
+            },
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 20
+              }
+            ]
+          }
+        },
+        {
+          "label": "Сдаться и нанять юриста",
+          "result": "Юрист говорит: «Надо было сразу». Юрист прав. Это самое обидное.",
+          "effects": {
+            "stats": {
+              "money": -400
+            },
+            "set": [
+              "aima_lawyer"
+            ],
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 25
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "aima_slot",
+      "kind": "event",
+      "scene": "aima",
+      "requires": {
+        "notFlags": [
+          "aima_slot_got"
+        ]
+      },
+      "text": "Запись на продление есть! На троих, в один день. Далеко от Оэйраша, в 8:40 утра. Но есть.",
+      "choices": [
+        {
+          "label": "Ехать на BMW",
+          "requires": {
+            "flags": [
+              "bmw"
+            ]
+          },
+          "result": "Ночью, втроём, на BMW в кредит. Сын спит, ты ведёшь, жена штурман. Отпечатки, фото, «Parabéns». Кредит за машину впервые кажется оправданным.",
+          "effects": {
+            "stats": {
+              "money": -80,
+              "documents": 20,
+              "nerves": -8,
+              "belonging": 3
+            },
+            "set": [
+              "aima_slot_got",
+              "biometrics_done"
+            ],
+            "schedule": [
+              {
+                "card": "biometrics_lost",
+                "inDays": 30
+              }
+            ]
+          }
+        },
+        {
+          "label": "Ехать автобусом",
+          "result": "Ночной автобус, кофе на заправке, сын на коленях. Отпечатки, фото, «Parabéns». Ты не понимаешь, с чем поздравляют, но приятно.",
+          "effects": {
+            "stats": {
+              "money": -150,
+              "documents": 20,
+              "nerves": -12
+            },
+            "set": [
+              "aima_slot_got",
+              "biometrics_done"
+            ],
+            "schedule": [
+              {
+                "card": "biometrics_lost",
+                "inDays": 30
+              }
+            ]
+          }
+        },
+        {
+          "label": "Попросить поближе",
+          "result": "«Ближе нет». Запись сгорает. Через месяц дают новую — так же далеко.",
+          "effects": {
+            "stats": {
+              "nerves": -6
+            },
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 30
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biometrics_lost",
+      "kind": "event",
+      "scene": "aima",
+      "speaker": "AIMA",
+      "text": "Продление. «Ваши биометрические данные не найдены в системе. Пожалуйста, запишитесь повторно». Три года назад их приняли в SEF, а AIMA их потеряла. Все шесть рук.",
+      "choices": [
+        {
+          "label": "Записаться повторно",
+          "result": "Всё сначала: горячая линия, музыка, слоты. Сын спрашивает, можно ли в этот раз взять кота на фото.",
+          "effects": {
+            "stats": {
+              "nerves": -15,
+              "documents": -15
+            },
+            "clear": [
+              "aima_slot_got",
+              "biometrics_done"
+            ],
+            "schedule": [
+              {
+                "card": "aima_slot",
+                "inDays": 30
+              }
+            ]
+          }
+        },
+        {
+          "label": "Жалоба капслоком",
+          "result": "Ты пишешь письмо на трёх языках, включая мат. Удаляешь мат. Отправляешь. Тишина.",
+          "effects": {
+            "stats": {
+              "nerves": -5,
+              "documents": -10
+            },
+            "schedule": [
+              {
+                "card": "biometrics_found",
+                "inDays": 25
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biometrics_found",
+      "kind": "event",
+      "scene": "aima",
+      "speaker": "AIMA",
+      "text": "«Ваши данные найдены. Приносим извинения за неудобства». Извинения от AIMA — как снег в Португалии: бывает, но все фотографируют.",
+      "choices": [
+        {
+          "label": "Сфотографировать",
+          "effects": {
+            "stats": {
+              "documents": 15,
+              "nerves": 10
+            }
           }
         }
       ]
