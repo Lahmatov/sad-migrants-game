@@ -280,9 +280,9 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(paris.requires?.flags, ["mom_visited", "residence_card"])
     }
 
-    func testFatherInLawDrivesBmwOnlyIfYouHaveOne() throws {
-        XCTAssertFalse(labels(try engine(at: "oei_inlaws_malaga", act: "oeiras")).contains("Тестю — за руль BMW"))
-        XCTAssertTrue(labels(try engine(at: "oei_inlaws_malaga", act: "oeiras", flags: ["bmw"])).contains("Тестю — за руль BMW"))
+    func testDriveToMalagaOnlyWithTheOldPeugeot() throws {
+        XCTAssertFalse(labels(try engine(at: "f2_inlaws_malaga", act: "figueira2")).contains("Ехать на Пежо"))
+        XCTAssertTrue(labels(try engine(at: "f2_inlaws_malaga", act: "figueira2", flags: ["old_car"])).contains("Ехать на Пежо"))
     }
 
     func testGrandmaDanceVideoOnlyIfYouDanced() throws {
