@@ -1050,38 +1050,6 @@
       ]
     },
     {
-      "id": "bat_laptop_sell",
-      "scene": "phone_chat",
-      "requires": {
-        "flags": [
-          "has_laptop2"
-        ],
-        "notFlags": [
-          "job_me"
-        ]
-      },
-      "text": "Старый ноутбук «на всякий случай». Случай наступил.",
-      "choices": [
-        {
-          "label": "Продать",
-          "result": "Покупатель торгуется двадцать минут и платит, не проверяя. Сто восемьдесят долларов и чувство, что ты предал старого друга.",
-          "effects": {
-            "stats": {
-              "money": 170
-            },
-            "clear": [
-              "has_laptop2"
-            ]
-          }
-        },
-        {
-          "label": "Оставить",
-          "result": "Вдруг будет ещё какой-нибудь случай.",
-          "effects": {}
-        }
-      ]
-    },
-    {
       "id": "bat_vnzh_apply",
       "scene": "public_service_hall",
       "weight": 5,

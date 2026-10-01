@@ -107,6 +107,39 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(outcome.ending?.id, "renting")
     }
 
+    func testAmericaOnlyWithAmericanJob() throws {
+        XCTAssertFalse(labels(try engine(at: "oei_final", act: "oeiras")).contains("Принять оффер из Штатов"))
+        var engine = try self.engine(at: "oei_final", act: "oeiras", flags: ["us_job"])
+        let outcome = try tap(&engine, "Принять оффер из Штатов")
+        XCTAssertEqual(outcome.ending?.id, "america")
+    }
+
+    func testNewAmericanJobRemembersAmerica() throws {
+        var engine = try self.engine(at: "fig_job_found_me", act: "figueira")
+        try tap(&engine, "Принять")
+        XCTAssertTrue(engine.state.flags.contains("us_job"))
+    }
+
+    func testBuyingOutrightOnlyAfterBusinessTookOff() throws {
+        XCTAssertFalse(labels(try engine(at: "oei_final", act: "oeiras", flags: ["business"])).contains("Купить без ипотеки"))
+        var engine = try self.engine(at: "oei_final", act: "oeiras", flags: ["business_ok"])
+        let outcome = try tap(&engine, "Купить без ипотеки")
+        XCTAssertEqual(outcome.ending?.id, "rich")
+    }
+
+    func testMovingApartEndsInDivorce() throws {
+        var engine = try self.engine(at: "oei_apart", act: "oeiras")
+        let outcome = try tap(&engine, "Разъехаться")
+        XCTAssertEqual(outcome.ending?.id, "divorce")
+    }
+
+    func testTalkingKeepsFamilyAndClosesTheQuestion() throws {
+        var engine = try self.engine(at: "oei_apart", act: "oeiras")
+        let outcome = try tap(&engine, "Поговорить по-настоящему")
+        XCTAssertNil(outcome.ending)
+        XCTAssertTrue(engine.state.flags.contains("apart_talked"))
+    }
+
     func testEveryEndingIsReachableSomehow() throws {
         let content = try Self.content.get()
         var reachable = Set(content.endings.filter { $0.stat != nil }.map(\.id))

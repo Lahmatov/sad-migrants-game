@@ -199,6 +199,39 @@ class StoryTests(unittest.TestCase):
             tap(g, label)
             self.assertEqual(g.ending, ending)
 
+    def test_america_only_with_american_job(self):
+        self.assertNotIn('Принять оффер из Штатов', labels(at_card('oei_final', 'oeiras')))
+        g = at_card('oei_final', 'oeiras', ['us_job'])
+        tap(g, 'Принять оффер из Штатов')
+        self.assertEqual(g.ending, 'america')
+
+    def test_new_american_job_remembers_america(self):
+        g = at_card('fig_job_found_me', 'figueira')
+        tap(g, 'Принять')
+        self.assertIn('us_job', g.flags)
+
+    def test_buying_outright_only_after_business_took_off(self):
+        self.assertNotIn('Купить без ипотеки', labels(at_card('oei_final', 'oeiras', ['business'])))
+        g = at_card('oei_final', 'oeiras', ['business_ok'])
+        tap(g, 'Купить без ипотеки')
+        self.assertEqual(g.ending, 'rich')
+
+    def test_moving_apart_ends_in_divorce(self):
+        g = at_card("oei_apart", "oeiras", nerves=15)
+        tap(g, 'Разъехаться')
+        self.assertEqual(g.ending, 'divorce')
+
+    def test_talking_keeps_family_and_closes_the_question(self):
+        g = at_card("oei_apart", "oeiras", nerves=15)
+        tap(g, 'Поговорить по-настоящему')
+        self.assertIsNone(g.ending)
+        self.assertIn('apart_talked', g.flags)
+
+    def test_laptop_sale_only_after_layoff(self):
+        card = next(c for c in CARDS if c['id'] == 'fig_laptop_sell')
+        self.assertIn('job_me', card['requires']['notFlags'])
+        self.assertIn('has_laptop2', card['requires']['flags'])
+
     def test_every_ending_is_reachable_somehow(self):
         reachable = {e['id'] for e in GAME['endings'] if 'stat' in e}
         for card in CARDS:
