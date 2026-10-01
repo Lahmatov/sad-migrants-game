@@ -47,6 +47,32 @@ def load():
     return game, cards
 
 
+STATS = ('money', 'nerves', 'documents', 'home', 'belonging')
+STRUCTURAL = ('set', 'clear', 'add', 'next', 'schedule', 'act', 'ending', 'days')
+
+
+def dominated_choices(cards):
+    """Варианты, которые хуже соседнего по всем шкалам и ничем больше не отличаются.
+
+    Такой выбор — не выбор: внимательный игрок его никогда не нажмёт,
+    а невнимательный просто проиграет. Сравниваем только «чистые» варианты —
+    если вариант ставит флаг или ведёт дальше, у него есть своя цена в будущем.
+    """
+    found = []
+    for card in cards:
+        pure = [c for c in card['choices']
+                if 'requires' not in c and not any(k in c.get('effects', {}) for k in STRUCTURAL)]
+        for a in pure:
+            for b in pure:
+                if a is b:
+                    continue
+                sa, sb = a.get('effects', {}).get('stats', {}), b.get('effects', {}).get('stats', {})
+                diff = [sa.get(k, 0) - sb.get(k, 0) for k in STATS]
+                if all(d >= 0 for d in diff) and any(d > 0 for d in diff):
+                    found.append(f"{card['id']}: «{b['label']}» во всём хуже «{a['label']}»")
+    return found
+
+
 def validate(game, cards):
     problems, warnings = [], []
     by_id = {}
@@ -354,6 +380,7 @@ def main():
         play(game, cards)
         return 0
     problems, warnings = validate(game, cards)
+    warnings += dominated_choices(cards)
     print(f"Карточек: {len(cards)}, актов: {len(game['acts'])}, концовок: {len(game['endings'])}")
     if warnings and not args.quiet:
         print(f"\nПредупреждения ({len(warnings)}):")
