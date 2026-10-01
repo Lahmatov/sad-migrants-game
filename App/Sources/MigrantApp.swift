@@ -19,10 +19,12 @@ struct RootView: View {
             switch session.phase {
             case .title:
                 TitleView(session: session)
+            case .intro:
+                IntroView(stanzas: session.introStanzas, finish: session.finishIntro)
             case .card, .outcome:
                 GameView(session: session)
-            case .ending(let ending):
-                EndingView(session: session, ending: ending)
+            case .ending(let ending, let isNew):
+                EndingView(session: session, ending: ending, isNew: isNew)
             }
         }
         .preferredColorScheme(.dark)

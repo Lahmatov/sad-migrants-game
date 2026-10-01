@@ -95,6 +95,28 @@ final class ContentLoaderTests: XCTestCase {
         }
     }
 
+    func testIntroIsSplitIntoStanzas() throws {
+        try write(gameJSON.replacingOccurrences(
+            of: #""endings""#,
+            with: #""intro": ["У каждого своя жизнь.", "", "Мы ошибаемся.", "Всегда."], "endings""#),
+                  to: "game.json")
+        try write(#"{ "act": "a", "cards": [ { "id": "c1", "text": "т", "choices": [] } ] }"#, to: "cards/1.json")
+        let content = try ContentLoader.load(from: directory)
+        XCTAssertEqual(content.introStanzas, [["У каждого своя жизнь."], ["Мы ошибаемся.", "Всегда."]])
+    }
+
+    func testMissingIntroMeansNoStanzas() throws {
+        try write(gameJSON, to: "game.json")
+        try write(#"{ "act": "a", "cards": [ { "id": "c1", "text": "т", "choices": [] } ] }"#, to: "cards/1.json")
+        XCTAssertEqual(try ContentLoader.load(from: directory).introStanzas, [])
+    }
+
+    func testIntroOfWrongTypeFails() throws {
+        try write(gameJSON.replacingOccurrences(of: #""endings""#, with: #""intro": "строка", "endings""#),
+                  to: "game.json")
+        XCTAssertThrowsError(try ContentLoader.load(from: directory))
+    }
+
     func testMissingGameFileFails() {
         XCTAssertThrowsError(try ContentLoader.load(from: directory))
     }
@@ -170,6 +192,10 @@ final class BundledContentTests: XCTestCase {
         XCTAssertGreaterThan(content.cards.count, 50)
     }
 
+    func testBundledContentHasIntro() throws {
+        XCTAssertFalse(try ContentLoader.bundled().introStanzas.isEmpty)
+    }
+
     func testBundledContentHasNoProblems() throws {
         let problems = ContentValidator.problems(in: try ContentLoader.bundled())
         XCTAssertEqual(problems, [], problems.joined(separator: "\n"))
@@ -192,6 +218,20 @@ final class BundledContentTests: XCTestCase {
             }
             XCTAssertTrue(engine.isFinished, "сид \(seed): партия не закончилась за \(turns) ходов")
         }
+    }
+}
+
+final class IntroStanzaTests: XCTestCase {
+    func testExtraBlankLinesDoNotMakeEmptyStanzas() {
+        XCTAssertEqual(GameContent.stanzas(["", "а", "", "  ", "б", ""]), [["а"], ["б"]])
+    }
+
+    func testNoBlankLinesIsOneStanza() {
+        XCTAssertEqual(GameContent.stanzas(["а", "б"]), [["а", "б"]])
+    }
+
+    func testEmptyIntroHasNoStanzas() {
+        XCTAssertEqual(GameContent.stanzas([]), [])
     }
 }
 

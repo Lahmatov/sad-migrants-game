@@ -448,6 +448,19 @@ a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
 | Интерфейс | кнопка при нажатии проседает на 2 px | — | кодом |
 | Концовка | затемнение в цвет концовки | — | кодом |
 
+## Вступление
+
+Анимация сделана кодом (`IntroView`): строфы печатаются по буквам, снизу вверх плывут пиксели палитры — как пыль в луче света или искры над морем. Картинки не нужны. Если захочется больше — под каждую строфу можно положить фон, тающий при смене строфы:
+
+| Строфа | Фон | Промпт |
+|---|---|---|
+| «У каждого своя жизнь. И свой чемодан» | пустая комната и чемодан | `pixel art, empty room with a single old suitcase in a beam of light, dust particles, very dark and minimal` |
+| «Мы выбираем…» | развилка дорог | `pixel art, a road splitting into two under a night sky, tiny figure at the fork, minimal` |
+| «Мы ошибаемся…» | перевёрнутая карта | `pixel art, a crumpled paper map with a wrong route drawn in red, on a kitchen table, minimal` |
+| «Помогаем близким…» | две руки | `pixel art, two hands almost touching across a video call screen, minimal and warm` |
+| «Встречаемся. Расстаёмся…» | аэропорт | `pixel art, airport arrivals gate at night, silhouettes hugging, minimal` |
+| «Это история одной семьи» | три силуэта у моря | `pixel art, father, mother and a toddler seen from behind on a pebble beach at dusk, minimal` |
+
 ## Иконка приложения
 
 1024 × 1024, рисуется в 64 × 64 и масштабируется ×16.

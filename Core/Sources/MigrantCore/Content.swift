@@ -1,3 +1,5 @@
+import Foundation
+
 /// Условие показа карточки или варианта ответа. Все заданные части
 /// должны выполняться одновременно; пустое условие выполняется всегда.
 public struct Requirement: Codable, Equatable, Sendable {
@@ -196,11 +198,14 @@ public struct GameFile: Codable, Equatable, Sendable {
     public var start: StartState
     public var acts: [Act]
     public var endings: [Ending]
+    /// Строки вступления. Пустая строка — граница строфы: экран очищается.
+    public var intro: [String]?
 
-    public init(start: StartState, acts: [Act], endings: [Ending]) {
+    public init(start: StartState, acts: [Act], endings: [Ending], intro: [String]? = nil) {
         self.start = start
         self.acts = acts
         self.endings = endings
+        self.intro = intro
     }
 }
 
@@ -226,6 +231,8 @@ public struct GameContent: Sendable {
     public let start: StartState
     public let acts: [Act]
     public let endings: [Ending]
+    /// Вступление по строфам; пустое, если в `game.json` его нет.
+    public let introStanzas: [[String]]
     /// Порядок карточек стабилен (по файлам и внутри файла): от него
     /// зависит случайный выбор, а значит — воспроизводимость партий.
     public let cards: [Card]
@@ -248,11 +255,29 @@ public struct GameContent: Sendable {
         self.start = game.start
         self.acts = game.acts
         self.endings = game.endings
+        self.introStanzas = Self.stanzas(game.intro ?? [])
         self.cards = cards
         self.cardIndex = index
         // Дубли актов и концовок ловит валидатор; здесь побеждает первый.
         self.actIndex = Dictionary(game.acts.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
         self.endingIndex = Dictionary(game.endings.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
+    }
+
+    /// Делит строки на строфы по пустым строкам. Лишние пустые строки
+    /// (в начале, в конце, подряд) не дают пустых строф.
+    static func stanzas(_ lines: [String]) -> [[String]] {
+        var result: [[String]] = []
+        var current: [String] = []
+        for line in lines {
+            if line.trimmingCharacters(in: .whitespaces).isEmpty {
+                if !current.isEmpty { result.append(current) }
+                current = []
+            } else {
+                current.append(line)
+            }
+        }
+        if !current.isEmpty { result.append(current) }
+        return result
     }
 
     public func card(_ id: String) -> Card? {

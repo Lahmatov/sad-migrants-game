@@ -59,6 +59,9 @@ def validate(game, cards):
     for e in game['endings']:
         if 'stat' in e and e['stat'] not in STATS:
             problems.append(f"концовка {e['id']}: неизвестная шкала {e['stat']}")
+    intro = game.get('intro', [])
+    if not isinstance(intro, list) or not all(isinstance(line, str) for line in intro):
+        problems.append("game.json: intro должен быть списком строк")
     if game['start']['act'] not in acts:
         problems.append(f"старт: нет акта {game['start']['act']}")
     if game['start']['card'] not in by_id:
