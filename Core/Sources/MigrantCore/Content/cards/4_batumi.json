@@ -118,7 +118,8 @@
           "effects": {
             "stats": {
               "money": 1500,
-              "nerves": 3
+              "nerves": 1,
+              "home": -12
             },
             "schedule": [
               {
@@ -163,7 +164,8 @@
           "effects": {
             "stats": {
               "money": 600,
-              "nerves": -5
+              "nerves": -7,
+              "home": -12
             },
             "schedule": [
               {
@@ -208,7 +210,8 @@
           "effects": {
             "stats": {
               "money": -200,
-              "nerves": -8
+              "nerves": -10,
+              "home": -12
             },
             "schedule": [
               {
@@ -253,7 +256,8 @@
           "effects": {
             "stats": {
               "money": -1900,
-              "nerves": -10
+              "nerves": -12,
+              "home": -12
             },
             "schedule": [
               {
@@ -1132,8 +1136,8 @@
             },
             "schedule": [
               {
-                "card": "bat_brother_leaves",
-                "inDays": 30
+                "card": "bat_brother_daughter",
+                "inDays": 14
               }
             ]
           }
@@ -1148,8 +1152,55 @@
             },
             "schedule": [
               {
+                "card": "bat_brother_daughter",
+                "inDays": 14
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bat_brother_daughter",
+      "kind": "event",
+      "scene": "phone_video",
+      "speaker": "Брат",
+      "text": "Ночью брату звонят из Петербурга. У него родилась дочка. Он сидит на балконе с телефоном и смотрит на неё — маленькую, красную, сердитую — через экран, за тысячу километров.",
+      "choices": [
+        {
+          "label": "Сесть рядом",
+          "result": "Вы молча смотрите на племянницу вдвоём. Потом брат говорит: «Она на маму похожа». Потом плачет. Потом смеётся. Ты делаешь то же самое.",
+          "effects": {
+            "stats": {
+              "home": 10,
+              "nerves": -5
+            },
+            "set": [
+              "brother_niece"
+            ],
+            "schedule": [
+              {
                 "card": "bat_brother_leaves",
-                "inDays": 30
+                "inDays": 10
+              }
+            ]
+          }
+        },
+        {
+          "label": "Открыть бутылку Гоги",
+          "result": "Чача Гоги наконец пригодилась по назначению. Тост первый — за племянницу. Второй — тоже за неё.",
+          "effects": {
+            "stats": {
+              "home": 8,
+              "nerves": 3
+            },
+            "set": [
+              "brother_niece"
+            ],
+            "schedule": [
+              {
+                "card": "bat_brother_leaves",
+                "inDays": 10
               }
             ]
           }
@@ -1161,7 +1212,7 @@
       "kind": "event",
       "scene": "batumi_boulevard",
       "speaker": "Брат",
-      "text": "Брат уезжает. Куда и почему — это его история, не твоя. Сын дарит ему лучший плоский камень с пляжа. Брат кладёт его в нагрудный карман.",
+      "text": "Брат уезжает домой — к дочке, которую пока видел только в телефоне. Сын дарит ему лучший плоский камень с пляжа: «Это для сестрёнки». Брат кладёт камень в нагрудный карман.",
       "choices": [
         {
           "label": "Обнять",

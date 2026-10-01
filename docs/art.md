@@ -4,7 +4,7 @@
 
 | Способ | Плюсы | Минусы | Когда |
 |---|---|---|---|
-| **Нейросеть для пикселя + чистка в Aseprite** | быстро, дёшево, можно за пару вечеров закрыть все 44 сцены | «фальшивые» пиксели, плывущая сетка, разный стиль от картинки к картинке — без ручной чистки видно сразу | **MVP**: черновики для всех сцен |
+| **Нейросеть для пикселя + чистка в Aseprite** | быстро, дёшево, можно за пару вечеров закрыть все 55 сцен | «фальшивые» пиксели, плывущая сетка, разный стиль от картинки к картинке — без ручной чистки видно сразу | **MVP**: черновики для всех сцен |
 | **Художник на заказ** | единый стиль, живые детали, это главное лицо игры | дорого и долго; цена сильно зависит от художника | **релиз**: титульный экран, иконка, 5–7 ключевых сцен |
 | **Готовые паки** (itch.io, Kenney, OpenGameArt) | бесплатно или почти, лицензии обычно разрешают коммерцию | Батуми, Фигейры и AIMA там нет; стиль чужой | UI-элементы, иконки, шрифт |
 | **Рисовать самому** | полный контроль, бесплатно | время | если зацепит — Aseprite стоит ~$20, Pixelorama бесплатна |
@@ -100,7 +100,7 @@ currency exchange booth near a metro entrance, glowing rate board with unreadabl
 in dark coats, one person in a hoodie seen from behind, cold evening, neon green digits
 ```
 
-### `airport_home` · 1
+### `airport_home` · 2
 ```
 airport departure hall at night, long quiet queue to passport control, people with big suitcases,
 departure board with unreadable text, cold white light, figure with a backpack seen from behind
@@ -112,7 +112,7 @@ passport control booth seen from traveler's point of view, border officer behind
 stamp in hand, harsh fluorescent light, tense
 ```
 
-### `plane` · 1
+### `plane` · 2
 ```
 view from an airplane window seat, clouds below, wing visible, a hand resting on the window frame,
 soft sunrise colors, calm and bittersweet
@@ -209,19 +209,19 @@ steep lisbon street with a yellow tram, colorful tiled facades, a family of thre
 kick scooter climbing uphill, sunny, slightly comic
 ```
 
-### `figueira_beach` · 4
+### `figueira_beach` · 5
 ```
 extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the
 ocean, seagulls, off-season grey-blue light, vast and quiet
 ```
 
-### `figueira_street` · 4
+### `figueira_street` · 5
 ```
 small portuguese seaside town street, white houses with blue azulejo trim, an old 15-year-old hatchback car
 parked, a bus stop, palm tree, windy afternoon
 ```
 
-### `figueira_school` · 3
+### `figueira_school` · 5
 ```
 small portuguese public school yard, kids in hoodies, a teacher at the gate, a boy with a backpack holding his
 father's hand, azulejo wall with a school emblem (no text), morning
@@ -239,13 +239,13 @@ cramped hostel dorm with bunk beds, backpacks everywhere, a suitcase open on the
 small window with sunlight and a lisbon rooftop view, slightly chaotic
 ```
 
-### `flat_viewing` · 3
+### `flat_viewing` · 4
 ```
 empty small lisbon apartment with a window facing a blank wall, real estate agent holding keys,
 visible mold stain in the ceiling corner, old tiles, bare lightbulb, ironic mood
 ```
 
-### `flat` · 5
+### `flat` · 6
 Своя квартира (самая частая сцена — её лучше заказать у художника).
 ```
 small rented lisbon apartment room, mattress with a checkered wool blanket, laptop on a box used as a table,
@@ -265,26 +265,26 @@ old lisbon building staircase with azulejo tiles on the walls, neighbor's door o
 a child peeking out, smell-lines of cooking, cozy
 ```
 
-### `financas` · 2
+### `financas` · 3
 ```
 portuguese tax office waiting room, ticket number screen, long rows of chairs, people waiting with papers,
 tired clerk at a desk, greenish fluorescent light, bureaucratic comedy
 ```
 
-### `bank` · 2
+### `bank` · 3
 ```
 small bank branch office, bank manager in a suit behind a desk holding a russian passport with a worried
 look, stack of forms, glass partition, neutral cold light
 ```
 
-### `aima` · 6
+### `aima` · 8
 Главная бюрократическая сцена — AIMA узнаваема.
 ```
 immigration office waiting hall, sign "AIMA" above counters, crowded with people from different countries,
 number display, one open window out of ten, clerk taking fingerprints, fluorescent light, absurd and tiring
 ```
 
-### `ctt_post` · 3
+### `ctt_post` · 4
 ```
 portuguese post office counter with a red "CTT" sign, parcels on shelves, a box wrapped in tape with
 russian stickers, clerk behind the counter, sunny window
@@ -302,32 +302,32 @@ traditional portuguese pastry shop counter, trays of pastel de nata, espresso cu
 azulejo walls, warm golden morning light, happy mood
 ```
 
-### `supermarket` · 2
+### `supermarket` · 3
 ```
 portuguese supermarket aisle, a small "world foods" shelf with slavic products, person standing still looking
 at a small curd snack, fluorescent light, quiet loneliness
 ```
 
-### `phone` · 19
+### `phone` · 24
 Экран телефона — самая частая сцена после квартиры. Одна картинка на всё: письма, зарплата, банк.
 ```
 close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text),
 blurred room background, pixel art UI icons on screen
 ```
 
-### `phone_chat` · 4
+### `phone_chat` · 6
 ```
 smartphone screen showing a busy group chat with many message bubbles and cat stickers (no readable text),
 hand holding the phone, night lighting
 ```
 
-### `phone_video` · 5
+### `phone_video` · 10
 ```
 smartphone in hand during a video call, mother's face on the screen in a warm kitchen, background of the
 caller's cold lisbon room, emotional contrast warm screen vs cold room
 ```
 
-### `ocean` · 1
+### `ocean` · 2
 ```
 atlantic ocean coast with rocks, figure sitting alone on a rock seen from behind looking at the horizon,
 big waves, overcast soft light, melancholic and vast
@@ -339,6 +339,78 @@ wide atlantic beach at sunset, family of three (father, mother, small boy) sitti
 feeling of quiet hope
 ```
 
+## Сцены — Фигейра, год 2 и Оэйраш
+
+### `figueira_flat_party` · 1
+Новый год дважды: в 21:00 — ноутбук с Петербургом, в 00:00 — друзья и виноград.
+```
+small apartment new year's eve, laptop on the table showing a video call with grandmother and relatives,
+champagne glasses, a bowl of twelve grapes, friends in party hats, a boy in pajamas, fairy lights, cozy and bittersweet
+```
+
+### `hospital` · 2
+Urgência ночью и роддом.
+```
+portuguese hospital emergency waiting room at night, number screen, tired parents with a sleeping child on a
+plastic chair, vending machine glow, quiet fluorescent light
+```
+
+### `padel` · 1
+```
+outdoor padel court with glass walls, woman holding a racket and her nose in surprise, man laughing and running
+to help, sunny afternoon, comic moment
+```
+
+### `legoland` · 1
+```
+colorful theme park made of giant toy bricks, father and small boy on a roller coaster with hands up,
+bright summer day, pure joy
+```
+
+### `oeiras_street` · 3
+```
+oeiras seaside promenade near lisbon, white modern buildings, palm trees, atlantic ocean, a dark bmw parked,
+evening traffic toward lisbon, golden light
+```
+
+### `oeiras_school` · 1
+```
+modern bilingual school yard, kids from many countries in uniforms, a boy laughing with friends, flags of
+different countries on a wall (no text), bright morning
+```
+
+### `oeiras_flat` · 2
+```
+modern rented apartment near lisbon, baby crib next to a desk with a laptop, a pregnancy test on the bathroom
+shelf in the background, warm evening light
+```
+
+### `oeiras_beach` · 1
+```
+beach near lisbon at sunset, group of friends with children around a picnic blanket, families from different
+countries, warm and nostalgic
+```
+
+### `stadium` · 2
+```
+huge football stadium in green and white colors, crowd with scarves raised, father and boy in green-white
+striped scarves singing, floodlights, evening match
+```
+
+### `car_dealer` · 1
+```
+car dealership showroom, shiny dark bmw under spotlights, salesman with a contract, father looking tempted
+and guilty, comic
+```
+
+### `lisbon_flat_keys` · 4
+Финал. Пустая квартира, ключи, музей переезда на полу.
+```
+empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor
+seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a one-eared plush hare,
+a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
+```
+
 ## Персонажи (спрайты на будущее)
 
 В MVP персонажи только внутри сцен. Отдельные спрайты понадобятся для «говорящей головы» рядом с репликой. Размер — **48 × 48**, три-четыре эмоции на персонажа.
@@ -347,6 +419,7 @@ feeling of quiet hope
 |---|---|
 | Папа (герой) | `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing` |
 | Жена | `pixel art portrait 48x48, woman in her thirties, hair in a messy bun, cardigan, determined look, emotions: focused, worried, relieved, laughing` |
+| Дочка | `pixel art portrait 48x48, baby girl, big curious eyes, tiny fist, emotions: sleeping, laughing, grabbing` |
 | Сын | `pixel art portrait 48x48, small boy about five years old, holding a plush hare with one ear, emotions: curious, proud, sulking, delighted` |
 | Мама | `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine` |
 | Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding a checkered blanket` |

@@ -71,7 +71,7 @@
               "belonging": 5
             },
             "set": [
-              "in_figueira"
+              "in_portugal"
             ],
             "schedule": [
               {
@@ -102,7 +102,7 @@
       "scene": "phone",
       "requires": {
         "flags": [
-          "in_figueira",
+          "in_portugal",
           "job_me",
           "job_wife"
         ]
@@ -114,7 +114,8 @@
           "effects": {
             "stats": {
               "money": 1300,
-              "nerves": 3
+              "nerves": 1,
+              "home": -12
             },
             "schedule": [
               {
@@ -145,7 +146,7 @@
       "scene": "phone",
       "requires": {
         "flags": [
-          "in_figueira",
+          "in_portugal",
           "job_me"
         ],
         "notFlags": [
@@ -159,7 +160,8 @@
           "effects": {
             "stats": {
               "money": 500,
-              "nerves": -5
+              "nerves": -7,
+              "home": -12
             },
             "schedule": [
               {
@@ -190,7 +192,7 @@
       "scene": "phone",
       "requires": {
         "flags": [
-          "in_figueira",
+          "in_portugal",
           "job_wife"
         ],
         "notFlags": [
@@ -204,7 +206,8 @@
           "effects": {
             "stats": {
               "money": -300,
-              "nerves": -8
+              "nerves": -10,
+              "home": -12
             },
             "schedule": [
               {
@@ -235,7 +238,7 @@
       "scene": "phone",
       "requires": {
         "flags": [
-          "in_figueira"
+          "in_portugal"
         ],
         "notFlags": [
           "job_me",
@@ -249,7 +252,8 @@
           "effects": {
             "stats": {
               "money": -1700,
-              "nerves": -10
+              "nerves": -12,
+              "home": -12
             },
             "schedule": [
               {
@@ -1283,14 +1287,14 @@
     {
       "id": "fig_cold",
       "scene": "flat_cold",
-      "weight": 3,
+      "weight": 15,
       "requires": {
         "flags": [
           "has_flat_pt"
         ],
-        "fromActDay": 60
+        "fromActDay": 15
       },
-      "text": "Ночью в квартире +14. Отопления нет. Португальцы говорят, что зима тут мягкая. Португальцы врут.",
+      "text": "Первая квартира в Фигейре — самая холодная в вашей жизни. Включая Петербург. Дома +13, на улице +15, в ванной — Норильск. Португальцы говорят, что зима тут мягкая. Португальцы врут.",
       "choices": [
         {
           "label": "Бабушкин плед",
@@ -1878,7 +1882,78 @@
       ]
     },
     {
-      "id": "fig_demo_end",
+      "id": "fig_urgencia",
+      "scene": "hospital",
+      "requires": {
+        "fromActDay": 40
+      },
+      "weight": 3,
+      "text": "Зима. Болеют все по очереди, а потом все сразу. Ночью у сына под сорок, и вы едете в urgência — приёмный покой. Табло обещает «до 6 часов ожидания». Табло не врёт.",
+      "choices": [
+        {
+          "label": "Ждать всю ночь",
+          "result": "В пять утра врач смотрит сына три минуты, улыбается, говорит «virose» — вирус — и отпускает. Бесплатно. Вы выходите на рассвет, как с ночной смены.",
+          "effects": {
+            "stats": {
+              "nerves": -12,
+              "belonging": 3
+            }
+          }
+        },
+        {
+          "label": "Аптечка из Петербурга",
+          "requires": {
+            "flags": [
+              "has_meds"
+            ]
+          },
+          "result": "Жена проверяет сроки годности при свете телефона. Ещё годно. Утром сыну лучше. Аптечка пережила две страны и одну Атлантику.",
+          "effects": {
+            "stats": {
+              "nerves": -3,
+              "home": 5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fig_friends",
+      "scene": "figueira_beach",
+      "requires": {
+        "fromActDay": 60
+      },
+      "weight": 3,
+      "text": "Шашлыки на пляже. Вокруг мангала — ребята из Москвы, Киева, Минска и Алматы. Дети носятся одной стаей. Говорите о школах, AIMA и о том, где лучше покупать мясо. О войне — нет. Все и так всё знают.",
+      "choices": [
+        {
+          "label": "Остаться до темноты",
+          "result": "Под утро ты понимаешь, что эти люди — ваши. Не по паспорту. По тому, как вы молчите об одном и том же.",
+          "effects": {
+            "stats": {
+              "belonging": 12,
+              "nerves": 8,
+              "money": -30
+            },
+            "set": [
+              "friends_pt"
+            ]
+          }
+        },
+        {
+          "label": "Уйти пораньше",
+          "result": "Сын не хочет уходить. Ты тоже. Вы уходите, потому что завтра школа. Это и есть нормальная жизнь.",
+          "effects": {
+            "stats": {
+              "belonging": 5,
+              "nerves": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fig_year_one",
       "scene": "ocean_sunset",
       "weight": 100,
       "requires": {
@@ -1891,9 +1966,12 @@
       "text": "Год в Фигейре. У вас есть NIF, ключи, любимая пастелария и друзья, которых можно позвать на шашлык. Сын говорит по-португальски лучше вас обоих. Вы здесь ещё не дома. Но уже и не в гостях.",
       "choices": [
         {
-          "label": "Что дальше?",
+          "label": "Второй год",
           "effects": {
-            "ending": "demo_end"
+            "act": "figueira2",
+            "next": [
+              "f2_card"
+            ]
           }
         }
       ]
