@@ -201,7 +201,7 @@
           "effects": {
             "stats": {
               "money": -700,
-              "nerves": -20,
+              "nerves": -12,
               "home": 10
             },
             "set": [
@@ -226,7 +226,7 @@
           "effects": {
             "stats": {
               "home": 15,
-              "nerves": -5,
+              "nerves": -3,
               "money": -300
             },
             "days": 14,
@@ -241,7 +241,7 @@
           "effects": {
             "stats": {
               "home": 8,
-              "nerves": -10
+              "nerves": -6
             },
             "days": 4,
             "next": [
@@ -429,7 +429,7 @@
       "weight": 30,
       "requires": {
         "maxStats": {
-          "nerves": 15
+          "nerves": 25
         }
       },
       "text": "Ты не спишь третью ночь. Всё вроде бы получилось: документы, работа, садик. А ты сидишь на кухне в три утра и не понимаешь, почему так тяжело.",
