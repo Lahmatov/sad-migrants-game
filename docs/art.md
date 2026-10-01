@@ -229,6 +229,12 @@ extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a 
 ocean, seagulls, off-season grey-blue light, vast and quiet
 ```
 
+### `figueira_lake` · 1
+```
+small calm lake among pine trees near figueira da foz, picnic area with stone barbecue grills, smoke rising,
+a few families at wooden tables, children running in a pack, warm late afternoon light
+```
+
 ### `figueira_street` · 5
 ```
 small portuguese seaside town street, white houses with blue azulejo trim, an old 15-year-old hatchback car

@@ -97,6 +97,9 @@ struct SceneRecipe {
             r.place = .sea(.pebbles); r.palms = true; r.neon = true
         case "figueira_beach":
             r.place = .sea(.sand); r.seagulls = true
+        case "figueira_lake":
+            // Озеро в соснах: тихая тёмная вода вместо прибоя.
+            r.place = .sea(.sand); r.sea = [E32.pine, E32.ocean]
         case "ocean":
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
         case "ocean_sunset", "oeiras_beach":

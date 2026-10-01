@@ -82,7 +82,7 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 57.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 58.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -250,6 +250,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet
+```
+
+**`figueira_lake.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, small calm lake among pine trees near figueira da foz, picnic area with stone barbecue grills, smoke rising, a few families at wooden tables, children running in a pack, warm late afternoon light
 ```
 
 **`figueira_street.png`**
