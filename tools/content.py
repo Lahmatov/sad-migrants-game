@@ -24,7 +24,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, 'Core/Sources/MigrantCore/Content')
 STATS = ('money', 'nerves', 'documents', 'home', 'belonging')
 # Сколько секунд в среднем уходит на карточку: прочитать, выбрать, прочитать итог.
-SECONDS_PER_CARD = 14
+# Оценка времени партии: чтение плюс раздумье над выбором.
+# Взрослый читает по-русски примерно 1000–1200 знаков в минуту — берём 18 знаков в секунду.
+READ_CHARS_PER_SECOND = 18
+DECIDE_SECONDS = 4
 
 CARD_KEYS = {'id', 'kind', 'scene', 'speaker', 'text', 'requires', 'repeatable', 'weight', 'choices'}
 CHOICE_KEYS = {'label', 'result', 'requires', 'effects'}
@@ -296,12 +299,13 @@ class Game:
 
 
 def simulate(game, cards, runs):
-    endings, turns, days, stuck = Counter(), [], [], 0
+    endings, turns, days, minutes, stuck = Counter(), [], [], [], 0
     shown = Counter()
     fallback_ids = {a.get('fallback') for a in game['acts']}
     fallback_hits = 0
     for seed in range(runs):
         g = Game(game, cards, random.Random(seed))
+        seconds = 0.0
         while g.ending is None and g.turn < 1000:
             if g.current is None:
                 stuck += 1
@@ -310,7 +314,12 @@ def simulate(game, cards, runs):
             if g.current in fallback_ids:
                 fallback_hits += 1
             options = g.available()
-            g.choose(g.rng.choice(options))
+            card = g.by_id[g.current]
+            pick = g.rng.choice(options)
+            read = len(card['text']) + len(card['choices'][pick].get('result', ''))
+            seconds += DECIDE_SECONDS + read / READ_CHARS_PER_SECOND
+            g.choose(pick)
+        minutes.append(seconds / 60)
         endings[g.ending or 'нет концовки'] += 1
         turns.append(g.turn)
         days.append(g.day)
@@ -318,8 +327,8 @@ def simulate(game, cards, runs):
     print(f"\nПрохождений: {runs} (случайные выборы)")
     print(f"Карточек за партию: медиана {statistics.median(turns):.0f}, "
           f"мин {min(turns)}, макс {max(turns)}")
-    print(f"≈ {statistics.median(turns) * SECONDS_PER_CARD / 60:.0f} мин игры "
-          f"(по {SECONDS_PER_CARD} с на карточку); игровых дней — медиана {statistics.median(days):.0f}")
+    print(f"≈ {statistics.median(minutes):.0f} мин игры (чтение {READ_CHARS_PER_SECOND} знаков/с "
+          f"+ {DECIDE_SECONDS} с на выбор); игровых дней — медиана {statistics.median(days):.0f}")
     print(f"Запасные карточки: {fallback_hits / total:.0%} показов — "
           "если много, акту не хватает содержания")
     print("Концовки:")
