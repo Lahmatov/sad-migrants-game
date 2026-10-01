@@ -94,6 +94,13 @@ russian apartment block courtyard in late autumn, rusty playground swing, small 
 puddles, grey sky, lonely figure in a hoodie with a backpack seen from behind taking a photo with a phone
 ```
 
+### `office` · 1
+Московский офис: сдать ноутбук и уйти.
+```
+open-space office in moscow at evening, empty desks, a laptop handed over at a reception desk, glass walls,
+city lights outside, cold neon light, a feeling of leaving quietly
+```
+
 ### `exchange` · 2
 ```
 currency exchange booth near a metro entrance, glowing rate board with unreadable digits, queue of people

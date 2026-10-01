@@ -128,7 +128,7 @@ struct SceneRecipe {
             r.place = .phone(.video)
         case "financas", "bank", "aima", "ctt_post", "clinic", "hospital", "lawyer",
              "public_service_hall", "border", "supermarket", "batumi_supermarket",
-             "car_dealer", "airport_home", "transit", "university":
+             "car_dealer", "airport_home", "transit", "university", "office":
             r.place = .office
         default:
             r.place = .interior

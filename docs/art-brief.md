@@ -82,7 +82,7 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 56.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 57.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -120,6 +120,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, russian apartment block courtyard in late autumn, rusty playground swing, small kiosk, bare trees, puddles, grey sky, lonely figure in a hoodie with a backpack seen from behind taking a photo with a phone
+```
+
+**`office.png`** — Московский офис: сдать ноутбук и уйти.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, open-space office in moscow at evening, empty desks, a laptop handed over at a reception desk, glass walls, city lights outside, cold neon light, a feeling of leaving quietly
 ```
 
 **`exchange.png`**
