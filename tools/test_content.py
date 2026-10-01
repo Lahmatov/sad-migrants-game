@@ -207,6 +207,16 @@ class ChoiceShapeTests(unittest.TestCase):
         self.assertNotIn('Ехать на Пежо', labels(at_card('f2_inlaws_malaga', 'figueira2')))
         self.assertIn('Ехать на Пежо', labels(at_card('f2_inlaws_malaga', 'figueira2', ['old_car'])))
 
+    def test_mom_has_not_met_granddaughter_yet(self):
+        for cid in ('oei_mom_again', 'oei_mom_paris', 'oei_mom_spain'):
+            card = next(c for c in CARDS if c['id'] == cid)
+            self.assertIn('daughter', card['requires']['notFlags'], cid)
+
+    def test_wifes_parents_come_to_meet_granddaughter(self):
+        g = at_card('oei_daughter_born', 'oeiras', ['pregnant'])
+        tap(g, 'Позвонить маме')
+        self.assertIn('oei_inlaws_granddaughter', [card for card, _ in g.scheduled])
+
     def test_mom_first_comes_to_batumi(self):
         g = at_card('bat_mom_visit', 'batumi')
         tap(g, 'Повести на пляж')

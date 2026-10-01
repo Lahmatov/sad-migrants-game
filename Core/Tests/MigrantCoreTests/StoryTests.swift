@@ -280,6 +280,14 @@ final class StoryTests: XCTestCase {
         XCTAssertEqual(paris.requires?.flags, ["mom_visited", "residence_card"])
     }
 
+    func testMomHasNotMetGranddaughterYet() throws {
+        let content = try Self.content.get()
+        for id in ["oei_mom_again", "oei_mom_paris", "oei_mom_spain"] {
+            let card = try XCTUnwrap(content.card(id))
+            XCTAssertTrue(card.requires?.notFlags?.contains("daughter") ?? false, id)
+        }
+    }
+
     func testDriveToMalagaOnlyWithTheOldPeugeot() throws {
         XCTAssertFalse(labels(try engine(at: "f2_inlaws_malaga", act: "figueira2")).contains("Ехать на Пежо"))
         XCTAssertTrue(labels(try engine(at: "f2_inlaws_malaga", act: "figueira2", flags: ["old_car"])).contains("Ехать на Пежо"))
