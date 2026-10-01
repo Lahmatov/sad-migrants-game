@@ -284,11 +284,15 @@ class StoryTests(unittest.TestCase):
         self.assertIn('Взять то, что хочется', rich)
         self.assertIn('Обойдёмся такси', poor)
 
-    def test_brother_daughter_schedules_his_leaving(self):
-        g = at_card('bat_brother_daughter', 'batumi')
-        tap(g, 'Сесть рядом')
-        self.assertIn('brother_niece', g.flags)
-        self.assertIn('bat_brother_leaves', [cid for cid, _ in g.scheduled])
+    def test_brother_leaves_together_with_you(self):
+        g = at_card('bat_schengen', 'batumi', ['brother_here', 'portugal_idea'])
+        tap(g, 'В Португалию')
+        self.assertEqual(g.current, 'bat_brother_leaves')
+
+    def test_without_brother_you_go_straight_to_packing(self):
+        g = at_card('bat_schengen', 'batumi', ['portugal_idea'])
+        tap(g, 'В Португалию')
+        self.assertEqual(g.current, 'bat_last_stones')
 
     def test_exactly_one_money_card_fits_each_job_situation(self):
         for prefix, place in (('bat_month_', 'in_batumi'), ('fig_month_', 'in_portugal')):

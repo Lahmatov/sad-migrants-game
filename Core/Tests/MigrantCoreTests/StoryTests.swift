@@ -202,11 +202,16 @@ final class StoryTests: XCTestCase {
         XCTAssertTrue(poor.contains("Обойдёмся такси"))
     }
 
-    func testBrotherDaughterSchedulesHisLeaving() throws {
-        var engine = try self.engine(at: "bat_brother_daughter", act: "batumi")
-        try tap(&engine, "Сесть рядом")
-        XCTAssertTrue(engine.state.flags.contains("brother_niece"))
-        XCTAssertTrue(engine.state.scheduled.contains { $0.cardId == "bat_brother_leaves" })
+    func testBrotherLeavesTogetherWithYou() throws {
+        var engine = try self.engine(at: "bat_schengen", act: "batumi", flags: ["brother_here", "portugal_idea"])
+        try tap(&engine, "В Португалию")
+        XCTAssertEqual(engine.currentCard?.id, "bat_brother_leaves")
+    }
+
+    func testWithoutBrotherYouGoStraightToPacking() throws {
+        var engine = try self.engine(at: "bat_schengen", act: "batumi", flags: ["portugal_idea"])
+        try tap(&engine, "В Португалию")
+        XCTAssertEqual(engine.currentCard?.id, "bat_last_stones")
     }
 
     func testExactlyOneMoneyCardFitsEachJobSituation() throws {
