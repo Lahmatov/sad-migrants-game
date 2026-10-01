@@ -129,7 +129,7 @@ def build():
     w('pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown '
       'front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop '
       'backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding '
-      'a grey plush cat toy; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl')
+      'a grey plush cat toy; second row: the same son at 5 years old in a school backpack; mother holding a baby girl')
     w('```')
     w('')
     for who, prompt in characters:

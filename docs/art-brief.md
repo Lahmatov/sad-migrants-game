@@ -65,7 +65,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 ### `characters_sheet.png` — семья целиком
 
 ```
-pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding a grey plush cat toy; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl
+pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding a grey plush cat toy; second row: the same son at 5 years old in a school backpack; mother holding a baby girl
 ```
 
 - **Папа (герой)** — `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing`
@@ -181,7 +181,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 **`batumi_boulevard.png`**
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, batumi seaside boulevard with palm trees, the moving metal statues of ali and nino in the distance, a boy on a kick scooter, lanterns, sunset over the sea
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, batumi seaside boulevard with palm trees, the moving metal statues of ali and nino in the distance, a toddler on his father's shoulders, lanterns, sunset over the sea
 ```
 
 **`batumi_street.png`**
@@ -231,7 +231,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 **`lisbon_street.png`**
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, steep lisbon street with a yellow tram, colorful tiled facades, a family of three with three suitcases and a kick scooter climbing uphill, sunny, slightly comic
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, steep lisbon street with a yellow tram, colorful tiled facades, a family of three with two suitcases and three backpacks climbing uphill, sunny, slightly comic
 ```
 
 **`figueira_beach.png`** *(опорная, уже есть)*

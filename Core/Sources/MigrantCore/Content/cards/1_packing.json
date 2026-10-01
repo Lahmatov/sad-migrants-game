@@ -314,7 +314,8 @@
               "home": 10
             },
             "next": [
-              "pack_scooter"
+              "scales_over",
+              "scales_ok"
             ]
           }
         },
@@ -324,43 +325,6 @@
           "effects": {
             "stats": {
               "home": -3
-            },
-            "next": [
-              "pack_scooter"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "pack_scooter",
-      "kind": "event",
-      "scene": "yard_home",
-      "text": "Самокат сына. Трёхколёсный, с фонариком. Не влезает ни в один чемодан. Влезает только в сердце.",
-      "choices": [
-        {
-          "label": "Сдать в багаж отдельно",
-          "result": "Самокат летит отдельным местом за деньги, как полноценный член семьи.",
-          "effects": {
-            "stats": {
-              "money": -60,
-              "nerves": 5
-            },
-            "set": [
-              "has_scooter"
-            ],
-            "next": [
-              "scales_over",
-              "scales_ok"
-            ]
-          }
-        },
-        {
-          "label": "Купим там новый",
-          "result": "Самокат достаётся соседскому мальчику. У соседского мальчика лучший день в жизни.",
-          "effects": {
-            "stats": {
-              "home": -5
             },
             "next": [
               "scales_over",

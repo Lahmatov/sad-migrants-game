@@ -239,13 +239,13 @@ class StoryTests(unittest.TestCase):
     # --- чемодан ---
 
     def test_overweight_leads_to_scales(self):
-        g = at_card('pack_scooter', 'packing', counters={'kg': 50})
-        tap(g, 'Купим там новый')
+        g = at_card('pack_album', 'packing', counters={'kg': 50})
+        tap(g, 'Сфотографировать страницы')
         self.assertEqual(g.current, 'scales_over')
 
     def test_normal_weight_skips_scales(self):
-        g = at_card('pack_scooter', 'packing', counters={'kg': 40})
-        tap(g, 'Купим там новый')
+        g = at_card('pack_album', 'packing', counters={'kg': 40})
+        tap(g, 'Сфотографировать страницы')
         self.assertEqual(g.current, 'scales_ok')
 
     def test_paying_overweight_closes_suitcase(self):

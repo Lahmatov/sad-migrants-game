@@ -145,14 +145,14 @@ final class StoryTests: XCTestCase {
     // MARK: - Чемодан
 
     func testOverweightLeadsToScales() throws {
-        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 50])
-        try tap(&engine, "Купим там новый")
+        var engine = try self.engine(at: "pack_album", act: "packing", counters: ["kg": 50])
+        try tap(&engine, "Сфотографировать страницы")
         XCTAssertEqual(engine.currentCard?.id, "scales_over")
     }
 
     func testNormalWeightSkipsScales() throws {
-        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 40])
-        try tap(&engine, "Купим там новый")
+        var engine = try self.engine(at: "pack_album", act: "packing", counters: ["kg": 40])
+        try tap(&engine, "Сфотографировать страницы")
         XCTAssertEqual(engine.currentCard?.id, "scales_ok")
     }
 

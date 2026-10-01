@@ -30,7 +30,7 @@
   - *Грузия* — зелень, мокрый асфальт, неон Батуми, тёплые деревянные балконы Тбилиси, серо-зелёное Чёрное море;
   - *Португалия* — охра, терракота, синий азулежу, белёные стены, много солнца;
   - *бюрократия* (AIMA, Finanças, банк) — зеленовато-флуоресцентный офисный свет.
-- **Семья:** папа (герой), мама и маленький сын. Лица крупно не рисуем — чаще со спины или издалека: так игрок узнаёт в них себя, а реальная семья остаётся неузнаваемой. Постоянные детали: у сына — серый плюшевый кот и трёхколёсный самокат, у папы — рюкзак с ноутбуком.
+- **Семья:** папа (герой), мама и маленький сын. Лица крупно не рисуем — чаще со спины или издалека: так игрок узнаёт в них себя, а реальная семья остаётся неузнаваемой. Постоянные детали: у сына — серый плюшевый кот, у папы — рюкзак с ноутбуком.
 - Контур — тёмный, но не чёрный (самый тёмный цвет палитры). Без дизеринга на больших заливках.
 - Ни слова текста на картинках: он в карточке. Вывески — неразборчивыми пиксельными штрихами (исключение — «CTT» и «AIMA», они узнаваемы).
 
@@ -156,8 +156,8 @@ mountains and high-rise towers in the background, evening light, peaceful and te
 
 ### `batumi_boulevard` · 4
 ```
-batumi seaside boulevard with palm trees, the moving metal statues of ali and nino in the distance, a boy on a
-kick scooter, lanterns, sunset over the sea
+batumi seaside boulevard with palm trees, the moving metal statues of ali and nino in the distance, a toddler on his father's
+shoulders, lanterns, sunset over the sea
 ```
 
 ### `batumi_street` · 4
@@ -205,8 +205,8 @@ document folders, futuristic bureaucracy, bright clean light
 
 ### `lisbon_street` · 1
 ```
-steep lisbon street with a yellow tram, colorful tiled facades, a family of three with three suitcases and a
-kick scooter climbing uphill, sunny, slightly comic
+steep lisbon street with a yellow tram, colorful tiled facades, a family of three with two suitcases and three
+backpacks climbing uphill, sunny, slightly comic
 ```
 
 ### `figueira_beach` · 5
