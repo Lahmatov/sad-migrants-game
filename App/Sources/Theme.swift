@@ -39,7 +39,7 @@ extension Stat {
         case .nerves: return "Кукуха"
         case .documents: return "Документы"
         case .home: return "Дом"
-        case .belonging: return "Своя тут"
+        case .belonging: return "Свой тут"
         }
     }
 }

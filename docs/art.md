@@ -4,9 +4,9 @@
 
 | Способ | Плюсы | Минусы | Когда |
 |---|---|---|---|
-| **Нейросеть для пикселя + чистка в Aseprite** | быстро, дёшево, можно за вечер закрыть все 37 сцен | «фальшивые» пиксели, плывущая сетка, разный стиль от картинки к картинке — без ручной чистки видно сразу | **MVP**: черновики для всех сцен |
+| **Нейросеть для пикселя + чистка в Aseprite** | быстро, дёшево, можно за пару вечеров закрыть все 44 сцены | «фальшивые» пиксели, плывущая сетка, разный стиль от картинки к картинке — без ручной чистки видно сразу | **MVP**: черновики для всех сцен |
 | **Художник на заказ** | единый стиль, живые детали, это главное лицо игры | дорого и долго; цена сильно зависит от художника | **релиз**: титульный экран, иконка, 5–7 ключевых сцен |
-| **Готовые паки** (itch.io, Kenney, OpenGameArt) | бесплатно или почти, лицензии обычно разрешают коммерцию | Лиссабона и AIMA там нет; стиль чужой | UI-элементы, иконки, шрифт |
+| **Готовые паки** (itch.io, Kenney, OpenGameArt) | бесплатно или почти, лицензии обычно разрешают коммерцию | Батуми, Фигейры и AIMA там нет; стиль чужой | UI-элементы, иконки, шрифт |
 | **Рисовать самому** | полный контроль, бесплатно | время | если зацепит — Aseprite стоит ~$20, Pixelorama бесплатна |
 
 **Рекомендация для MVP:** генерировать в **Retro Diffusion** или **PixelLab** (обе заточены под пиксель-арт; у PixelLab есть плагин для Aseprite и генерация анимаций), потом в **Aseprite**:
@@ -26,10 +26,11 @@
 - **Размер сцены: 180 × 135 px** (4:3). На экране растягивается примерно в 2 раза в точках, без сглаживания (`interpolation(.none)` уже стоит в коде).
 - **Палитра: [Endesga 32](https://lospec.com/palette-list/endesga-32)**. Запасной вариант — [Resurrect 64](https://lospec.com/palette-list/resurrect-64), если 32 цветов не хватит.
 - **Два мира цветом:**
-  - *дом* — холодные серо-синие, приглушённые, мало контраста, всегда немного сумерки;
+  - *Петербург* — холодные серо-синие, приглушённые, мало контраста, всегда немного сумерки;
+  - *Грузия* — зелень, мокрый асфальт, неон Батуми, тёплые деревянные балконы Тбилиси, серо-зелёное Чёрное море;
   - *Португалия* — охра, терракота, синий азулежу, белёные стены, много солнца;
   - *бюрократия* (AIMA, Finanças, банк) — зеленовато-флуоресцентный офисный свет.
-- **Герой** показан со спины или без лица (капюшон, рюкзак): игрок может быть любого пола, и герой не должен этому мешать.
+- **Семья:** папа (герой), мама и маленький сын. Лица крупно не рисуем — чаще со спины или издалека: так игрок узнаёт в них себя, а реальная семья остаётся неузнаваемой. Постоянные детали: у сына — плюшевый заяц без уха и самокат, у папы — рюкзак с ноутбуком.
 - Контур — тёмный, но не чёрный (самый тёмный цвет палитры). Без дизеринга на больших заливках.
 - Ни слова текста на картинках: он в карточке. Вывески — неразборчивыми пиксельными штрихами (исключение — «CTT» и «AIMA», они узнаваемы).
 
@@ -56,7 +57,7 @@ blurry, gradient, photorealistic, 3d render, text, letters, watermark, jpeg arti
 
 ## Сцены — дом (холодная палитра)
 
-### `room_home` · 8 карточек
+### `room_home` · 6 карточек
 Комната в панельке: чемодан раскрыт на полу, вещи разложены вокруг, за окном серый двор.
 ```
 small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books,
@@ -64,15 +65,15 @@ window with grey overcast sky and concrete apartment blocks outside, old carpet 
 cold blue-grey muted colors, evening light from a desk lamp, quiet and sad
 ```
 
-### `suitcase` · 8 карточек
-Крупно: чемодан на весах, рядом кот, гречка, плед.
+### `suitcase` · 7 карточек
+Крупно: чемодан на весах, сверху сидит сын, рядом гречка и плед.
 ```
 close-up of a large open suitcase on a floor bathroom scale, stuffed with clothes, a pack of buckwheat,
-a checkered wool blanket and a glass jar of apricot jam next to it, a grey cat sitting inside the suitcase,
+a checkered wool blanket and a glass jar of apricot jam next to it, a small boy sitting on top of the suitcase to close it, a plush hare with one ear,
 muted cold palette, warm lamp highlight
 ```
 
-### `kitchen_mom` · 3 карточки
+### `kitchen_mom` · 2 карточки
 Кухня мамы: стол, заставленный едой, мама со спины у плиты, клеёнка.
 ```
 cozy small russian kitchen, table covered with too much food (salads, pies, olivier salad bowl), oilcloth
@@ -86,7 +87,7 @@ crowded small kitchen at night, silhouettes of friends around a table with wine 
 cigarette smoke near the window, fairy lights, warm but tired atmosphere
 ```
 
-### `yard_home` · 1
+### `yard_home` · 2
 Двор: панельки, качели, ларёк, голые деревья.
 ```
 russian apartment block courtyard in late autumn, rusty playground swing, small kiosk, bare trees,
@@ -97,18 +98,6 @@ puddles, grey sky, lonely figure in a hoodie with a backpack seen from behind ta
 ```
 currency exchange booth near a metro entrance, glowing rate board with unreadable digits, queue of people
 in dark coats, one person in a hoodie seen from behind, cold evening, neon green digits
-```
-
-### `consulate` · 3
-```
-small visa center waiting room, numbered ticket display, rows of plastic chairs, people holding document
-folders, a clerk behind a glass window, fluorescent light, tense bureaucratic mood
-```
-
-### `vet` · 1
-```
-small veterinary clinic room, grey cat in a pet carrier on the examination table, kind vet with papers,
-posters on the wall (unreadable), soft light
 ```
 
 ### `airport_home` · 1
@@ -129,33 +118,134 @@ view from an airplane window seat, clouds below, wing visible, a hand resting on
 soft sunrise colors, calm and bittersweet
 ```
 
-### `transit` · 1
+### `transit` · 2
 ```
 huge transit airport terminal at night, people sleeping on benches with backpacks, a simit bread stall,
 big glass windows with airplanes outside, warm artificial light, liminal space feeling
 ```
 
+## Сцены — Грузия
+
+### `tbilisi_hotel` · 6
+Одна комната на троих: два ноутбука, ребёнок в наушниках, чемоданы.
+```
+small hotel room in tbilisi, one double bed with a laptop on it, a desk with a second laptop, a small boy
+with headphones watching cartoons between them, open suitcases, toy cars under the bed, window to a courtyard
+with old wooden balconies, warm lamp light, crowded but cozy
+```
+
+### `tbilisi_old_town` · 2
+```
+tbilisi old town at dusk, colorful carved wooden balconies, steep cobblestone street, sulfur bath domes,
+narikala fortress on the hill, father carrying a small boy on his shoulders seen from behind, warm lights
+```
+
+### `batumi_flat` · 9
+Квартира на высоком этаже, море во всё окно — главная сцена акта.
+```
+high-rise apartment in batumi, big balcony window with the black sea filling the whole view, sparse rented
+furniture, a toy railway on the floor, a boy on the balcony waving at the sea, soft grey-green sea light
+```
+
+### `batumi_beach` · 5
+Галька и камни — центральная сцена всей игры.
+```
+pebble beach in batumi, father and small boy throwing flat stones into the black sea, skipping stone ripples,
+mountains and high-rise towers in the background, evening light, peaceful and tender
+```
+
+### `batumi_boulevard` · 4
+```
+batumi seaside boulevard with palm trees, the moving metal statues of ali and nino in the distance, a boy on a
+kick scooter, lanterns, sunset over the sea
+```
+
+### `batumi_street` · 4
+```
+batumi street with a mix of old houses and glass towers, used cars parked along the road, wet asphalt, neon
+signs (unreadable), a car market vibe, cloudy sky
+```
+
+### `batumi_bar` · 2
+```
+small cozy bar in batumi, wooden tables, friends with beer glasses laughing, warm yellow light, rain on the
+window, string lights
+```
+
+### `batumi_rain` · 1
+```
+batumi in heavy rain seen from a high balcony, grey sea merging with the sky, a child's drawing of a sunny sea
+taped to the window glass, cozy inside, gloomy outside
+```
+
+### `batumi_cafe` · 1
+```
+georgian cafe table with a boat-shaped adjarian khachapuri with egg and butter, a small boy eating only the
+crust, father's hand with a fork, warm light
+```
+
+### `batumi_kindergarten` · 2
+```
+kindergarten gate in batumi, colorful fence, a teacher holding hands with children, a small boy walking in
+without looking back, father standing outside the gate, morning
+```
+
+### `batumi_supermarket` · 1
+```
+georgian supermarket shelf full of buckwheat packs, a man in a hoodie staring at it, ironic mood
+```
+
+### `public_service_hall` · 1
+```
+modern georgian public service hall, glass and wood, electronic queue screens, coffee corner, people with
+document folders, futuristic bureaucracy, bright clean light
+```
+
 ## Сцены — Португалия (тёплая палитра)
 
-### `lisbon_airport` · 1
+### `lisbon_street` · 1
 ```
-arrival exit of lisbon airport, palm trees, bright sunny sky, yellow taxis waiting, traveler with a
-suitcase and pet carrier seen from behind, warm ochre and blue colors, hopeful
+steep lisbon street with a yellow tram, colorful tiled facades, a family of three with three suitcases and a
+kick scooter climbing uphill, sunny, slightly comic
 ```
 
-### `hostel` · 2
+### `figueira_beach` · 4
+```
+extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the
+ocean, seagulls, off-season grey-blue light, vast and quiet
+```
+
+### `figueira_street` · 4
+```
+small portuguese seaside town street, white houses with blue azulejo trim, an old 15-year-old hatchback car
+parked, a bus stop, palm tree, windy afternoon
+```
+
+### `figueira_school` · 3
+```
+small portuguese public school yard, kids in hoodies, a teacher at the gate, a boy with a backpack holding his
+father's hand, azulejo wall with a school emblem (no text), morning
+```
+
+### `lawyer` · 1
+```
+small immigration lawyer office, stacks of folders, a lawyer in glasses explaining something with a pen,
+a couple across the desk looking confused, portuguese flag in the corner
+```
+
+### `hostel` · 1
 ```
 cramped hostel dorm with bunk beds, backpacks everywhere, a suitcase open on the floor, tiled floor,
 small window with sunlight and a lisbon rooftop view, slightly chaotic
 ```
 
-### `flat_viewing` · 2
+### `flat_viewing` · 3
 ```
 empty small lisbon apartment with a window facing a blank wall, real estate agent holding keys,
 visible mold stain in the ceiling corner, old tiles, bare lightbulb, ironic mood
 ```
 
-### `flat` · 9
+### `flat` · 5
 Своя квартира (самая частая сцена — её лучше заказать у художника).
 ```
 small rented lisbon apartment room, mattress with a checkered wool blanket, laptop on a box used as a table,
@@ -175,19 +265,19 @@ old lisbon building staircase with azulejo tiles on the walls, neighbor's door o
 a child peeking out, smell-lines of cooking, cozy
 ```
 
-### `financas` · 3
+### `financas` · 2
 ```
 portuguese tax office waiting room, ticket number screen, long rows of chairs, people waiting with papers,
 tired clerk at a desk, greenish fluorescent light, bureaucratic comedy
 ```
 
-### `bank` · 1
+### `bank` · 2
 ```
 small bank branch office, bank manager in a suit behind a desk holding a russian passport with a worried
 look, stack of forms, glass partition, neutral cold light
 ```
 
-### `aima` · 5
+### `aima` · 6
 Главная бюрократическая сцена — AIMA узнаваема.
 ```
 immigration office waiting hall, sign "AIMA" above counters, crowded with people from different countries,
@@ -218,14 +308,14 @@ portuguese supermarket aisle, a small "world foods" shelf with slavic products, 
 at a small curd snack, fluorescent light, quiet loneliness
 ```
 
-### `phone` · 11
+### `phone` · 19
 Экран телефона — самая частая сцена после квартиры. Одна картинка на всё: письма, зарплата, банк.
 ```
 close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text),
 blurred room background, pixel art UI icons on screen
 ```
 
-### `phone_chat` · 2
+### `phone_chat` · 4
 ```
 smartphone screen showing a busy group chat with many message bubbles and cat stickers (no readable text),
 hand holding the phone, night lighting
@@ -237,24 +327,6 @@ smartphone in hand during a video call, mother's face on the screen in a warm ki
 caller's cold lisbon room, emotional contrast warm screen vs cold room
 ```
 
-### `street` · 2
-```
-narrow lisbon street with colorful facades, laundry hanging from balconies, yellow tram in the distance,
-cobblestones, afternoon sun
-```
-
-### `street_rain` · 1
-```
-same narrow lisbon street in heavy rain, empty, puddles reflecting streetlights, one figure with a cheap
-umbrella seen from behind, grey-blue tint
-```
-
-### `miradouro` · 1
-```
-lisbon viewpoint terrace at sunset, terracotta rooftops, river tagus and a red suspension bridge in the
-distance, street musician with a guitar, warm golden light, peaceful
-```
-
 ### `ocean` · 1
 ```
 atlantic ocean coast with rocks, figure sitting alone on a rock seen from behind looking at the horizon,
@@ -263,35 +335,9 @@ big waves, overcast soft light, melancholic and vast
 
 ### `ocean_sunset` · 1 (финал демо)
 ```
-atlantic beach at sunset, figure sitting on the sand next to a cat, orange and pink sky, calm waves,
+wide atlantic beach at sunset, family of three (father, mother, small boy) sitting on the sand seen from behind, orange and pink sky, calm waves,
 feeling of quiet hope
 ```
-
-### `university` · 1
-```
-old university lecture hall in lisbon, professor at a blackboard with unreadable chalk writing, students
-at wooden desks, sunlight through tall windows
-```
-
-### `cafe` · 1
-```
-small portuguese cafe with a counter, person in an apron carrying espresso cups, tables outside on a
-sunny sidewalk, busy
-```
-
-### `car` · 1
-```
-inside a ride-share car, driver smiling in the rear-view mirror, lisbon street passing by through windows,
-brazilian flag air freshener, sunny
-```
-
-### `playground` · 1
-```
-small lisbon playground with palm trees, woman on a bench talking on the phone, children playing,
-sunny afternoon, figure passing by
-```
-
----
 
 ## Персонажи (спрайты на будущее)
 
@@ -299,13 +345,15 @@ sunny afternoon, figure passing by
 
 | Персонаж | Промпт |
 |---|---|
-| Герой | `pixel art character portrait 48x48, person in an oversized hoodie with hood up, face in shadow, backpack straps, neutral gender, emotions: tired, smiling, crying, surprised` |
+| Папа (герой) | `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing` |
+| Жена | `pixel art portrait 48x48, woman in her thirties, hair in a messy bun, cardigan, determined look, emotions: focused, worried, relieved, laughing` |
+| Сын | `pixel art portrait 48x48, small boy about five years old, holding a plush hare with one ear, emotions: curious, proud, sulking, delighted` |
 | Мама | `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine` |
 | Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding a checkered blanket` |
-| Кот | `pixel art 48x48, fluffy grey cat, emotions: judging, sleeping, suspicious, content` |
-| Сотрудник AIMA | `pixel art portrait 48x48, bored portuguese immigration clerk, lanyard badge, coffee cup` |
+| Брат | `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors` |
+| Гоги | `pixel art portrait 48x48, georgian neighbor in his fifties, mustache, big smile, holding a wine glass` |
 | Сеньора Фатима | `pixel art portrait 48x48, elderly portuguese neighbor woman, black dress, warm smile, gold earrings` |
-| Диогу | `pixel art portrait 48x48, young brazilian student, curly hair, big smile, headphones around neck` |
+| Сотрудник AIMA | `pixel art portrait 48x48, bored portuguese immigration clerk, lanyard badge, coffee cup` |
 | Хозяин квартиры | `pixel art portrait 48x48, middle-aged portuguese landlord, mustache, shrugging, "é normal" attitude` |
 
 ## Анимации
@@ -314,15 +362,15 @@ sunny afternoon, figure passing by
 
 | Где | Что двигается | Кадров | Промпт/заметка |
 |---|---|---|---|
-| `ocean`, `ocean_sunset` | волны | 4 | `seamless loop animation of pixel art waves, 4 frames` |
-| `street_rain` | дождь | 3 | слой капель поверх сцены, сдвиг вниз на 3 px за кадр |
+| `ocean`, `ocean_sunset`, `figueira_beach` | волны | 4 | `seamless loop animation of pixel art waves, 4 frames` |
+| `batumi_rain` | дождь | 3 | слой капель поверх сцены, сдвиг вниз на 3 px за кадр |
 | `pastelaria` | пар над кофе | 4 | `pixel art steam rising from espresso cup, 4 frame loop` |
-| `suitcase` | кот моргает и машет хвостом | 4 | `pixel art grey cat idle animation, tail swish and blink, 4 frames` |
+| `batumi_beach` | камень летит и делает «блинчики» | 6 | `pixel art skipping stone animation over waves, 6 frames` |
 | `plane` | облака плывут | 2 слоя | параллакс: два слоя облаков с разной скоростью |
 | `phone*` | экран мерцает, приходит уведомление | 3 | подпрыгивающий баннер |
 | `aima` | табло с номерами мигает | 2 | |
 | `flat_cold` | пар изо рта | 3 | |
-| `miradouro` | трамвай проезжает | 8 | единственная «длинная» анимация, можно отложить |
+| `batumi_boulevard` | Али и Нино съезжаются и расходятся | 8 | единственная «длинная» анимация, можно отложить |
 | Интерфейс | изменения шкал всплывают и улетают вверх | — | делается кодом, картинки не нужны |
 | Интерфейс | кнопка при нажатии проседает на 2 px | — | кодом |
 | Концовка | затемнение в цвет концовки | — | кодом |
@@ -332,7 +380,7 @@ sunny afternoon, figure passing by
 1024 × 1024, рисуется в 64 × 64 и масштабируется ×16.
 ```
 pixel art app icon 64x64, a big old suitcase with a luggage tag "23 kg", on a background of blue portuguese
-azulejo tile pattern, a small grey cat peeking out of the suitcase, bold readable silhouette, no other text
+azulejo tile pattern, a small plush hare with one ear peeking out of the suitcase, bold readable silhouette, no other text
 ```
 
 ## Шрифт
