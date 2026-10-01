@@ -420,7 +420,7 @@ a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
 | Папа (герой) | `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing` |
 | Жена | `pixel art portrait 48x48, woman in her thirties, hair in a messy bun, cardigan, determined look, emotions: focused, worried, relieved, laughing` |
 | Дочка | `pixel art portrait 48x48, baby girl, big curious eyes, tiny fist, emotions: sleeping, laughing, grabbing` |
-| Сын | `pixel art portrait 48x48, small boy about five years old, holding a plush hare with one ear, emotions: curious, proud, sulking, delighted` |
+| Сын (две версии: 2–3 года в Грузии, 5–6 лет в Оэйраше) | `pixel art portrait 48x48, small boy (toddler version and preschool version), holding a plush hare with one ear, emotions: curious, proud, sulking, delighted` |
 | Мама | `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine` |
 | Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding a checkered blanket` |
 | Брат | `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors` |
