@@ -212,10 +212,15 @@ class ChoiceShapeTests(unittest.TestCase):
             card = next(c for c in CARDS if c['id'] == cid)
             self.assertIn('daughter', card['requires']['notFlags'], cid)
 
-    def test_wifes_parents_come_to_meet_granddaughter(self):
-        g = at_card('oei_daughter_born', 'oeiras', ['pregnant'])
-        tap(g, 'Позвонить маме')
-        self.assertIn('oei_inlaws_granddaughter', [card for card, _ in g.scheduled])
+    def test_wifes_parents_arrive_before_the_birth(self):
+        # Они были здесь в день родов — сидели с сыном.
+        g = at_card('oei_law_change', 'oeiras', ['pregnant'])
+        tap(g, 'Перечитать закон')
+        due = dict(g.scheduled)
+        self.assertLess(due['oei_inlaws_granddaughter'], due['oei_daughter_born'])
+        g = at_card('oei_law_change', 'oeiras', ['pregnant'])
+        tap(g, 'Не говорить жене')
+        self.assertIn('oei_inlaws_granddaughter', dict(g.scheduled))
 
     def test_mom_first_comes_to_batumi(self):
         g = at_card('bat_mom_visit', 'batumi')
