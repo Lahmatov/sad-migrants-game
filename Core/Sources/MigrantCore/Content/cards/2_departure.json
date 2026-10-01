@@ -449,7 +449,7 @@
             },
             "act": "tbilisi",
             "next": [
-              "tb_arrival"
+              "tb_border"
             ]
           }
         },
@@ -462,7 +462,7 @@
             },
             "act": "tbilisi",
             "next": [
-              "tb_arrival"
+              "tb_border"
             ]
           }
         }
