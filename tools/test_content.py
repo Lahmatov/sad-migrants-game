@@ -156,6 +156,51 @@ class EngineMirrorTests(unittest.TestCase):
         self.assertEqual(applied, {'home': 50})
 
 
+class ChoiceShapeTests(unittest.TestCase):
+    """Выбор должен быть выбором: не монетка и не ловушка."""
+
+    def test_detector_finds_option_worse_in_everything(self):
+        card = {'id': 'x', 'choices': [
+            {'label': 'хорошо', 'effects': {'stats': {'nerves': 5, 'home': 2}}},
+            {'label': 'плохо', 'effects': {'stats': {'nerves': 3}}}]}
+        self.assertEqual(len(content.dominated_choices([card])), 1)
+
+    def test_detector_accepts_real_trade_off(self):
+        card = {'id': 'x', 'choices': [
+            {'label': 'деньги', 'effects': {'stats': {'money': 100, 'nerves': -5}}},
+            {'label': 'нервы', 'effects': {'stats': {'nerves': 5}}}]}
+        self.assertEqual(content.dominated_choices([card]), [])
+
+    def test_detector_ignores_options_with_future_consequences(self):
+        card = {'id': 'x', 'choices': [
+            {'label': 'хорошо', 'effects': {'stats': {'nerves': 5}}},
+            {'label': 'с флагом', 'effects': {'stats': {'nerves': 3}, 'set': ['later']}}]}
+        self.assertEqual(content.dominated_choices([card]), [])
+
+    def test_no_option_is_worse_in_everything(self):
+        self.assertEqual(content.dominated_choices(CARDS), [])
+
+    def test_no_card_is_a_coin_flip(self):
+        # Один вариант — это судьба, два — монетка, три — выбор.
+        # Два допустимы, только если второй открывается прошлым решением.
+        flips = [c['id'] for c in CARDS
+                 if len(c['choices']) == 2 and all('requires' not in x for x in c['choices'])]
+        self.assertEqual(flips, [])
+
+    def test_dad_call_is_remembered(self):
+        self.assertNotIn('Вспомнить тот звонок', labels(at_card('oei_father', 'oeiras')))
+        g = at_card('call_dad', 'packing')
+        tap(g, 'Позвать его с собой')
+        self.assertIn('asked_dad', g.flags)
+        self.assertIn('Вспомнить тот звонок', labels(at_card('oei_father', 'oeiras', ['asked_dad'])))
+
+    def test_grandma_dance_video_only_if_you_danced(self):
+        self.assertNotIn('Пересмотреть её танец', labels(at_card('f2_grandma', 'figueira2')))
+        g = at_card('bat_wedding', 'batumi', ['new_offer'])
+        tap(g, 'Позвать её танцевать')
+        self.assertIn('grandma_dance', g.flags)
+
+
 class StoryTests(unittest.TestCase):
     """Ключевые истории настоящего сценария ведут туда, куда задумано."""
 

@@ -262,7 +262,31 @@ final class StoryTests: XCTestCase {
         }
     }
 
+    // MARK: - Отложенные отклики
+
+    func testDadCallIsRemembered() throws {
+        XCTAssertFalse(labels(try engine(at: "oei_father", act: "oeiras")).contains("Вспомнить тот звонок"))
+        var engine = try self.engine(at: "call_dad", act: "packing")
+        try tap(&engine, "Позвать его с собой")
+        XCTAssertTrue(engine.state.flags.contains("asked_dad"))
+        XCTAssertTrue(labels(try self.engine(at: "oei_father", act: "oeiras", flags: ["asked_dad"])).contains("Вспомнить тот звонок"))
+    }
+
+    func testGrandmaDanceVideoOnlyIfYouDanced() throws {
+        XCTAssertFalse(labels(try engine(at: "f2_grandma", act: "figueira2")).contains("Пересмотреть её танец"))
+        XCTAssertTrue(labels(try engine(at: "f2_grandma", act: "figueira2", flags: ["grandma_dance"])).contains("Пересмотреть её танец"))
+    }
+
     // MARK: - Форма
+
+    /// Один вариант — судьба, два — монетка, три — выбор.
+    /// Два допустимы, только если второй открывается прошлым решением.
+    func testNoCardIsACoinFlip() throws {
+        let flips = try Self.content.get().cards
+            .filter { $0.choices.count == 2 && $0.choices.allSatisfy { $0.requires == nil } }
+            .map(\.id)
+        XCTAssertEqual(flips, [])
+    }
 
     func testButtonsFitOnScreen() throws {
         for card in try Self.content.get().cards {
