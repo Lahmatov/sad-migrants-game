@@ -145,8 +145,9 @@ struct SceneImage: View {
                     .interpolation(.none)
                     .scaledToFill()
                 ArtOverlay(kind: ArtLibrary.animation(for: art))
-            } else if let name, UIImage(named: name) != nil {
-                Image(name)
+            } else if let name, let image = ArtLibrary.image(name) ?? UIImage(named: name) {
+                // Фон сцены: из папки Art или из каталога ассетов.
+                Image(uiImage: image)
                     .resizable()
                     .interpolation(.none)
                     .scaledToFill()

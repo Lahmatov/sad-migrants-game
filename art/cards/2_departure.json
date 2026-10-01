@@ -21,7 +21,8 @@
           "image": "the man quietly handing the envelope to his mother in a dim hallway",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "dep_mom_dinner",
@@ -143,7 +144,8 @@
           "image": "a fort built from cardboard boxes with a window, a toddler peeking out",
           "anim": "dust"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "dep_walk",
@@ -233,7 +235,8 @@
           "image": "the officer glancing at the sleeping toddler and stamping the passport",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "dep_plane",
@@ -255,7 +258,8 @@
           "image": "a sleeping toddler holding the man's finger",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "dep_yerevan",

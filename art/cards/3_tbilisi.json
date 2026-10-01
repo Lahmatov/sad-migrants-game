@@ -11,7 +11,8 @@
           "image": "the officer laughing and stamping the passport, the man with a hand on his heart",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "tb_arrival",
@@ -223,7 +224,8 @@
           "image": "the family on the city wall of sighnaghi, the toddler running where the couple once stood",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "tb_one_room",
@@ -267,7 +269,8 @@
           "image": "the man shaking hands with a smiling landlord under a golden chandelier",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "tb_where_next",

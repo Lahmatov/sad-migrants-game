@@ -55,7 +55,8 @@
           "image": "the family walking hand in hand toward the huge cold atlantic",
           "anim": "gulls"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_month_both",
@@ -644,7 +645,8 @@
           "image": "the boy throwing a shell into the ocean, the stone still in his pocket",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_stones",
@@ -832,7 +834,8 @@
           "image": "the man grilling sardines on the balcony, neighbours waving",
           "anim": "steam"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_ocean",
@@ -844,7 +847,8 @@
           "image": "the man still sitting as the sun sets over the ocean",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_syrok",
@@ -976,7 +980,8 @@
           "image": "the couple handing over at the hospital door with a taxi waiting",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_friends",
@@ -998,7 +1003,8 @@
           "image": "the man opening a thermos of pelmeni, everyone crowding around",
           "anim": "steam"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_niece_born",
@@ -1032,7 +1038,8 @@
           "image": "the family walking home along the promenade at dusk",
           "anim": "gulls"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "fig_day",

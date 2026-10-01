@@ -5,7 +5,8 @@
     python3 tools/make_card_art.py --check   # только проверить, что ничего не пропущено
 
 Источник — art/cards/*.json: по файлу на акт, в каждом карточки с полями
-`image` (что нарисовать, по-английски) и `anim` (какая анимация поверх),
+`image` (что нарисовать, по-английски), `anim` (какая анимация поверх)
+и необязательным `key` — ключевая карточка, её рисуют во вторую очередь,
 и такие же поля у каждого выбора. Там же лежит `label` кнопки: если текст
 кнопки в сценарии поменялся, скрипт это заметит — значит, картинку выбора
 пора пересмотреть.
@@ -109,8 +110,15 @@ def problems(cards, acts):
 def check_one(found, name, entry):
     if not entry.get('image', '').strip():
         found.append(f'{name}: пустой промпт')
+    if 'key' in entry and entry['key'] is not True:
+        found.append(f'{name}: key бывает только true')
     if entry.get('anim') not in ANIMATIONS:
         found.append(f'{name}: неизвестная анимация {entry.get("anim")!r}')
+
+
+def tier(name, entry, is_card):
+    """Очередь рисования: 1 — фоны сцен (в docs/art-brief.md), 2 — ключевые карточки, 3 — остальное."""
+    return 2 if is_card and entry.get('key') else 3
 
 
 def full_prompt(prefix, scenes, scene, moment, anim):
@@ -141,6 +149,7 @@ def build():
     art = {e['id']: e for _, data in acts for e in data['cards']}
     act_titles = {a['id']: a['title'] for a in game['acts']}
     rows, anims = [], {}
+    key_cards = [c for c in cards if art[c['id']].get('key')]
     out = []
     w = out.append
     w('# Картинки карточек и выборов')
@@ -166,6 +175,21 @@ def build():
     w(f'Всего картинок: **{sum(1 + len(c["choices"]) for c in cards)}** — '
       f'{len(cards)} карточек и {sum(len(c["choices"]) for c in cards)} выборов.')
     w('')
+    w('## Порядок работы — три уровня')
+    w('')
+    w('1. **Фоны сцен** — `docs/art-brief.md`, шаг 3 (и первые строки `art/prompts.csv`). Их немного, '
+      'а с ними картинка есть у каждой карточки сразу. Файл — `<сцена>.png` в ту же папку `App/Resources/Art/`.')
+    w(f'2. **Ключевые карточки** — {len(key_cards)} штук, отмечены ★ ниже. Поворотные моменты истории: '
+      'отъезд, граница, первое слово, свадьба брата, папа, рождение дочки, финалы.')
+    w('3. **Всё остальное** — карточки и выборы по порядку игры. Каждая готовая картинка сразу видна в игре.')
+    w('')
+    w('В `art/prompts.csv` есть колонка `tier` — можно отсортировать и генерировать пачками по уровню.')
+    w('')
+    w('### Ключевые карточки')
+    w('')
+    for card in key_cards:
+        w(f'- `{card["id"]}.png` — {card["text"][:70].rstrip()}…')
+    w('')
     current_act = None
     for card in cards:
         if card['act'] != current_act:
@@ -175,10 +199,10 @@ def build():
         entry = art[card['id']]
         scene = card.get('scene', '')
         prompt = full_prompt(prefix, scenes, scene, entry['image'], entry['anim'])
-        rows.append((f'{card["id"]}.png', prompt, entry['anim']))
+        rows.append((f'{card["id"]}.png', prompt, entry['anim'], tier(card['id'], entry, True)))
         if entry['anim'] != 'none':
             anims[card['id']] = entry['anim']
-        w(f'### `{card["id"]}.png`')
+        w(f'### `{card["id"]}.png`' + (' ★' if entry.get('key') else ''))
         w('')
         w(f'> {card["text"]}')
         w('')
@@ -191,7 +215,7 @@ def build():
         for index, (choice, pic) in enumerate(zip(card['choices'], entry['choices']), 1):
             name = f'{card["id"]}__{index}'
             prompt = full_prompt(prefix, scenes, scene, pic['image'], pic['anim'])
-            rows.append((f'{name}.png', prompt, pic['anim']))
+            rows.append((f'{name}.png', prompt, pic['anim'], tier(name, pic, False)))
             if pic['anim'] != 'none':
                 anims[name] = pic['anim']
             w(f'#### `{name}.png` — «{choice["label"]}»')
@@ -208,17 +232,21 @@ def build():
 
     with open(DOC, 'w', encoding='utf-8') as handle:
         handle.write('\n'.join(out))
+    # Уровень 1 — фоны сцен: те же промпты, что в docs/art-brief.md, чтобы вся очередь была в одной таблице.
+    used = sorted({c.get('scene') for c in cards if c.get('scene')})
+    for scene in used:
+        rows.append((f'{scene}.png', f'{prefix.rstrip(", ")}. {scenes[scene]}', 'none', 1))
     os.makedirs(os.path.dirname(CSV), exist_ok=True)
     with open(CSV, 'w', encoding='utf-8', newline='') as handle:
         writer = csv.writer(handle)
-        writer.writerow(['file', 'prompt', 'negative', 'animation'])
-        for file, prompt, anim in rows:
-            writer.writerow([file, prompt, negative, anim])
+        writer.writerow(['file', 'tier', 'prompt', 'negative', 'animation'])
+        for file, prompt, anim, level in sorted(rows, key=lambda r: r[3]):
+            writer.writerow([file, level, prompt, negative, anim])
     os.makedirs(os.path.dirname(ANIM), exist_ok=True)
     with open(ANIM, 'w', encoding='utf-8') as handle:
         json.dump(dict(sorted(anims.items())), handle, ensure_ascii=False, indent=1)
         handle.write('\n')
-    print(f'Собрано: {len(rows)} промптов → docs/card-prompts.md, art/prompts.csv; анимаций: {len(anims)}')
+    print(f'Собрано: {len(rows)} промптов (из них фонов сцен: {len(used)}) → docs/card-prompts.md, art/prompts.csv; анимаций: {len(anims)}')
     return 0
 
 

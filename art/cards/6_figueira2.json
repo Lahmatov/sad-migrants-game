@@ -21,7 +21,8 @@
           "image": "the man on the phone with his mother, waving the card",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "f2_citizen_count",
@@ -65,7 +66,8 @@
           "image": "the couple walking the promenade at night, fireworks over the sea",
           "anim": "confetti"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "f2_padel",
@@ -109,7 +111,8 @@
           "image": "a wedding video on the phone: the tiny grandmother dancing, holding onto the man",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "f2_niece",
@@ -201,7 +204,8 @@
           "image": "the couple at a restaurant table alone, candles",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "f2_inlaws_visit",
@@ -250,7 +254,8 @@
           "image": "five people in the battered peugeot on a spanish highway, the sky through the glass roof",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "f2_low_nerves",

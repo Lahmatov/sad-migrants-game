@@ -15,9 +15,63 @@
 
 Всего картинок: **711** — 212 карточек и 499 выборов.
 
+## Порядок работы — три уровня
+
+1. **Фоны сцен** — `docs/art-brief.md`, шаг 3 (и первые строки `art/prompts.csv`). Их немного, а с ними картинка есть у каждой карточки сразу. Файл — `<сцена>.png` в ту же папку `App/Resources/Art/`.
+2. **Ключевые карточки** — 43 штук, отмечены ★ ниже. Поворотные моменты истории: отъезд, граница, первое слово, свадьба брата, папа, рождение дочки, финалы.
+3. **Всё остальное** — карточки и выборы по порядку игры. Каждая готовая картинка сразу видна в игре.
+
+В `art/prompts.csv` есть колонка `tier` — можно отсортировать и генерировать пачками по уровню.
+
+### Ключевые карточки
+
+- `intro.png` — Петербург, конец февраля. Решение уехать принимается за несколько дней…
+- `call_dad.png` — Ты звонишь папе и спрашиваешь, что он думает про переезд. Он долго мол…
+- `dep_russa.png` — Старая Русса. Сын гостил здесь у твоей мамы, ты приехал его забрать. Б…
+- `dep_kid_question.png` — Последний вечер. Квартира в сумках и коробках. Сын ходит между ними гр…
+- `dep_border.png` — «Цель поездки?» Сын спит у тебя на плече. Два чемодана и три рюкзака —…
+- `dep_plane.png` — Чартер взлетает. Внизу становится маленьким всё, что было большим. Сын…
+- `tb_border.png` — Тбилиси, паспортный контроль. Полицейский смотрит на сонного сына, улы…
+- `tb_signagi.png` — Четыре года назад вы уже были в Грузии. Прилетели на три дня и поженил…
+- `tb_trip.png` — Первая неделя. Почему Батуми? Подумали: когда ещё получится пожить у м…
+- `bat_flat.png` — Батуми. Квартира у моря: две комнаты, армянский ремонт, позолота на вс…
+- `bat_car.png` — Авторынок. В России осталась Skoda Yeti — её отдали родителям. Ты ищеш…
+- `bat_stones.png` — Пляж в Батуми — галька. Сын открывает лучшее развлечение на свете: кид…
+- `bat_ali_nino.png` — На бульваре — статуи Али и Нино. Каждый вечер они медленно едут навстр…
+- `bat_first_word.png` — Сын говорит первое слово. «Мама». Жена плачет, ты снимаешь на телефон…
+- `bat_wedding.png` — Конец августа. Брат женится. Вы с женой летите в Россию на несколько д…
+- `bat_brother_border.png` — Ты едешь встречать брата на границу. Он стоит в очереди больше суток.…
+- `bat_brother_leaves.png` — Декабрь. Вы уезжаете в Португалию, брат — домой, в Россию. Сын суёт ем…
+- `bat_last_stones.png` — Последний вечер на пляже. Сын кидает камни в море. Последний он прижим…
+- `fig_arrive.png` — Фигейра-да-Фош. Маленький город на океане. Пляж такой широкий, что до…
+- `fig_stone.png` — На пляже сын достаёт из кармана камень из Батуми. «Можно я его брошу в…
+- `fig_sardines.png` — Июнь, праздник Святого Жуана. На улицах жарят сардины, играет музыка,…
+- `fig_ocean.png` — Ты сидишь на мокром песке. Океан огромный и шумит. Где-то там, прямо,…
+- `fig_urgencia.png` — Зима. Вечером у сына под сорок, вы едете в urgência — приёмный покой.…
+- `fig_friends.png` — Шашлыки на пляже нельзя — только у озера, в специальном месте с мангал…
+- `fig_year_one.png` — Год в Фигейре. У вас есть NIF, ключи, любимая пастелария и друзья, с к…
+- `f2_card.png` — Девять месяцев спустя из Порту приходит и твоя карточка ВНЖ. Последняя…
+- `f2_new_year.png` — Новый год. В Петербурге полночь наступает в девять вечера по-вашему. В…
+- `f2_grandma.png` — Мама пишет коротко: бабушки больше нет. Та, что совала деньги в карман…
+- `f2_mom_visit.png` — Мама прилетает в Фигейру. После Батуми она уже опытная путешественница…
+- `f2_inlaws_malaga.png` — Лето 2024-го. Родители жены прилетают снова — они приезжают раз-два в…
+- `oei_school.png` — Сентябрь. Все вернулись из отпусков, и дорога в школу — туда и обратно…
+- `oei_sporting.png` — Одноклассники сына делятся на «Бенфику» и «Спортинг». Нейтралитет нево…
+- `oei_daughter_born.png` — Июль. Родилась дочка. Твой нос и мамины брови. Гражданства у неё нет.…
+- `oei_legoland.png` — Ты обещал сыну Леголенд. Вы летите вдвоём: три дня в Копенгагене, пото…
+- `oei_father.png` — Восемь утра. Звонит мама. Они с папой давно в разводе, но полиция позв…
+- `oei_father_trip.png` — Петербург. Брат встречает тебя, и вы на его машине едете на север, в Н…
+- `oei_father_back.png` — Самолёт в Лиссабон. Ты впервые замечаешь, что про Португалию думаешь «…
+- `oei_mom_paris.png` — 2026-й. Ты везёшь маму в Париж. Всю жизнь он был для неё открыткой на…
+- `oei_final.png` — Квартира найдена. Не идеальная: третий этаж без лифта, кухня маленькая…
+- `final_museum.png` — Вечер в пустой квартире. Ты открываешь коробку, которую возил из стран…
+- `final_two_homes.png` — Вечер в пустой квартире. На полу — камень из Батуми, серый кот и фото…
+- `final_ours.png` — Вечер в пустой квартире. Соседка снизу приносит пирог и говорит, что т…
+- `final_thirty.png` — Вечер в пустой квартире. Вы сидите на полу вчетвером и едите пиццу из…
+
 ## Петербург. Сборы
 
-### `intro.png`
+### `intro.png` ★
 
 > Петербург, конец февраля. Решение уехать принимается за несколько дней — где-то между новостями и третьей бессонной ночью. Билеты на чартер через Ереван, вылет второго марта, ночью. Сыну два года, он ещё не говорит. Сейчас он у бабушки в Старой Руссе и ничего не знает.
 
@@ -35,7 +89,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man standing at the dark window holding a phone to his ear, waiting for an answer, city lights below in the snow. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
 ```
 
-### `call_dad.png`
+### `call_dad.png` ★
 
 > Ты звонишь папе и спрашиваешь, что он думает про переезд. Он долго молчит. Потом говорит: «Не надо. Подумайте ещё».
 
@@ -461,7 +515,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ## Петербург. Отъезд
 
-### `dep_russa.png`
+### `dep_russa.png` ★
 
 > Старая Русса. Сын гостил здесь у твоей мамы, ты приехал его забрать. Бабушка тоже здесь. Она суёт тебе в карман конверт с деньгами «на первое время», обнимает, целует сына в макушку, снова обнимает.
 
@@ -681,7 +735,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a hand turning a key twice in an old apartment door. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
 ```
 
-### `dep_kid_question.png`
+### `dep_kid_question.png` ★
 
 > Последний вечер. Квартира в сумках и коробках. Сын ходит между ними грустный и не понимает, что происходит. Говорить он ещё не умеет — спросить не может.
 
@@ -839,7 +893,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a crowded airport hall at night, families with suitcases standing in a long quiet queue. Usual place, adapt if the moment says otherwise: airport departure hall at night, long quiet queue to passport control, people with big suitcases, departure board with unreadable text, cold white light, figure with a backpack seen from behind. small lit windows or lamps scattered in the upper two thirds.
 ```
 
-### `dep_border.png`
+### `dep_border.png` ★
 
 > «Цель поездки?» Сын спит у тебя на плече. Два чемодана и три рюкзака — в три часа ночи.
 
@@ -879,7 +933,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the officer glancing at the sleeping toddler and stamping the passport. Usual place, adapt if the moment says otherwise: passport control booth seen from traveler's point of view, border officer behind glass looking at a passport, stamp in hand, harsh fluorescent light, tense.
 ```
 
-### `dep_plane.png`
+### `dep_plane.png` ★
 
 > Чартер взлетает. Внизу становится маленьким всё, что было большим. Сын засыпает сразу, на тебе. Жена смотрит в окно. Ты смотришь на жену.
 
@@ -979,7 +1033,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ## Тбилиси
 
-### `tb_border.png`
+### `tb_border.png` ★
 
 > Тбилиси, паспортный контроль. Полицейский смотрит на сонного сына, улыбается и говорит на ломаном русском: «Молодец. Хороший мальчик будешь». Приобнимает его за плечо. Первый человек в новой стране — добрый.
 
@@ -1335,7 +1389,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the phone pointed at the courtyard, a man under a car bonnet waving at the camera. Usual place, adapt if the moment says otherwise: smartphone in hand during a video call, mother's face on the screen in a warm kitchen, background of the caller's cold lisbon room, emotional contrast warm screen vs cold room.
 ```
 
-### `tb_signagi.png`
+### `tb_signagi.png` ★
 
 > Четыре года назад вы уже были в Грузии. Прилетели на три дня и поженились в Сигнахи — двое русских в городе любви на холме. Тогда Грузия была праздником. Теперь она — убежище.
 
@@ -1415,7 +1469,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the couple on a narrow hotel balcony with tea, looking down at the courtyard. Usual place, adapt if the moment says otherwise: georgian cafe table with a boat-shaped adjarian khachapuri with egg and butter, a small boy eating only the crust, father's hand with a fork, warm light. keep dark night sky in the upper part of the frame.
 ```
 
-### `tb_trip.png`
+### `tb_trip.png` ★
 
 > Первая неделя. Почему Батуми? Подумали: когда ещё получится пожить у моря. Вы берёте машину напрокат и едете смотреть квартиры. Пять часов дороги через перевал. Сын спит, потом смотрит на горы, потом снова спит.
 
@@ -1495,7 +1549,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ## Батуми
 
-### `bat_flat.png`
+### `bat_flat.png` ★
 
 > Батуми. Квартира у моря: две комнаты, армянский ремонт, позолота на всём, что не двигается. Из окна — море. Сын выбегает на балкон и машет морю обеими руками. Море не отвечает, но, кажется, ему приятно.
 
@@ -1747,7 +1801,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the woman on a video call pointing calmly toward the boxes without looking up. Usual place, adapt if the moment says otherwise: high-rise apartment in batumi, big balcony window with the black sea filling the whole view, sparse rented furniture, a toy railway on the floor, a boy on the balcony waving at the sea, soft grey-green sea light.
 ```
 
-### `bat_car.png`
+### `bat_car.png` ★
 
 > Авторынок. В России осталась Skoda Yeti — её отдали родителям. Ты ищешь что-то похожее: повыше, полноприводное, вроде Tiguan. И тут видишь её — Volkswagen Jetta GLI. Низкая, спортивная, совсем не то, что нужно семье с ребёнком.
 
@@ -1847,7 +1901,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the car driving out of the garage, a crate of mandarins on the back seat. Usual place, adapt if the moment says otherwise: batumi street with a mix of old houses and glass towers, used cars parked along the road, wet asphalt, neon signs (unreadable), a car market vibe, cloudy sky.
 ```
 
-### `bat_stones.png`
+### `bat_stones.png` ★
 
 > Пляж в Батуми — галька. Сын открывает лучшее развлечение на свете: кидать камни в море. Один камень, второй, сотый. Ты сначала смотришь в телефон. Потом откладываешь телефон.
 
@@ -2183,7 +2237,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man working calmly at the laptop, a quiet flat, sea in the window. Usual place, adapt if the moment says otherwise: kindergarten gate in batumi, colorful fence, a teacher holding hands with children, a small boy walking in without looking back, father standing outside the gate, morning. keep water in the lower third of the frame.
 ```
 
-### `bat_ali_nino.png`
+### `bat_ali_nino.png` ★
 
 > На бульваре — статуи Али и Нино. Каждый вечер они медленно едут навстречу друг другу, на миг сливаются и снова расходятся. Сын смотрит, раскрыв рот, а когда они расходятся, говорит: «Ушли». И грустит.
 
@@ -2563,7 +2617,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the woman taking notes during the call about schools and taxes. Usual place, adapt if the moment says otherwise: smartphone in hand during a video call, mother's face on the screen in a warm kitchen, background of the caller's cold lisbon room, emotional contrast warm screen vs cold room.
 ```
 
-### `bat_first_word.png`
+### `bat_first_word.png` ★
 
 > Сын говорит первое слово. «Мама». Жена плачет, ты снимаешь на телефон дрожащими руками. Через неделю — «папа». Ты делаешь вид, что не ревновал.
 
@@ -2643,7 +2697,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the phone face down on the table for a week, the recruiter's messages piling up. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
-### `bat_wedding.png`
+### `bat_wedding.png` ★
 
 > Конец августа. Брат женится. Вы с женой летите в Россию на несколько дней, а сын остаётся в Батуми с её родителями — они прилетают специально, возят его на минеральные источники и обживают отель. На свадьбе бабушка снова суёт тебе деньги, обнимает и целует. Ты ещё не знаешь, что видишь её в последний раз.
 
@@ -2743,7 +2797,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man saying yes into the phone, the sea dark behind him. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen. keep dark night sky in the upper part of the frame.
 ```
 
-### `bat_brother_border.png`
+### `bat_brother_border.png` ★
 
 > Ты едешь встречать брата на границу. Он стоит в очереди больше суток. Там таких много — ночью холодно, люди мёрзнут в машинах и на обочине. Пока ждёшь брата, ты возишь незнакомых ребят до отеля — погреться.
 
@@ -2823,7 +2877,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the brother, the man and the toddler skipping stones on the beach. Usual place, adapt if the moment says otherwise: high-rise apartment in batumi, big balcony window with the black sea filling the whole view, sparse rented furniture, a toy railway on the floor, a boy on the balcony waving at the sea, soft grey-green sea light. keep water in the lower third of the frame.
 ```
 
-### `bat_brother_leaves.png`
+### `bat_brother_leaves.png` ★
 
 > Декабрь. Вы уезжаете в Португалию, брат — домой, в Россию. Сын суёт ему в руку свой лучший камень с пляжа. Брат кладёт его в нагрудный карман.
 
@@ -3103,7 +3157,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man handing over the keys and taking cash. Usual place, adapt if the moment says otherwise: batumi street with a mix of old houses and glass towers, used cars parked along the road, wet asphalt, neon signs (unreadable), a car market vibe, cloudy sky.
 ```
 
-### `bat_last_stones.png`
+### `bat_last_stones.png` ★
 
 > Последний вечер на пляже. Сын кидает камни в море. Последний он прижимает к груди и не отдаёт. В чемодане теперь есть камень из Батуми.
 
@@ -3303,7 +3357,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the boy running toward atlantic waves on a lisbon beach and away again. Usual place, adapt if the moment says otherwise: steep lisbon street with a yellow tram, colorful tiled facades, a family of three with two suitcases and three backpacks climbing uphill, sunny, slightly comic. keep water in the lower third of the frame.
 ```
 
-### `fig_arrive.png`
+### `fig_arrive.png` ★
 
 > Фигейра-да-Фош. Маленький город на океане. Пляж такой широкий, что до воды идти десять минут. Не сезон: пусто, ветер, чайки, рыбаки. Сын бежит к океану и останавливается — тот рычит.
 
@@ -4321,7 +4375,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man paying the bill on his phone with a sigh. Usual place, adapt if the moment says otherwise: small rented lisbon apartment room, mattress with a thin blanket, laptop on a box used as a table, a few books on a shelf, black mold spot in the corner of the ceiling, window with terracotta rooftops, evening, lived-in but temporary feeling.
 ```
 
-### `fig_stone.png`
+### `fig_stone.png` ★
 
 > На пляже сын достаёт из кармана камень из Батуми. «Можно я его брошу в океан? Пусть познакомятся».
 
@@ -4659,7 +4713,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the family recording a video with a cake and a drawing. Usual place, adapt if the moment says otherwise: portuguese tax office waiting room, ticket number screen, long rows of chairs, people waiting with papers, tired clerk at a desk, greenish fluorescent light, bureaucratic comedy.
 ```
 
-### `fig_sardines.png`
+### `fig_sardines.png` ★
 
 > Июнь, праздник Святого Жуана. На улицах жарят сардины, играет музыка, все бьют друг друга по голове пластиковыми молоточками. Это традиция. Сыну дают молоточек.
 
@@ -4699,7 +4753,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man grilling sardines on the balcony, neighbours waving. Usual place, adapt if the moment says otherwise: small portuguese seaside town street, white houses with blue azulejo trim, an old 15-year-old hatchback car parked, a bus stop, palm tree, windy afternoon. a steaming cup or pot near the center of the frame.
 ```
 
-### `fig_ocean.png`
+### `fig_ocean.png` ★
 
 > Ты сидишь на мокром песке. Океан огромный и шумит. Где-то там, прямо, — Америка. Петербург — в другую сторону, за спиной. Батуми — тоже. Ты не оборачиваешься.
 
@@ -4917,7 +4971,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: money transfer notifications from mother. Usual place, adapt if the moment says otherwise: small rented lisbon apartment room, mattress with a thin blanket, laptop on a box used as a table, a few books on a shelf, black mold spot in the corner of the ceiling, window with terracotta rooftops, evening, lived-in but temporary feeling.
 ```
 
-### `fig_urgencia.png`
+### `fig_urgencia.png` ★
 
 > Зима. Вечером у сына под сорок, вы едете в urgência — приёмный покой. Его оставляют в больнице с температурой на два дня. Остаться с ним можно одному взрослому.
 
@@ -4957,7 +5011,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the couple handing over at the hospital door with a taxi waiting. Usual place, adapt if the moment says otherwise: portuguese hospital emergency waiting room at night, number screen, tired parents with a sleeping child on a plastic chair, vending machine glow, quiet fluorescent light.
 ```
 
-### `fig_friends.png`
+### `fig_friends.png` ★
 
 > Шашлыки на пляже нельзя — только у озера, в специальном месте с мангалами. Туда съезжаются все, кого вы знаете по площадке. Дети носятся одной стаей. Говорите о садиках, SEF и где брать мясо. О главном — нет. Все и так всё знают.
 
@@ -5037,7 +5091,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man typing 'we will come' on his phone. Usual place, adapt if the moment says otherwise: smartphone in hand during a video call, mother's face on the screen in a warm kitchen, background of the caller's cold lisbon room, emotional contrast warm screen vs cold room.
 ```
 
-### `fig_year_one.png`
+### `fig_year_one.png` ★
 
 > Год в Фигейре. У вас есть NIF, ключи, любимая пастелария и друзья, с которыми можно поехать на озеро. Сын говорит по-португальски чуть-чуть лучше вас обоих — и очень этим гордится. Вы здесь ещё не дома. Но уже и не в гостях.
 
@@ -5075,7 +5129,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ## Фигейра-да-Фош, год 2
 
-### `f2_card.png`
+### `f2_card.png` ★
 
 > Девять месяцев спустя из Порту приходит и твоя карточка ВНЖ. Последняя в семье. Пока она шла, SEF успели переименовать в AIMA, а сын — выучить португальский.
 
@@ -5155,7 +5209,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: an evening language class, the same faces as before, a bit more confident. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
-### `f2_new_year.png`
+### `f2_new_year.png` ★
 
 > Новый год. В Петербурге полночь наступает в девять вечера по-вашему. В 21:00 вы с бокалами у ноутбука: мама, брат с женой и малышкой, куранты. В 00:00 — второй раз, с друзьями и португальским виноградом.
 
@@ -5235,7 +5289,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a private clinic x-ray screen showing a nose. Usual place, adapt if the moment says otherwise: outdoor padel court with glass walls, woman holding a racket and her nose in surprise, man laughing and running to help, sunny afternoon, comic moment.
 ```
 
-### `f2_grandma.png`
+### `f2_grandma.png` ★
 
 > Мама пишет коротко: бабушки больше нет. Та, что совала деньги в карман и целовала сына в макушку. Последний раз ты видел её на свадьбе брата.
 
@@ -5391,7 +5445,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the call ending with everyone waving goodbye. Usual place, adapt if the moment says otherwise: smartphone in hand during a video call, mother's face on the screen in a warm kitchen, background of the caller's cold lisbon room, emotional contrast warm screen vs cold room.
 ```
 
-### `f2_mom_visit.png`
+### `f2_mom_visit.png` ★
 
 > Мама прилетает в Фигейру. После Батуми она уже опытная путешественница: пересадка, паспортный контроль, «obrigada» на выходе. Чемодан, как всегда, наполовину ваш: сырки, гречка, носки внуку.
 
@@ -5471,7 +5525,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a crowded dinner in the old flat with colleagues, friends and grandparents. Usual place, adapt if the moment says otherwise: airport arrivals hall in lisbon, glass doors opening, a grandmother with a big suitcase and a small boy running toward her with arms open, warm afternoon light, welcome signs, joyful and slightly teary. small lit windows or lamps scattered in the upper two thirds.
 ```
 
-### `f2_inlaws_malaga.png`
+### `f2_inlaws_malaga.png` ★
 
 > Лето 2024-го. Родители жены прилетают снова — они приезжают раз-два в год. Атлантика им холодная, поэтому решаете все вместе: едем в Малагу, купаться в нормальном море.
 
@@ -5739,7 +5793,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man paying on his phone with a sigh. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
-### `oei_school.png`
+### `oei_school.png` ★
 
 > Сентябрь. Все вернулись из отпусков, и дорога в школу — туда и обратно — теперь минимум час двадцать. Зато школа: половина дня на португальском, половина на английском, в классе дети из десятка с лишним стран. Сын приходит домой и молчит. Потом говорит: «Тут все немножко как я».
 
@@ -5759,7 +5813,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man hugging the boy after his first school day. Usual place, adapt if the moment says otherwise: modern bilingual school yard, kids from many countries in uniforms, a boy laughing with friends, flags of different countries on a wall (no text), bright morning.
 ```
 
-### `oei_sporting.png`
+### `oei_sporting.png` ★
 
 > Одноклассники сына делятся на «Бенфику» и «Спортинг». Нейтралитет невозможен: это Лиссабон. А сын как раз начал ходить на футбол при школе — и секция там «Спортинга».
 
@@ -5957,7 +6011,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: an online petition with many signatures. Usual place, adapt if the moment says otherwise: smartphone screen showing a busy group chat with many message bubbles and cat stickers (no readable text), hand holding the phone, night lighting.
 ```
 
-### `oei_daughter_born.png`
+### `oei_daughter_born.png` ★
 
 > Июль. Родилась дочка. Твой нос и мамины брови. Гражданства у неё нет. Ей всё равно — она спит. Сын в это время дома с бабушкой и дедушкой, а вечером держит сестру на руках и говорит: «Я научу её кидать камни».
 
@@ -6057,7 +6111,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: keys jingling above the camera, the baby staring seriously into the lens. Usual place, adapt if the moment says otherwise: immigration office waiting hall, sign "AIMA" above counters, crowded with people from different countries, number display, one open window out of ten, clerk taking fingerprints, fluorescent light, absurd and tiring.
 ```
 
-### `oei_legoland.png`
+### `oei_legoland.png` ★
 
 > Ты обещал сыну Леголенд. Вы летите вдвоём: три дня в Копенгагене, потом на арендованном Ситроене — в Биллунн. Жена остаётся дома «отдыхать от вас обоих».
 
@@ -6097,7 +6151,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the whole family in a rented citroën on a danish road. Usual place, adapt if the moment says otherwise: colorful theme park made of giant toy bricks, father and small boy on a roller coaster with hands up, bright summer day, pure joy.
 ```
 
-### `oei_father.png`
+### `oei_father.png` ★
 
 > Восемь утра. Звонит мама. Они с папой давно в разводе, но полиция позвонила ей. Папа был у своей мамы в Надвоицах. Сердце.
 
@@ -6127,7 +6181,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man remembering: a row of old garages under snow. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
-### `oei_father_trip.png`
+### `oei_father_trip.png` ★
 
 > Петербург. Брат встречает тебя, и вы на его машине едете на север, в Надвоицы: справки, похоронное бюро, бумаги. Потом — в Мончегорск, где папа жил. Конец мая, а там лежит снег.
 
@@ -6147,7 +6201,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: an old flat in monchegorsk, the brothers sorting things in silence, a nike sweatshirt and a stopped wristwatch on the table. Usual place, adapt if the moment says otherwise: small rental car on a winding mountain road in georgia, green mountains, low clouds, view from behind the car, a toddler asleep in a child seat visible through the rear window, early spring, calm road-trip mood.
 ```
 
-### `oei_father_back.png`
+### `oei_father_back.png` ★
 
 > Самолёт в Лиссабон. Ты впервые замечаешь, что про Португалию думаешь «лечу домой». И что дом теперь — не одно место. На руке — папина кофта. Внизу облака.
 
@@ -6605,7 +6659,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a photo of the grandparents with the boy on the sofa, waiting. Usual place, adapt if the moment says otherwise: airport arrivals hall in lisbon, glass doors opening, a grandmother with a big suitcase and a small boy running toward her with arms open, warm afternoon light, welcome signs, joyful and slightly teary.
 ```
 
-### `oei_mom_paris.png`
+### `oei_mom_paris.png` ★
 
 > 2026-й. Ты везёшь маму в Париж. Всю жизнь он был для неё открыткой на холодильнике. Теперь вы стоите на мосту, и открытка вокруг — настоящая.
 
@@ -6765,7 +6819,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a school office, the man signing a payment plan. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
-### `oei_final.png`
+### `oei_final.png` ★
 
 > Квартира найдена. Не идеальная: третий этаж без лифта, кухня маленькая, зато школа рядом и из окна видно кусочек реки. Банк ждёт подписи до пятницы. Подписать — значит впервые в жизни решить что-то на тридцать лет вперёд.
 
@@ -6833,7 +6887,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man on the phone saying 'não', the wife nodding. Usual place, adapt if the moment says otherwise: empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy, an old banknote and a pizza box, keys in the father's hand, warm and quiet.
 ```
 
-### `final_museum.png`
+### `final_museum.png` ★
 
 > Вечер в пустой квартире. Ты открываешь коробку, которую возил из страны в страну и ни разу не разобрал. Купюра из бабушкиного конверта. Камень из Батуми. Альбом. Серый кот. Сын раскладывает их по полу в ряд, как в музее.
 
@@ -6851,7 +6905,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a box placed first on an empty shelf. Usual place, adapt if the moment says otherwise: empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy, an old banknote and a pizza box, keys in the father's hand, warm and quiet.
 ```
 
-### `final_two_homes.png`
+### `final_two_homes.png` ★
 
 > Вечер в пустой квартире. На полу — камень из Батуми, серый кот и фото детей. Мама на видео осматривает каждый угол. Сын объясняет бабушке, где будет его комната. По-русски.
 
@@ -6869,7 +6923,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the light switched on in the empty flat, warm glow. Usual place, adapt if the moment says otherwise: empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy, an old banknote and a pizza box, keys in the father's hand, warm and quiet. small lit windows or lamps scattered in the upper two thirds.
 ```
 
-### `final_ours.png`
+### `final_ours.png` ★
 
 > Вечер в пустой квартире. Соседка снизу приносит пирог и говорит, что тут хороший район для детей. Сын благодарит её на португальском без акцента. Дочка спит на шарфе «Спортинга».
 
@@ -6887,7 +6941,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the light switched on, the family and the neighbour laughing. Usual place, adapt if the moment says otherwise: empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy, an old banknote and a pizza box, keys in the father's hand, warm and quiet. small lit windows or lamps scattered in the upper two thirds.
 ```
 
-### `final_thirty.png`
+### `final_thirty.png` ★
 
 > Вечер в пустой квартире. Вы сидите на полу вчетвером и едите пиццу из коробки. Никто ничего не говорит. Всё уже сказано за пять лет и четыре города.
 

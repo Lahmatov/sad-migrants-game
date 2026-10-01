@@ -21,7 +21,8 @@
           "image": "the family asleep in their clothes on a big bed with golden legs, sea light on the ceiling",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_lift",
@@ -169,7 +170,8 @@
           "image": "the man leaving the car market on foot with cash in his pocket, waving down a taxi",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_car_police",
@@ -225,7 +227,8 @@
           "image": "small hands holding a pile of white striped pebbles",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_stones_again",
@@ -415,7 +418,8 @@
           "image": "the man crouching beside the toddler, telling the story, pointing at the statues",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_persimmon",
@@ -627,7 +631,8 @@
           "image": "a cake with an illegible word on it, the toddler eating the first letter",
           "anim": "confetti"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_offer",
@@ -671,7 +676,8 @@
           "image": "the man slowly dancing with his tiny grandmother, everyone filming",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_moscow_office",
@@ -727,7 +733,8 @@
           "image": "the man walking along the queue with a thermos and sandwiches",
           "anim": "steam"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_brother_here",
@@ -761,7 +768,8 @@
           "image": "two brothers in a long hug, then walking in opposite directions",
           "anim": "sea"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_tourists",
@@ -917,7 +925,8 @@
           "image": "a flat batumi stone placed into the suitcase on top of clothes",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "bat_spb_flat",

@@ -11,7 +11,8 @@
           "image": "the man standing at the dark window holding a phone to his ear, waiting for an answer, city lights below in the snow",
           "anim": "snow"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "call_dad",
@@ -33,7 +34,8 @@
           "image": "the man smiling sadly into the phone, through the window a row of old soviet garages under snow",
           "anim": "snow"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "call_inlaws",

@@ -51,7 +51,7 @@ no text, cozy melancholic mood, side or three-quarter view, game background for 
 blurry, gradient, photorealistic, 3d render, text, letters, watermark, jpeg artifacts, extra fingers, face close-up
 ```
 
-Имя файла = имя сцены из карточек. В Xcode положить в `App/Resources/Assets.xcassets/Scenes/` как Image Set с тем же именем; пока картинки нет, игра показывает имя сцены на заглушке.
+Имя файла = имя сцены из карточек: `batumi_beach.png` в папку `App/Resources/Art/` (туда же, куда картинки карточек). Пока картинки нет, игра рисует сцену кодом.
 
 ---
 

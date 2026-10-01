@@ -260,6 +260,15 @@ class CardArtTests(unittest.TestCase):
         self.assertTrue(any('y' in f for f in found))
         self.assertTrue(any('fireworks' in f for f in found))
 
+    def test_key_cards_go_second_and_choices_last(self):
+        self.assertEqual(self.art.tier('x', {'key': True}, True), 2)
+        self.assertEqual(self.art.tier('x', {}, True), 3)
+        self.assertEqual(self.art.tier('x__1', {'key': True}, False), 3)
+
+    def test_there_are_about_forty_key_cards(self):
+        keys = [e for _, data in self.art.load_art() for e in data['cards'] if e.get('key')]
+        self.assertTrue(30 <= len(keys) <= 50, len(keys))
+
     def test_animation_names_match_the_app(self):
         path = os.path.join(ROOT, 'Core', 'Sources', 'MigrantCore', 'ArtMotion.swift')
         with open(path, encoding='utf-8') as handle:

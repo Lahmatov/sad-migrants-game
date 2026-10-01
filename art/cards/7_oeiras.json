@@ -57,7 +57,8 @@
           "image": "the man hugging the boy after his first school day",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_sporting",
@@ -79,7 +80,8 @@
           "image": "the boy looking at his father like a traitor, a sporting shirt on the chair",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_sporting_match",
@@ -191,7 +193,8 @@
           "image": "a midwife placing the baby in the man's arms, the baby looking at him",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_daughter_docs",
@@ -247,7 +250,8 @@
           "image": "the whole family in a rented citroën on a danish road",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_father",
@@ -264,7 +268,8 @@
           "image": "the man remembering: a row of old garages under snow",
           "anim": "snow"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_father_trip",
@@ -276,7 +281,8 @@
           "image": "an old flat in monchegorsk, the brothers sorting things in silence, a nike sweatshirt and a stopped wristwatch on the table",
           "anim": "dust"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_father_back",
@@ -288,7 +294,8 @@
           "image": "the arrivals hall, the woman and the boy holding a handmade sign 'papa' with a backwards letter",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_ten_years",
@@ -556,7 +563,8 @@
           "image": "mother and son at a small paris café corner table",
           "anim": "steam"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "oei_mom_spain",
@@ -659,7 +667,8 @@
           "image": "the man on the phone saying 'não', the wife nodding",
           "anim": "none"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "final_museum",
@@ -671,7 +680,8 @@
           "image": "a box placed first on an empty shelf",
           "anim": "dust"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "final_two_homes",
@@ -683,7 +693,8 @@
           "image": "the light switched on in the empty flat, warm glow",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "final_ours",
@@ -695,7 +706,8 @@
           "image": "the light switched on, the family and the neighbour laughing",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "final_thirty",
@@ -707,7 +719,8 @@
           "image": "the light switched on over the pizza box",
           "anim": "lights"
         }
-      ]
+      ],
+      "key": true
     },
     {
       "id": "aima_call_again",
