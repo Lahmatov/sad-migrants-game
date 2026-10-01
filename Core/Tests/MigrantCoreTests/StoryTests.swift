@@ -197,7 +197,8 @@ final class StoryTests: XCTestCase {
 
     func testExpensiveCarNeedsMoney() throws {
         let poor = labels(try engine(at: "bat_car", act: "batumi", money: 5_000))
-        XCTAssertFalse(poor.contains("Купить красивую"))
+        XCTAssertFalse(poor.contains("Взять то, что хочется"))
+        XCTAssertTrue(labels(try engine(at: "bat_car", act: "batumi", money: 20_000)).contains("Взять то, что хочется"))
         XCTAssertTrue(poor.contains("Обойдёмся такси"))
     }
 

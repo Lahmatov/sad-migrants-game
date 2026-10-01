@@ -110,6 +110,10 @@ struct SceneRecipe {
             if name.hasSuffix("_school") || name == "batumi_kindergarten" { r.stars = false }
         case "plane":
             r.place = .plane
+        case "car":
+            // Дорога через перевал: горы и облака, без моря.
+            r.place = .sea(.rocks); r.mountains = true; r.sea = [E32.pine, E32.green]
+            r.sky = [E32.steel, E32.mist, E32.cloud]
         case "stadium":
             r.place = .stadium
         case "padel":

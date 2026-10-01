@@ -140,6 +140,13 @@ tbilisi old town at dusk, colorful carved wooden balconies, steep cobblestone st
 narikala fortress on the hill, father carrying a small boy on his shoulders seen from behind, warm lights
 ```
 
+### `car` · 1
+Поездка на прокатной машине из Тбилиси в Батуми через перевал.
+```
+small rental car on a winding mountain road in georgia, green mountains, low clouds, view from behind the car,
+a toddler asleep in a child seat visible through the rear window, early spring, calm road-trip mood
+```
+
 ### `batumi_flat` · 9
 Квартира на высоком этаже, море во всё окно — главная сцена акта.
 ```
@@ -424,7 +431,7 @@ an old banknote and a pizza box, keys in the father's hand, warm and quiet
 | Мама | `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine` |
 | Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding an envelope with money` |
 | Брат | `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors` |
-| Гоги | `pixel art portrait 48x48, georgian neighbor in his fifties, mustache, big smile, holding a wine glass` |
+| Хозяева квартиры в Батуми | `pixel art portrait 48x48, georgian middle-aged couple, warm smiles, holding two bags of persimmons` |
 | Сеньора Фатима | `pixel art portrait 48x48, elderly portuguese neighbor woman, black dress, warm smile, gold earrings` |
 | Сотрудник AIMA | `pixel art portrait 48x48, bored portuguese immigration clerk, lanyard badge, coffee cup` |
 | Хозяин квартиры | `pixel art portrait 48x48, middle-aged portuguese landlord, mustache, shrugging, "é normal" attitude` |

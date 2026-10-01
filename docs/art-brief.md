@@ -75,14 +75,14 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 - **Мама** — `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine`
 - **Бабушка** — `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding an envelope with money`
 - **Брат** — `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors`
-- **Гоги** — `pixel art portrait 48x48, georgian neighbor in his fifties, mustache, big smile, holding a wine glass`
+- **Хозяева квартиры в Батуми** — `pixel art portrait 48x48, georgian middle-aged couple, warm smiles, holding two bags of persimmons`
 - **Сеньора Фатима** — `pixel art portrait 48x48, elderly portuguese neighbor woman, black dress, warm smile, gold earrings`
 - **Сотрудник AIMA** — `pixel art portrait 48x48, bored portuguese immigration clerk, lanyard badge, coffee cup`
 - **Хозяин квартиры** — `pixel art portrait 48x48, middle-aged portuguese landlord, mustache, shrugging, "é normal" attitude`
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 55.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 56.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -164,6 +164,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, tbilisi old town at dusk, colorful carved wooden balconies, steep cobblestone street, sulfur bath domes, narikala fortress on the hill, father carrying a small boy on his shoulders seen from behind, warm lights
+```
+
+**`car.png`** — Поездка на прокатной машине из Тбилиси в Батуми через перевал.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, small rental car on a winding mountain road in georgia, green mountains, low clouds, view from behind the car, a toddler asleep in a child seat visible through the rear window, early spring, calm road-trip mood
 ```
 
 **`batumi_flat.png`** — Квартира на высоком этаже, море во всё окно — главная сцена акта.

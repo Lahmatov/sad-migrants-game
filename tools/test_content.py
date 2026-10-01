@@ -279,7 +279,9 @@ class StoryTests(unittest.TestCase):
 
     def test_expensive_car_needs_money(self):
         poor = labels(at_card('bat_car', 'batumi', money=5000))
-        self.assertNotIn('Купить красивую', poor)
+        self.assertNotIn('Взять то, что хочется', poor)
+        rich = labels(at_card('bat_car', 'batumi', money=20000))
+        self.assertIn('Взять то, что хочется', rich)
         self.assertIn('Обойдёмся такси', poor)
 
     def test_brother_daughter_schedules_his_leaving(self):
