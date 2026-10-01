@@ -61,12 +61,12 @@ final class StoryTests: XCTestCase {
     }
 
     func testKeptThingsOpenMuseum() throws {
-        let kept: Set<String> = ["has_plaid", "batumi_stone", "has_album"]
+        let kept: Set<String> = ["grandma_envelope", "batumi_stone", "has_album"]
         XCTAssertEqual(try finalEnding(flags: kept, home: 80, belonging: 80), "museum")
     }
 
     func testStoneThrownIntoOceanMeansNoMuseum() throws {
-        XCTAssertEqual(try finalEnding(flags: ["has_plaid", "has_album"], home: 80, belonging: 80), "two_homes")
+        XCTAssertEqual(try finalEnding(flags: ["grandma_envelope", "has_album"], home: 80, belonging: 80), "two_homes")
     }
 
     func testStrongHomeGivesTwoHomes() throws {
@@ -145,13 +145,13 @@ final class StoryTests: XCTestCase {
     // MARK: - Чемодан
 
     func testOverweightLeadsToScales() throws {
-        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 72])
+        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 50])
         try tap(&engine, "Купим там новый")
         XCTAssertEqual(engine.currentCard?.id, "scales_over")
     }
 
     func testNormalWeightSkipsScales() throws {
-        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 60])
+        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 40])
         try tap(&engine, "Купим там новый")
         XCTAssertEqual(engine.currentCard?.id, "scales_ok")
     }
@@ -171,11 +171,28 @@ final class StoryTests: XCTestCase {
 
     // MARK: - Отложенные последствия
 
-    func testPlaidButtonOnlyWithPlaid() throws {
-        let with = try engine(at: "fig_cold", act: "figueira", flags: ["has_flat_pt", "has_plaid"])
-        let without = try engine(at: "fig_cold", act: "figueira", flags: ["has_flat_pt"])
-        XCTAssertTrue(labels(with).contains("Бабушкин плед"))
-        XCTAssertFalse(labels(without).contains("Бабушкин плед"))
+    func testGrandmaBanknoteOnlyIfEnvelopeWasKept() throws {
+        let with = try engine(at: "f2_grandma", act: "figueira2", flags: ["grandma_envelope"])
+        let without = try engine(at: "f2_grandma", act: "figueira2")
+        XCTAssertTrue(labels(with).contains("Достать её купюру"))
+        XCTAssertFalse(labels(without).contains("Достать её купюру"))
+    }
+
+    func testBrotherComesOnlyAfterWedding() throws {
+        let content = try Self.content.get()
+        let call = try XCTUnwrap(content.card("bat_brother_call"))
+        var state = GameState(stats: Stats(money: 1, nerves: 1, documents: 1, home: 1, belonging: 1),
+                              act: "batumi", rng: SeededRandom(seed: 1), day: 400)
+        XCTAssertFalse(state.meets(call.requires))
+        state.flags.insert("wedding_done")
+        XCTAssertTrue(state.meets(call.requires))
+    }
+
+    func testLegoCanBeLeftOnlyOnce() throws {
+        var engine = try self.engine(at: "scales_over", act: "packing", flags: ["has_toys"], counters: ["kg": 60])
+        try tap(&engine, "Выложить Лего")
+        XCTAssertEqual(engine.currentCard?.id, "scales_over")
+        XCTAssertFalse(labels(engine).contains("Выложить Лего"))
     }
 
     func testExpensiveCarNeedsMoney() throws {

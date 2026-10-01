@@ -44,9 +44,9 @@ python3 tools/content.py --play   # сыграть в терминале
 
 ```json
 {
-  "label": "Укрыться бабушкиным пледом",
-  "requires": { "flags": ["has_plaid"] },
-  "result": "Плед колется и пахнет бабушкиной квартирой.",
+  "label": "Аптечка из Петербурга",
+  "requires": { "flags": ["has_meds"] },
+  "result": "Жена проверяет сроки годности при свете телефона. Ещё годно.",
   "effects": { "stats": { "nerves": 10, "home": 10 } }
 }
 ```

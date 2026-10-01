@@ -168,10 +168,10 @@ class StoryTests(unittest.TestCase):
         return g.ending
 
     def test_kept_things_open_museum(self):
-        self.assertEqual(self.final_ending(['has_plaid', 'batumi_stone', 'has_album'], home=80, belonging=80), 'museum')
+        self.assertEqual(self.final_ending(['grandma_envelope', 'batumi_stone', 'has_album'], home=80, belonging=80), 'museum')
 
     def test_stone_thrown_into_ocean_means_no_museum(self):
-        self.assertEqual(self.final_ending(['has_plaid', 'has_album'], home=80, belonging=80), 'two_homes')
+        self.assertEqual(self.final_ending(['grandma_envelope', 'has_album'], home=80, belonging=80), 'two_homes')
 
     def test_strong_home_gives_two_homes(self):
         self.assertEqual(self.final_ending(home=70, belonging=80), 'two_homes')
@@ -239,12 +239,12 @@ class StoryTests(unittest.TestCase):
     # --- чемодан ---
 
     def test_overweight_leads_to_scales(self):
-        g = at_card('pack_scooter', 'packing', counters={'kg': 72})
+        g = at_card('pack_scooter', 'packing', counters={'kg': 50})
         tap(g, 'Купим там новый')
         self.assertEqual(g.current, 'scales_over')
 
     def test_normal_weight_skips_scales(self):
-        g = at_card('pack_scooter', 'packing', counters={'kg': 60})
+        g = at_card('pack_scooter', 'packing', counters={'kg': 40})
         tap(g, 'Купим там новый')
         self.assertEqual(g.current, 'scales_ok')
 
@@ -259,9 +259,23 @@ class StoryTests(unittest.TestCase):
 
     # --- отложенные вещи ---
 
-    def test_plaid_button_only_with_plaid(self):
-        self.assertIn('Бабушкин плед', labels(at_card('fig_cold', 'figueira', ['has_flat_pt', 'has_plaid'])))
-        self.assertNotIn('Бабушкин плед', labels(at_card('fig_cold', 'figueira', ['has_flat_pt'])))
+    def test_grandma_banknote_only_if_envelope_was_kept(self):
+        self.assertIn('Достать её купюру', labels(at_card('f2_grandma', 'figueira2', ['grandma_envelope'])))
+        self.assertNotIn('Достать её купюру', labels(at_card('f2_grandma', 'figueira2')))
+
+    def test_brother_comes_only_after_wedding(self):
+        g = at_card('bat_day', 'batumi')
+        g.day = 400
+        card = g.by_id['bat_brother_call']
+        self.assertFalse(g.meets(card.get('requires')))
+        g.flags.add('wedding_done')
+        self.assertTrue(g.meets(card.get('requires')))
+
+    def test_lego_can_be_left_only_once(self):
+        g = at_card('scales_over', 'packing', ['has_toys'], counters={'kg': 60})
+        tap(g, 'Выложить Лего')
+        self.assertEqual(g.current, 'scales_over')
+        self.assertNotIn('Выложить Лего', labels(g))
 
     def test_expensive_car_needs_money(self):
         poor = labels(at_card('bat_car', 'batumi', money=5000))

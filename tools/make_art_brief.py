@@ -34,7 +34,7 @@ STYLE BIBLE (follow for every image):
 - The family is shown from behind or from a distance; no detailed face close-ups.
   Father: man in his 30s, oversized hoodie, laptop backpack, stubble.
   Mother: woman in her 30s, messy bun, cardigan.
-  Son: toddler (2-3 y.o.) in Georgia, preschooler (4-6) in Portugal; always has a plush hare with ONE ear.
+  Son: toddler (2-3 y.o.) in Georgia, preschooler (4-6) in Portugal; always has a grey plush cat toy. The son does not talk until Batumi.
   Baby daughter appears only in the final scenes.
 - Color worlds:
   Saint Petersburg — cold blue-grey, muted, always a bit of dusk.
@@ -129,7 +129,7 @@ def build():
     w('pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown '
       'front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop '
       'backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding '
-      'a plush hare with one ear; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl')
+      'a grey plush cat toy; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl')
     w('```')
     w('')
     for who, prompt in characters:
@@ -217,7 +217,7 @@ def build():
     w('- **Фальшивые пиксели:** «пиксели» разного размера, сетка плывёт. Признак уменьшения картинки с ИИ без привязки к сетке. Лечится: Sprite Size с *Nearest neighbor* и ручная чистка.')
     w('- **Сглаживание на контурах** — полупрозрачные полутона вокруг линий.')
     w('- **Текст-каша** на вывесках и экранах. Затереть.')
-    w('- **Чужая семья:** у сына заяц с двумя ушами, отец без рюкзака, у мамы распущенные волосы. Сверять с листом персонажей.')
+    w('- **Чужая семья:** у сына в руках не серый плюшевый кот, отец без рюкзака, у мамы распущенные волосы. Сверять с листом персонажей.')
     w('- **Лица крупным планом** — по стилю их нет.')
     w('')
     with open(OUT, 'w', encoding='utf-8') as handle:

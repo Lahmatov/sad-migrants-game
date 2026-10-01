@@ -30,7 +30,7 @@
   - *Грузия* — зелень, мокрый асфальт, неон Батуми, тёплые деревянные балконы Тбилиси, серо-зелёное Чёрное море;
   - *Португалия* — охра, терракота, синий азулежу, белёные стены, много солнца;
   - *бюрократия* (AIMA, Finanças, банк) — зеленовато-флуоресцентный офисный свет.
-- **Семья:** папа (герой), мама и маленький сын. Лица крупно не рисуем — чаще со спины или издалека: так игрок узнаёт в них себя, а реальная семья остаётся неузнаваемой. Постоянные детали: у сына — плюшевый заяц без уха и самокат, у папы — рюкзак с ноутбуком.
+- **Семья:** папа (герой), мама и маленький сын. Лица крупно не рисуем — чаще со спины или издалека: так игрок узнаёт в них себя, а реальная семья остаётся неузнаваемой. Постоянные детали: у сына — серый плюшевый кот и трёхколёсный самокат, у папы — рюкзак с ноутбуком.
 - Контур — тёмный, но не чёрный (самый тёмный цвет палитры). Без дизеринга на больших заливках.
 - Ни слова текста на картинках: он в карточке. Вывески — неразборчивыми пиксельными штрихами (исключение — «CTT» и «AIMA», они узнаваемы).
 
@@ -66,10 +66,10 @@ cold blue-grey muted colors, evening light from a desk lamp, quiet and sad
 ```
 
 ### `suitcase` · 7 карточек
-Крупно: чемодан на весах, сверху сидит сын, рядом гречка и плед.
+Крупно: чемодан на весах, рядом гречка, машинки и серый плюшевый кот.
 ```
 close-up of a large open suitcase on a floor bathroom scale, stuffed with clothes, a pack of buckwheat,
-a checkered wool blanket and a glass jar of apricot jam next to it, a small boy sitting on top of the suitcase to close it, a plush hare with one ear,
+toy cars scattered around, a grey plush cat toy sitting on top of the suitcase,
 muted cold palette, warm lamp highlight
 ```
 
@@ -248,7 +248,7 @@ visible mold stain in the ceiling corner, old tiles, bare lightbulb, ironic mood
 ### `flat` · 6
 Своя квартира (самая частая сцена — её лучше заказать у художника).
 ```
-small rented lisbon apartment room, mattress with a checkered wool blanket, laptop on a box used as a table,
+small rented lisbon apartment room, mattress with a thin blanket, laptop on a box used as a table,
 a few books on a shelf, black mold spot in the corner of the ceiling, window with terracotta rooftops,
 evening, lived-in but temporary feeling
 ```
@@ -407,8 +407,8 @@ and guilty, comic
 Финал. Пустая квартира, ключи, музей переезда на полу.
 ```
 empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor
-seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a one-eared plush hare,
-a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
+seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy,
+an old banknote and a pizza box, keys in the father's hand, warm and quiet
 ```
 
 ## Персонажи (спрайты на будущее)
@@ -420,9 +420,9 @@ a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
 | Папа (герой) | `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing` |
 | Жена | `pixel art portrait 48x48, woman in her thirties, hair in a messy bun, cardigan, determined look, emotions: focused, worried, relieved, laughing` |
 | Дочка | `pixel art portrait 48x48, baby girl, big curious eyes, tiny fist, emotions: sleeping, laughing, grabbing` |
-| Сын (две версии: 2–3 года в Грузии, 5–6 лет в Оэйраше) | `pixel art portrait 48x48, small boy (toddler version and preschool version), holding a plush hare with one ear, emotions: curious, proud, sulking, delighted` |
+| Сын (две версии: 2–3 года в Грузии, 5–6 лет в Оэйраше) | `pixel art portrait 48x48, small boy (toddler version and preschool version), holding a grey plush cat toy, emotions: curious, proud, sulking, delighted` |
 | Мама | `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine` |
-| Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding a checkered blanket` |
+| Бабушка | `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding an envelope with money` |
 | Брат | `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors` |
 | Гоги | `pixel art portrait 48x48, georgian neighbor in his fifties, mustache, big smile, holding a wine glass` |
 | Сеньора Фатима | `pixel art portrait 48x48, elderly portuguese neighbor woman, black dress, warm smile, gold earrings` |
@@ -466,7 +466,7 @@ a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
 1024 × 1024, рисуется в 64 × 64 и масштабируется ×16.
 ```
 pixel art app icon 64x64, a big old suitcase with a luggage tag "23 kg", on a background of blue portuguese
-azulejo tile pattern, a small plush hare with one ear peeking out of the suitcase, bold readable silhouette, no other text
+azulejo tile pattern, a small grey plush cat toy peeking out of the suitcase, bold readable silhouette, no other text
 ```
 
 ## Шрифт

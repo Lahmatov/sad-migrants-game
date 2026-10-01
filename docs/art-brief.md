@@ -26,7 +26,7 @@ STYLE BIBLE (follow for every image):
 - The family is shown from behind or from a distance; no detailed face close-ups.
   Father: man in his 30s, oversized hoodie, laptop backpack, stubble.
   Mother: woman in her 30s, messy bun, cardigan.
-  Son: toddler (2-3 y.o.) in Georgia, preschooler (4-6) in Portugal; always has a plush hare with ONE ear.
+  Son: toddler (2-3 y.o.) in Georgia, preschooler (4-6) in Portugal; always has a grey plush cat toy. The son does not talk until Batumi.
   Baby daughter appears only in the final scenes.
 - Color worlds:
   Saint Petersburg — cold blue-grey, muted, always a bit of dusk.
@@ -65,15 +65,15 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 ### `characters_sheet.png` — семья целиком
 
 ```
-pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding a plush hare with one ear; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl
+pixel art character sheet, Endesga 32 palette, no anti-aliasing, white background, the same family shown front, side and back, full body, 32 px tall adults: father in his 30s in an oversized hoodie with a laptop backpack and stubble; mother in her 30s with a messy bun and a cardigan; toddler son about 2 years old holding a grey plush cat toy; second row: the same son at 5 years old with a kick scooter; mother holding a baby girl
 ```
 
 - **Папа (герой)** — `pixel art character portrait 48x48, man in his thirties in an oversized hoodie, laptop backpack strap, tired kind eyes, stubble, emotions: tired, smiling, worried, laughing`
 - **Жена** — `pixel art portrait 48x48, woman in her thirties, hair in a messy bun, cardigan, determined look, emotions: focused, worried, relieved, laughing`
 - **Дочка** — `pixel art portrait 48x48, baby girl, big curious eyes, tiny fist, emotions: sleeping, laughing, grabbing`
-- **Сын (две версии: 2–3 года в Грузии, 5–6 лет в Оэйраше)** — `pixel art portrait 48x48, small boy (toddler version and preschool version), holding a plush hare with one ear, emotions: curious, proud, sulking, delighted`
+- **Сын (две версии: 2–3 года в Грузии, 5–6 лет в Оэйраше)** — `pixel art portrait 48x48, small boy (toddler version and preschool version), holding a grey plush cat toy, emotions: curious, proud, sulking, delighted`
 - **Мама** — `pixel art portrait 48x48, russian woman in her sixties, short dyed hair, reading glasses on a chain, home cardigan, emotions: worried, happy, pretending to be fine`
-- **Бабушка** — `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding a checkered blanket`
+- **Бабушка** — `pixel art portrait 48x48, old russian grandmother, headscarf, kind wrinkles, holding an envelope with money`
 - **Брат** — `pixel art portrait 48x48, young man with a small backpack, tired smile, looking away, muted colors`
 - **Гоги** — `pixel art portrait 48x48, georgian neighbor in his fifties, mustache, big smile, holding a wine glass`
 - **Сеньора Фатима** — `pixel art portrait 48x48, elderly portuguese neighbor woman, black dress, warm smile, gold earrings`
@@ -98,10 +98,10 @@ blurry, gradient, photorealistic, 3d render, text, letters, watermark, jpeg arti
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad
 ```
 
-**`suitcase.png`** — Крупно: чемодан на весах, сверху сидит сын, рядом гречка и плед.
+**`suitcase.png`** — Крупно: чемодан на весах, рядом гречка, машинки и серый плюшевый кот.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, close-up of a large open suitcase on a floor bathroom scale, stuffed with clothes, a pack of buckwheat, a checkered wool blanket and a glass jar of apricot jam next to it, a small boy sitting on top of the suitcase to close it, a plush hare with one ear, muted cold palette, warm lamp highlight
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, close-up of a large open suitcase on a floor bathroom scale, stuffed with clothes, a pack of buckwheat, toy cars scattered around, a grey plush cat toy sitting on top of the suitcase, muted cold palette, warm lamp highlight
 ```
 
 **`kitchen_mom.png`** — Кухня мамы: стол, заставленный едой, мама со спины у плиты, клеёнка.
@@ -273,7 +273,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 **`flat.png`** — Своя квартира (самая частая сцена — её лучше заказать у художника).
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, small rented lisbon apartment room, mattress with a checkered wool blanket, laptop on a box used as a table, a few books on a shelf, black mold spot in the corner of the ceiling, window with terracotta rooftops, evening, lived-in but temporary feeling
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, small rented lisbon apartment room, mattress with a thin blanket, laptop on a box used as a table, a few books on a shelf, black mold spot in the corner of the ceiling, window with terracotta rooftops, evening, lived-in but temporary feeling
 ```
 
 **`flat_cold.png`**
@@ -425,7 +425,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 **`lisbon_flat_keys.png`** — Финал. Пустая квартира, ключи, музей переезда на полу.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a one-eared plush hare, a checkered blanket and a pizza box, keys in the father's hand, warm and quiet
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, empty lisbon apartment at dusk, small window with a glimpse of the river, family of four sitting on the floor seen from behind: father, mother with a baby, a boy; on the floor a flat stone, a grey plush cat toy, an old banknote and a pizza box, keys in the father's hand, warm and quiet
 ```
 
 ## Шаг 4. Анимации
@@ -461,7 +461,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 ### `AppIcon.png` — иконка приложения, 1024×1024 (рисовать 64×64, увеличить ×16 без сглаживания)
 
 ```
-pixel art app icon 64x64, a big old suitcase with a luggage tag "23 kg", on a background of blue portuguese azulejo tile pattern, a small plush hare with one ear peeking out of the suitcase, bold readable silhouette, no other text
+pixel art app icon 64x64, a big old suitcase with a luggage tag "23 kg", on a background of blue portuguese azulejo tile pattern, a small grey plush cat toy peeking out of the suitcase, bold readable silhouette, no other text
 ```
 
 ### Иконки шкал — 16×16, прозрачный фон, по одной на файл
@@ -490,5 +490,5 @@ pixel art app icon 64x64, a big old suitcase with a luggage tag "23 kg", on a ba
 - **Фальшивые пиксели:** «пиксели» разного размера, сетка плывёт. Признак уменьшения картинки с ИИ без привязки к сетке. Лечится: Sprite Size с *Nearest neighbor* и ручная чистка.
 - **Сглаживание на контурах** — полупрозрачные полутона вокруг линий.
 - **Текст-каша** на вывесках и экранах. Затереть.
-- **Чужая семья:** у сына заяц с двумя ушами, отец без рюкзака, у мамы распущенные волосы. Сверять с листом персонажей.
+- **Чужая семья:** у сына в руках не серый плюшевый кот, отец без рюкзака, у мамы распущенные волосы. Сверять с листом персонажей.
 - **Лица крупным планом** — по стилю их нет.
