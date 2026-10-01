@@ -57,6 +57,21 @@ else
   note "Есть ошибки в карточках — записаны в build-errors.txt"
 fi
 
+# --- Тесты сценария (Python, без Xcode) -----------------------------------
+
+say "Тесты сценария"
+if python3 "$ROOT/tools/test_content.py" > "$RAW" 2>&1; then
+  note "$(grep -E "^Ran [0-9]+ tests" "$RAW" | head -1)"
+else
+  FAILED=1
+  {
+    echo "=== ТЕСТЫ СЦЕНАРИЯ ==="
+    cat "$RAW"
+    echo
+  } >> "$REPORT"
+  note "Есть упавшие тесты — записаны в build-errors.txt"
+fi
+
 # --- Статические проверки --------------------------------------------------
 
 say "Статические проверки (без компилятора)"

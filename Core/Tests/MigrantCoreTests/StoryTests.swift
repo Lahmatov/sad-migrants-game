@@ -1,0 +1,218 @@
+import XCTest
+@testable import MigrantCore
+
+/// Ключевые истории настоящего сценария ведут туда, куда задумано.
+///
+/// Партия ставится прямо на нужную карточку с нужными флагами и шкалами —
+/// так проверяется одна история, а не вся игра. Те же проверки есть
+/// в tools/test_content.py, чтобы гонять их без Mac.
+final class StoryTests: XCTestCase {
+    private static let content = Result { try ContentLoader.bundled() }
+
+    private func engine(at cardId: String, act: String, flags: Set<String> = [],
+                        counters: [String: Int] = [:], money: Int = 20_000,
+                        home: Int = 60, belonging: Int = 60) throws -> GameEngine {
+        let content = try Self.content.get()
+        let stats = Stats(money: money, nerves: 80, documents: 80, home: home, belonging: belonging)
+        let state = GameState(stats: stats, act: act, rng: SeededRandom(seed: 7),
+                              flags: flags, counters: counters, currentCardId: cardId)
+        let engine = GameEngine(content: content, restoring: state)
+        XCTAssertEqual(engine.currentCard?.id, cardId, "нет карточки \(cardId)")
+        return engine
+    }
+
+    private func labels(_ engine: GameEngine) -> [String] {
+        guard let card = engine.currentCard else { return [] }
+        return engine.availableChoices.map { card.choices[$0].label }
+    }
+
+    @discardableResult
+    private func tap(_ engine: inout GameEngine, _ label: String,
+                     file: StaticString = #filePath, line: UInt = #line) throws -> Outcome {
+        guard let card = engine.currentCard,
+              let index = card.choices.firstIndex(where: { $0.label == label }) else {
+            XCTFail("нет кнопки «\(label)» на \(engine.currentCard?.id ?? "-")", file: file, line: line)
+            throw GameError.choiceOutOfRange
+        }
+        return try engine.choose(index)
+    }
+
+    /// Играет, пока не кончатся ходы или партия, и собирает показанные карточки.
+    private func play(_ engine: inout GameEngine, turns: Int,
+                      pick: ([Int]) -> Int?) throws -> Set<String> {
+        var shown: Set<String> = []
+        for _ in 0..<turns {
+            guard !engine.isFinished, let card = engine.currentCard,
+                  let index = pick(engine.availableChoices) else { break }
+            shown.insert(card.id)
+            try engine.choose(index)
+        }
+        return shown
+    }
+
+    // MARK: - Финал
+
+    private func finalEnding(flags: Set<String> = [], home: Int, belonging: Int) throws -> String? {
+        var engine = try self.engine(at: "oei_final", act: "oeiras", flags: flags,
+                                     home: home, belonging: belonging)
+        try tap(&engine, "Подписать")
+        try engine.choose(0)
+        return engine.ending?.id
+    }
+
+    func testKeptThingsOpenMuseum() throws {
+        let kept: Set<String> = ["has_plaid", "batumi_stone", "has_album"]
+        XCTAssertEqual(try finalEnding(flags: kept, home: 80, belonging: 80), "museum")
+    }
+
+    func testStoneThrownIntoOceanMeansNoMuseum() throws {
+        XCTAssertEqual(try finalEnding(flags: ["has_plaid", "has_album"], home: 80, belonging: 80), "two_homes")
+    }
+
+    func testStrongHomeGivesTwoHomes() throws {
+        XCTAssertEqual(try finalEnding(home: 70, belonging: 80), "two_homes")
+    }
+
+    func testFadedHomeAndRootsGiveOursHere() throws {
+        XCTAssertEqual(try finalEnding(home: 40, belonging: 90), "ours_here")
+    }
+
+    func testMiddleHomeGivesThirtyYears() throws {
+        XCTAssertEqual(try finalEnding(home: 60, belonging: 90), "thirty_years")
+    }
+
+    func testNoRootsGivesThirtyYears() throws {
+        XCTAssertEqual(try finalEnding(home: 40, belonging: 30), "thirty_years")
+    }
+
+    func testReturnHomeHiddenWhenHomeIsWeak() throws {
+        XCTAssertFalse(labels(try engine(at: "oei_final", act: "oeiras", home: 40)).contains("Вернуться в Петербург"))
+    }
+
+    func testReturnHomeEnding() throws {
+        var engine = try self.engine(at: "oei_final", act: "oeiras", home: 60)
+        let outcome = try tap(&engine, "Вернуться в Петербург")
+        XCTAssertEqual(outcome.ending?.id, "return_home")
+    }
+
+    func testAmsterdamEnding() throws {
+        var engine = try self.engine(at: "oei_final", act: "oeiras")
+        let outcome = try tap(&engine, "Принять оффер в Амстердаме")
+        XCTAssertEqual(outcome.ending?.id, "further")
+    }
+
+    func testRentingEnding() throws {
+        var engine = try self.engine(at: "oei_final", act: "oeiras")
+        let outcome = try tap(&engine, "Не подписывать. Пока")
+        XCTAssertEqual(outcome.ending?.id, "renting")
+    }
+
+    func testEveryEndingIsReachableSomehow() throws {
+        let content = try Self.content.get()
+        var reachable = Set(content.endings.filter { $0.stat != nil }.map(\.id))
+        for card in content.cards {
+            for choice in card.choices {
+                if let ending = choice.effects?.ending { reachable.insert(ending) }
+            }
+        }
+        XCTAssertEqual(reachable, Set(content.endings.map(\.id)))
+    }
+
+    // MARK: - Посылка
+
+    func testParcelNeedsNifToDeclare() throws {
+        let engine = try self.engine(at: "ctt_notice", act: "figueira", flags: ["in_portugal"])
+        XCTAssertFalse(labels(engine).contains("Задекларировать сейчас"))
+    }
+
+    func testUndeclaredParcelGoesBackToMom() throws {
+        var engine = try self.engine(at: "ctt_notice", act: "figueira", flags: ["in_portugal"])
+        try tap(&engine, "Потом разберусь")
+        // Последняя кнопка: у напоминания это «Amanhã», то есть снова не декларируем.
+        let shown = try play(&engine, turns: 40) { $0.last }
+        XCTAssertTrue(shown.contains("parcel_returned"))
+        XCTAssertFalse(shown.contains("parcel_arrives"))
+    }
+
+    func testDeclaredParcelArrives() throws {
+        var engine = try self.engine(at: "ctt_notice", act: "figueira", flags: ["in_portugal", "has_nif"])
+        try tap(&engine, "Задекларировать сейчас")
+        let shown = try play(&engine, turns: 30) { $0.first }
+        XCTAssertTrue(shown.contains("parcel_arrives"))
+        XCTAssertFalse(shown.contains("parcel_returned"))
+    }
+
+    // MARK: - Чемодан
+
+    func testOverweightLeadsToScales() throws {
+        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 72])
+        try tap(&engine, "Купим там новый")
+        XCTAssertEqual(engine.currentCard?.id, "scales_over")
+    }
+
+    func testNormalWeightSkipsScales() throws {
+        var engine = try self.engine(at: "pack_scooter", act: "packing", counters: ["kg": 60])
+        try tap(&engine, "Купим там новый")
+        XCTAssertEqual(engine.currentCard?.id, "scales_ok")
+    }
+
+    func testPayingOverweightClosesSuitcase() throws {
+        var engine = try self.engine(at: "scales_over", act: "packing", counters: ["kg": 75])
+        try tap(&engine, "Доплатить за перевес")
+        XCTAssertEqual(engine.currentCard?.id, "scales_ok")
+    }
+
+    func testDroppingBuckwheatOnlyIfPacked() throws {
+        let without = try engine(at: "scales_over", act: "packing", counters: ["kg": 75])
+        let with = try engine(at: "scales_over", act: "packing", flags: ["has_buckwheat"], counters: ["kg": 75])
+        XCTAssertFalse(labels(without).contains("Выложить гречку"))
+        XCTAssertTrue(labels(with).contains("Выложить гречку"))
+    }
+
+    // MARK: - Отложенные последствия
+
+    func testPlaidButtonOnlyWithPlaid() throws {
+        let with = try engine(at: "fig_cold", act: "figueira", flags: ["has_flat_pt", "has_plaid"])
+        let without = try engine(at: "fig_cold", act: "figueira", flags: ["has_flat_pt"])
+        XCTAssertTrue(labels(with).contains("Бабушкин плед"))
+        XCTAssertFalse(labels(without).contains("Бабушкин плед"))
+    }
+
+    func testExpensiveCarNeedsMoney() throws {
+        let poor = labels(try engine(at: "bat_car", act: "batumi", money: 5_000))
+        XCTAssertFalse(poor.contains("Купить красивую"))
+        XCTAssertTrue(poor.contains("Обойдёмся такси"))
+    }
+
+    func testBrotherDaughterSchedulesHisLeaving() throws {
+        var engine = try self.engine(at: "bat_brother_daughter", act: "batumi")
+        try tap(&engine, "Сесть рядом")
+        XCTAssertTrue(engine.state.flags.contains("brother_niece"))
+        XCTAssertTrue(engine.state.scheduled.contains { $0.cardId == "bat_brother_leaves" })
+    }
+
+    func testExactlyOneMoneyCardFitsEachJobSituation() throws {
+        let content = try Self.content.get()
+        for (prefix, place) in [("bat_month_", "in_batumi"), ("fig_month_", "in_portugal")] {
+            let cards = content.cards.filter { $0.id.hasPrefix(prefix) }
+            XCTAssertEqual(cards.count, 4, prefix)
+            let situations: [Set<String>] = [[], ["job_me"], ["job_wife"], ["job_me", "job_wife"]]
+            for jobs in situations {
+                let state = GameState(stats: Stats(money: 1, nerves: 1, documents: 1, home: 1, belonging: 1),
+                                      act: "x", rng: SeededRandom(seed: 1), flags: jobs.union([place]))
+                let fitting = cards.filter { state.meets($0.requires) }.map(\.id)
+                XCTAssertEqual(fitting.count, 1, "\(prefix) \(jobs.sorted()): \(fitting)")
+            }
+        }
+    }
+
+    // MARK: - Форма
+
+    func testButtonsFitOnScreen() throws {
+        for card in try Self.content.get().cards {
+            for choice in card.choices {
+                XCTAssertLessThanOrEqual(choice.label.count, 32, "\(card.id): \(choice.label)")
+            }
+        }
+    }
+}

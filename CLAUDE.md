@@ -13,8 +13,11 @@
 
 | Тесты | Где | Как гонять |
 |---|---|---|
-| Движок, сценарий | `Core/Tests/MigrantCoreTests/` | `cd Core && swift test` |
-| Сценарий без Xcode | — | `python3 tools/content.py` |
+| Движок, сценарий, сюжетные истории | `Core/Tests/MigrantCoreTests/` | `cd Core && swift test` |
+| Валидатор и сюжетные истории без Xcode | `tools/test_content.py` | `python3 tools/test_content.py` |
+| Баланс и тупики | — | `python3 tools/content.py` |
+
+Новая сюжетная развилка (вещь из чемодана, которая где-то «выстреливает», новая концовка) — тест в `StoryTests.swift` и такой же в `tools/test_content.py`: партия ставится на нужную карточку с нужными флагами, и проверяется, куда она ведёт.
 
 Логику писать в `Core/`, а не в приложении. В `App/` — только экраны.
 
@@ -36,7 +39,7 @@
 ## Перед коммитом
 
 ```sh
-python3 tools/content.py --quiet && python3 tools/lint.py
+python3 tools/content.py --quiet && python3 tools/test_content.py && python3 tools/lint.py
 ```
 
 ## Прочее
