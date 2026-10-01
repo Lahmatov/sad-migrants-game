@@ -4,17 +4,19 @@ import SwiftUI
 /// Цвета и шрифты. Пока моноширинный системный шрифт — пиксельный
 /// подключим вместе с первыми картинками (см. docs/art.md).
 enum Theme {
-    /// Тёмно-синий, как океан ночью.
-    static let background = Color(red: 0.08, green: 0.10, blue: 0.16)
-    static let panel = Color(red: 0.13, green: 0.16, blue: 0.24)
-    static let text = Color(red: 0.95, green: 0.92, blue: 0.85)
-    static let dim = Color(red: 0.62, green: 0.64, blue: 0.70)
+    // Цвета интерфейса взяты из палитры Endesga 32 — той же, что у сцен,
+    // чтобы рамки и картинки не спорили друг с другом.
+    /// Ночное небо.
+    static let background = E32.night
+    static let panel = E32.navy
+    static let text = E32.sand
+    static let dim = E32.mist
     /// Охра португальских домов.
-    static let accent = Color(red: 0.93, green: 0.66, blue: 0.29)
+    static let accent = E32.gold
     /// Синий азулежу.
-    static let azulejo = Color(red: 0.24, green: 0.47, blue: 0.85)
-    static let good = Color(red: 0.49, green: 0.80, blue: 0.47)
-    static let bad = Color(red: 0.91, green: 0.38, blue: 0.36)
+    static let azulejo = E32.sky
+    static let good = E32.lime
+    static let bad = E32.red
 
     static let body = Font.system(.body, design: .monospaced)
     static let caption = Font.system(.caption, design: .monospaced).weight(.semibold)

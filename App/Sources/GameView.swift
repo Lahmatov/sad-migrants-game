@@ -24,7 +24,7 @@ struct GameView: View {
                 .font(Theme.caption)
                 .foregroundStyle(Theme.dim)
 
-                SceneImage(name: card.scene)
+                SceneImage(name: card.scene, act: engine.state.act)
 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 8) {
@@ -124,24 +124,26 @@ struct PixelMeter: View {
 
 struct SceneImage: View {
     let name: String?
+    let act: String
 
     var body: some View {
         ZStack {
-            Theme.panel
             if let name, UIImage(named: name) != nil {
                 Image(name)
                     .resizable()
                     .interpolation(.none)
-                    .scaledToFit()
+                    .scaledToFill()
             } else {
-                // Картинки ещё нет — показываем имя сцены, чтобы было видно, что рисовать.
-                Text(name ?? "—")
-                    .font(Theme.caption)
-                    .foregroundStyle(Theme.dim)
+                // Картинки ещё нет — сцена рисуется кодом и живёт.
+                LiveScene(scene: name, act: act)
             }
         }
         .aspectRatio(4.0 / 3.0, contentMode: .fit)
+        .clipped()
         .pixelFrame()
+        // Новая сцена проявляется, а не выскакивает.
+        .id(name)
+        .transition(.opacity)
     }
 }
 
