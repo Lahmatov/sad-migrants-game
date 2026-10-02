@@ -16,10 +16,10 @@ struct GameView: View {
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }
-                    .accessibilityLabel("Меню")
+                    .accessibilityLabel(L(.menu))
                     Text(engine.currentAct?.title ?? "")
                     Spacer()
-                    Text("День \(engine.state.day)")
+                    Text(L(.day, engine.state.day))
                 }
                 .font(Theme.caption)
                 .foregroundStyle(Theme.dim)
@@ -206,7 +206,7 @@ struct OutcomePanel: View {
                 DeltaRow(applied: outcome.applied)
             }
             Button(action: dismiss) {
-                Text("Дальше")
+                Text(L(.next))
                     .font(Theme.button)
                     .foregroundStyle(Theme.background)
                     .frame(maxWidth: .infinity, minHeight: 44)

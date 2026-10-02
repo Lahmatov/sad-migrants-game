@@ -307,6 +307,26 @@ class CardArtTests(unittest.TestCase):
         self.assertEqual(cases, self.art.ANIMATIONS)
 
 
+class TranslationTests(unittest.TestCase):
+    def test_bundled_translations_are_clean(self):
+        self.assertEqual(content.translation_problems(GAME, CARDS, content.load_translations()), [])
+
+    def test_unknown_card_and_lost_buttons_are_reported(self):
+        card = {'id': 'x', 'choices': [{'label': 'a'}, {'label': 'b'}]}
+        t = {'en': {'cards': {'x': {'text': 'X', 'choices': [{'label': 'A'}]}, 'ghost': {'text': '?'}}}}
+        problems = content.translation_problems({'acts': [], 'endings': []}, [card], t)
+        self.assertEqual(len(problems), 2)
+
+    def test_ending_needs_title_and_text(self):
+        game = {'acts': [], 'endings': [{'id': 'e'}]}
+        problems = content.translation_problems(game, [], {'pt': {'endings': {'e': {'title': 'Fim'}}}})
+        self.assertEqual(len(problems), 1)
+
+    def test_coverage_counts_translated_cards(self):
+        cards = [{'id': 'a'}, {'id': 'b'}]
+        self.assertEqual(content.translation_coverage(cards, {'cards': {'a': {'text': 'A'}}}), 0.5)
+
+
 class StoryTests(unittest.TestCase):
     """Ключевые истории настоящего сценария ведут туда, куда задумано."""
 

@@ -48,7 +48,7 @@ struct IntroView: View {
             VStack {
                 HStack {
                     Spacer()
-                    Button("Пропустить", action: finish)
+                    Button(L(.skip), action: finish)
                         .font(Theme.caption)
                         .foregroundStyle(Theme.dim)
                         .padding(8)
@@ -56,7 +56,7 @@ struct IntroView: View {
                 Spacer()
                 if isDone {
                     Button(action: finish) {
-                        Text("Начать")
+                        Text(L(.start))
                             .font(Theme.button)
                             .foregroundStyle(Theme.background)
                             .frame(maxWidth: .infinity, minHeight: 48)

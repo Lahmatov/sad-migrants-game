@@ -76,6 +76,55 @@ def dominated_choices(cards):
     return found
 
 
+LANGUAGES = ('en', 'pt')
+
+
+def load_translations():
+    found = {}
+    for lang in LANGUAGES:
+        path = os.path.join(CONTENT, 'i18n', f'{lang}.json')
+        if os.path.exists(path):
+            with open(path, encoding='utf-8') as f:
+                found[lang] = json.load(f)
+    return found
+
+
+def translation_problems(game, cards, translations):
+    """Перевод ссылается только на существующее и не теряет кнопок."""
+    problems = []
+    acts = {a['id'] for a in game['acts']}
+    endings = {e['id'] for e in game['endings']}
+    by_id = {c['id']: c for c in cards}
+    for lang, t in translations.items():
+        for act in (t.get('acts') or {}):
+            if act not in acts:
+                problems.append(f'{lang}: перевод несуществующего акта {act}')
+        for ending, text in (t.get('endings') or {}).items():
+            if ending not in endings:
+                problems.append(f'{lang}: перевод несуществующей концовки {ending}')
+            if not text.get('title') or not text.get('text'):
+                problems.append(f'{lang}: концовка {ending} без заголовка или текста')
+        for cid, text in (t.get('cards') or {}).items():
+            card = by_id.get(cid)
+            if card is None:
+                problems.append(f'{lang}: перевод несуществующей карточки {cid}')
+                continue
+            choices = text.get('choices')
+            if choices is not None and len(choices) != len(card['choices']):
+                problems.append(f'{lang}: {cid} — кнопок в оригинале {len(card["choices"])}, в переводе {len(choices)}')
+            for choice in choices or []:
+                if not choice.get('label'):
+                    problems.append(f'{lang}: {cid} — пустая кнопка')
+        if t.get('intro') is not None and not any(line.strip() for line in t['intro']):
+            problems.append(f'{lang}: пустое вступление')
+    return problems
+
+
+def translation_coverage(cards, translation):
+    done = sum(1 for c in cards if (translation.get('cards') or {}).get(c['id'], {}).get('text'))
+    return done / len(cards) if cards else 0
+
+
 def validate(game, cards):
     problems, warnings = [], []
     by_id = {}
@@ -390,7 +439,12 @@ def main():
         return 0
     problems, warnings = validate(game, cards)
     warnings += dominated_choices(cards)
+    translations = load_translations()
+    problems += translation_problems(game, cards, translations)
     print(f"Карточек: {len(cards)}, актов: {len(game['acts'])}, концовок: {len(game['endings'])}")
+    for lang, t in translations.items():
+        print(f"Перевод {lang}: карточек {translation_coverage(cards, t):.0%}, "
+              f"концовок {len(t.get('endings') or {})}/{len(game['endings'])}")
     if warnings and not args.quiet:
         print(f"\nПредупреждения ({len(warnings)}):")
         for w in warnings:

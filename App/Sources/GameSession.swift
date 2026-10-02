@@ -24,13 +24,13 @@ final class GameSession {
     /// Концовка, открытая этим выбором впервые, — до показа экрана концовки.
     private var freshEnding = false
 
-    private let content: GameContent?
+    private var content: GameContent?
     private let saveURL = URL.applicationSupportDirectory.appending(path: "save.json")
     private let galleryURL = URL.applicationSupportDirectory.appending(path: "endings.json")
 
-    init() {
+    init(language: AppLanguage = .ru) {
         do {
-            content = try ContentLoader.bundled()
+            content = try ContentLoader.bundled(language: language)
         } catch {
             content = nil
             loadError = String(describing: error)
@@ -107,6 +107,16 @@ final class GameSession {
 
     func backToTitle() {
         phase = .title
+    }
+
+    /// Язык сменился: те же карточки с другими текстами. Партия продолжается —
+    /// состояние ссылается на карточки по id, а id у переводов те же.
+    func reload(language: AppLanguage) {
+        guard let fresh = try? ContentLoader.bundled(language: language) else { return }
+        content = fresh
+        if let state = engine?.state {
+            engine = GameEngine(content: fresh, restoring: state)
+        }
     }
 
     private func save() {

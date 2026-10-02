@@ -11,7 +11,8 @@ struct MigrantApp: App {
 }
 
 struct RootView: View {
-    @State private var session = GameSession()
+    @State private var session = GameSession(language: AppSettings.shared.value.language)
+    private let settings = AppSettings.shared
 
     var body: some View {
         ZStack {
@@ -27,6 +28,8 @@ struct RootView: View {
                 EndingView(session: session, ending: ending, isNew: isNew)
             }
         }
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(Theme.palette.scheme)
+        .onAppear { MusicPlayer.shared.apply(settings.value) }
+        .onChange(of: settings.value.language) { _, language in session.reload(language: language) }
     }
 }

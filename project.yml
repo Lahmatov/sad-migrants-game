@@ -29,8 +29,13 @@ targets:
         buildPhase: resources
         excludes:
           - "Art/**"
+          - "Music/**"
       # Картинки карточек — папкой-ссылкой: новый PNG попадает в сборку без xcodegen.
       - path: App/Resources/Art
+        type: folder
+        buildPhase: resources
+      # Записи музыки — тоже папкой-ссылкой: положил файл, собрал, играет.
+      - path: App/Resources/Music
         type: folder
         buildPhase: resources
     dependencies:
