@@ -82,7 +82,7 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 61.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 63.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -138,6 +138,18 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, airport arrivals hall in lisbon, glass doors opening, a grandmother with a big suitcase and a small boy running toward her with arms open, warm afternoon light, welcome signs, joyful and slightly teary
+```
+
+**`cabo_da_roca.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind
+```
+
+**`azores.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain
 ```
 
 **`paris.png`**

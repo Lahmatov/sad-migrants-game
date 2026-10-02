@@ -113,6 +113,18 @@ airport arrivals hall in lisbon, glass doors opening, a grandmother with a big s
 with arms open, warm afternoon light, welcome signs, joyful and slightly teary
 ```
 
+### `cabo_da_roca` · 1
+```
+cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at
+the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind
+```
+
+### `azores` · 1
+```
+azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges,
+cows grazing on a steep green slope above the ocean, low clouds and light rain
+```
+
 ### `paris` · 1
 ```
 paris seine embankment at golden hour, eiffel tower in the distance, a man in his 30s walking arm in arm with his elderly

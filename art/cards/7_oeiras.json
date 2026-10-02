@@ -366,6 +366,50 @@
       ]
     },
     {
+      "id": "oei_cabo_da_roca",
+      "image": "the man standing alone at the wooden fence on the cabo da roca cliff, lighthouse behind, the atlantic to the horizon",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Постоять у обрыва",
+          "image": "the man at the cliff edge, wind in his jacket, nothing but ocean ahead",
+          "anim": "gulls"
+        },
+        {
+          "label": "Привезти семью",
+          "image": "the family by the stone cross monument, the woman holding her hat, the boy running",
+          "anim": "gulls"
+        },
+        {
+          "label": "Позвонить маме оттуда",
+          "image": "the man showing the lighthouse and the cliff on a video call",
+          "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "oei_azores",
+      "image": "a green azores volcanic crater with a blue lake and a green lake, cows on the slope, the family on a viewpoint",
+      "anim": "rain",
+      "choices": [
+        {
+          "label": "Купаться в горячем источнике",
+          "image": "the man lying in a warm orange hot spring among ferns, light rain",
+          "anim": "steam"
+        },
+        {
+          "label": "Смотреть на озёра с кратера",
+          "image": "father and son looking down at the two-colored crater lakes",
+          "anim": "none"
+        },
+        {
+          "label": "Пусть сын бегает с коровами",
+          "image": "the boy running on a green slope, cows watching calmly",
+          "anim": "none"
+        }
+      ]
+    },
+    {
       "id": "oei_mom_granddaughter",
       "image": "a video call: the grandmother on screen, the baby trying to eat the phone",
       "anim": "none",

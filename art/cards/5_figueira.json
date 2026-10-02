@@ -661,6 +661,28 @@
       ]
     },
     {
+      "id": "fig_son_runs",
+      "image": "the boy running across the enormous empty figueira beach toward the ocean, boots flying off, seagulls lifting",
+      "anim": "gulls",
+      "choices": [
+        {
+          "label": "Бежать за ним",
+          "image": "the man running after the boy, sinking in the sand",
+          "anim": "gulls"
+        },
+        {
+          "label": "Смотреть издалека",
+          "image": "a tiny figure with arms out like a plane on a vast empty beach",
+          "anim": "gulls"
+        },
+        {
+          "label": "Устроить забег с чайками",
+          "image": "the boy racing a flock of seagulls taking off",
+          "anim": "gulls"
+        }
+      ]
+    },
+    {
       "id": "fig_pastel",
       "image": "a portuguese pastelaria counter with warm pastéis de nata and cinnamon, the man eating one standing",
       "anim": "steam",

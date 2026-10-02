@@ -13,7 +13,7 @@
 
 **Негатив** (если генератор поддерживает): `blurry, gradient, photorealistic, 3d render, text, letters, watermark, jpeg artifacts, extra fingers, face close-up`
 
-Всего картинок: **711** — 212 карточек и 499 выборов.
+Всего картинок: **723** — 215 карточек и 508 выборов.
 
 ## Порядок работы — три уровня
 
@@ -4437,6 +4437,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: father and son crouching on the sand together searching. Usual place, adapt if the moment says otherwise: extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet. keep open sky in the upper part of the frame.
 ```
 
+### `fig_son_runs.png`
+
+> У сына на пляже Фигейры одно главное занятие — бегать. Пляж такой широкий, что до воды десять минут, и он пробегает их все: к океану, от волны, по кругу, наперегонки с чайками. Сапоги летят в одну сторону, шапка в другую. Ты стоишь с его вещами в руках и понимаешь, что в Батуми ему было тесно.
+
+Анимация: чайки пролетают в верхней части. Сцена: `figueira_beach`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the boy running across the enormous empty figueira beach toward the ocean, boots flying off, seagulls lifting. Usual place, adapt if the moment says otherwise: extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet. keep open sky in the upper part of the frame.
+```
+
+#### `fig_son_runs__1.png` — «Бежать за ним»
+
+> Ты бежишь, проваливаясь в песок, и через минуту сдаёшься. Он возвращается, хватает тебя за руку и тащит дальше. «Папа, ещё!» Ещё — так ещё.
+
+Анимация: чайки пролетают в верхней части.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man running after the boy, sinking in the sand. Usual place, adapt if the moment says otherwise: extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet. keep open sky in the upper part of the frame.
+```
+
+#### `fig_son_runs__2.png` — «Смотреть издалека»
+
+> Маленькая точка на огромном пустом пляже, руки в стороны, как у самолёта. Ты смотришь и думаешь, что ради этой точки вы проехали полмира.
+
+Анимация: чайки пролетают в верхней части.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a tiny figure with arms out like a plane on a vast empty beach. Usual place, adapt if the moment says otherwise: extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet. keep open sky in the upper part of the frame.
+```
+
+#### `fig_son_runs__3.png` — «Устроить забег с чайками»
+
+> Старт по команде, чайки взлетают всей стаей. Сын объявляет, что победил. Чайки не спорят.
+
+Анимация: чайки пролетают в верхней части.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the boy racing a flock of seagulls taking off. Usual place, adapt if the moment says otherwise: extremely wide empty sandy beach of figueira da foz, atlantic waves far away, a small boy running toward the ocean, seagulls, off-season grey-blue light, vast and quiet. keep open sky in the upper part of the frame.
+```
+
 ### `fig_pastel.png`
 
 > Пастел-де-ната. Тёплый, с корицей, евро двадцать. Ты съедаешь один у стойки, как местные. Сын — два, как сын.
@@ -6341,6 +6381,86 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the group on the beach at night, still talking. Usual place, adapt if the moment says otherwise: beach near lisbon at sunset, group of friends with children around a picnic blanket, families from different countries, warm and nostalgic. keep dark night sky in the upper part of the frame.
+```
+
+### `oei_cabo_da_roca.png`
+
+> Кабо-да-Рока. Самая западная точка Европы: обрыв, маяк, ветер, который сбивает с ног, и океан до самого горизонта. Дальше земли нет. Это твоё место. Ты приезжаешь сюда, когда надо подумать, — или когда думать уже не можешь.
+
+Анимация: чайки пролетают в верхней части. Сцена: `cabo_da_roca`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man standing alone at the wooden fence on the cabo da roca cliff, lighthouse behind, the atlantic to the horizon. Usual place, adapt if the moment says otherwise: cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind. keep open sky in the upper part of the frame.
+```
+
+#### `oei_cabo_da_roca__1.png` — «Постоять у обрыва»
+
+> Ты стоишь у ограждения, ветер треплет куртку. Где-то за спиной вся Европа, вся дорога от Петербурга. Впереди — ничего, кроме воды. Почему-то от этого спокойно.
+
+Анимация: чайки пролетают в верхней части.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man at the cliff edge, wind in his jacket, nothing but ocean ahead. Usual place, adapt if the moment says otherwise: cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind. keep open sky in the upper part of the frame.
+```
+
+#### `oei_cabo_da_roca__2.png` — «Привезти семью»
+
+> Сын бегает вокруг креста с надписью, жена держит шапку двумя руками. «Вот, — говоришь ты. — Край». Они смотрят на океан и, кажется, понимают, почему ты сюда ездишь.
+
+Анимация: чайки пролетают в верхней части.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the family by the stone cross monument, the woman holding her hat, the boy running. Usual place, adapt if the moment says otherwise: cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind. keep open sky in the upper part of the frame.
+```
+
+#### `oei_cabo_da_roca__3.png` — «Позвонить маме оттуда»
+
+> Ты показываешь маме обрыв и маяк. «Дальше уже ничего?» — «Ничего, мам. Только Америка». Мама смеётся: «Ну, не уезжай туда хотя бы».
+
+Анимация: блики на воде в нижней трети.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man showing the lighthouse and the cliff on a video call. Usual place, adapt if the moment says otherwise: cabo da roca, the westernmost cliff of europe: a red-roofed lighthouse, a stone monument with a cross, a wooden fence at the edge of a huge cliff, the atlantic ocean to the horizon, strong wind bending the grass, a lone figure seen from behind. keep water in the lower third of the frame.
+```
+
+### `oei_azores.png`
+
+> Вы летите на Азоры — два часа над океаном, и вы снова на острове посреди ничего. Зелёные кратеры, озёра двух цветов, коровы, которые пасутся прямо над обрывом, и горячие источники, где пахнет серой, как в тбилисских банях.
+
+Анимация: дождь по всему кадру. Сцена: `azores`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a green azores volcanic crater with a blue lake and a green lake, cows on the slope, the family on a viewpoint. Usual place, adapt if the moment says otherwise: azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain.
+```
+
+#### `oei_azores__1.png` — «Купаться в горячем источнике»
+
+> Тёплая рыжая вода, вокруг папоротники, сверху мелкий дождь. Ты лежишь в ней и вспоминаешь серные бани в Тбилиси. Круг замкнулся — только теперь вы приехали сами, а не сбежали.
+
+Анимация: пар поднимается из центра.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man lying in a warm orange hot spring among ferns, light rain. Usual place, adapt if the moment says otherwise: azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain. a steaming cup or pot near the center of the frame.
+```
+
+#### `oei_azores__2.png` — «Смотреть на озёра с кратера»
+
+> Одно озеро синее, другое зелёное. Сын спрашивает, почему. Ты не знаешь и придумываешь легенду на ходу. Он верит. Ты почти тоже.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: father and son looking down at the two-colored crater lakes. Usual place, adapt if the moment says otherwise: azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain.
+```
+
+#### `oei_azores__3.png` — «Пусть сын бегает с коровами»
+
+> Сын бегает по зелёному склону, коровы смотрят на него с огромным спокойствием. Он кричит им «olá». Одна мычит в ответ. Лучший день поездки.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the boy running on a green slope, cows watching calmly. Usual place, adapt if the moment says otherwise: azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain.
 ```
 
 ### `oei_mom_granddaughter.png`

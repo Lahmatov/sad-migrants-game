@@ -102,6 +102,13 @@ struct SceneRecipe {
             r.place = .sea(.sand); r.sea = [E32.pine, E32.ocean]
         case "ocean":
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
+        case "cabo_da_roca":
+            // Край Европы: обрыв и океан до горизонта, ветер.
+            r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
+            r.seagulls = true
+        case "azores":
+            // Зелёные кратеры над океаном, мелкий дождь.
+            r.place = .sea(.rocks); r.mountains = true; r.sea = [E32.ocean, E32.sky]; r.rain = true
         case "malaga_beach":
             // Средиземное море: тёплое и спокойное, без португальских чаек.
             r = mood(act: "oeiras"); r.place = .sea(.sand); r.palms = true
