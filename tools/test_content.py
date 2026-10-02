@@ -239,6 +239,10 @@ class ChoiceShapeTests(unittest.TestCase):
         self.assertNotIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras')))
         self.assertIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras', ['father_watch'])))
 
+    def test_azores_trip_was_before_the_daughter(self):
+        card = next(c for c in CARDS if c['id'] == 'oei_azores')
+        self.assertIn('daughter', card['requires']['notFlags'])
+
     def test_mom_first_comes_to_batumi(self):
         g = at_card('bat_mom_visit', 'batumi')
         tap(g, 'Повести на пляж')
