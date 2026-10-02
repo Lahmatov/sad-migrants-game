@@ -190,3 +190,30 @@ final class TranslationTests: XCTestCase {
         XCTAssertEqual(english.introStanzas.first?.first, "Everyone has their own life.")
     }
 }
+
+final class LinksTests: XCTestCase {
+    func testAnyUsualSpellingOfChannelWorks() {
+        let expected = URL(string: "https://t.me/sad_migrants")
+        XCTAssertEqual(Links.telegramURL("@sad_migrants"), expected)
+        XCTAssertEqual(Links.telegramURL("t.me/sad_migrants"), expected)
+        XCTAssertEqual(Links.telegramURL("https://t.me/sad_migrants"), expected)
+        XCTAssertEqual(Links.telegramURL("  http://telegram.me/sad_migrants \n"), expected)
+    }
+
+    func testInviteLinksAreKept() {
+        XCTAssertEqual(Links.telegramURL("https://t.me/+AbC-123"), URL(string: "https://t.me/+AbC-123"))
+    }
+
+    func testEmptyMeansNoChannelYet() {
+        XCTAssertNil(Links.telegramURL(""))
+        XCTAssertNil(Links.telegramURL("   "))
+        XCTAssertNil(Links.telegramURL("@"))
+    }
+
+    func testOtherSitesAreRejected() {
+        XCTAssertNil(Links.telegramURL("https://evil.example/t.me/x"))
+        XCTAssertNil(Links.telegramURL("t.me.evil.example/x"))
+        XCTAssertNil(Links.telegramURL("t.me/канал"))
+        XCTAssertNil(Links.telegramURL("t.me/a?b=c"))
+    }
+}

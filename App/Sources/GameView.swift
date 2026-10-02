@@ -13,7 +13,7 @@ struct GameView: View {
                 StatsBar(stats: engine.state.stats)
                 HStack {
                     Button {
-                        session.backToTitle()
+                        session.menuOpen = true
                     } label: {
                         Image(systemName: "line.3.horizontal")
                     }

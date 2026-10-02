@@ -21,6 +21,8 @@ final class GameSession {
     private(set) var phase: Phase = .title
     private(set) var loadError: String?
     private(set) var gallery = EndingGallery()
+    /// Боковое меню открыто — свайпом от левого края или кнопкой ☰.
+    var menuOpen = false
     /// Концовка, открытая этим выбором впервые, — до показа экрана концовки.
     private var freshEnding = false
 
@@ -106,6 +108,27 @@ final class GameSession {
     }
 
     func backToTitle() {
+        phase = .title
+    }
+
+    /// Все концовки сценария — для галереи в меню.
+    var endings: [Ending] {
+        content?.endings ?? []
+    }
+
+    var isPlaying: Bool {
+        switch phase {
+        case .card, .outcome: return true
+        default: return false
+        }
+    }
+
+    /// Стирает партию и открытые концовки. Настройки не трогает — это не прогресс.
+    func resetProgress() {
+        engine = nil
+        gallery = EndingGallery()
+        try? FileManager.default.removeItem(at: saveURL)
+        try? FileManager.default.removeItem(at: galleryURL)
         phase = .title
     }
 

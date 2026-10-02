@@ -12,6 +12,8 @@ public enum UIKey: String, CaseIterable, Sendable {
     case language, languageNote
     case music, musicOn, volume, track
     case privacy, privacyText, aboutStory, aboutStoryText, done
+    case endings, endingLocked, telegram, telegramSoon, shareGame, shareText, rateGame
+    case resetProgress, resetConfirm, resetWarning, newGameConfirm, newGameWarning, cancel, version
 }
 
 public enum UIText {
@@ -65,7 +67,21 @@ public enum UIText {
             .privacyText: "Игра ничего не собирает и никуда не отправляет. Нет рекламы, аналитики и аккаунтов. Сохранение, открытые концовки и настройки хранятся только на этом телефоне и удаляются вместе с игрой.",
             .aboutStory: "Об истории",
             .aboutStoryText: "Игра основана на реальной истории одной семьи: Петербург, Тбилиси, Батуми, Фигейра-да-Фош, Оэйраш. Имена убраны, люди названы по ролям. Главные события настоящие; часть вариантов выбора — то, как могло бы быть.",
-            .done: "Готово"
+            .done: "Готово",
+            .endings: "Концовки",
+            .endingLocked: "Ещё не открыта",
+            .telegram: "Телеграм-канал",
+            .telegramSoon: "Телеграм-канал — скоро",
+            .shareGame: "Поделиться игрой",
+            .shareText: "«23 кг» — игра про эмиграцию. Смешная и немного грустная. Основана на реальной истории.",
+            .rateGame: "Оценить игру",
+            .resetProgress: "Сбросить прогресс",
+            .resetConfirm: "Сбросить",
+            .resetWarning: "Удалятся текущая партия и открытые концовки. Настройки останутся.",
+            .newGameConfirm: "Начать заново",
+            .newGameWarning: "Текущая партия закончится. Открытые концовки останутся.",
+            .cancel: "Отмена",
+            .version: "Версия"
         ],
         .en: [
             .gameTitle: "23 kg",
@@ -103,7 +119,21 @@ public enum UIText {
             .privacyText: "The game collects nothing and sends nothing anywhere. No ads, no analytics, no accounts. Your save, endings and settings stay on this phone and are deleted with the game.",
             .aboutStory: "About the story",
             .aboutStoryText: "The game is based on the real story of one family: Saint Petersburg, Tbilisi, Batumi, Figueira da Foz, Oeiras. Names are removed; people are called by their roles. The main events are real; some of the choices are what could have been.",
-            .done: "Done"
+            .done: "Done",
+            .endings: "Endings",
+            .endingLocked: "Not found yet",
+            .telegram: "Telegram channel",
+            .telegramSoon: "Telegram channel — soon",
+            .shareGame: "Share the game",
+            .shareText: "“23 kg” — a game about emigration. Funny and a little sad. Based on a true story.",
+            .rateGame: "Rate the game",
+            .resetProgress: "Reset progress",
+            .resetConfirm: "Reset",
+            .resetWarning: "Your current game and found endings will be deleted. Settings stay.",
+            .newGameConfirm: "Start over",
+            .newGameWarning: "Your current game will end. Found endings stay.",
+            .cancel: "Cancel",
+            .version: "Version"
         ],
         .pt: [
             .gameTitle: "23 kg",
@@ -141,7 +171,21 @@ public enum UIText {
             .privacyText: "O jogo não recolhe nada nem envia nada para lado nenhum. Sem anúncios, sem análises, sem contas. O progresso, os finais e as definições ficam só neste telemóvel e são apagados com o jogo.",
             .aboutStory: "Sobre a história",
             .aboutStoryText: "O jogo baseia-se na história real de uma família: São Petersburgo, Tbilisi, Batumi, Figueira da Foz, Oeiras. Os nomes foram retirados; as pessoas são chamadas pelos seus papéis. Os acontecimentos principais são reais; algumas escolhas são o que poderia ter sido.",
-            .done: "Feito"
+            .done: "Feito",
+            .endings: "Finais",
+            .endingLocked: "Ainda por descobrir",
+            .telegram: "Canal no Telegram",
+            .telegramSoon: "Canal no Telegram — em breve",
+            .shareGame: "Partilhar o jogo",
+            .shareText: "«23 kg» — um jogo sobre emigração. Engraçado e um pouco triste. Baseado numa história real.",
+            .rateGame: "Avaliar o jogo",
+            .resetProgress: "Apagar progresso",
+            .resetConfirm: "Apagar",
+            .resetWarning: "O jogo atual e os finais descobertos serão apagados. As definições ficam.",
+            .newGameConfirm: "Recomeçar",
+            .newGameWarning: "O jogo atual vai terminar. Os finais descobertos ficam.",
+            .cancel: "Cancelar",
+            .version: "Versão"
         ]
     ]
 }
