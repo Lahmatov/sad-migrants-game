@@ -225,6 +225,20 @@ class ChoiceShapeTests(unittest.TestCase):
         tap(g, 'Не говорить жене')
         self.assertIn('oei_inlaws_granddaughter', dict(g.scheduled))
 
+    def test_memories_surface_after_what_reminds_of_them(self):
+        triggers = {'mem_sled': 'bat_snow', 'mem_ford_ka': 'bat_toys', 'mem_brother_lake': 'bat_brother_here',
+                    'mem_chips': 'fig_mom_birthday', 'mem_dad_car': 'oei_father_back'}
+        by_id = {c['id']: c for c in CARDS}
+        for memory, trigger in triggers.items():
+            self.assertEqual(by_id[memory].get('kind'), 'event', memory)
+            for choice in by_id[trigger]['choices']:
+                scheduled = [s['card'] for s in choice['effects'].get('schedule', [])]
+                self.assertIn(memory, scheduled, f'{trigger} → {memory}')
+
+    def test_dads_watch_only_if_you_took_it(self):
+        self.assertNotIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras')))
+        self.assertIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras', ['father_watch'])))
+
     def test_mom_first_comes_to_batumi(self):
         g = at_card('bat_mom_visit', 'batumi')
         tap(g, 'Повести на пляж')

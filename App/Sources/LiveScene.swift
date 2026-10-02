@@ -102,6 +102,10 @@ struct SceneRecipe {
             r.place = .sea(.sand); r.sea = [E32.pine, E32.ocean]
         case "ocean":
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
+        case "memory":
+            // Детство: снежный двор девяностых в тёплых, выцветших тонах.
+            r = mood(act: "packing"); r.place = .city; r.snow = true
+            r.sky = [E32.brown, E32.clay, E32.tan]
         case "cabo_da_roca":
             // Край Европы: обрыв и океан до горизонта, ветер.
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]

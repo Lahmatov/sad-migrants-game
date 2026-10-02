@@ -837,6 +837,29 @@
       ]
     },
     {
+      "id": "mem_chips",
+      "image": "a small boy sitting happily among a mountain of crisp packets on his birthday in a 1990s flat",
+      "anim": "confetti",
+      "key": true,
+      "choices": [
+        {
+          "label": "Искать их в магазине",
+          "image": "a portuguese supermarket crisps aisle, the man holding a pack, not the right one",
+          "anim": "none"
+        },
+        {
+          "label": "Рассказать маме",
+          "image": "the man on a video call with his mother, both laughing",
+          "anim": "none"
+        },
+        {
+          "label": "Подарить сыну гору чипсов",
+          "image": "the boy surrounded by a pile of crisp packets, looking puzzled and delighted",
+          "anim": "confetti"
+        }
+      ]
+    },
+    {
       "id": "fig_sardines",
       "image": "são joão festival in figueira: sardines grilling, music, strings of lights, people bopping each other with plastic hammers",
       "anim": "lights",

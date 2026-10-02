@@ -309,6 +309,29 @@
       ]
     },
     {
+      "id": "mem_sled",
+      "image": "1990s soviet courtyard at dusk in deep snow, kids on sledges holding onto the rear bumper of a slowly moving lada, laughing",
+      "anim": "snow",
+      "key": true,
+      "choices": [
+        {
+          "label": "Улыбнуться",
+          "image": "the man smiling at a palm tree covered in snow on a batumi balcony",
+          "anim": "snow"
+        },
+        {
+          "label": "Рассказать жене",
+          "image": "the woman shaking her head, the man crossing fingers behind his back",
+          "anim": "none"
+        },
+        {
+          "label": "Написать маме",
+          "image": "a phone chat: 'mom, did you know?' answered 'everyone knew'",
+          "anim": "none"
+        }
+      ]
+    },
+    {
       "id": "bat_adjaruli",
       "image": "an adjarian khachapuri boat with cheese, butter and egg on a cafe table, a local stirring it to show how",
       "anim": "steam",
@@ -463,6 +486,29 @@
         {
           "label": "Достроить пробку вместе",
           "image": "father and son on the floor adding the last toy cars to the jam",
+          "anim": "none"
+        }
+      ]
+    },
+    {
+      "id": "mem_ford_ka",
+      "image": "a 1990s russian shop counter, a young mother looking into a thin wallet, a small boy pointing at a tiny toy ford ka in a glass case",
+      "anim": "dust",
+      "key": true,
+      "choices": [
+        {
+          "label": "Позвонить маме",
+          "image": "the man on the phone, his mother crying on the video call",
+          "anim": "none"
+        },
+        {
+          "label": "Найти похожую сыну",
+          "image": "a tiny toy ford ka placed at the end of a long line of toy cars",
+          "anim": "none"
+        },
+        {
+          "label": "Сесть рядом с сыном",
+          "image": "father and son on the floor moving toy cars together",
           "anim": "none"
         }
       ]
@@ -755,6 +801,29 @@
           "label": "Позвать кидать камни",
           "image": "the brother, the man and the toddler skipping stones on the beach",
           "anim": "sea"
+        }
+      ]
+    },
+    {
+      "id": "mem_brother_lake",
+      "image": "two small boys in winter coats walking hand in hand across a frozen snowy lake at dusk, an empty bus stop far behind",
+      "anim": "snow",
+      "key": true,
+      "choices": [
+        {
+          "label": "Напомнить брату",
+          "image": "the brothers laughing in the gilded living room, the boy running in",
+          "anim": "none"
+        },
+        {
+          "label": "Позвать гулять сейчас",
+          "image": "the brothers walking side by side on the night boulevard",
+          "anim": "sea"
+        },
+        {
+          "label": "Промолчать",
+          "image": "the brother playing with the boy on the floor, the man watching",
+          "anim": "none"
         }
       ]
     },

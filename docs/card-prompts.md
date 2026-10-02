@@ -13,12 +13,12 @@
 
 **Негатив** (если генератор поддерживает): `blurry, gradient, photorealistic, 3d render, text, letters, watermark, jpeg artifacts, extra fingers, face close-up`
 
-Всего картинок: **723** — 215 карточек и 508 выборов.
+Всего картинок: **743** — 220 карточек и 523 выборов.
 
 ## Порядок работы — три уровня
 
 1. **Фоны сцен** — `docs/art-brief.md`, шаг 3 (и первые строки `art/prompts.csv`). Их немного, а с ними картинка есть у каждой карточки сразу. Файл — `<сцена>.png` в ту же папку `App/Resources/Art/`.
-2. **Ключевые карточки** — 43 штук, отмечены ★ ниже. Поворотные моменты истории: отъезд, граница, первое слово, свадьба брата, папа, рождение дочки, финалы.
+2. **Ключевые карточки** — 48 штук, отмечены ★ ниже. Поворотные моменты истории: отъезд, граница, первое слово, свадьба брата, папа, рождение дочки, финалы.
 3. **Всё остальное** — карточки и выборы по порядку игры. Каждая готовая картинка сразу видна в игре.
 
 В `art/prompts.csv` есть колонка `tier` — можно отсортировать и генерировать пачками по уровню.
@@ -37,14 +37,18 @@
 - `bat_flat.png` — Батуми. Квартира у моря: две комнаты, армянский ремонт, позолота на вс…
 - `bat_car.png` — Авторынок. В России осталась Skoda Yeti — её отдали родителям. Ты ищеш…
 - `bat_stones.png` — Пляж в Батуми — галька. Сын открывает лучшее развлечение на свете: кид…
+- `mem_sled.png` — Снег на батумских пальмах — и ты вдруг снова во дворе своего детства.…
 - `bat_ali_nino.png` — На бульваре — статуи Али и Нино. Каждый вечер они медленно едут навстр…
+- `mem_ford_ka.png` — Сорок машинок в пробке на полу — и ты вспоминаешь одну. Тебе лет шесть…
 - `bat_first_word.png` — Сын говорит первое слово. «Мама». Жена плачет, ты снимаешь на телефон…
 - `bat_wedding.png` — Конец августа. Брат женится. Вы с женой летите в Россию на несколько д…
 - `bat_brother_border.png` — Ты едешь встречать брата на границу. Он стоит в очереди больше суток.…
+- `mem_brother_lake.png` — Брат сидит у вас в зале, и ты вспоминаешь зиму из детства. Вы вдвоём п…
 - `bat_brother_leaves.png` — Декабрь. Вы уезжаете в Португалию, брат — домой, в Россию. Сын суёт ем…
 - `bat_last_stones.png` — Последний вечер на пляже. Сын кидает камни в море. Последний он прижим…
 - `fig_arrive.png` — Фигейра-да-Фош. Маленький город на океане. Пляж такой широкий, что до…
 - `fig_stone.png` — На пляже сын достаёт из кармана камень из Батуми. «Можно я его брошу в…
+- `mem_chips.png` — Мамин день рождения — и ты вспоминаешь свой, из детства. Мама дарит те…
 - `fig_sardines.png` — Июнь, праздник Святого Жуана. На улицах жарят сардины, играет музыка,…
 - `fig_ocean.png` — Ты сидишь на мокром песке. Океан огромный и шумит. Где-то там, прямо,…
 - `fig_urgencia.png` — Зима. Вечером у сына под сорок, вы едете в urgência — приёмный покой.…
@@ -62,6 +66,7 @@
 - `oei_father.png` — Восемь утра. Звонит мама. Они с папой давно в разводе, но полиция позв…
 - `oei_father_trip.png` — Петербург. Брат встречает тебя, и вы на его машине едете на север, в Н…
 - `oei_father_back.png` — Самолёт в Лиссабон. Ты впервые замечаешь, что про Португалию думаешь «…
+- `mem_dad_car.png` — Утром в Оэйраше ты надеваешь папину кофту — и вспоминаешь. Тебе десять…
 - `oei_mom_paris.png` — 2026-й. Ты везёшь маму в Париж. Всю жизнь он был для неё открыткой на…
 - `oei_final.png` — Квартира найдена. Не идеальная: третий этаж без лифта, кухня маленькая…
 - `final_museum.png` — Вечер в пустой квартире. Ты открываешь коробку, которую возил из стран…
@@ -2083,6 +2088,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a tiny wet snowman with a mandarin nose on the beach. Usual place, adapt if the moment says otherwise: batumi in heavy rain seen from a high balcony, grey sea merging with the sky, a child's drawing of a sunny sea taped to the window glass, cozy inside, gloomy outside.
 ```
 
+### `mem_sled.png` ★
+
+> Снег на батумских пальмах — и ты вдруг снова во дворе своего детства. Зима, сугробы выше головы, вечер. Вы с пацанами со двора цепляетесь санками за бампер проезжающей машины и едете, визжа, пока водитель не заметит. Мама бы убила, если бы узнала. Она так и не узнала.
+
+Анимация: падающий снег. Сцена: `memory`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: 1990s soviet courtyard at dusk in deep snow, kids on sledges holding onto the rear bumper of a slowly moving lada, laughing. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_sled__1.png` — «Улыбнуться»
+
+> Ты стоишь на балконе и улыбаешься пальме в снегу. Холодно было, страшно было, весело было. Всё сразу — как сейчас.
+
+Анимация: падающий снег.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man smiling at a palm tree covered in snow on a batumi balcony. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_sled__2.png` — «Рассказать жене»
+
+> Жена слушает и качает головой: «Только сыну не рассказывай». Ты обещаешь. Скрещённые пальцы держишь за спиной.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the woman shaking her head, the man crossing fingers behind his back. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_sled__3.png` — «Написать маме»
+
+> «Мам, а ты знала, что мы катались за машинами на санках?» Мама отвечает через минуту: «Знала. Все знали». Двадцать пять лет ты думал иначе.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a phone chat: 'mom, did you know?' answered 'everyone knew'. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
 ### `bat_adjaruli.png`
 
 > Аджарский хачапури: лодочка с сыром, маслом и яйцом. Местные учат правильно размешивать. Сын ест только корочку, а остальное отдаёт тебе. Это твой главный риск здоровью в Грузии.
@@ -2359,6 +2404,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: father and son on the floor adding the last toy cars to the jam. Usual place, adapt if the moment says otherwise: high-rise apartment in batumi, big balcony window with the black sea filling the whole view, sparse rented furniture, a toy railway on the floor, a boy on the balcony waving at the sea, soft grey-green sea light.
+```
+
+### `mem_ford_ka.png` ★
+
+> Сорок машинок в пробке на полу — и ты вспоминаешь одну. Тебе лет шесть, вы с мамой в магазине, денег нет совсем, а ты капризничаешь у витрины. Мама долго смотрит в кошелёк. И покупает тебе маленькую машинку — Ford Ka. Самую дешёвую. Самую любимую. Ты спал с ней под подушкой.
+
+Анимация: пылинки медленно плывут. Сцена: `memory`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a 1990s russian shop counter, a young mother looking into a thin wallet, a small boy pointing at a tiny toy ford ka in a glass case. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_ford_ka__1.png` — «Позвонить маме»
+
+> «Мам, помнишь Ford Ka?» Пауза. «Ты помнишь?..» Она помнит всё: магазин, витрину, сколько осталось в кошельке. Она плачет. Ты тоже.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man on the phone, his mother crying on the video call. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_ford_ka__2.png` — «Найти похожую сыну»
+
+> Ты находишь в интернете такую же маленькую Ford Ka и заказываешь. Сын ставит её в пробку сорок первой. Для него это просто машинка. Пусть.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a tiny toy ford ka placed at the end of a long line of toy cars. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_ford_ka__3.png` — «Сесть рядом с сыном»
+
+> Ты садишься на пол и двигаешь машинки вместе с ним. Ничего не объясняешь. Тебе снова шесть, только теперь денег хватает.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: father and son on the floor moving toy cars together. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
 ```
 
 ### `bat_cold_flat.png`
@@ -2879,6 +2964,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the brother, the man and the toddler skipping stones on the beach. Usual place, adapt if the moment says otherwise: high-rise apartment in batumi, big balcony window with the black sea filling the whole view, sparse rented furniture, a toy railway on the floor, a boy on the balcony waving at the sea, soft grey-green sea light. keep water in the lower third of the frame.
+```
+
+### `mem_brother_lake.png` ★
+
+> Брат сидит у вас в зале, и ты вспоминаешь зиму из детства. Вы вдвоём после прогулки садитесь в автобус — не в ту сторону. Понимаете это на конечной. Денег на обратный нет, темнеет, и вы час идёте пешком через замёрзшее озеро, по колено в снегу. Младший не плачет — ты держишь его за руку.
+
+Анимация: падающий снег. Сцена: `memory`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: two small boys in winter coats walking hand in hand across a frozen snowy lake at dusk, an empty bus stop far behind. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_brother_lake__1.png` — «Напомнить брату»
+
+> «Помнишь озеро?» Брат смеётся так, что сын прибегает из другой комнаты. «Ты тогда сказал, что знаешь дорогу». — «Я и знал». — «Ты не знал». Оба правы.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the brothers laughing in the gilded living room, the boy running in. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_brother_lake__2.png` — «Позвать гулять сейчас»
+
+> Вы гуляете вдвоём по ночному бульвару. Не через озеро, без снега, на правильном автобусе. Но идёте так же — молча и рядом.
+
+Анимация: блики на воде в нижней трети.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the brothers walking side by side on the night boulevard. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle. keep water in the lower third of the frame.
+```
+
+#### `mem_brother_lake__3.png` — «Промолчать»
+
+> Ты не напоминаешь. Просто смотришь, как он играет с сыном, и думаешь: тогда ты держал его за руку. Теперь — снова. Только озеро другое.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the brother playing with the boy on the floor, the man watching. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
 ```
 
 ### `bat_brother_leaves.png` ★
@@ -4757,6 +4882,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the family recording a video with a cake and a drawing. Usual place, adapt if the moment says otherwise: portuguese tax office waiting room, ticket number screen, long rows of chairs, people waiting with papers, tired clerk at a desk, greenish fluorescent light, bureaucratic comedy.
 ```
 
+### `mem_chips.png` ★
+
+> Мамин день рождения — и ты вспоминаешь свой, из детства. Мама дарит тебе чипсы «Эстрелла», «Сметана и лук». Не пачку — много пачек, целую гору. Ты сидишь среди этих пачек и чувствуешь себя самым богатым человеком в мире. Это был лучший подарок. Ты до сих пор помнишь, как они шуршали.
+
+Анимация: конфетти падает. Сцена: `memory`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a small boy sitting happily among a mountain of crisp packets on his birthday in a 1990s flat. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_chips__1.png` — «Искать их в магазине»
+
+> В Португалии «Эстреллы» нет. Есть чипсы со сметаной, есть с луком, есть даже вместе. Не то. Ты покупаешь пачку и съедаешь её в машине один.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a portuguese supermarket crisps aisle, the man holding a pack, not the right one. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_chips__2.png` — «Рассказать маме»
+
+> «Мам, а помнишь чипсы на мой день рождения?» — «Это которые ты три дня ел и никому не давал?» Она помнит другую версию. Её версия, наверное, точнее.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man on a video call with his mother, both laughing. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_chips__3.png` — «Подарить сыну гору чипсов»
+
+> На следующий день рождения сын получает гору пачек. Смотрит на тебя странно: «Это всё мне?» Да. Всё тебе. Так надо.
+
+Анимация: конфетти падает.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the boy surrounded by a pile of crisp packets, looking puzzled and delighted. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
 ### `fig_sardines.png` ★
 
 > Июнь, праздник Святого Жуана. На улицах жарят сардины, играет музыка, все бьют друг друга по голове пластиковыми молоточками. Это традиция. Сыну дают молоточек.
@@ -6263,6 +6428,46 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the arrivals hall, the woman and the boy holding a handmade sign 'papa' with a backwards letter. Usual place, adapt if the moment says otherwise: view from an airplane window seat, clouds below, wing visible, a hand resting on the window frame, soft sunrise colors, calm and bittersweet.
+```
+
+### `mem_dad_car.png` ★
+
+> Утром в Оэйраше ты надеваешь папину кофту — и вспоминаешь. Тебе десять. Темно, мороз, до школы полчаса. Папа даёт тебе щётку и кивает на свою «девятку», белую от снега. Ты чистишь крышу, капот, стёкла, пальцы немеют в варежках. Папа прогревает мотор и смотрит на тебя через лобовое стекло. Ничего не говорит. Просто смотрит.
+
+Анимация: падающий снег. Сцена: `memory`.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a dark frozen winter morning in 1990s russia, a 10-year-old boy brushing snow off a white lada 2109, his father watching through the windscreen. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_dad_car__1.png` — «Рассказать сыну»
+
+> Ты рассказываешь сыну про «девятку», мороз и щётку. Он не знает, что такое снег на машине. «А дедушка тебе помогал?» — «Нет. Он смотрел». Сын думает. «Это тоже помогать?» Да. Это тоже.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man telling his son a story at the oeiras breakfast table. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_dad_car__2.png` — «Посмотреть на его часы»
+
+> Часы Romanson лежат на полке и всё так же стоят. Ты берёшь их в руки. Ты так и не почистил ему машину, когда он стал старым. Он не просил.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: a stopped romanson wristwatch in the man's palm. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
+```
+
+#### `mem_dad_car__3.png` — «Позвонить брату»
+
+> «Помнишь девятку?» — «Белую? Помню. Он её больше нас любил». Вы смеётесь. Потом долго молчите в трубку, и это тоже разговор.
+
+Анимация: без анимации.
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man on the phone with his brother by the window. Usual place, adapt if the moment says otherwise: a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle.
 ```
 
 ### `oei_ten_years.png`

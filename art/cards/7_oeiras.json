@@ -298,6 +298,29 @@
       "key": true
     },
     {
+      "id": "mem_dad_car",
+      "image": "a dark frozen winter morning in 1990s russia, a 10-year-old boy brushing snow off a white lada 2109, his father watching through the windscreen",
+      "anim": "snow",
+      "key": true,
+      "choices": [
+        {
+          "label": "Рассказать сыну",
+          "image": "the man telling his son a story at the oeiras breakfast table",
+          "anim": "none"
+        },
+        {
+          "label": "Посмотреть на его часы",
+          "image": "a stopped romanson wristwatch in the man's palm",
+          "anim": "none"
+        },
+        {
+          "label": "Позвонить брату",
+          "image": "the man on the phone with his brother by the window",
+          "anim": "none"
+        }
+      ]
+    },
+    {
       "id": "oei_ten_years",
       "image": "a chat message: citizenship now ten years instead of five, a calendar reminder on the phone",
       "anim": "none",

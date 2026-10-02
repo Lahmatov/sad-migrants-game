@@ -82,7 +82,7 @@ pixel art character sheet, Endesga 32 palette, no anti-aliasing, white backgroun
 
 ## Шаг 3. Сцены — по порядку игры
 
-Размер — **180 × 135**. Имя файла — как в заголовке. Всего 63.
+Размер — **180 × 135**. Имя файла — как в заголовке. Всего 64.
 
 Негатив (если генератор поддерживает отдельное поле):
 
@@ -150,6 +150,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ```
 pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, azores island landscape: a green volcanic crater with two lakes of different colors (blue and green), hydrangea hedges, cows grazing on a steep green slope above the ocean, low clouds and light rain
+```
+
+**`memory.png`**
+
+```
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game, a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle
 ```
 
 **`paris.png`**
