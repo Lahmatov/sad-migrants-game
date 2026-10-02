@@ -5,6 +5,7 @@ import UIKit
 struct GameView: View {
     let session: GameSession
     @State private var tapCount = 0
+    @State private var showSettings = false
 
     var body: some View {
         if let engine = session.engine, let card = shownCard(engine) {
@@ -20,6 +21,13 @@ struct GameView: View {
                     Text(engine.currentAct?.title ?? "")
                     Spacer()
                     Text(L(.day, engine.state.day))
+                    // Настройки прямо из партии: музыку и тему меняют посреди игры, а не только в меню.
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    .accessibilityLabel(L(.settings))
                 }
                 .font(Theme.caption)
                 .foregroundStyle(Theme.dim)
@@ -53,6 +61,7 @@ struct GameView: View {
                 }
             }
             .padding(16)
+            .sheet(isPresented: $showSettings) { SettingsView() }
             .sensoryFeedback(.selection, trigger: tapCount)
             .animation(.easeOut(duration: 0.2), value: session.phase)
         }
