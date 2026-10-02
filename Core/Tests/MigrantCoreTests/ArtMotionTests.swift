@@ -3,7 +3,7 @@ import XCTest
 
 final class ArtMotionTests: XCTestCase {
     func testNoneDrawsNothing() {
-        XCTAssertTrue(ArtMotion.particles(.none, frame: 10).isEmpty)
+        XCTAssertTrue(ArtMotion.particles(ArtAnimation.none, frame: 10).isEmpty)
     }
 
     func testEveryParticleStaysInsidePicture() {
@@ -25,7 +25,7 @@ final class ArtMotionTests: XCTestCase {
     }
 
     func testEveryAnimationActuallyMoves() {
-        for kind in ArtAnimation.allCases where kind != .none {
+        for kind in ArtAnimation.allCases where kind != ArtAnimation.none {
             let frames = (0..<16).map { ArtMotion.particles(kind, frame: $0) }
             XCTAssertGreaterThan(Set(frames.map { "\($0)" }).count, 1, "\(kind) стоит на месте")
         }
@@ -43,6 +43,6 @@ final class ArtMotionTests: XCTestCase {
 
     func testAnimationNamesDecodeFromArtJSON() throws {
         let decoded = try JSONDecoder().decode([String: ArtAnimation].self, from: Data(#"{"a":"rain","b":"none"}"#.utf8))
-        XCTAssertEqual(decoded, ["a": .rain, "b": .none])
+        XCTAssertEqual(decoded, ["a": ArtAnimation.rain, "b": ArtAnimation.none])
     }
 }

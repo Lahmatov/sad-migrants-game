@@ -41,7 +41,7 @@ enum ArtLibrary {
     }
 
     static func animation(for name: String) -> ArtAnimation {
-        animations[name] ?? .none
+        animations[name] ?? ArtAnimation.none
     }
 
     /// Номер выбора в имени файла считается с единицы — как в списке промптов.
@@ -55,7 +55,7 @@ struct ArtOverlay: View {
     let kind: ArtAnimation
 
     var body: some View {
-        if kind != .none {
+        if kind != ArtAnimation.none {
             TimelineView(.periodic(from: .now, by: 1.0 / 8)) { timeline in
                 Canvas { context, size in
                     let frame = Int(timeline.date.timeIntervalSinceReferenceDate * 8)
