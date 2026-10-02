@@ -49,8 +49,8 @@
         },
         {
           "label": "«Спасибо»",
-          "image": "the older man walking out to a snowy yard toward an old car with a flashlight, checking the fuel",
-          "anim": "snow"
+          "image": "the older man pouring a glass of red wine in front of a tv showing a football match, thoughtful",
+          "anim": "none"
         },
         {
           "label": "«Мы сами, на такси»",
@@ -183,7 +183,7 @@
     },
     {
       "id": "pack_album",
-      "image": "an old paper photo album open on a bed: a small boy on a beach, a young father, faded colors",
+      "image": "an old paper photo album open on a bed: a little boy in underpants holding a cucumber in one hand and a bucket in the other at his grandmother's village house, a young laughing father, faded colors",
       "anim": "dust",
       "choices": [
         {
@@ -198,7 +198,7 @@
         },
         {
           "label": "Взять три фотографии",
-          "image": "three old photos slipped into a passport cover on a table",
+          "image": "three old photos slipped into a passport cover: a young father, a young mother, a little boy in underpants with a cucumber and a bucket",
           "anim": "none"
         }
       ]

@@ -111,7 +111,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 #### `call_dad__2.png` — ««Пап, мы уже решили»»
 
-> «Ну, вам виднее», — говорит он. Голос ровный, без обиды. Он спрашивает только, взяли ли вы тёплые вещи. Ты потом долго вспоминаешь, каким он был — этот ровный голос.
+> «Вы точно хотите уехать?» — спрашивает он ещё раз. Ты говоришь «да». Пауза. «Ну, вам виднее». Голос ровный, без обиды. Ты потом долго вспоминаешь, каким он был — этот ровный голос.
 
 Анимация: без анимации.
 
@@ -151,12 +151,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 #### `call_inlaws__2.png` — ««Спасибо»»
 
-> «Да ладно», — говорит он и уходит смотреть, сколько бензина в машине. Через минуту из гаража слышно, как он что-то подкручивает. На всякий случай.
+> «Да ладно», — говорит он и наливает себе бокал вина. По телевизору футбол, он смотрит на поле, но, кажется, уже думает о ночной дороге в Пулково.
 
-Анимация: падающий снег.
+Анимация: без анимации.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the older man walking out to a snowy yard toward an old car with a flashlight, checking the fuel. Usual place, adapt if the moment says otherwise: cozy small russian kitchen, table covered with too much food (salads, pies, olivier salad bowl), oilcloth tablecloth, mother figure seen from behind standing at the stove, steam, window with dark winter evening, warm yellow lamp inside, cold blue outside.
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the older man pouring a glass of red wine in front of a tv showing a football match, thoughtful. Usual place, adapt if the moment says otherwise: cozy small russian kitchen, table covered with too much food (salads, pies, olivier salad bowl), oilcloth tablecloth, mother figure seen from behind standing at the stove, steam, window with dark winter evening, warm yellow lamp inside, cold blue outside.
 ```
 
 #### `call_inlaws__3.png` — ««Мы сами, на такси»»
@@ -391,12 +391,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ### `pack_album.png`
 
-> Фотоальбом. Бумажный, тяжёлый, с плёнкой, которая шуршит на каждой странице. Ты на море в пять лет, с ведёрком. Мама на даче. Папа молодой, худой и смеётся. Все живые. Ты листаешь его дольше, чем собирался, а время, между прочим, идёт.
+> Фотоальбом. Бумажный, тяжёлый, с плёнкой, которая шуршит на каждой странице. Вот ты маленький, в одних трусах, с огурцом в одной руке и ведром в другой — у бабушки в деревне. Мама молодая. Папа молодой, худой и смеётся. Все живые. Ты листаешь его дольше, чем собирался, а время, между прочим, идёт.
 
 Анимация: пылинки медленно плывут. Сцена: `room_home`.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: an old paper photo album open on a bed: a small boy on a beach, a young father, faded colors. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: an old paper photo album open on a bed: a little boy in underpants holding a cucumber in one hand and a bucket in the other at his grandmother's village house, a young laughing father, faded colors. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
 ```
 
 #### `pack_album__1.png` — «Взять альбом»
@@ -421,12 +421,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 #### `pack_album__3.png` — «Взять три фотографии»
 
-> Три снимка в обложке паспорта: папа молодой, мама на даче, ты на море. Теперь они пройдут с тобой каждую границу. Остальной альбом остаётся в шкафу у мамы, ждать.
+> Три снимка в обложке паспорта: папа молодой, мама молодая и ты — в трусах, с огурцом и ведром у бабушки в деревне. Теперь они пройдут с тобой каждую границу. Остальной альбом остаётся в шкафу у мамы, ждать.
 
 Анимация: без анимации.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: three old photos slipped into a passport cover on a table. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: three old photos slipped into a passport cover: a young father, a young mother, a little boy in underpants with a cucumber and a bucket. Usual place, adapt if the moment says otherwise: small soviet-era apartment bedroom, open suitcase on the floor surrounded by folded clothes and books, window with grey overcast sky and concrete apartment blocks outside, old carpet on the wall, cold blue-grey muted colors, evening light from a desk lamp, quiet and sad.
 ```
 
 ### `scales_over.png`
