@@ -47,6 +47,29 @@
       ]
     },
     {
+      "id": "mem_murmansk",
+      "image": "a 2000s cinema hall in murmansk, a small boy and his mother in the dark lit by a huge screen showing an underwater adventure, then a food court with pizza and milkshakes",
+      "anim": "lights",
+      "key": true,
+      "choices": [
+        {
+          "label": "Сказать маме «спасибо»",
+          "image": "the man's mother turning away to the kitchen, the man at the table",
+          "anim": "none"
+        },
+        {
+          "label": "Отдать сыну свой кусок",
+          "image": "the boy eating only the pizza crust, grandmother smiling",
+          "anim": "none"
+        },
+        {
+          "label": "Взбить молочный коктейль",
+          "image": "a glass jar of milk being shaken in a small kitchen",
+          "anim": "none"
+        }
+      ]
+    },
+    {
       "id": "dep_money",
       "image": "a dark winter street at night with a row of atms, one screen glowing, the man with a phone checking a broker app",
       "anim": "snow",

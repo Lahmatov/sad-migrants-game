@@ -235,6 +235,18 @@ class ChoiceShapeTests(unittest.TestCase):
                 scheduled = [s['card'] for s in choice['effects'].get('schedule', [])]
                 self.assertIn(memory, scheduled, f'{trigger} → {memory}')
 
+    def test_memories_inside_story_chains(self):
+        g = at_card('dep_mom_dinner', 'departure')
+        tap(g, 'Есть ещё пирожок')
+        self.assertEqual(g.current, 'mem_murmansk')
+        tap(g, 'Сказать маме «спасибо»')
+        self.assertEqual(g.current, 'dep_money')
+        g = at_card('oei_father_trip', 'oeiras')
+        tap(g, 'Разобрать его квартиру')
+        self.assertEqual(g.current, 'mem_gasmask')
+        tap(g, 'Рассмеяться')
+        self.assertEqual(g.current, 'oei_father_back')
+
     def test_dads_watch_only_if_you_took_it(self):
         self.assertNotIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras')))
         self.assertIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras', ['father_watch'])))

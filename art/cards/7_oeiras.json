@@ -285,6 +285,29 @@
       "key": true
     },
     {
+      "id": "mem_gasmask",
+      "image": "a small boy in a soviet gas mask sitting on a toilet, a laughing father in the doorway holding a film camera, flash",
+      "anim": "none",
+      "key": true,
+      "choices": [
+        {
+          "label": "Рассмеяться",
+          "image": "the man laughing alone in an empty old flat, his brother peeking in",
+          "anim": "dust"
+        },
+        {
+          "label": "Жалеть, что порвали",
+          "image": "an open box of old photographs on a table, one empty space",
+          "anim": "dust"
+        },
+        {
+          "label": "Сфотографировать комнату",
+          "image": "the man photographing an empty armchair and a stopped watch on the table",
+          "anim": "dust"
+        }
+      ]
+    },
+    {
       "id": "oei_father_back",
       "image": "a plane window over clouds, the man wearing his father's sweatshirt",
       "anim": "none",

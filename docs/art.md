@@ -125,7 +125,7 @@ azores island landscape: a green volcanic crater with two lakes of different col
 cows grazing on a steep green slope above the ocean, low clouds and light rain
 ```
 
-### `memory` · 5
+### `memory` · 7
 ```
 a faded childhood memory from 1990s russia, warm sepia-tinted palette, soft vignette, snowy soviet courtyard with
 panel apartment blocks, old lada cars, children in fur hats, nostalgic and gentle
