@@ -49,19 +49,23 @@ struct GameView: View {
                 }
 
                 if case .outcome(_, let outcome, _) = session.phase {
-                    OutcomePanel(outcome: outcome) {
+                    OutcomePanel(outcome: outcome, keepsakes: session.freshKeepsakes) {
                         tapCount += 1
                         session.dismissOutcome()
                     }
                 } else {
                     ChoiceList(card: card, available: engine.availableChoices) { index in
                         tapCount += 1
+                        SoundPlayer.shared.click()
                         session.choose(index)
                     }
                 }
             }
             .padding(16)
             .sheet(isPresented: $showSettings) { SettingsView() }
+            // Море слышно на пляже, дождь — под дождём; в очереди AIMA тихо.
+            .onChange(of: card.id, initial: true) { _, _ in SoundPlayer.shared.ambience(for: card.scene) }
+            .onDisappear { SoundPlayer.shared.stopAmbience() }
             .sensoryFeedback(.selection, trigger: tapCount)
             .animation(.easeOut(duration: 0.2), value: session.phase)
         }
@@ -201,6 +205,7 @@ struct ChoiceList: View {
 
 struct OutcomePanel: View {
     let outcome: Outcome
+    var keepsakes: [Keepsake] = []
     let dismiss: () -> Void
 
     var body: some View {
@@ -210,6 +215,12 @@ struct OutcomePanel: View {
                     .font(Theme.body)
                     .foregroundStyle(Theme.text)
                     .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            ForEach(keepsakes) { keepsake in
+                // Нашлась памятная вещь — тихо отмечаем, она уже в альбоме.
+                Label("\(L(.inAlbum)) \(keepsake.title(AppSettings.shared.value.language))", systemImage: "sparkles")
+                    .font(Theme.caption)
+                    .foregroundStyle(Theme.accent)
             }
             if !outcome.applied.isEmpty {
                 DeltaRow(applied: outcome.applied)

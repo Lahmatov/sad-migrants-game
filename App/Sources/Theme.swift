@@ -1,8 +1,8 @@
+import CoreText
 import MigrantCore
 import SwiftUI
 
-/// Цвета и шрифты. Пока моноширинный системный шрифт — пиксельный
-/// подключим вместе с первыми картинками (см. docs/art.md).
+/// Цвета и шрифты интерфейса.
 enum Theme {
     /// Текущая тема. Чтение идёт через наблюдаемые настройки, поэтому любой
     /// экран, взявший цвет, сам перерисуется, когда тему поменяют.
@@ -17,10 +17,34 @@ enum Theme {
     static var good: Color { palette.good }
     static var bad: Color { palette.bad }
 
-    static let body = Font.system(.body, design: .monospaced)
-    static let caption = Font.system(.caption, design: .monospaced).weight(.semibold)
-    static let title = Font.system(.largeTitle, design: .monospaced).weight(.heavy)
-    static let button = Font.system(.callout, design: .monospaced).weight(.semibold)
+    // Шрифты: Press Start 2P — аркадный, для заголовков и подписей; Tiny5 — пиксельный
+    // для текста и кнопок. Оба под SIL OFL, с кириллицей и португальскими буквами.
+    // Размеры привязаны к системным стилям — работает увеличенный текст iOS.
+    static let arcade = "PressStart2P-Regular"
+    static let pixel = "Tiny5-Regular"
+
+    static var body: Font {
+        AppSettings.shared.value.pixelText
+            ? .custom(pixel, size: 20, relativeTo: .body)
+            : .system(.body, design: .monospaced)
+    }
+    static var caption: Font { .custom(arcade, size: 9, relativeTo: .caption) }
+    static var title: Font { .custom(arcade, size: 24, relativeTo: .largeTitle) }
+    static var button: Font {
+        AppSettings.shared.value.pixelText
+            ? .custom(pixel, size: 19, relativeTo: .callout)
+            : .system(.callout, design: .monospaced).weight(.semibold)
+    }
+
+    /// Шрифты лежат в бандле файлами: регистрируем их при запуске,
+    /// чтобы не прописывать в Info.plist (он у нас генерируется).
+    static func registerFonts() {
+        for name in [arcade, pixel] {
+            if let url = Bundle.main.url(forResource: name, withExtension: "ttf") {
+                CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
+            }
+        }
+    }
 }
 
 /// Набор цветов интерфейса. Все из палитры Endesga 32 — той же, что у сцен,

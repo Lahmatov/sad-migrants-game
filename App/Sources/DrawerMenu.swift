@@ -36,6 +36,9 @@ struct DrawerMenu: View {
                 }
 
                 divider
+                item(L(.journey), icon: "map", detail: journeyDetail) { sheet = .journey }
+                item(L(.album), icon: "sparkles", detail: "\(session.album.keepsakes.count)/\(Keepsake.all.count)") { sheet = .album }
+                item(L(.memories), icon: "photo.on.rectangle", detail: memoriesDetail) { sheet = .memories }
                 item(L(.endings), icon: "book.closed", detail: endingsDetail) { sheet = .endings }
                 item(L(.settings), icon: "gearshape") { sheet = .settings }
 
@@ -72,6 +75,9 @@ struct DrawerMenu: View {
             switch sheet {
             case .settings: SettingsView()
             case .endings: EndingsGalleryView(session: session)
+            case .journey: JourneyMapView(session: session)
+            case .album: AlbumView(session: session)
+            case .memories: MemoriesView(session: session)
             case .about: InfoView(title: L(.aboutStory), text: L(.aboutStoryText))
             case .privacy: InfoView(title: L(.privacy), text: L(.privacyText))
             }
@@ -90,6 +96,15 @@ struct DrawerMenu: View {
     private var endingsDetail: String {
         let opened = session.endings.filter { session.gallery.isOpened($0) }.count
         return "\(opened)/\(session.endings.count)"
+    }
+
+    private var journeyDetail: String {
+        "\(Journey.visited(upTo: session.furthestAct).count)/\(Journey.stops.count)"
+    }
+
+    private var memoriesDetail: String {
+        let found = session.memoryCards.filter { session.album.memories.contains($0.id) }.count
+        return "\(found)/\(session.memoryCards.count)"
     }
 
     private var appVersion: String {
@@ -146,7 +161,7 @@ struct DrawerMenu: View {
 }
 
 private enum DrawerSheet: String, Identifiable {
-    case settings, endings, about, privacy
+    case settings, endings, about, privacy, journey, album, memories
     var id: String { rawValue }
 }
 

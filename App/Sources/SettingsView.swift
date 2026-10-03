@@ -57,6 +57,17 @@ struct SettingsView: View {
                     ForEach(MusicTrack.all) { track in
                         trackButton(track)
                     }
+                    Toggle(L(.sounds), isOn: Binding(
+                        get: { settings.value.soundsOn },
+                        set: { settings.value.soundsOn = $0 }))
+                        .font(Theme.body)
+                        .foregroundStyle(Theme.text)
+                        .tint(Theme.accent)
+                }
+
+                section(L(.textFont)) {
+                    choiceRow([true, false], selected: settings.value.pixelText,
+                              title: { L($0 ? .fontPixel : .fontPlain) }) { settings.value.pixelText = $0 }
                 }
 
                 section(L(.privacy)) { note(L(.privacyText)) }

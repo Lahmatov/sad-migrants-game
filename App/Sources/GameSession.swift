@@ -29,6 +29,11 @@ final class GameSession {
     private var content: GameContent?
     private let saveURL = URL.applicationSupportDirectory.appending(path: "save.json")
     private let galleryURL = URL.applicationSupportDirectory.appending(path: "endings.json")
+    private let albumURL = URL.applicationSupportDirectory.appending(path: "album.json")
+    /// Вещи, воспоминания и самая дальняя точка пути — за все партии.
+    private(set) var album = Album()
+    /// Вещи, открытые последним выбором, — для строки «В альбом: …» под итогом.
+    private(set) var freshKeepsakes: [Keepsake] = []
 
     init(language: AppLanguage = .ru) {
         do {
@@ -45,6 +50,10 @@ final class GameSession {
         if let data = try? Data(contentsOf: galleryURL),
            let saved = try? JSONDecoder().decode(EndingGallery.self, from: data) {
             gallery = saved
+        }
+        if let data = try? Data(contentsOf: albumURL),
+           let saved = try? JSONDecoder().decode(Album.self, from: data) {
+            album = saved
         }
     }
 
@@ -87,11 +96,13 @@ final class GameSession {
         guard let outcome = try? engine.choose(index) else { return }
         self.engine = engine
         save()
+        freshKeepsakes = album.record(card: card.id, flags: engine.state.flags, act: engine.state.act)
+        write(album, to: albumURL)
         if let ending = outcome.ending {
             freshEnding = gallery.record(ending.id)
             saveGallery()
         }
-        if outcome.result == nil, outcome.applied.isEmpty, outcome.ending == nil {
+        if outcome.result == nil, outcome.applied.isEmpty, outcome.ending == nil, freshKeepsakes.isEmpty {
             phase = .card
         } else {
             phase = .outcome(card, outcome, choice: index)
@@ -111,6 +122,16 @@ final class GameSession {
         phase = .title
     }
 
+    /// Карточки воспоминаний сценария — для списка в меню.
+    var memoryCards: [Card] {
+        content?.cards.filter { Album.isMemory($0.id) } ?? []
+    }
+
+    /// Самый дальний акт: текущей партии или любой из прошлых.
+    var furthestAct: String? {
+        Journey.further(album.furthestAct, engine?.state.act)
+    }
+
     /// Все концовки сценария — для галереи в меню.
     var endings: [Ending] {
         content?.endings ?? []
@@ -127,8 +148,10 @@ final class GameSession {
     func resetProgress() {
         engine = nil
         gallery = EndingGallery()
+        album = Album()
         try? FileManager.default.removeItem(at: saveURL)
         try? FileManager.default.removeItem(at: galleryURL)
+        try? FileManager.default.removeItem(at: albumURL)
         phase = .title
     }
 

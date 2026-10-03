@@ -3,6 +3,10 @@ import SwiftUI
 
 @main
 struct MigrantApp: App {
+    init() {
+        Theme.registerFonts()
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()
@@ -56,7 +60,10 @@ struct RootView: View {
         }
         .preferredColorScheme(Theme.palette.scheme)
         .onAppear { MusicPlayer.shared.apply(settings.value) }
-        .onChange(of: settings.value) { _, new in MusicPlayer.shared.apply(new) }
+        .onChange(of: settings.value) { _, new in
+            MusicPlayer.shared.apply(new)
+            if !new.soundsOn { SoundPlayer.shared.stopAmbience() }
+        }
         // Вернулись из фона — музыка продолжается.
         .onChange(of: scenePhase) { _, phase in
             if phase == .active { MusicPlayer.shared.apply(settings.value) }

@@ -32,18 +32,26 @@ public struct Settings: Codable, Equatable, Sendable {
         didSet { musicVolume = Self.clamp(musicVolume) }
     }
     public var track: String
+    /// Щелчки кнопок и шум моря.
+    public var soundsOn: Bool
+    /// Пиксельный шрифт в тексте карточек. Заголовки пиксельные всегда;
+    /// длинный текст обычным шрифтом читать легче — кому как.
+    public var pixelText: Bool
 
     public init(theme: ColorTheme = .night, language: AppLanguage = .ru, musicOn: Bool = true,
-                musicVolume: Double = 0.6, track: String = MusicTrack.all[0].id) {
+                musicVolume: Double = 0.6, track: String = MusicTrack.all[0].id,
+                soundsOn: Bool = true, pixelText: Bool = true) {
         self.theme = theme
         self.language = language
         self.musicOn = musicOn
         self.musicVolume = Self.clamp(musicVolume)
         self.track = track
+        self.soundsOn = soundsOn
+        self.pixelText = pixelText
     }
 
     private enum CodingKeys: String, CodingKey {
-        case theme, language, musicOn, musicVolume, track
+        case theme, language, musicOn, musicVolume, track, soundsOn, pixelText
     }
 
     /// Старый или битый файл настроек не должен ломать запуск:
@@ -58,6 +66,8 @@ public struct Settings: Codable, Equatable, Sendable {
         let saved = (try? c.decodeIfPresent(String.self, forKey: .track)) ?? defaults.track
         // Трек могли убрать из игры — тогда играет первый.
         track = MusicTrack.track(id: saved) == nil ? defaults.track : saved
+        soundsOn = (try? c.decodeIfPresent(Bool.self, forKey: .soundsOn)) ?? defaults.soundsOn
+        pixelText = (try? c.decodeIfPresent(Bool.self, forKey: .pixelText)) ?? defaults.pixelText
     }
 
     public static func decode(_ data: Data?) -> Settings {

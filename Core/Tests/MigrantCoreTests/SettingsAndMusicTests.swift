@@ -8,10 +8,13 @@ final class SettingsTests: XCTestCase {
         XCTAssertEqual(settings.language, .ru)
         XCTAssertTrue(settings.musicOn)
         XCTAssertEqual(settings.track, MusicTrack.all[0].id)
+        XCTAssertTrue(settings.soundsOn)
+        XCTAssertTrue(settings.pixelText)
     }
 
     func testRoundTripKeepsEverything() throws {
-        let saved = Settings(theme: .sepia, language: .pt, musicOn: false, musicVolume: 0.3, track: "atlantic")
+        let saved = Settings(theme: .sepia, language: .pt, musicOn: false, musicVolume: 0.3, track: "atlantic",
+                             soundsOn: false, pixelText: false)
         let data = try JSONEncoder().encode(saved)
         XCTAssertEqual(Settings.decode(data), saved)
     }
