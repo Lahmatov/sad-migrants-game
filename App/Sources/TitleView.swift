@@ -6,8 +6,10 @@ struct TitleView: View {
     @State private var showSettings = false
 
     var body: some View {
-        VStack(spacing: 24) {
-            Spacer()
+        VStack(spacing: 20) {
+            TitlePanorama()
+                .frame(maxHeight: 240)
+                .padding(.top, 8)
             Text(L(.gameTitle))
                 .font(Theme.title)
                 .foregroundStyle(Theme.accent)
@@ -15,6 +17,7 @@ struct TitleView: View {
                 .font(Theme.body)
                 .foregroundStyle(Theme.dim)
                 .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.8)
             Spacer()
             if let progress = session.galleryProgress {
                 Text(L(.endingsOpened, progress.opened, progress.total))
@@ -56,8 +59,10 @@ struct EndingView: View {
     let isNew: Bool
 
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
+        VStack(spacing: 16) {
+            let place = EndingScene.of(ending)
+            SceneImage(name: place.scene, act: place.act, art: "ending_\(ending.id)")
+                .frame(maxHeight: 180)
             if isNew {
                 Text(L(.newEnding))
                     .font(Theme.caption)

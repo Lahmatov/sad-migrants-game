@@ -14,6 +14,7 @@ struct RootView: View {
     @State private var session = GameSession(language: AppSettings.shared.value.language)
     /// Сдвиг пальцем, пока меню тянут: плюс — открывают, минус — закрывают.
     @State private var drag: CGFloat = 0
+    @Environment(\.scenePhase) private var scenePhase
     private let settings = AppSettings.shared
 
     /// Свайп засчитывается, только если начат у самого левого края —
@@ -56,6 +57,10 @@ struct RootView: View {
         .preferredColorScheme(Theme.palette.scheme)
         .onAppear { MusicPlayer.shared.apply(settings.value) }
         .onChange(of: settings.value) { _, new in MusicPlayer.shared.apply(new) }
+        // Вернулись из фона — музыка продолжается.
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { MusicPlayer.shared.apply(settings.value) }
+        }
         .onChange(of: settings.value.language) { _, language in session.reload(language: language) }
     }
 

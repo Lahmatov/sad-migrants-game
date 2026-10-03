@@ -1,0 +1,60 @@
+{
+  "endings": {
+    "museum": {
+      "image": "an empty new lisbon flat in the evening, on the floor in a row: an old banknote, a flat black-sea pebble, a paper photo album and a grey plush cat; a box on an empty shelf",
+      "anim": "dust"
+    },
+    "two_homes": {
+      "image": "an empty lisbon flat at dusk, the batumi stone and grey cat on the floor, a grandmother on a phone video call looking at every corner, the boy pointing at his future room",
+      "anim": "lights"
+    },
+    "ours_here": {
+      "image": "a portuguese neighbour bringing a pie to the door of an empty flat, a baby asleep on a green-white sporting scarf, warm light",
+      "anim": "none"
+    },
+    "thirty_years": {
+      "image": "a family of four sitting on the floor of an empty flat eating pizza from a box, a slice of the tagus river in the window",
+      "anim": "none"
+    },
+    "return_home": {
+      "image": "pulkovo airport arrivals in winter, a grandmother hugging the family for a long time, snow outside the glass",
+      "anim": "snow"
+    },
+    "further": {
+      "image": "the family with suitcases at a departure gate, a plane to amsterdam through the window, suitcases that know the way",
+      "anim": "none"
+    },
+    "america": {
+      "image": "a plane window over the atlantic at sunset, the boy pressing his face to the glass, lego in his backpack",
+      "anim": "stars"
+    },
+    "rich": {
+      "image": "a bright new flat bought outright, a stopped romanson wristwatch on a shelf, the man looking at it",
+      "anim": "dust"
+    },
+    "divorce": {
+      "image": "two front doors in the same oeiras street, a boy carrying a backpack from one to the other, rain",
+      "anim": "rain"
+    },
+    "renting": {
+      "image": "an old rented flat in winter, a heater glowing, suitcases on top of the wardrobe, the family together on the sofa",
+      "anim": "none"
+    },
+    "broke": {
+      "image": "a family at an airport check-in with all their suitcases, the boy asking if he will see the sea again",
+      "anim": "none"
+    },
+    "burnout": {
+      "image": "the man sitting on the floor staring at a wall in a dim flat, the woman gently taking his phone",
+      "anim": "none"
+    },
+    "paperless": {
+      "image": "an aima office counter with a stack of expired papers, suitcases packed by the door",
+      "anim": "none"
+    },
+    "forgot": {
+      "image": "a faded memory of a soviet stairwell, blurring and fading at the edges, a man trying to remember",
+      "anim": "dust"
+    }
+  }
+}

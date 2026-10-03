@@ -59,6 +59,8 @@ struct SceneRecipe {
     }
 
     enum Shore { case pebbles, sand, rocks }
+    /// Кто стоит на берегу. Со спины, без лиц — как в брифе к картинкам.
+    enum Figures { case none, family, dadAlone }
     enum PhoneKind { case notification, chat, video }
 
     var place: Place = .interior
@@ -83,6 +85,7 @@ struct SceneRecipe {
     var suitcase = false
     /// Что видно в окне комнаты.
     var windowSea = false
+    var figures: Figures = .none
 
     static func make(scene: String?, act: String) -> SceneRecipe {
         var r = mood(act: act)
@@ -90,18 +93,19 @@ struct SceneRecipe {
 
         switch name {
         case "batumi_beach":
-            r.place = .sea(.pebbles); r.mountains = true
+            r.place = .sea(.pebbles); r.mountains = true; r.figures = .family
         case "batumi_rain":
             r.place = .sea(.pebbles); r.rain = true; r.sky = [E32.slate, E32.steel, E32.mist]
         case "batumi_boulevard":
             r.place = .sea(.pebbles); r.palms = true; r.neon = true
         case "figueira_beach":
-            r.place = .sea(.sand); r.seagulls = true
+            r.place = .sea(.sand); r.seagulls = true; r.figures = .family
         case "figueira_lake":
             // Озеро в соснах: тихая тёмная вода вместо прибоя.
             r.place = .sea(.sand); r.sea = [E32.pine, E32.ocean]
         case "ocean":
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
+            r.figures = .dadAlone
         case "memory":
             // Детство: снежный двор девяностых в тёплых, выцветших тонах.
             r = mood(act: "packing"); r.place = .city; r.snow = true
@@ -109,15 +113,15 @@ struct SceneRecipe {
         case "cabo_da_roca":
             // Край Европы: обрыв и океан до горизонта, ветер.
             r.place = .sea(.rocks); r.sky = [E32.steel, E32.mist, E32.cloud]; r.sea = [E32.deepSea, E32.ocean]
-            r.seagulls = true
+            r.seagulls = true; r.figures = .dadAlone
         case "azores":
             // Зелёные кратеры над океаном, мелкий дождь.
             r.place = .sea(.rocks); r.mountains = true; r.sea = [E32.ocean, E32.sky]; r.rain = true
         case "malaga_beach":
             // Средиземное море: тёплое и спокойное, без португальских чаек.
-            r = mood(act: "oeiras"); r.place = .sea(.sand); r.palms = true
+            r = mood(act: "oeiras"); r.place = .sea(.sand); r.palms = true; r.figures = .family
         case "ocean_sunset", "oeiras_beach":
-            r = mood(act: "oeiras"); r.place = .sea(.sand); r.seagulls = true
+            r = mood(act: "oeiras"); r.place = .sea(.sand); r.seagulls = true; r.figures = .family
         case "yard_home", "exchange", "tbilisi_old_town", "batumi_street", "lisbon_street",
              "figueira_street", "oeiras_street", "batumi_kindergarten", "figueira_school",
              "oeiras_school", "playground", "paris":
@@ -404,6 +408,11 @@ struct SceneRenderer {
         if recipe.palms {
             for px in [22, 150] { drawPalm(px, shoreY) }
         }
+        switch recipe.figures {
+        case .none: break
+        case .family: drawFamily(shore: shore, shoreY: shoreY)
+        case .dadAlone: drawDad(x: 84, feet: shoreY + 16, sway: (frame / 6) % 2)
+        }
         if recipe.neon {
             // Фонари бульвара мигают по очереди.
             for i in 0..<6 {
@@ -412,6 +421,64 @@ struct SceneRenderer {
                 canvas.rect(lx - 1, shoreY - 20, 3, 2, (frame / 4 + i) % 5 == 0 ? E32.magenta : E32.lemon)
             }
         }
+    }
+
+    // MARK: - Семья
+
+    /// Папа, мама и сын со спины. На гальке сын кидает камни в море,
+    /// на песке — бегает туда-сюда, как на пляже Фигейры.
+    private func drawFamily(shore: SceneRecipe.Shore, shoreY: Int) {
+        let feet = shoreY + 18
+        drawDad(x: 52, feet: feet, sway: 0)
+        drawMom(x: 64, feet: feet)
+        switch shore {
+        case .sand:
+            // Бег челноком: туда и обратно, ноги мелькают.
+            let lap = frame % 80
+            let run = lap < 40 ? lap : 80 - lap
+            drawSon(x: 80 + run, feet: feet + 2, step: (frame / 2) % 2, arm: false)
+        default:
+            let cycle = frame % 36
+            drawSon(x: 82, feet: feet + 2, step: 0, arm: cycle < 4)
+            if cycle >= 4, cycle < 24 {
+                // Камень летит дугой к воде.
+                let t = Double(cycle - 4) / 20
+                let sx = 85 + Int(t * 40)
+                let sy = feet - 12 - Int(sin(t * .pi) * 18) + Int(t * 4)
+                canvas.rect(sx, sy, 2, 2, E32.mist)
+            } else if cycle >= 24, cycle < 30 {
+                // Плюх.
+                let r = cycle - 24
+                canvas.dot(125 - r, shoreY - 6, E32.white)
+                canvas.dot(125 + r, shoreY - 6, E32.white)
+                canvas.dot(125, shoreY - 7 - r / 2, E32.white)
+            }
+        }
+    }
+
+    private func drawDad(x: Int, feet: Int, sway: Int) {
+        canvas.rect(x + 1, feet - 22, 5, 5, E32.brown)              // затылок
+        canvas.rect(x, feet - 17, 7 + sway, 10, E32.ocean)           // худи, полы на ветру
+        canvas.rect(x + 1, feet - 16, 5, 6, E32.navy)                // рюкзак с ноутбуком
+        canvas.rect(x + 1, feet - 7, 2, 7, E32.night)
+        canvas.rect(x + 4, feet - 7, 2, 7, E32.night)
+    }
+
+    private func drawMom(x: Int, feet: Int) {
+        canvas.rect(x + 2, feet - 22, 2, 2, E32.brown)              // пучок
+        canvas.rect(x + 1, feet - 20, 4, 4, E32.brown)
+        canvas.rect(x, feet - 16, 6, 9, E32.rust)                    // кардиган
+        canvas.rect(x + 1, feet - 7, 2, 7, E32.navy)
+        canvas.rect(x + 3, feet - 7, 2, 7, E32.navy)
+    }
+
+    private func drawSon(x: Int, feet: Int, step: Int, arm: Bool) {
+        canvas.rect(x + 1, feet - 13, 3, 3, E32.tan)                // светлая макушка
+        canvas.rect(x, feet - 10, 5, 6, E32.gold)                    // куртка
+        if arm { canvas.rect(x + 4, feet - 14, 1, 4, E32.gold) }     // рука с камнем вверх
+        canvas.rect(x - 2, feet - 7, 2, 2, E32.mist)                 // серый кот всегда с ним
+        canvas.rect(x + step, feet - 4, 2, 4, E32.navy)
+        canvas.rect(x + 3 - step, feet - 4, 2, 4, E32.navy)
     }
 
     private func drawPalm(_ x: Int, _ ground: Int) {

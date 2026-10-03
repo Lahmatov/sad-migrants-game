@@ -13,6 +13,7 @@ public enum UIKey: String, CaseIterable, Sendable {
     case music, musicOn, volume, track
     case privacy, privacyText, aboutStory, aboutStoryText, done
     case endings, endingLocked, telegram, telegramSoon, shareGame, shareText, rateGame
+    case cityPetersburg, cityTbilisi, cityBatumi, cityFigueira, cityOeiras
     case resetProgress, resetConfirm, resetWarning, newGameConfirm, newGameWarning, cancel, version
 }
 
@@ -68,6 +69,11 @@ public enum UIText {
             .aboutStory: "Об истории",
             .aboutStoryText: "Игра основана на реальной истории одной семьи: Петербург, Тбилиси, Батуми, Фигейра-да-Фош, Оэйраш. Имена убраны, люди названы по ролям. Главные события настоящие; часть вариантов выбора — то, как могло бы быть.",
             .done: "Готово",
+            .cityPetersburg: "Петербург",
+            .cityTbilisi: "Тбилиси",
+            .cityBatumi: "Батуми",
+            .cityFigueira: "Фигейра-да-Фош",
+            .cityOeiras: "Оэйраш",
             .endings: "Концовки",
             .endingLocked: "Ещё не открыта",
             .telegram: "Телеграм-канал",
@@ -120,6 +126,11 @@ public enum UIText {
             .aboutStory: "About the story",
             .aboutStoryText: "The game is based on the real story of one family: Saint Petersburg, Tbilisi, Batumi, Figueira da Foz, Oeiras. Names are removed; people are called by their roles. The main events are real; some of the choices are what could have been.",
             .done: "Done",
+            .cityPetersburg: "Saint Petersburg",
+            .cityTbilisi: "Tbilisi",
+            .cityBatumi: "Batumi",
+            .cityFigueira: "Figueira da Foz",
+            .cityOeiras: "Oeiras",
             .endings: "Endings",
             .endingLocked: "Not found yet",
             .telegram: "Telegram channel",
@@ -172,6 +183,11 @@ public enum UIText {
             .aboutStory: "Sobre a história",
             .aboutStoryText: "O jogo baseia-se na história real de uma família: São Petersburgo, Tbilisi, Batumi, Figueira da Foz, Oeiras. Os nomes foram retirados; as pessoas são chamadas pelos seus papéis. Os acontecimentos principais são reais; algumas escolhas são o que poderia ter sido.",
             .done: "Feito",
+            .cityPetersburg: "São Petersburgo",
+            .cityTbilisi: "Tbilisi",
+            .cityBatumi: "Batumi",
+            .cityFigueira: "Figueira da Foz",
+            .cityOeiras: "Oeiras",
             .endings: "Finais",
             .endingLocked: "Ainda por descobrir",
             .telegram: "Canal no Telegram",

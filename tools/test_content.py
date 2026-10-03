@@ -277,6 +277,14 @@ class CardArtTests(unittest.TestCase):
     def test_every_card_and_choice_has_prompt(self):
         self.assertEqual(self.art.problems(CARDS, self.art.load_art()), [])
 
+    def test_every_ending_has_prompt(self):
+        self.assertEqual(self.art.ending_problems(GAME, self.art.load_endings()), [])
+
+    def test_missing_ending_prompt_is_reported(self):
+        game = {'endings': [{'id': 'a'}, {'id': 'b'}]}
+        found = self.art.ending_problems(game, {'a': {'image': 'x', 'anim': 'none'}})
+        self.assertEqual(len(found), 1)
+
     def test_renamed_button_is_reported(self):
         card = {'id': 'x', 'choices': [{'label': 'новая'}]}
         acts = [('t.json', {'cards': [{'id': 'x', 'image': 'a', 'anim': 'none',

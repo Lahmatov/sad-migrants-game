@@ -78,6 +78,29 @@ def load_art():
     return acts
 
 
+ENDINGS = os.path.join(ROOT, 'art', 'endings.json')
+
+
+def load_endings():
+    if not os.path.exists(ENDINGS):
+        return {}
+    with open(ENDINGS, encoding='utf-8') as handle:
+        return json.load(handle).get('endings', {})
+
+
+def ending_problems(game, endings_art):
+    """У каждой концовки своя картинка: это последнее, что видит игрок."""
+    found = []
+    ids = {e['id'] for e in game['endings']}
+    for missing in sorted(ids - set(endings_art)):
+        found.append(f'концовка {missing}: нет промпта')
+    for extra in sorted(set(endings_art) - ids):
+        found.append(f'art/endings.json: {extra} — такой концовки нет')
+    for eid, entry in endings_art.items():
+        check_one(found, f'ending_{eid}', entry)
+    return found
+
+
 def problems(cards, acts):
     """Всё, из-за чего у карточки или выбора не будет своей картинки."""
     found = []
@@ -133,7 +156,8 @@ def full_prompt(prefix, scenes, scene, moment, anim):
 def build():
     game, cards = content.load()
     acts = load_art()
-    found = problems(cards, acts)
+    endings_art = load_endings()
+    found = problems(cards, acts) + ending_problems(game, endings_art)
     if found:
         print(f'Промпты неполные ({len(found)}):')
         for line in found[:40]:
@@ -232,6 +256,27 @@ def build():
 
     with open(DOC, 'w', encoding='utf-8') as handle:
         handle.write('\n'.join(out))
+    # Концовки — тоже второй уровень: их видят в конце каждой партии.
+    w('## Концовки')
+    w('')
+    for ending in game['endings']:
+        entry = endings_art[ending['id']]
+        prompt = full_prompt(prefix, scenes, '', entry['image'], entry['anim'])
+        name = f'ending_{ending["id"]}'
+        rows.append((f'{name}.png', prompt, entry['anim'], 2))
+        if entry['anim'] != 'none':
+            anims[name] = entry['anim']
+        w(f'### `{name}.png` ★ — «{ending["title"]}»')
+        w('')
+        w(f'> {ending["text"]}')
+        w('')
+        w(f'Анимация: {ANIM_RU[entry["anim"]]}.')
+        w('')
+        w('```')
+        w(prompt)
+        w('```')
+        w('')
+
     # Уровень 1 — фоны сцен: те же промпты, что в docs/art-brief.md, чтобы вся очередь была в одной таблице.
     used = sorted({c.get('scene') for c in cards if c.get('scene')})
     for scene in used:

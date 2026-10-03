@@ -31,7 +31,10 @@ final class MusicPlayer {
             return
         }
         let volume = Float(settings.musicVolume)
-        if currentTrack != settings.track {
+        // Тот же трек, но звук молчит — iOS остановила движок, пока игра была
+        // в фоне или шёл звонок. Тогда запускаем заново, а не считаем, что играет.
+        let sounding = node.isPlaying || filePlayer?.isPlaying == true
+        if currentTrack != settings.track || !sounding {
             stop()
             play(settings.track)
         }
