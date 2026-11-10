@@ -1,0 +1,75 @@
+# Проверка всего проекта на каждый пуш: сценарий, ядро и сборка приложения.
+#
+# Зачем: код пишется без Mac под рукой. Раньше первая настоящая сборка случалась
+# только у автора в Xcode — теперь её делает GitHub на своей macOS-машине,
+# и ошибка компиляции видна через несколько минут после пуша.
+# Для публичного репозитория macOS-минуты бесплатны.
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  content:
+    name: Сценарий и статические проверки
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Сценарий (ссылки, тупики, баланс)
+        run: python3 tools/content.py --quiet --runs 500
+      - name: Промпты картинок на месте
+        run: python3 tools/make_card_art.py --check
+      - name: Тесты сценария
+        run: python3 tools/test_content.py
+      - name: Линтер Swift
+        run: python3 tools/lint.py
+
+  core:
+    name: Ядро (swift test)
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+      - name: Версии
+        run: xcodebuild -version && swift --version
+      - name: Тесты ядра
+        working-directory: Core
+        run: |
+          set +e
+          swift test > ../core.log 2>&1
+          STATUS=$?
+          grep -E "error:|failed|Executed [0-9]+ test|Fatal error" ../core.log | tail -100
+          exit $STATUS
+
+  app:
+    name: Приложение (сборка под симулятор)
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+      - name: XcodeGen
+        run: |
+          brew install xcodegen || true
+          xcodegen generate
+      - name: Сборка
+        run: |
+          set +e
+          xcodebuild build \
+            -project MigrantSad.xcodeproj \
+            -scheme MigrantSad \
+            -destination "generic/platform=iOS Simulator" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            > app.log 2>&1
+          STATUS=$?
+          # Полный вывод xcodebuild — тысячи строк; в журнал — только суть.
+          grep -E "error:|warning: .*(deprecated|never used|unused)|\*\* BUILD" app.log | sed "s|$GITHUB_WORKSPACE/||" | sort -u | tail -150
+          exit $STATUS
+      - name: Ошибки коротко
+        if: failure()
+        run: |
+          grep -E "error:" app.log | sed "s|$GITHUB_WORKSPACE/||" | sort -u | head -150 || true
