@@ -54,7 +54,7 @@ struct SettingsView: View {
                     Text(L(.track))
                         .font(Theme.caption)
                         .foregroundStyle(Theme.dim)
-                    ForEach(MusicTrack.all) { track in
+                    ForEach(GameTrack.all) { track in
                         trackButton(track)
                     }
                     Toggle(L(.sounds), isOn: Binding(
@@ -117,7 +117,7 @@ struct SettingsView: View {
         }
     }
 
-    private func trackButton(_ track: MusicTrack) -> some View {
+    private func trackButton(_ track: GameTrack) -> some View {
         let selected = settings.value.track == track.id
         return Button {
             settings.value.track = track.id

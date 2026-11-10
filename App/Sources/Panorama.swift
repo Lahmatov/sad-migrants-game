@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Титульный экран: живые сцены всех городов по очереди — весь путь за полминуты.
 struct TitlePanorama: View {
-    private static let stops: [(scene: String, act: String, city: UIKey)] = [
+    private static let stops: [(scene: String, act: String, city: TextKey)] = [
         ("yard_home", "packing", .cityPetersburg),
         ("tbilisi_old_town", "tbilisi", .cityTbilisi),
         ("batumi_beach", "batumi", .cityBatumi),

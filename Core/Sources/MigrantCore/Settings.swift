@@ -39,7 +39,7 @@ public struct Settings: Codable, Equatable, Sendable {
     public var pixelText: Bool
 
     public init(theme: ColorTheme = .night, language: AppLanguage = .ru, musicOn: Bool = true,
-                musicVolume: Double = 0.6, track: String = MusicTrack.all[0].id,
+                musicVolume: Double = 0.6, track: String = GameTrack.all[0].id,
                 soundsOn: Bool = true, pixelText: Bool = true) {
         self.theme = theme
         self.language = language
@@ -65,7 +65,7 @@ public struct Settings: Codable, Equatable, Sendable {
         musicVolume = Self.clamp((try? c.decodeIfPresent(Double.self, forKey: .musicVolume)) ?? defaults.musicVolume)
         let saved = (try? c.decodeIfPresent(String.self, forKey: .track)) ?? defaults.track
         // Трек могли убрать из игры — тогда играет первый.
-        track = MusicTrack.track(id: saved) == nil ? defaults.track : saved
+        track = GameTrack.track(id: saved) == nil ? defaults.track : saved
         soundsOn = (try? c.decodeIfPresent(Bool.self, forKey: .soundsOn)) ?? defaults.soundsOn
         pixelText = (try? c.decodeIfPresent(Bool.self, forKey: .pixelText)) ?? defaults.pixelText
     }

@@ -4,7 +4,7 @@ import Foundation
 /// приставок. Никаких файлов и лицензий — и звучит в тон пиксель-арту.
 /// Если положить настоящую запись `App/Resources/Music/<id>.m4a`,
 /// приложение сыграет её вместо синтеза.
-public struct MusicTrack: Equatable, Sendable, Identifiable {
+public struct GameTrack: Equatable, Sendable, Identifiable {
     public let id: String
     public let titles: [AppLanguage: String]
     /// Ударов в минуту.
@@ -25,19 +25,19 @@ public struct MusicTrack: Equatable, Sendable, Identifiable {
         titles[language] ?? titles[.ru] ?? id
     }
 
-    public static func track(id: String) -> MusicTrack? {
+    public static func track(id: String) -> GameTrack? {
         all.first { $0.id == id }
     }
 
-    public static let all: [MusicTrack] = [
-        MusicTrack(
+    public static let all: [GameTrack] = [
+        GameTrack(
             id: "petersburg",
             titles: [.ru: "Петербург, февраль", .en: "Petersburg, February", .pt: "Petersburgo, fevereiro"],
             tempo: 66,
             lead: "A4:2 C5:1 E5:1 D5:2 C5:2 B4:2 G4:1 B4:1 A4:4 "
                 + "E4:1 A4:1 C5:2 B4:1 A4:1 G4:2 F4:2 E4:2 A4:4",
             bass: "A2:4 F2:4 G2:4 E2:4 A2:4 D2:4 E2:4 A2:4"),
-        MusicTrack(
+        GameTrack(
             id: "black_sea",
             titles: [.ru: "Чёрное море", .en: "The Black Sea", .pt: "O Mar Negro"],
             tempo: 84,
@@ -46,14 +46,14 @@ public struct MusicTrack: Equatable, Sendable, Identifiable {
                 + "F4:2 G4:1 A4:2 D5:1 C5:3 Bb4:3 A4:2 G4:1 F4:2 E4:1 D4:6",
             bass: "D3:3 D3:3 F2:3 F2:3 G2:3 G2:3 A2:3 A2:3 "
                 + "D3:3 D3:3 Bb2:3 Bb2:3 G2:3 A2:3 D2:6"),
-        MusicTrack(
+        GameTrack(
             id: "atlantic",
             titles: [.ru: "Атлантика", .en: "The Atlantic", .pt: "O Atlântico"],
             tempo: 58,
             // Длинные ноты — как волны на пустом пляже.
             lead: "E5:3 B4:1 D5:4 C5:3 G4:1 B4:4 A4:3 E4:1 G4:2 F#4:2 E4:8",
             bass: "E2:4 E2:4 C2:4 C2:4 A2:4 B2:4 E2:8"),
-        MusicTrack(
+        GameTrack(
             id: "lullaby",
             titles: [.ru: "Колыбельная", .en: "Lullaby", .pt: "Canção de ninar"],
             tempo: 60,
@@ -112,7 +112,7 @@ public enum Chiptune {
     ///
     /// Мелодия — мягкий квадрат, бас — треугольник. У каждой ноты короткая
     /// атака и затухание: без них на стыках нот слышны щелчки.
-    public static func render(_ track: MusicTrack, sampleRate: Double = 22_050) -> [Float] {
+    public static func render(_ track: GameTrack, sampleRate: Double = 22_050) -> [Float] {
         let secondsPerBeat = 60 / track.tempo
         let lead = Melody.parse(track.lead)
         let bass = Melody.parse(track.bass)

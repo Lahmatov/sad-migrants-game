@@ -269,6 +269,20 @@ class ChoiceShapeTests(unittest.TestCase):
                 self.assertIsNone(words.search(choice['label'] + choice.get('result', '')),
                                   f"{card['id']}: {choice['label']}")
 
+    def test_cannot_ask_brother_who_never_came(self):
+        self.assertNotIn('Спросить брата', labels(at_card('bat_schengen', 'batumi')))
+        self.assertIn('Спросить брата', labels(at_card('bat_schengen', 'batumi', ['brother_here'])))
+
+    def test_father_in_law_drives_only_a_car_you_own(self):
+        self.assertNotIn('Дать тестю порулить', labels(at_card('f2_inlaws_visit', 'figueira2')))
+        self.assertIn('Дать тестю порулить', labels(at_card('f2_inlaws_visit', 'figueira2', ['old_car'])))
+        self.assertNotIn('Отдать тестю ключи', labels(at_card('oei_inlaws_again', 'oeiras')))
+        self.assertIn('Отдать тестю ключи', labels(at_card('oei_inlaws_again', 'oeiras', ['bmw'])))
+
+    def test_wifes_new_nose_only_after_padel(self):
+        card = next(c for c in CARDS if c['id'] == 'f2_mom_call')
+        self.assertIn('wife_nose', card['requires']['flags'])
+
     def test_azores_trip_was_before_the_daughter(self):
         card = next(c for c in CARDS if c['id'] == 'oei_azores')
         self.assertIn('daughter', card['requires']['notFlags'])
@@ -351,6 +365,26 @@ class TranslationTests(unittest.TestCase):
     def test_coverage_counts_translated_cards(self):
         cards = [{'id': 'a'}, {'id': 'b'}]
         self.assertEqual(content.translation_coverage(cards, {'cards': {'a': {'text': 'A'}}}), 0.5)
+
+
+class NamingTests(unittest.TestCase):
+    def test_core_types_do_not_shadow_apple_types(self):
+        # Публичный тип ядра с именем, как у типа из UIKit/SwiftUI/AVFoundation, собирается
+        # на Linux, а в приложении даёт «ambiguous for type lookup». Так уже было с UIKey и MusicTrack.
+        import glob
+        taken = {'UIKey', 'MusicTrack', 'MusicPlayer', 'MusicSequence', 'Text', 'Image', 'Color', 'View',
+                 'Font', 'Label', 'Button', 'Link', 'List', 'Section', 'Group', 'Form', 'Path', 'Shape',
+                 'Layout', 'Scene', 'Transaction', 'Animation', 'State', 'Binding', 'Environment',
+                 'Notification', 'Data', 'Date', 'URL', 'Locale', 'Calendar', 'Timer', 'Bundle', 'Picker',
+                 'Toggle', 'Slider', 'Menu', 'Table', 'Grid', 'Gradient', 'Angle', 'Edge', 'Axis', 'Alignment',
+                 'Selection', 'Gesture', 'Canvas', 'Chart', 'Map', 'Tab', 'Entity', 'Component', 'Material'}
+        names = set()
+        for path in glob.glob(os.path.join(ROOT, 'Core', 'Sources', 'MigrantCore', '*.swift')):
+            with open(path, encoding='utf-8') as handle:
+                names |= set(re.findall(r'^public (?:final )?(?:struct|enum|class|protocol|typealias) (\w+)',
+                                        handle.read(), re.M))
+        self.assertGreater(len(names), 20)
+        self.assertEqual(names & taken, set())
 
 
 class StoryTests(unittest.TestCase):

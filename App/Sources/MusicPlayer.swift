@@ -51,7 +51,7 @@ final class MusicPlayer {
             filePlayer = player
             return
         }
-        guard let track = MusicTrack.track(id: id), let buffer = buffer(for: track) else { return }
+        guard let track = GameTrack.track(id: id), let buffer = buffer(for: track) else { return }
         if !engine.isRunning { try? engine.start() }
         node.scheduleBuffer(buffer, at: nil, options: .loops)
         node.play()
@@ -75,7 +75,7 @@ final class MusicPlayer {
         return nil
     }
 
-    private func buffer(for track: MusicTrack) -> AVAudioPCMBuffer? {
+    private func buffer(for track: GameTrack) -> AVAudioPCMBuffer? {
         if let cached = buffers[track.id] { return cached }
         let samples = Chiptune.render(track, sampleRate: sampleRate)
         guard let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1),

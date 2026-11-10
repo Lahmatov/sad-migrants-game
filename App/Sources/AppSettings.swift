@@ -27,12 +27,12 @@ final class AppSettings {
 }
 
 /// Строка интерфейса на выбранном языке: `L(.newGame)`, `L(.day, 12)`.
-func L(_ key: UIKey, _ numbers: Int...) -> String {
+func L(_ key: TextKey, _ numbers: Int...) -> String {
     UIText.text(key, AppSettings.shared.value.language, numbers: numbers)
 }
 
 extension ColorTheme {
-    var titleKey: UIKey {
+    var titleKey: TextKey {
         switch self {
         case .night: return .themeNight
         case .day: return .themeDay

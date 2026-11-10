@@ -4,7 +4,7 @@ import Foundation
 ///
 /// Свой словарь вместо Localizable.strings: язык выбирается внутри игры, а не
 /// в настройках телефона, и все строки проверяются тестом на полноту.
-public enum UIKey: String, CaseIterable, Sendable {
+public enum TextKey: String, CaseIterable, Sendable {
     case gameTitle, tagline, newGame, continueGame, settings, endingsOpened, scriptFailed
     case menu, day, next, start, skip, newEnding, daysAndChoices, playAgain, toMenu
     case statMoney, statNerves, statDocuments, statHome, statBelonging
@@ -20,11 +20,11 @@ public enum UIKey: String, CaseIterable, Sendable {
 
 public enum UIText {
     /// `%d` в строке — число; порядок подстановок одинаков во всех языках.
-    public static func text(_ key: UIKey, _ language: AppLanguage, _ numbers: Int...) -> String {
+    public static func text(_ key: TextKey, _ language: AppLanguage, _ numbers: Int...) -> String {
         text(key, language, numbers: numbers)
     }
 
-    public static func text(_ key: UIKey, _ language: AppLanguage, numbers: [Int]) -> String {
+    public static func text(_ key: TextKey, _ language: AppLanguage, numbers: [Int]) -> String {
         let format = table[language]?[key] ?? table[.ru]?[key] ?? key.rawValue
         return numbers.reduce(format) { text, number in
             guard let range = text.range(of: "%d") else { return text }
@@ -32,7 +32,7 @@ public enum UIText {
         }
     }
 
-    public static let table: [AppLanguage: [UIKey: String]] = [
+    public static let table: [AppLanguage: [TextKey: String]] = [
         .ru: [
             .gameTitle: "23 кг",
             .tagline: "История про эмиграцию.\nСмешная и немного грустная.\nОснована на реальных событиях.",

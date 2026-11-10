@@ -7,7 +7,7 @@ final class SettingsTests: XCTestCase {
         XCTAssertEqual(settings.theme, .night)
         XCTAssertEqual(settings.language, .ru)
         XCTAssertTrue(settings.musicOn)
-        XCTAssertEqual(settings.track, MusicTrack.all[0].id)
+        XCTAssertEqual(settings.track, GameTrack.all[0].id)
         XCTAssertTrue(settings.soundsOn)
         XCTAssertTrue(settings.pixelText)
     }
@@ -43,18 +43,18 @@ final class SettingsTests: XCTestCase {
     }
 
     func testRemovedTrackFallsBackToFirst() {
-        XCTAssertEqual(Settings.decode(Data(#"{"track":"deleted_song"}"#.utf8)).track, MusicTrack.all[0].id)
+        XCTAssertEqual(Settings.decode(Data(#"{"track":"deleted_song"}"#.utf8)).track, GameTrack.all[0].id)
     }
 }
 
 final class MusicTests: XCTestCase {
     func testThereAreFourTracksWithUniqueIds() {
-        XCTAssertEqual(MusicTrack.all.count, 4)
-        XCTAssertEqual(Set(MusicTrack.all.map(\.id)).count, MusicTrack.all.count)
+        XCTAssertEqual(GameTrack.all.count, 4)
+        XCTAssertEqual(Set(GameTrack.all.map(\.id)).count, GameTrack.all.count)
     }
 
     func testEveryTrackHasTitleInEveryLanguage() {
-        for track in MusicTrack.all {
+        for track in GameTrack.all {
             for language in AppLanguage.allCases {
                 XCTAssertNotNil(track.titles[language], "\(track.id) \(language)")
             }
@@ -62,7 +62,7 @@ final class MusicTests: XCTestCase {
     }
 
     func testEveryNoteOfEveryTrackParses() {
-        for track in MusicTrack.all {
+        for track in GameTrack.all {
             for line in [track.lead, track.bass] {
                 let tokens = line.split(separator: " ").count
                 XCTAssertEqual(Melody.parse(line).count, tokens, "\(track.id): опечатка в нотах")
@@ -72,7 +72,7 @@ final class MusicTests: XCTestCase {
 
     func testMelodyAndBassHaveSameLength() {
         // Иначе на стыке петли один голос замолкает раньше другого.
-        for track in MusicTrack.all {
+        for track in GameTrack.all {
             XCTAssertEqual(Melody.beats(Melody.parse(track.lead)), Melody.beats(Melody.parse(track.bass)), track.id)
         }
     }
@@ -97,7 +97,7 @@ final class MusicTests: XCTestCase {
     }
 
     func testRenderedLoopHasRightLengthAndStaysInRange() {
-        let track = MusicTrack.all[0]
+        let track = GameTrack.all[0]
         let samples = Chiptune.render(track, sampleRate: 8_000)
         let seconds = Melody.beats(Melody.parse(track.lead)) * 60 / track.tempo
         XCTAssertEqual(samples.count, Int(seconds * 8_000), accuracy: 2)
@@ -106,7 +106,7 @@ final class MusicTests: XCTestCase {
     }
 
     func testLoopStartsAndEndsQuietToAvoidClick() {
-        let samples = Chiptune.render(MusicTrack.all[2], sampleRate: 8_000)
+        let samples = Chiptune.render(GameTrack.all[2], sampleRate: 8_000)
         XCTAssertLessThan(abs(samples.first ?? 1), 0.05)
         XCTAssertLessThan(abs(samples.last ?? 1), 0.05)
     }
@@ -115,7 +115,7 @@ final class MusicTests: XCTestCase {
 final class UITextTests: XCTestCase {
     func testEveryKeyIsTranslatedEverywhere() {
         for language in AppLanguage.allCases {
-            for key in UIKey.allCases {
+            for key in TextKey.allCases {
                 let text = UIText.table[language]?[key]
                 XCTAssertFalse(text?.isEmpty ?? true, "\(language) \(key)")
             }
@@ -123,7 +123,7 @@ final class UITextTests: XCTestCase {
     }
 
     func testPlaceholdersMatchAcrossLanguages() {
-        for key in UIKey.allCases {
+        for key in TextKey.allCases {
             let counts = AppLanguage.allCases.map { (UIText.table[$0]?[key] ?? "").components(separatedBy: "%d").count }
             XCTAssertEqual(Set(counts).count, 1, "\(key): разное число подстановок")
         }
