@@ -251,6 +251,24 @@ class ChoiceShapeTests(unittest.TestCase):
         self.assertNotIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras')))
         self.assertIn('Посмотреть на его часы', labels(at_card('mem_dad_car', 'oeiras', ['father_watch'])))
 
+    def test_daughter_is_not_mentioned_before_she_is_born(self):
+        # Карточка Оэйраша, которая может выпасть до рождения дочки, не должна о ней знать.
+        import re
+        words = re.compile(r'дочк|младен|внуков|подгузн|вчетвером', re.I)
+        allowed = {'oei_pregnancy'}  # «будет сестра» — это как раз про ожидание
+        for card in CARDS:
+            if card['act'] != 'oeiras' or card['id'] in allowed:
+                continue
+            gated = 'daughter' in (card.get('requires', {}).get('flags') or []) or card.get('kind') == 'event'
+            if gated:
+                continue
+            self.assertIsNone(words.search(card['text']), card['id'])
+            for choice in card['choices']:
+                if 'daughter' in ((choice.get('requires') or {}).get('flags') or []):
+                    continue
+                self.assertIsNone(words.search(choice['label'] + choice.get('result', '')),
+                                  f"{card['id']}: {choice['label']}")
+
     def test_azores_trip_was_before_the_daughter(self):
         card = next(c for c in CARDS if c['id'] == 'oei_azores')
         self.assertIn('daughter', card['requires']['notFlags'])

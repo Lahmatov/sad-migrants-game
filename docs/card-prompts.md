@@ -1164,7 +1164,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ### `tb_work_bed.png`
 
-> Рабочий день. Ты на кровати с ноутбуком на коленях, жена за единственным столом, сын между вами смотрит мультики в наушниках, которые он не любит. Созвоны по очереди: один говорит, двое молчат. Твой начальник видит на фоне чужую штору с огурцами и делает вид, что так и надо. Все так сейчас живут. Все делают вид.
+> Рабочий день. Ты на кровати с ноутбуком на коленях, жена за единственным столом, сын между вами смотрит мультики — без наушников, на всю комнату. Созвоны по очереди: один говорит, двое молчат. Твой начальник видит на фоне чужую штору с огурцами и делает вид, что так и надо. Все так сейчас живут. Все делают вид.
 
 Анимация: без анимации. Сцена: `tbilisi_hotel`.
 
@@ -2122,7 +2122,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 #### `bat_snow__3.png` — «Лепить снеговика»
 
-> Снеговик получается маленький и мокрый, с мандарином вместо носа. Через час он тает. Сын машет ему: «Ушёл».
+> Снеговик получается маленький и мокрый, с мандарином вместо носа. Через час он тает. Сын молча машет луже — он пока не говорит, но прощаться уже умеет.
 
 Анимация: падающий снег.
 
@@ -6992,7 +6992,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ### `oei_inlaws_again.png`
 
-> Прилетают родители жены. Тесть уже не обходит машину — он сразу просит ключи. Тёща забирает внуков, и дом на неделю становится тихим и сытым.
+> Прилетают родители жены. Тесть уже не обходит машину — он сразу просит ключи. Тёща берёт детскую на себя, и дом на неделю становится тихим и сытым.
 
 Анимация: без анимации. Сцена: `airport_arrivals`.
 
@@ -7152,7 +7152,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ### `oei_low_nerves.png`
 
-> Младенец не спит, старший — подросток в миниатюре, ипотека, AIMA, работа. Ты засыпаешь стоя в очереди в аптеке.
+> Школа, пробки до Лиссабона, ипотека, AIMA, созвоны по американскому времени. Ты засыпаешь стоя в очереди в аптеке, и тебя вежливо будит сеньора с рецептом.
 
 Анимация: без анимации. Сцена: `oeiras_flat`.
 
@@ -7192,7 +7192,7 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 ### `oei_low_money.png`
 
-> Школа, аренда, кредит за BMW, подгузники. Деньги в Оэйраше уходят быстрее, чем приходит пригородная электричка.
+> Школа, аренда, машина, бензин до школы и обратно. Деньги в Оэйраше уходят быстрее, чем приходит пригородная электричка.
 
 Анимация: без анимации. Сцена: `phone`.
 
@@ -7202,12 +7202,12 @@ pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no a
 
 #### `oei_low_money__1.png` — «Взять подработку»
 
-> Вечерами — фриланс, днём — работа, ночью — дочка. Ты спишь по выходным. Иногда.
+> Вечерами — фриланс, днём — работа, между ними — дорога в школу. Ты спишь по выходным. Иногда.
 
 Анимация: без анимации.
 
 ```
-pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man working at night with a baby monitor beside the laptop. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
+pixel art scene, 180x135, limited palette (Endesga 32), clean 1px outlines, no anti-aliasing, no text, cozy melancholic mood, side or three-quarter view, game background for a narrative mobile game. Moment: the man working at a laptop late at night, school backpack by the door. Usual place, adapt if the moment says otherwise: close-up of a smartphone held in a hand, screen glowing with an abstract notification (no readable text), blurred room background, pixel art UI icons on screen.
 ```
 
 #### `oei_low_money__2.png` — «Продать BMW»
