@@ -4,6 +4,7 @@ import Observation
 
 /// Партия на экране: движок, текущая фаза и сохранение на диск.
 @Observable
+@MainActor
 final class GameSession {
     enum Phase: Equatable {
         case title
@@ -27,15 +28,20 @@ final class GameSession {
     private var freshEnding = false
 
     private var content: GameContent?
-    private let saveURL = URL.applicationSupportDirectory.appending(path: "save.json")
-    private let galleryURL = URL.applicationSupportDirectory.appending(path: "endings.json")
-    private let albumURL = URL.applicationSupportDirectory.appending(path: "album.json")
+    private let saveURL: URL
+    private let galleryURL: URL
+    private let albumURL: URL
     /// Вещи, воспоминания и самая дальняя точка пути — за все партии.
     private(set) var album = Album()
     /// Вещи, открытые последним выбором, — для строки «В альбом: …» под итогом.
     private(set) var freshKeepsakes: [Keepsake] = []
 
-    init(language: AppLanguage = .ru) {
+    /// `folder` — где лежат сохранения. Превью передают временную папку,
+    /// чтобы не трогать настоящую партию.
+    init(language: AppLanguage = .ru, folder: URL = .applicationSupportDirectory) {
+        saveURL = folder.appending(path: "save.json")
+        galleryURL = folder.appending(path: "endings.json")
+        albumURL = folder.appending(path: "album.json")
         do {
             content = try ContentLoader.bundled(language: language)
         } catch {

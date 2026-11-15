@@ -16,6 +16,8 @@ struct GameView: View {
                         session.menuOpen = true
                     } label: {
                         Image(systemName: "line.3.horizontal")
+                            .frame(minWidth: 44, minHeight: 44, alignment: .leading)
+                            .contentShape(Rectangle())
                     }
                     .accessibilityLabel(L(.menu))
                     Text(engine.currentAct?.title ?? "")
@@ -26,6 +28,8 @@ struct GameView: View {
                         showSettings = true
                     } label: {
                         Image(systemName: "gearshape")
+                            .frame(minWidth: 44, minHeight: 44, alignment: .trailing)
+                            .contentShape(Rectangle())
                     }
                     .accessibilityLabel(L(.settings))
                 }
@@ -102,6 +106,8 @@ struct StatsBar: View {
                             .foregroundStyle(Theme.text)
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
+                            .contentTransition(.numericText(value: Double(stats.money)))
+                            .animation(.easeOut(duration: 0.3), value: stats.money)
                     } else {
                         PixelMeter(value: stats[stat], color: color(for: stat))
                     }
@@ -109,7 +115,7 @@ struct StatsBar: View {
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(stat.title)
-                .accessibilityValue(stat == .money ? "\(stats.money) евро" : "\(stats[stat]) из 100")
+                .accessibilityValue(stat == .money ? L(.moneyValue, stats.money) : L(.meterValue, stats[stat]))
             }
         }
         .padding(10)
@@ -259,3 +265,22 @@ struct DeltaRow: View {
         }
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    @State private var session: GameSession
+
+    init(_ stage: PreviewData.Stage) {
+        _session = State(initialValue: PreviewData.session(stage))
+    }
+
+    var body: some View {
+        GameView(session: session)
+            .background(Theme.background)
+    }
+}
+
+#Preview("Карточка") { Previews(.card) }
+#Preview("Итог выбора") { Previews(.outcome) }
+#Preview("Крупный шрифт") { Previews(.card).dynamicTypeSize(.accessibility3) }
+#endif

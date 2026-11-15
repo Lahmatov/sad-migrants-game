@@ -54,3 +54,16 @@ enum EndingScene {
         }
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var body: some View {
+        TitlePanorama()
+            .padding()
+            .background(Theme.background)
+    }
+}
+
+#Preview("Панорама") { Previews() }
+#Preview("Крупный шрифт") { Previews().dynamicTypeSize(.accessibility3) }
+#endif

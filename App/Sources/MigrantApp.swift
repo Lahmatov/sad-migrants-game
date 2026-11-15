@@ -102,3 +102,14 @@ struct RootView: View {
             }
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var body: some View {
+        RootView()
+    }
+}
+
+#Preview("Запуск") { Previews() }
+#Preview("Крупный шрифт") { Previews().dynamicTypeSize(.accessibility3) }
+#endif

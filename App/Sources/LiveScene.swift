@@ -806,3 +806,19 @@ struct SceneRenderer {
         }
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var scene: String? = "batumi_beach"
+    var act = "batumi"
+
+    var body: some View {
+        LiveScene(scene: scene, act: act)
+            .aspectRatio(4.0 / 3.0, contentMode: .fit)
+            .padding()
+    }
+}
+
+#Preview("Батуми") { Previews() }
+#Preview("Неизвестная сцена") { Previews(scene: nil, act: "нет такого акта") }
+#endif

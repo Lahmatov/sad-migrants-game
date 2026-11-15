@@ -159,3 +159,28 @@ struct MemoriesView: View {
         .background(Theme.background.ignoresSafeArea())
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    enum Screen {
+        case journey, album, memories
+    }
+
+    var screen = Screen.journey
+    var stage = PreviewData.Stage.card
+
+    var body: some View {
+        let session = PreviewData.session(stage)
+        switch screen {
+        case .journey: JourneyMapView(session: session)
+        case .album: AlbumView(session: session)
+        case .memories: MemoriesView(session: session)
+        }
+    }
+}
+
+#Preview("Путь в начале") { Previews() }
+#Preview("Путь до первой партии") { Previews(stage: .title) }
+#Preview("Альбом пуст") { Previews(screen: .album) }
+#Preview("Воспоминания") { Previews(screen: .memories) }
+#endif

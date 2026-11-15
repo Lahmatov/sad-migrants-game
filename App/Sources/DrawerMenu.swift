@@ -165,6 +165,7 @@ private enum DrawerSheet: String, Identifiable {
     var id: String { rawValue }
 }
 
+@MainActor
 private enum Confirmation {
     case newGame, reset
 
@@ -259,3 +260,26 @@ func header(_ title: String, dismiss: @escaping () -> Void) -> some View {
             .foregroundStyle(Theme.accent)
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    enum Screen {
+        case menu, endings, info
+    }
+
+    var screen = Screen.menu
+    @State private var session = PreviewData.session(.card)
+
+    var body: some View {
+        switch screen {
+        case .menu: DrawerMenu(session: session).frame(width: 300)
+        case .endings: EndingsGalleryView(session: session)
+        case .info: InfoView(title: L(.privacy), text: PreviewData.longText)
+        }
+    }
+}
+
+#Preview("Меню") { Previews() }
+#Preview("Концовки, ни одной не открыто") { Previews(screen: .endings) }
+#Preview("Длинный текст") { Previews(screen: .info) }
+#endif

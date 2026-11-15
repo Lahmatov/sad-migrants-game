@@ -83,3 +83,18 @@ struct ArtOverlay: View {
         }
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var kind = ArtAnimation.snow
+
+    var body: some View {
+        ArtOverlay(kind: kind)
+            .aspectRatio(4.0 / 3.0, contentMode: .fit)
+            .background(.black)
+    }
+}
+
+#Preview("Снег") { Previews() }
+#Preview("Без анимации") { Previews(kind: ArtAnimation.none) }
+#endif

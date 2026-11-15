@@ -7,6 +7,7 @@ import SwiftUI
 /// Одна общая копия — строки интерфейса и цвета читают её отовсюду,
 /// не протаскивая через каждый экран.
 @Observable
+@MainActor
 final class AppSettings {
     static let shared = AppSettings()
 
@@ -27,6 +28,7 @@ final class AppSettings {
 }
 
 /// Строка интерфейса на выбранном языке: `L(.newGame)`, `L(.day, 12)`.
+@MainActor
 func L(_ key: TextKey, _ numbers: Int...) -> String {
     UIText.text(key, AppSettings.shared.value.language, numbers: numbers)
 }

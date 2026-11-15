@@ -112,3 +112,25 @@ struct EndingView: View {
         .padding(24)
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var showsEnding = false
+    @State private var session = PreviewData.session()
+
+    var body: some View {
+        Group {
+            if showsEnding {
+                EndingView(session: session, ending: PreviewData.ending, isNew: true)
+            } else {
+                TitleView(session: session)
+            }
+        }
+        .background(Theme.background)
+    }
+}
+
+#Preview("Титул") { Previews() }
+#Preview("Концовка") { Previews(showsEnding: true) }
+#Preview("Концовка, крупный шрифт") { Previews(showsEnding: true).dynamicTypeSize(.accessibility3) }
+#endif

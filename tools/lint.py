@@ -145,10 +145,30 @@ def check_duplicate_types():
                 r'^(?:public |private |internal |final |@\w+\s+)*'
                 r'(?:public\s+)?(?:final\s+)?(struct|class|enum|protocol)\s+(\w+)',
                 read(path), re.M):
+            # Previews — по одному приватному на файл, так и задумано.
+            if match.group(2) == 'Previews':
+                continue
             seen.setdefault(match.group(2), []).append(os.path.basename(path))
     for name, files in seen.items():
         if len(files) > 1:
             problems.append(f"тип {name} объявлен несколько раз: {', '.join(files)}")
+
+
+def check_architecture():
+    """Правила навыка ios-architecture, которые видны без компилятора."""
+    for path in APP:
+        src = read(path)
+        code = strip_literals(src)
+        name = os.path.basename(path)
+        for banned in ('ObservableObject', '@Published', '@StateObject',
+                       '@ObservedObject', '@EnvironmentObject', 'NavigationView'):
+            if banned in code:
+                problems.append(f"{name}: {banned} — только @Observable и NavigationStack")
+        for match in re.finditer(r'@Observable\s+((?:@\w+\s+)*)(?:final\s+)?class (\w+)', code):
+            if '@MainActor' not in match.group(1):
+                problems.append(f"{name}: @Observable class {match.group(2)} без @MainActor")
+        if re.search(r'struct \w+\s*:\s*View\b', code) and '#Preview' not in src:
+            problems.append(f"{name}: экран без превью (private struct Previews + #Preview)")
 
 
 def report():
@@ -170,4 +190,5 @@ if __name__ == '__main__':
     check_imports()
     check_public_inits()
     check_duplicate_types()
+    check_architecture()
     sys.exit(report())

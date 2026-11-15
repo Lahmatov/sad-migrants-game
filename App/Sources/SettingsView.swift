@@ -136,3 +136,14 @@ struct SettingsView: View {
         .accessibilityAddTraits(selected ? .isSelected : [])
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var body: some View {
+        SettingsView()
+    }
+}
+
+#Preview("Настройки") { Previews() }
+#Preview("Крупный шрифт") { Previews().dynamicTypeSize(.accessibility3) }
+#endif

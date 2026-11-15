@@ -5,6 +5,7 @@ import MigrantCore
 ///
 /// Отдельный движок от музыки: фон меняется с каждой карточкой,
 /// а музыка должна играть, не прерываясь.
+@MainActor
 final class SoundPlayer {
     static let shared = SoundPlayer()
 

@@ -6,6 +6,7 @@ import MigrantCore
 ///
 /// Звук идёт в категории ambient: переключатель «без звука» на айфоне
 /// выключает и игру, а музыка в наушниках у человека не прерывается.
+@MainActor
 final class MusicPlayer {
     static let shared = MusicPlayer()
 

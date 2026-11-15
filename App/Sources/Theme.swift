@@ -3,6 +3,7 @@ import MigrantCore
 import SwiftUI
 
 /// Цвета и шрифты интерфейса.
+@MainActor
 enum Theme {
     /// Текущая тема. Чтение идёт через наблюдаемые настройки, поэтому любой
     /// экран, взявший цвет, сам перерисуется, когда тему поменяют.
@@ -83,6 +84,7 @@ extension Stat {
         }
     }
 
+    @MainActor
     var title: String {
         switch self {
         case .money: return L(.statMoney)

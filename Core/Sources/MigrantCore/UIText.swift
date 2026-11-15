@@ -7,7 +7,7 @@ import Foundation
 public enum TextKey: String, CaseIterable, Sendable {
     case gameTitle, tagline, newGame, continueGame, settings, endingsOpened, scriptFailed
     case menu, day, next, start, skip, newEnding, daysAndChoices, playAgain, toMenu
-    case statMoney, statNerves, statDocuments, statHome, statBelonging
+    case statMoney, statNerves, statDocuments, statHome, statBelonging, moneyValue, meterValue
     case theme, themeNight, themeDay, themeSepia
     case language, languageNote
     case music, musicOn, volume, track
@@ -55,6 +55,8 @@ public enum UIText {
             .statDocuments: "Документы",
             .statHome: "Дом",
             .statBelonging: "Свой тут",
+            .moneyValue: "%d евро",
+            .meterValue: "%d из 100",
             .theme: "Цвета",
             .themeNight: "Ночь",
             .themeDay: "День",
@@ -121,6 +123,8 @@ public enum UIText {
             .statDocuments: "Papers",
             .statHome: "Home",
             .statBelonging: "Belonging",
+            .moneyValue: "%d euros",
+            .meterValue: "%d out of 100",
             .theme: "Colors",
             .themeNight: "Night",
             .themeDay: "Day",
@@ -187,6 +191,8 @@ public enum UIText {
             .statDocuments: "Papéis",
             .statHome: "Casa",
             .statBelonging: "Pertença",
+            .moneyValue: "%d euros",
+            .meterValue: "%d de 100",
             .theme: "Cores",
             .themeNight: "Noite",
             .themeDay: "Dia",

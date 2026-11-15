@@ -51,7 +51,8 @@ struct IntroView: View {
                     Button(L(.skip), action: finish)
                         .font(Theme.caption)
                         .foregroundStyle(Theme.dim)
-                        .padding(8)
+                        .frame(minWidth: 44, minHeight: 44)
+                        .padding(.horizontal, 8)
                 }
                 Spacer()
                 if isDone {
@@ -164,3 +165,17 @@ struct PixelDrift: View {
         return value - value.rounded(.down)
     }
 }
+
+#if DEBUG
+private struct Previews: View {
+    var stanzas = [["Мы собрали жизнь", "в четыре чемодана."], ["По двадцать три килограмма."]]
+
+    var body: some View {
+        IntroView(stanzas: stanzas, finish: {})
+            .background(Theme.background)
+    }
+}
+
+#Preview("Вступление") { Previews() }
+#Preview("Пусто") { Previews(stanzas: []) }
+#endif
