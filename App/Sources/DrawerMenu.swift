@@ -247,6 +247,7 @@ struct InfoView: View {
 }
 
 /// Заголовок листа с кнопкой «Готово».
+@MainActor
 func header(_ title: String, dismiss: @escaping () -> Void) -> some View {
     HStack {
         Text(title)
