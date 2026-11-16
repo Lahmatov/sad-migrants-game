@@ -18,16 +18,17 @@ struct SettingsView: View {
                     Button(L(.done)) { dismiss() }
                         .font(Theme.button)
                         .foregroundStyle(Theme.accent)
+                        .accessibilityIdentifier("settings-done")
                 }
 
                 section(L(.theme)) {
                     choiceRow(ColorTheme.allCases, selected: settings.value.theme,
-                              title: { L($0.titleKey) }) { settings.value.theme = $0 }
+                              title: { L($0.titleKey) }, id: { "settings-theme-\($0.rawValue)" }) { settings.value.theme = $0 }
                 }
 
                 section(L(.language)) {
                     choiceRow(AppLanguage.allCases, selected: settings.value.language,
-                              title: { $0.nativeName }) { settings.value.language = $0 }
+                              title: { $0.nativeName }, id: { "settings-language-\($0.rawValue)" }) { settings.value.language = $0 }
                     if settings.value.language != .ru {
                         note(L(.languageNote))
                     }
@@ -67,7 +68,8 @@ struct SettingsView: View {
 
                 section(L(.textFont)) {
                     choiceRow([true, false], selected: settings.value.pixelText,
-                              title: { L($0 ? .fontPixel : .fontPlain) }) { settings.value.pixelText = $0 }
+                              title: { L($0 ? .fontPixel : .fontPlain) },
+                              id: { "settings-font-\($0 ? "pixel" : "plain")" }) { settings.value.pixelText = $0 }
                 }
 
                 section(L(.privacy)) { note(L(.privacyText)) }
@@ -98,7 +100,9 @@ struct SettingsView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 
+    /// `id` — идентификатор доступности кнопки для e2e-тестов.
     private func choiceRow<Item: Hashable>(_ items: [Item], selected: Item, title: @escaping (Item) -> String,
+                                           id: @escaping (Item) -> String,
                                            select: @escaping (Item) -> Void) -> some View {
         HStack(spacing: 8) {
             ForEach(items, id: \.self) { item in
@@ -113,6 +117,7 @@ struct SettingsView: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(item == selected ? .isSelected : [])
+                .accessibilityIdentifier(id(item))
             }
         }
     }

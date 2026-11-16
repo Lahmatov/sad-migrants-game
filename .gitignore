@@ -6,3 +6,7 @@ DerivedData/
 .swiftpm/
 build-errors.txt
 __pycache__/
+node_modules/
+# Вывод e2e (отчёт, трейсы, логи, доказательства); кэш повторов можно коммитить
+e2e/.e2e/*
+!e2e/.e2e/cache/

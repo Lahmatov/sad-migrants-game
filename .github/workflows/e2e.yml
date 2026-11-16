@@ -1,0 +1,102 @@
+# Сквозные (e2e) тесты игры на симуляторе iPhone: e2e + движок @e2e-dev/mobile.
+#
+# Отдельно от CI, чтобы долгий прогон на симуляторе не тормозил основные проверки.
+# Тесты с шагами агента (agent.*) идут через Claude Code по подписке владельца:
+# секрет CLAUDE_CODE_OAUTH_TOKEN (`claude setup-token`). Без секрета они пропускаются,
+# остальные тесты гоняются всё равно.
+name: e2e
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ios:
+    name: e2e — iOS-симулятор
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      E2E_TELEMETRY_DISABLED: '1'
+      # Мажорная версия iOS симулятора: внутри неё берётся самый новый рантайм образа.
+      # Дерево доступности меняется между версиями iOS — поднимать осознанно.
+      IOS_MAJOR: '26'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: e2e/package-lock.json
+      - name: Зависимости e2e
+        working-directory: e2e
+        run: npm ci && npm run typecheck && npx e2e list
+
+      - name: XcodeGen и сборка под симулятор
+        run: |
+          brew install xcodegen || true
+          xcodegen generate
+          set +e
+          xcodebuild build \
+            -project MigrantSad.xcodeproj \
+            -scheme MigrantSad \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            > app.log 2>&1
+          STATUS=$?
+          grep -E "error:|\*\* BUILD" app.log | sed "s|$GITHUB_WORKSPACE/||" | sort -u | tail -100
+          exit $STATUS
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.agent-device/apple-runner/derived
+          key: agent-device-runner-${{ runner.os }}-${{ hashFiles('e2e/package-lock.json') }}
+
+      - name: Симулятор и установка игры
+        run: |
+          RUNTIME=$(xcrun simctl list runtimes -j | python3 -c '
+          import json, os, sys
+          major = os.environ["IOS_MAJOR"]
+          rs = [r for r in json.load(sys.stdin)["runtimes"]
+                if "SimRuntime.iOS-" in r["identifier"] and r.get("isAvailable") and r["version"].split(".")[0] == major]
+          rs.sort(key=lambda r: [int(x) for x in r["version"].split(".")])
+          print(rs[-1]["identifier"] if rs else "")')
+          if [ -z "$RUNTIME" ]; then echo "Нет рантайма iOS $IOS_MAJOR:"; xcrun simctl list runtimes; exit 1; fi
+          DEVICE_TYPE=$(xcrun simctl list devicetypes -j | python3 -c '
+          import json, re, sys
+          ts = [(int(m.group(1)), t["identifier"]) for t in json.load(sys.stdin)["devicetypes"]
+                for m in [re.fullmatch(r"iPhone (\d+)", t["name"])] if m]
+          print(max(ts)[1] if ts else "")')
+          if [ -z "$DEVICE_TYPE" ]; then echo "Нет iPhone среди типов устройств"; exit 1; fi
+          echo "Рантайм: $RUNTIME, устройство: $DEVICE_TYPE"
+          UDID=$(xcrun simctl create e2e "$DEVICE_TYPE" "$RUNTIME")
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl install "$UDID" build/Build/Products/Debug-iphonesimulator/MigrantSad.app
+          echo "IOS_DEVICE=$UDID" >> "$GITHUB_ENV"
+
+      - name: e2e
+        working-directory: e2e
+        run: npx e2e run --target ios --reporter list,junit
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+      - name: Отчёт e2e
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-ios
+          path: e2e/.e2e
+          if-no-files-found: warn

@@ -20,6 +20,7 @@ struct GameView: View {
                             .contentShape(Rectangle())
                     }
                     .accessibilityLabel(L(.menu))
+                    .accessibilityIdentifier("game-menu")
                     Text(engine.currentAct?.title ?? "")
                     Spacer()
                     Text(L(.day, engine.state.day))
@@ -32,6 +33,7 @@ struct GameView: View {
                             .contentShape(Rectangle())
                     }
                     .accessibilityLabel(L(.settings))
+                    .accessibilityIdentifier("game-settings")
                 }
                 .font(Theme.caption)
                 .foregroundStyle(Theme.dim)
@@ -204,6 +206,8 @@ struct ChoiceList: View {
                         .pixelFrame(color: Theme.accent)
                 }
                 .buttonStyle(.plain)
+                // Номер выбора в карточке, а не позиция на экране: недоступные кнопки скрыты.
+                .accessibilityIdentifier("choice-\(index)")
             }
         }
     }

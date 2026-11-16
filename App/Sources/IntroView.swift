@@ -53,6 +53,7 @@ struct IntroView: View {
                         .foregroundStyle(Theme.dim)
                         .frame(minWidth: 44, minHeight: 44)
                         .padding(.horizontal, 8)
+                        .accessibilityIdentifier("intro-skip")
                 }
                 Spacer()
                 if isDone {
@@ -64,6 +65,7 @@ struct IntroView: View {
                             .pixelFrame(color: Theme.accent, fill: Theme.accent)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("intro-start")
                     .padding(24)
                     .transition(.opacity)
                 }

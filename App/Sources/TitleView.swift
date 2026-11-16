@@ -31,17 +31,18 @@ struct TitleView: View {
             }
             VStack(spacing: 10) {
                 if session.canContinue {
-                    menuButton(L(.continueGame), filled: true) { session.continueGame() }
+                    menuButton(L(.continueGame), id: "title-continue", filled: true) { session.continueGame() }
                 }
-                menuButton(L(.newGame), filled: !session.canContinue) { session.newGame() }
-                menuButton(L(.settings), filled: false) { showSettings = true }
+                menuButton(L(.newGame), id: "title-new-game", filled: !session.canContinue) { session.newGame() }
+                menuButton(L(.settings), id: "title-settings", filled: false) { showSettings = true }
             }
         }
         .padding(24)
         .sheet(isPresented: $showSettings) { SettingsView() }
     }
 
-    private func menuButton(_ title: String, filled: Bool, action: @escaping () -> Void) -> some View {
+    /// `id` — идентификатор доступности для e2e-тестов (`e2e/tests`), не текст: тексты зависят от языка.
+    private func menuButton(_ title: String, id: String, filled: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(title)
                 .font(Theme.button)
@@ -50,6 +51,7 @@ struct TitleView: View {
                 .pixelFrame(color: Theme.accent, fill: filled ? Theme.accent : Theme.panel)
         }
         .buttonStyle(.plain)
+        .accessibilityIdentifier(id)
     }
 }
 
